@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+*.egg-info/
+.env
+.env.*
+*.pem
+*.key
+*kubeconfig*
+llm_rca_config.json
+results-local/

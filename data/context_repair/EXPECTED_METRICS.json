@@ -1,0 +1,125 @@
+{
+  "training": {
+    "positions": 24,
+    "attempt_status": {
+      "observed": 23,
+      "rejected": 1
+    },
+    "metrics": {
+      "context": {
+        "success": {
+          "scored": 23,
+          "known_labels": 23,
+          "missing_labels": 1,
+          "brier": 0.014076666795624249,
+          "ece": 0.08475309511493308
+        },
+        "safety": {
+          "scored": 23,
+          "known_labels": 23,
+          "missing_labels": 1,
+          "brier": 0.03644910374189656,
+          "ece": 0.05902521961048647
+        }
+      },
+      "coarse": {
+        "success": {
+          "scored": 23,
+          "known_labels": 23,
+          "missing_labels": 1,
+          "brier": 0.14251568640366452,
+          "ece": 0.04672706827261277
+        },
+        "safety": {
+          "scored": 23,
+          "known_labels": 23,
+          "missing_labels": 1,
+          "brier": 0.07622870694816795,
+          "ece": 0.002097155535791373
+        }
+      }
+    }
+  },
+  "validation": {
+    "positions": 24,
+    "attempt_status": {
+      "observed": 23,
+      "rejected": 1
+    },
+    "metrics": {
+      "context": {
+        "success": {
+          "scored": 23,
+          "known_labels": 23,
+          "missing_labels": 1,
+          "brier": 0.014083464078441832,
+          "ece": 0.08476767784648022
+        },
+        "safety": {
+          "scored": 23,
+          "known_labels": 23,
+          "missing_labels": 1,
+          "brier": 0.07478866553631348,
+          "ece": 0.09052473614334118
+        }
+      },
+      "coarse": {
+        "success": {
+          "scored": 23,
+          "known_labels": 23,
+          "missing_labels": 1,
+          "brier": 0.14251568640366452,
+          "ece": 0.04672706827261277
+        },
+        "safety": {
+          "scored": 23,
+          "known_labels": 23,
+          "missing_labels": 1,
+          "brier": 0.048784320231147024,
+          "ece": 0.045575416405356665
+        }
+      }
+    }
+  },
+  "test": {
+    "positions": 24,
+    "attempt_status": {
+      "observed": 23,
+      "rejected": 1
+    },
+    "metrics": {
+      "context": {
+        "success": {
+          "scored": 23,
+          "known_labels": 23,
+          "missing_labels": 1,
+          "brier": 0.031070714087853658,
+          "ece": 0.10571127637983249
+        },
+        "safety": {
+          "scored": 23,
+          "known_labels": 23,
+          "missing_labels": 1,
+          "brier": 0.1594338653077914,
+          "ece": 0.12402155336457883
+        }
+      },
+      "coarse": {
+        "success": {
+          "scored": 23,
+          "known_labels": 23,
+          "missing_labels": 1,
+          "brier": 0.14251568640366452,
+          "ece": 0.04672706827261277
+        },
+        "safety": {
+          "scored": 23,
+          "known_labels": 23,
+          "missing_labels": 1,
+          "brier": 0.156488928995698,
+          "ece": 0.084859366203339
+        }
+      }
+    }
+  }
+}

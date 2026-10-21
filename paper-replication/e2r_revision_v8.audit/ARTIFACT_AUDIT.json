@@ -1,0 +1,132 @@
+{
+  "audit_skill": "experiment-audit",
+  "audit_type": "anonymous_artifact_release",
+  "verdict": "PASS",
+  "overall_verdict": "PASS",
+  "integrity_status": "pass",
+  "reason_code": "prior_release_blockers_resolved",
+  "summary": "V8 passes independent package/archive integrity, anonymity scans including folded literals, source-to-staged provenance, support completeness and twelve isolated offline tests.",
+  "generated_at": "2026-09-27T03:01:39.459275+00:00",
+  "date": "2026-09-27",
+  "agent_id": "/root/artifact_release_audit",
+  "auxiliary_reviewer": "/root/artifact_release_audit/offline_test_audit",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "artifact_root": "artifacts/e2r_revision_v8",
+  "archive_sha256": "76d5ce9f035a0b42a27fc8e6c82c58e0d663a65d06212b4c39016a4247c60c4b",
+  "trace_path": ".aris/traces/experiment-audit/20260927_artifact_release/v8",
+  "audited_input_hashes_file": ".aris/traces/experiment-audit/20260927_artifact_release/v8/audited_input_hashes.json",
+  "findings": [],
+  "prior_findings": {
+    "v6_F001": "resolved",
+    "v6_F002": "resolved",
+    "v6_F003": "resolved",
+    "v6_F004": "accurately scoped; clean lock not tested",
+    "v6_F005": "resolved",
+    "v6_F006": "resolved within documented distribution-verifier scope",
+    "v7_B701": "resolved",
+    "v7_W701": "resolved"
+  },
+  "checks": {
+    "manifest": {
+      "status": "PASS",
+      "entries": 7320,
+      "manifested_bytes": 165670654,
+      "full_bytes": 167137372,
+      "only_unlisted": "MANIFEST.json"
+    },
+    "tar_equivalence": {
+      "status": "PASS",
+      "files": 7321,
+      "members": 7415
+    },
+    "tar_paths_metadata": {
+      "status": "PASS",
+      "uid": 0,
+      "gid": 0,
+      "names_empty": true,
+      "fixed_mtime": true
+    },
+    "archive_sidecar": {
+      "status": "PASS"
+    },
+    "literal_byte_scan": {
+      "status": "PASS",
+      "files": 7321
+    },
+    "constant_expression_scan": {
+      "status": "PASS",
+      "python_files": 121,
+      "sensitive_matches": 0
+    },
+    "checkpoint_scan": {
+      "status": "PASS",
+      "files": 30,
+      "zip_members": 480
+    },
+    "observations": {
+      "status": "PASS",
+      "cases": 798
+    },
+    "anonymization_map": {
+      "status": "PASS",
+      "staged_and_source_hashes_verified": 97,
+      "unchanged_source_files": 7219,
+      "unmapped_changes": 0
+    },
+    "metadata_claims": {
+      "status": "PASS"
+    },
+    "offline_tests": {
+      "status": "PASS",
+      "passed": 12,
+      "seconds": 2.72,
+      "skipped": 0,
+      "parent_config_excluded": true
+    },
+    "included_verifier": {
+      "status": "PASS",
+      "required_files": 16,
+      "errors": 0,
+      "source_hash_note_scoped": true
+    },
+    "support_completeness": {
+      "status": "PASS",
+      "b2_trace_files": 33,
+      "m4_trace_files": 30,
+      "interrupted_trace_files": 15,
+      "formal_v2_included": true,
+      "historical_collector_hash_matches": true,
+      "generalization_splits": 6
+    },
+    "historical_receipts": {
+      "status": "PASS",
+      "not_rewritten": true,
+      "interrupted_original_receipt_to_staged_joins": 3
+    },
+    "comparison_claims": {
+      "status": "PASS",
+      "complete_pairs": 0,
+      "valid_matched_comparison": false,
+      "planned": 2,
+      "attempted": 2,
+      "injected": 2,
+      "repair_invocations": 1,
+      "repair_mutations": 1,
+      "oracle_statuses": [
+        "FAIL",
+        null
+      ]
+    }
+  },
+  "limitations": [
+    "Same-family provisional semantic acceptance.",
+    "No clean target-lock installation, full suite, retraining or full historical arithmetic replay.",
+    "External DY-RCA and installed Python dependencies are required.",
+    "Historical execution receipts remain historical; distribution map does not attest execution-time code.",
+    "Pattern/AST scans are bounded, not an exhaustive guarantee against all secret encodings."
+  ],
+  "immutable_inputs_verified": true,
+  "no_network_or_live_operations": true,
+  "no_package_or_source_edits_by_auditor": true
+}

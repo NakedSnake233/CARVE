@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "carve-supplement"
+version = "0.1.0"
+description = "Anonymous supplementary implementation and offline reproducibility examples"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "Anonymous Authors"}]
+dependencies = ["numpy>=1.26", "torch>=2.0", "PyYAML>=6.0"]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+native = ["grpcio>=1.60", "protobuf>=5"]
+analysis = ["pandas", "networkx", "matplotlib", "httpx", "requests", "jsonschema"]
+
+[project.scripts]
+rca-bench = "rca_bench.cli:main"
+e2r-intervention = "methods.E2R.intervention.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["methods*", "rca_bench*", "scripts*"]
+exclude = ["tests*", "data*", "paper*", "enhancement*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests/intervention"]
+python_files = ["test_*.py"]
+addopts = "-q"
