@@ -1,0 +1,76 @@
+{
+  "status": "completed_synthetic_multi_root_proxy",
+  "evaluation_type": "simulation_only",
+  "source_test_incidents": 116,
+  "pairs": 57,
+  "orientations": 2,
+  "prediction_rows": 342,
+  "checkpoint_sha256": {
+    "42": "c4895cf287eb11dae65267fdf0e6c53d7053680ec651e3a7066e75baf58889f5",
+    "43": "5b1486bf9bd8e33d8569170ecc9d79344409e0647062fc6c801ad5661c36b467",
+    "44": "ce72f2987e5e9514eea28f56c76d2c50e67445dc8746b79006071fa95ecbfb80"
+  },
+  "construction_uses_evaluator_labels": true,
+  "relation_count_aggregation": "maximum source-window count per directed relation",
+  "synthetic_time_policy": "source-local observations; no shared physical cutoff",
+  "summary": {
+    "42:left_base": {
+      "n": 57,
+      "Recall@1": 0.4824561403508772,
+      "Recall@2": 0.8157894736842105,
+      "Recall@5": 0.9298245614035088,
+      "ExactSet@2": 0.631578947368421,
+      "MAP": 0.8862647566594934
+    },
+    "42:right_base": {
+      "n": 57,
+      "Recall@1": 0.4824561403508772,
+      "Recall@2": 0.7894736842105263,
+      "Recall@5": 0.9035087719298246,
+      "ExactSet@2": 0.5789473684210527,
+      "MAP": 0.8728236412446939
+    },
+    "43:left_base": {
+      "n": 57,
+      "Recall@1": 0.4824561403508772,
+      "Recall@2": 0.8070175438596491,
+      "Recall@5": 0.9385964912280702,
+      "ExactSet@2": 0.6140350877192983,
+      "MAP": 0.8852204792994267
+    },
+    "43:right_base": {
+      "n": 57,
+      "Recall@1": 0.4824561403508772,
+      "Recall@2": 0.8070175438596491,
+      "Recall@5": 0.9210526315789473,
+      "ExactSet@2": 0.6140350877192983,
+      "MAP": 0.8804259804259804
+    },
+    "44:left_base": {
+      "n": 57,
+      "Recall@1": 0.4824561403508772,
+      "Recall@2": 0.8245614035087719,
+      "Recall@5": 0.9298245614035088,
+      "ExactSet@2": 0.6491228070175439,
+      "MAP": 0.8909013481381902
+    },
+    "44:right_base": {
+      "n": 57,
+      "Recall@1": 0.4824561403508772,
+      "Recall@2": 0.8070175438596491,
+      "Recall@5": 0.9210526315789473,
+      "ExactSet@2": 0.6140350877192983,
+      "MAP": 0.8817208843524633
+    }
+  },
+  "elapsed_seconds": 0.6638296712189913,
+  "limitations": [
+    "Each composite overlays two independently recorded single-fault observations; it is not a live concurrent-fault incident.",
+    "The second root contributes its service-local topology and telemetry while call edges are unioned; causal interactions are unavailable.",
+    "Ground-truth root labels select the two service-local states used to construct the proxy; they are used for construction/evaluation, never model features.",
+    "Pod names/IPs are deterministically remapped, endpoint ownership is total and unique, and directed relation counts use the maximum source-window count.",
+    "Source observations have different physical times; the composite declares no shared cutoff and makes no simultaneity claim.",
+    "Both base orientations are reported because the composition is asymmetric.",
+    "Results support only a synthetic multi-root sensitivity statement, not open-world or production recovery."
+  ]
+}

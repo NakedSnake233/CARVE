@@ -1,0 +1,50 @@
+{
+  "catalog": [
+    {
+      "id": "op0000",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "ts-order-other-service",
+        "target": "pod:ts-order-other-service-67cf586847-k97n6",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "evidence": [
+          "during:ts-order-other-service->pod:ts-order-other-service-67cf586847-k97n6"
+        ]
+      },
+      "evidence_id": "during:ts-order-other-service->pod:ts-order-other-service-67cf586847-k97n6",
+      "requires": []
+    }
+  ],
+  "plan": {
+    "experiment_id": "case00132",
+    "change_type": "observation_supported_updates",
+    "confidence": 0.0,
+    "causal_role": "not_inferred",
+    "node_ops": [],
+    "edge_ops": [
+      {
+        "op": "ADD_EDGE",
+        "source": "ts-order-other-service",
+        "target": "pod:ts-order-other-service-67cf586847-k97n6",
+        "old_source": "ts-order-other-service",
+        "old_target": "pod:ts-order-other-service-67cf586847-k97n6",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:ts-order-other-service->pod:ts-order-other-service-67cf586847-k97n6"
+        ]
+      }
+    ],
+    "weight_ops": [],
+    "state_transfer": {},
+    "evidence": [
+      "during:ts-order-other-service->pod:ts-order-other-service-67cf586847-k97n6"
+    ]
+  }
+}

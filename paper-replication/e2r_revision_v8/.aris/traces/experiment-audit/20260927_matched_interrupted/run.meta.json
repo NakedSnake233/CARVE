@@ -1,0 +1,14 @@
+{
+  "skill": "experiment-audit",
+  "run_id": "20260927_matched_interrupted",
+  "trace_initialized_at": "2026-09-27T02:29:25.907438+00:00",
+  "executor": "codex",
+  "executor_model": "codex-gpt-6-astra",
+  "executor_family": "openai",
+  "reviewer_model": "gpt-6-astra",
+  "reviewer_reasoning": "ultra",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "project_dir": "${PROJECT_ROOT}",
+  "agent_id": "/root/matched_interruption_audit"
+}

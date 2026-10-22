@@ -1,0 +1,145 @@
+{
+  "catalog": [
+    {
+      "id": "op0000",
+      "group": "edge_ops",
+      "operation": {
+        "op": "REMOVE_EDGE",
+        "source": "ts-basic-service",
+        "target": "pod:ts-basic-service-b8f896f8b-5j9m5",
+        "evidence": [
+          "topology_diff:ts-basic-service->pod:ts-basic-service-b8f896f8b-5j9m5"
+        ]
+      },
+      "evidence_id": "topology_diff:ts-basic-service->pod:ts-basic-service-b8f896f8b-5j9m5",
+      "requires": []
+    },
+    {
+      "id": "op0001",
+      "group": "edge_ops",
+      "operation": {
+        "op": "REMOVE_EDGE",
+        "source": "ts-preserve-service",
+        "target": "pod:ts-preserve-service-7d5dddf58d-db94d",
+        "evidence": [
+          "topology_diff:ts-preserve-service->pod:ts-preserve-service-7d5dddf58d-db94d"
+        ]
+      },
+      "evidence_id": "topology_diff:ts-preserve-service->pod:ts-preserve-service-7d5dddf58d-db94d",
+      "requires": []
+    },
+    {
+      "id": "op0002",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "ts-basic-service",
+        "target": "pod:ts-station-service-ff96f8f6b-pt6rh",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "evidence": [
+          "during:ts-basic-service->pod:ts-station-service-ff96f8f6b-pt6rh"
+        ]
+      },
+      "evidence_id": "during:ts-basic-service->pod:ts-station-service-ff96f8f6b-pt6rh",
+      "requires": []
+    },
+    {
+      "id": "op0003",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_TRACE_MISMATCH_EDGE",
+        "source": "ts-basic-service",
+        "target": "ts-station-service",
+        "edge_type": "endpoint_mismatch",
+        "weight": 1.0,
+        "evidence": [
+          "endpoint_owner:ts-basic-service:10.244.1.248"
+        ]
+      },
+      "evidence_id": "endpoint_owner:ts-basic-service:10.244.1.248",
+      "requires": []
+    }
+  ],
+  "plan": {
+    "experiment_id": "case00455",
+    "change_type": "observation_supported_updates",
+    "confidence": 0.0,
+    "causal_role": "not_inferred",
+    "node_ops": [],
+    "edge_ops": [
+      {
+        "op": "REMOVE_EDGE",
+        "source": "ts-basic-service",
+        "target": "pod:ts-basic-service-b8f896f8b-5j9m5",
+        "old_source": "ts-basic-service",
+        "old_target": "pod:ts-basic-service-b8f896f8b-5j9m5",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": null,
+        "attrs": {},
+        "evidence": [
+          "topology_diff:ts-basic-service->pod:ts-basic-service-b8f896f8b-5j9m5"
+        ]
+      },
+      {
+        "op": "REMOVE_EDGE",
+        "source": "ts-preserve-service",
+        "target": "pod:ts-preserve-service-7d5dddf58d-db94d",
+        "old_source": "ts-preserve-service",
+        "old_target": "pod:ts-preserve-service-7d5dddf58d-db94d",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": null,
+        "attrs": {},
+        "evidence": [
+          "topology_diff:ts-preserve-service->pod:ts-preserve-service-7d5dddf58d-db94d"
+        ]
+      },
+      {
+        "op": "ADD_EDGE",
+        "source": "ts-basic-service",
+        "target": "pod:ts-station-service-ff96f8f6b-pt6rh",
+        "old_source": "ts-basic-service",
+        "old_target": "pod:ts-station-service-ff96f8f6b-pt6rh",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:ts-basic-service->pod:ts-station-service-ff96f8f6b-pt6rh"
+        ]
+      },
+      {
+        "op": "ADD_TRACE_MISMATCH_EDGE",
+        "source": "ts-basic-service",
+        "target": "ts-station-service",
+        "old_source": "ts-basic-service",
+        "old_target": "ts-station-service",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "endpoint_mismatch",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "endpoint_owner:ts-basic-service:10.244.1.248"
+        ]
+      }
+    ],
+    "weight_ops": [],
+    "state_transfer": {},
+    "evidence": [
+      "topology_diff:ts-basic-service->pod:ts-basic-service-b8f896f8b-5j9m5",
+      "topology_diff:ts-preserve-service->pod:ts-preserve-service-7d5dddf58d-db94d",
+      "during:ts-basic-service->pod:ts-station-service-ff96f8f6b-pt6rh",
+      "endpoint_owner:ts-basic-service:10.244.1.248"
+    ]
+  }
+}

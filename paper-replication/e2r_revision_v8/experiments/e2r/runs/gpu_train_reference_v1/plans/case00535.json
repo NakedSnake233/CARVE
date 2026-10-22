@@ -1,0 +1,211 @@
+{
+  "catalog": [
+    {
+      "id": "op0000",
+      "group": "edge_ops",
+      "operation": {
+        "op": "REMOVE_EDGE",
+        "source": "ts-ticketinfo-service",
+        "target": "pod:ts-ticketinfo-service-854b89fccd-prqbr",
+        "evidence": [
+          "topology_diff:ts-ticketinfo-service->pod:ts-ticketinfo-service-854b89fccd-prqbr"
+        ]
+      },
+      "evidence_id": "topology_diff:ts-ticketinfo-service->pod:ts-ticketinfo-service-854b89fccd-prqbr",
+      "requires": []
+    },
+    {
+      "id": "op0001",
+      "group": "edge_ops",
+      "operation": {
+        "op": "REMOVE_EDGE",
+        "source": "ts-travel-service",
+        "target": "pod:ts-travel-service-6f6dd9dc64-bvslt",
+        "evidence": [
+          "topology_diff:ts-travel-service->pod:ts-travel-service-6f6dd9dc64-bvslt"
+        ]
+      },
+      "evidence_id": "topology_diff:ts-travel-service->pod:ts-travel-service-6f6dd9dc64-bvslt",
+      "requires": []
+    },
+    {
+      "id": "op0002",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "ts-ticketinfo-service",
+        "target": "pod:ts-order-service-5755fc9ccd-9gj78",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "evidence": [
+          "during:ts-ticketinfo-service->pod:ts-order-service-5755fc9ccd-9gj78"
+        ]
+      },
+      "evidence_id": "during:ts-ticketinfo-service->pod:ts-order-service-5755fc9ccd-9gj78",
+      "requires": []
+    },
+    {
+      "id": "op0003",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "ts-ticketinfo-service",
+        "target": "pod:ts-order-service-5755fc9ccd-fq8w7",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "evidence": [
+          "during:ts-ticketinfo-service->pod:ts-order-service-5755fc9ccd-fq8w7"
+        ]
+      },
+      "evidence_id": "during:ts-ticketinfo-service->pod:ts-order-service-5755fc9ccd-fq8w7",
+      "requires": []
+    },
+    {
+      "id": "op0004",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_TRACE_MISMATCH_EDGE",
+        "source": "ts-ticketinfo-service",
+        "target": "ts-order-service",
+        "edge_type": "endpoint_mismatch",
+        "weight": 1.0,
+        "evidence": [
+          "endpoint_owner:ts-ticketinfo-service:10.244.1.75"
+        ]
+      },
+      "evidence_id": "endpoint_owner:ts-ticketinfo-service:10.244.1.75",
+      "requires": []
+    },
+    {
+      "id": "op0005",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_TRACE_MISMATCH_EDGE",
+        "source": "ts-ticketinfo-service",
+        "target": "ts-order-service",
+        "edge_type": "endpoint_mismatch",
+        "weight": 1.0,
+        "evidence": [
+          "endpoint_owner:ts-ticketinfo-service:10.244.2.238"
+        ]
+      },
+      "evidence_id": "endpoint_owner:ts-ticketinfo-service:10.244.2.238",
+      "requires": []
+    }
+  ],
+  "plan": {
+    "experiment_id": "case00535",
+    "change_type": "observation_supported_updates",
+    "confidence": 0.0,
+    "causal_role": "not_inferred",
+    "node_ops": [],
+    "edge_ops": [
+      {
+        "op": "REMOVE_EDGE",
+        "source": "ts-ticketinfo-service",
+        "target": "pod:ts-ticketinfo-service-854b89fccd-prqbr",
+        "old_source": "ts-ticketinfo-service",
+        "old_target": "pod:ts-ticketinfo-service-854b89fccd-prqbr",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": null,
+        "attrs": {},
+        "evidence": [
+          "topology_diff:ts-ticketinfo-service->pod:ts-ticketinfo-service-854b89fccd-prqbr"
+        ]
+      },
+      {
+        "op": "REMOVE_EDGE",
+        "source": "ts-travel-service",
+        "target": "pod:ts-travel-service-6f6dd9dc64-bvslt",
+        "old_source": "ts-travel-service",
+        "old_target": "pod:ts-travel-service-6f6dd9dc64-bvslt",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": null,
+        "attrs": {},
+        "evidence": [
+          "topology_diff:ts-travel-service->pod:ts-travel-service-6f6dd9dc64-bvslt"
+        ]
+      },
+      {
+        "op": "ADD_EDGE",
+        "source": "ts-ticketinfo-service",
+        "target": "pod:ts-order-service-5755fc9ccd-9gj78",
+        "old_source": "ts-ticketinfo-service",
+        "old_target": "pod:ts-order-service-5755fc9ccd-9gj78",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:ts-ticketinfo-service->pod:ts-order-service-5755fc9ccd-9gj78"
+        ]
+      },
+      {
+        "op": "ADD_EDGE",
+        "source": "ts-ticketinfo-service",
+        "target": "pod:ts-order-service-5755fc9ccd-fq8w7",
+        "old_source": "ts-ticketinfo-service",
+        "old_target": "pod:ts-order-service-5755fc9ccd-fq8w7",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:ts-ticketinfo-service->pod:ts-order-service-5755fc9ccd-fq8w7"
+        ]
+      },
+      {
+        "op": "ADD_TRACE_MISMATCH_EDGE",
+        "source": "ts-ticketinfo-service",
+        "target": "ts-order-service",
+        "old_source": "ts-ticketinfo-service",
+        "old_target": "ts-order-service",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "endpoint_mismatch",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "endpoint_owner:ts-ticketinfo-service:10.244.1.75"
+        ]
+      },
+      {
+        "op": "ADD_TRACE_MISMATCH_EDGE",
+        "source": "ts-ticketinfo-service",
+        "target": "ts-order-service",
+        "old_source": "ts-ticketinfo-service",
+        "old_target": "ts-order-service",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "endpoint_mismatch",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "endpoint_owner:ts-ticketinfo-service:10.244.2.238"
+        ]
+      }
+    ],
+    "weight_ops": [],
+    "state_transfer": {},
+    "evidence": [
+      "topology_diff:ts-ticketinfo-service->pod:ts-ticketinfo-service-854b89fccd-prqbr",
+      "topology_diff:ts-travel-service->pod:ts-travel-service-6f6dd9dc64-bvslt",
+      "during:ts-ticketinfo-service->pod:ts-order-service-5755fc9ccd-9gj78",
+      "during:ts-ticketinfo-service->pod:ts-order-service-5755fc9ccd-fq8w7",
+      "endpoint_owner:ts-ticketinfo-service:10.244.1.75",
+      "endpoint_owner:ts-ticketinfo-service:10.244.2.238"
+    ]
+  }
+}

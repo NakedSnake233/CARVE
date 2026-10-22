@@ -1,0 +1,163 @@
+{
+  "catalog": [
+    {
+      "id": "op0000",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:currencyservice-v2-646cc88594-hsjbx",
+        "attrs": {
+          "type": "pod",
+          "service": "currencyservice",
+          "version": "v2.0.0"
+        },
+        "evidence": [
+          "during:pod:currencyservice-v2-646cc88594-hsjbx"
+        ]
+      },
+      "evidence_id": "during:pod:currencyservice-v2-646cc88594-hsjbx",
+      "requires": []
+    },
+    {
+      "id": "op0001",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "checkoutservice",
+        "target": "cartservice",
+        "edge_type": "dependency",
+        "weight": 1.0,
+        "evidence": [
+          "during:checkoutservice->cartservice"
+        ]
+      },
+      "evidence_id": "during:checkoutservice->cartservice",
+      "requires": []
+    },
+    {
+      "id": "op0002",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "frontend",
+        "target": "checkoutservice",
+        "edge_type": "dependency",
+        "weight": 1.0,
+        "evidence": [
+          "during:frontend->checkoutservice"
+        ]
+      },
+      "evidence_id": "during:frontend->checkoutservice",
+      "requires": []
+    },
+    {
+      "id": "op0003",
+      "group": "node_ops",
+      "operation": {
+        "op": "SPLIT_NODE",
+        "parent": "currencyservice",
+        "children": [
+          "currencyservice:unversioned",
+          "currencyservice:v2.0.0"
+        ],
+        "attrs": {
+          "type": "version",
+          "service": "currencyservice"
+        },
+        "evidence": [
+          "version_coexistence:currencyservice"
+        ]
+      },
+      "evidence_id": "version_coexistence:currencyservice",
+      "requires": []
+    }
+  ],
+  "plan": {
+    "experiment_id": "case00594",
+    "change_type": "observation_supported_updates",
+    "confidence": 0.0,
+    "causal_role": "not_inferred",
+    "node_ops": [
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:currencyservice-v2-646cc88594-hsjbx",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "currencyservice",
+          "version": "v2.0.0"
+        },
+        "evidence": [
+          "during:pod:currencyservice-v2-646cc88594-hsjbx"
+        ]
+      },
+      {
+        "op": "SPLIT_NODE",
+        "node_id": "",
+        "old_node": "",
+        "new_node": "",
+        "parent": "currencyservice",
+        "children": [
+          "currencyservice:unversioned",
+          "currencyservice:v2.0.0"
+        ],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "version",
+          "service": "currencyservice"
+        },
+        "evidence": [
+          "version_coexistence:currencyservice"
+        ]
+      }
+    ],
+    "edge_ops": [
+      {
+        "op": "ADD_EDGE",
+        "source": "checkoutservice",
+        "target": "cartservice",
+        "old_source": "checkoutservice",
+        "old_target": "cartservice",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:checkoutservice->cartservice"
+        ]
+      },
+      {
+        "op": "ADD_EDGE",
+        "source": "frontend",
+        "target": "checkoutservice",
+        "old_source": "frontend",
+        "old_target": "checkoutservice",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:frontend->checkoutservice"
+        ]
+      }
+    ],
+    "weight_ops": [],
+    "state_transfer": {},
+    "evidence": [
+      "during:pod:currencyservice-v2-646cc88594-hsjbx",
+      "during:checkoutservice->cartservice",
+      "during:frontend->checkoutservice",
+      "version_coexistence:currencyservice"
+    ]
+  }
+}

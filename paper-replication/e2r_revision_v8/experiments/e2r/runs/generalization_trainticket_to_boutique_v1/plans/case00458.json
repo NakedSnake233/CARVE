@@ -1,0 +1,88 @@
+{
+  "catalog": [
+    {
+      "id": "op0000",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-preserve-service-7d5dddf58d-hz55x",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-preserve-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-preserve-service-7d5dddf58d-hz55x"
+        ]
+      },
+      "evidence_id": "during:pod:ts-preserve-service-7d5dddf58d-hz55x",
+      "requires": []
+    },
+    {
+      "id": "op0001",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "ts-preserve-service",
+        "target": "pod:ts-preserve-service-7d5dddf58d-wctgc",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "evidence": [
+          "during:ts-preserve-service->pod:ts-preserve-service-7d5dddf58d-wctgc"
+        ]
+      },
+      "evidence_id": "during:ts-preserve-service->pod:ts-preserve-service-7d5dddf58d-wctgc",
+      "requires": []
+    }
+  ],
+  "plan": {
+    "experiment_id": "case00458",
+    "change_type": "observation_supported_updates",
+    "confidence": 0.0,
+    "causal_role": "not_inferred",
+    "node_ops": [
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-preserve-service-7d5dddf58d-hz55x",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-preserve-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-preserve-service-7d5dddf58d-hz55x"
+        ]
+      }
+    ],
+    "edge_ops": [
+      {
+        "op": "ADD_EDGE",
+        "source": "ts-preserve-service",
+        "target": "pod:ts-preserve-service-7d5dddf58d-wctgc",
+        "old_source": "ts-preserve-service",
+        "old_target": "pod:ts-preserve-service-7d5dddf58d-wctgc",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:ts-preserve-service->pod:ts-preserve-service-7d5dddf58d-wctgc"
+        ]
+      }
+    ],
+    "weight_ops": [],
+    "state_transfer": {},
+    "evidence": [
+      "during:pod:ts-preserve-service-7d5dddf58d-hz55x",
+      "during:ts-preserve-service->pod:ts-preserve-service-7d5dddf58d-wctgc"
+    ]
+  }
+}

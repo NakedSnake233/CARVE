@@ -1,0 +1,11 @@
+{
+  "purpose": "supporting-read-only-deterministic-fact-extraction",
+  "tool": "spawn_agent",
+  "agent_id": "/root/matched_interruption_audit/recompute_noaction",
+  "review_role": false,
+  "prompt": "Read-only deterministic verification subtask for fresh experiment-audit. No network/Kubernetes/Ansible/runtime calls. Read scripts/e2r/run_recovery_matched_block.py, scripts/e2r/run_recovery_sanity.py, rca_bench/recovery_oracle.py, frozen experiments/e2r/recovery_matched_cpu_protocol_v1.json, baseline experiments/e2r/runs/recovery_baseline_v2/baseline.json and raw experiments/e2r/runs/recovery_matched_frontend_cpu_v1/episodes/00_no_action.json. Independently recompute ALL saved windows from raw requests, latency mean/p95, throughput/errors/window durations, threshold/deadline/liveness/UID fields, raw technical and oracle and cleanup/runtime stability fields. Inspect relevant metric source line by line. Write deterministic verifier and JSON output only under experiments/e2r/runs/recovery_matched_frontend_cpu_v1/audit_v1/recompute_noaction.py and recompute_noaction.json, do not modify original source/results. Report exact numbers, mismatches and file:line evidence. This is fact extraction, not a separate semantic verdict.",
+  "followups": [
+    "Please also recompute immutable baseline aggregate (6 windows/900 samples) and each baseline raw metric if feasible to validate actual thresholds. Note raw lists are sorted per-request latency observations plus aggregate successes, not status/timestamp per-request logs. Report this precision/limit. All deadline raw ages are recorded monotonic values; do not imply independent recomputation of clocks from per-request timestamps absent from artifacts.",
+    "Please finish with concise numeric summary soon; main 116-check typed/accounting verifier done, report drafting. Include location and exact check counts/mismatches. Need no new tests, just artifact recomputation."
+  ]
+}

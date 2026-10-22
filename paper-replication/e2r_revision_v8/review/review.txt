@@ -1,0 +1,107 @@
+review1
+Weaknesses
+The contributions of major design components are unclear.
+
+Limited scope of evaluation.
+
+Some technical details are missing or contradicting.
+
+Detailed comments for authors
+The contributions of major design components of E2R are unclear. E2R combines rich observability inputs, graph-patch construction, a fixed graph scorer, LLM planning, evidence-bound reranking, deterministic fallback rules, and constrained recovery actions. The current evaluation does not sufficiently isolate the contribution of these components. For example, it is not clear if the GraphPatchPlans are useful. It would be better to perform an experiment with Same telemetry + Same LLM, but no GraphPatchPlans, versus full E2R.
+
+The paper should clarify whether E2R and all baselines receive identical metrics, active probes, traces, topology information, candidate sets, and safety policies; otherwise, the RCA and remediation comparisons may not be fully comparable.
+
+The recovery capability is constrained by a predefined graph-operation language, a finite set of fault categories, and typed repair runbooks. While this design improves safety, the evaluation does not establish whether E2R can handle unseen, composite, or open-ended operational failures.
+
+The evaluation covers only Online Boutique, TrainTicket, and seven controlled fault types. It lacks validation on other types of faults (e.g., multi-root incidents, concurrent failures, stateful dependencies, and production environments).
+
+The reported end-to-end latency includes a fixed 40-second settling and restoration overhead, making it difficult to quantify the actual costs of RCA, LLM planning, Ansible execution, and verification separately.
+
+Table III reports AC@5 < AC@3 for mABC on TrainTicket under all three LLM configurations, contradicting Equation (6). Please clarify it and discuss whether it affects the comparative conclusions.
+
+Questions for authors’ response
+Can the authors provide controlled ablations isolating the contribution of each major E2R design component?
+
+How does E2R handle failures outside the predefined operation/fault taxonomy?
+
+Are the AC@5 and AC@3 results in Table III correct?
+
+review2
+Weaknesses
+– Cost-efficiency is largely neglected, although the framework appears to require many LLM calls per incident. This is important for assessing practical applicability. Scalability could also have been discussed.
+
+– The evaluated applications are standard academic benchmarks and may be far from realistic production-scale microservice systems.
+
+– Several modules and experimental choices are under-specified
+
+Detailed comments for authors
+Novelty.
+
+The novelty is acceptable. The individual building blocks are not new, but the paper integrates RCA and remediation into a single LLM-based multi-agent pipeline. In particular, the transition from evidence collection and ranking to recovery planning, validation, and playbook generation provides a reasonably distinctive end-to-end contribution.
+
+Impact and rigor.
+
+The proposed framework has potentially high practical impact, but some important aspects of the evaluation require clarification.
+
+– Cost and efficiency. The paper does not provide a sufficiently detailed cost-efficiency analysis. This is a significant limitation because the proposed workflow appears to require multiple LLM calls for each incident. A slightly less accurate RCA or recovery approach may still be preferable if it is substantially cheaper. The paper should therefore report and discuss inference cost and number of LLM calls, and ideally compare these quantities with LLM-based and non-LLM-based baselines. Scalability with the number of services and telemetry sources should also be considered.
+
+– Workload characterization. What workload is executed on TrainTicket and Online Boutique during the experiments? The paper describes the injected faults, but the application workload under which these faults are exercised is not sufficiently clear. Since the observability signals and fault propagation strongly depend on workload, this information is important for reproducibility and interpretation of the results.
+
+– Representativeness of the subjects. Online Boutique and TrainTicket are widely used research benchmarks, and their use is reasonable. However, they remain much smaller and more controlled than many production microservice systems. The paper should discuss how this affects generalizability, especially in terms of system scale, topology complexity, telemetry volume, and concurrent failures.
+
+– Some key parts of the recovery pipeline require more precise explanation. For example, it is unclear how the safety-review agent evaluates the “post-repair state,” what exactly constitutes a plan that “lacks evidence references,” and how an “unmeasurable verification predicate” is detected. A concrete running example, from diagnosis through proposed actions to verification, would substantially improve clarity.
+
+– Fault-injection protocol. The construction of the 760-incident dataset should be described in more detail. In particular, how many faults are injected for each fault category, where are they injected, and which Chaos Mesh configuration parameters are varied. The injection location, duration, magnitude, and affected resources can all substantially influence the observed behavior.
+
+– Recovery action model. The recovery action space includes restart, restore, rebalance, and scale operations at node, edge, or weight level. Some of these concepts are too broadly defined. In particular, “rebalance” and “scale” can correspond to several different mechanisms and policies. The paper should specify how these actions are instantiated and executed.
+
+– An anonymous replication package is linked to the submission, but it seems to be empty
+
+Presentation.
+
+– The paper is generally well written, but some concepts central to the recovery phase should be introduced earlier and explained more concretely. – The introductory statement “as reflected by widely used benchmark applications and suites such as Online Boutique, TrainTicket, and DeathStarBench” is not a convincing motivation for the relevance of the problem. The popularity of academic benchmarks does not demonstrate the practical importance of RCA and recovery in production microservice systems. T
+
+Questions for authors’ response
+Q1. Are the recovery actions included in the action model assumed to cover all fault categories used in the fault-injection campaign? If so, how was this mapping established?
+
+Q2. How is the post-repair oracle defined?
+
+Q3. What workload is used during the TrainTicket and Online Boutique experiments?
+
+Q4. Is a replication package available? Please check the linked repo.
+
+review3
+Rigor
+
+The RCA graph constructed in this paper does not appear fundamentally different from graphs used in previous approaches, and the RCA models are also based on graph neural networks. However, the paper introduces many unclear terms to describe the graph construction and update process, making the method unnecessarily difficult to understand.
+
+The predefined remediation actions are too simplistic and may only recover a subset of failures. The authors should clearly specify the scope of failures that can be remediated and explain why these particular actions were selected. Moreover, applying such remediation actions in production environments may introduce substantial risks. How does the proposed approach avoid or control these risks?
+
+The motivation lacks supporting examples or statistical evidence, and the connection between the motivation and the proposed method is not sufficiently clear.
+
+The paper does not compare E2R with more recent graph-based RCA approaches or RCA Agent methods.
+
+The paper does not explain how the domain knowledge and predefined rules required by the method are implemented in the experiments.
+
+Relevance
+
+This paper is relevant to AIOps, and integrating root cause analysis with automated remediation is also meaningful. The work may attract interest from both academia and industry. However, the current solution still has significant limitations and requires further improvement.
+
+Verifiability & Transparency
+
+The replication package contains only an empty README and does not provide the source code or experimental data. In addition, the paper provides insufficient details about the method, benchmark construction, and experimental setup. As a result, the reported results are difficult to verify and reproduce.
+
+The proposed method relies on predefined remediation actions, but it remains unclear whether these actions can be applied to different types of failures.
+
+Presentation
+
+The presentation needs substantial improvement. The paper contains many unclear terms and redundant descriptions, and several figures appear to be AI-generated.
+
+Artifact assessment
+1. 
+Unsatisfactory, e.g., the artifacts are unavailable while the authors declared their availability [OR] the authors explained why the artifacts are not available, but I do not find the explanation to be reasonable [OR] the artifacts do not contain what is declared in the submission form or the paper.
+
+Questions for authors’ response
+What are the fundamental differences between the graph constructed in this paper and the graphs used in existing RCA approaches?
+
+What types of failures can be handled by the predefined remediation actions in E2R?

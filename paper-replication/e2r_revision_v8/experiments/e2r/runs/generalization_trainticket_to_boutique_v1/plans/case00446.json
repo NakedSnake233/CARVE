@@ -1,0 +1,147 @@
+{
+  "catalog": [
+    {
+      "id": "op0000",
+      "group": "edge_ops",
+      "operation": {
+        "op": "REMOVE_EDGE",
+        "source": "shippingservice",
+        "target": "pod:shippingservice-6c84c75b8d-jnjqf",
+        "evidence": [
+          "topology_diff:shippingservice->pod:shippingservice-6c84c75b8d-jnjqf"
+        ]
+      },
+      "evidence_id": "topology_diff:shippingservice->pod:shippingservice-6c84c75b8d-jnjqf",
+      "requires": []
+    },
+    {
+      "id": "op0001",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "cartservice",
+        "target": "shippingservice",
+        "edge_type": "dependency",
+        "weight": 1.0,
+        "evidence": [
+          "during:cartservice->shippingservice"
+        ]
+      },
+      "evidence_id": "during:cartservice->shippingservice",
+      "requires": []
+    },
+    {
+      "id": "op0002",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "shippingservice",
+        "target": "pod:cartservice-5967c9cd9b-2czh7",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "evidence": [
+          "during:shippingservice->pod:cartservice-5967c9cd9b-2czh7"
+        ]
+      },
+      "evidence_id": "during:shippingservice->pod:cartservice-5967c9cd9b-2czh7",
+      "requires": []
+    },
+    {
+      "id": "op0003",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_TRACE_MISMATCH_EDGE",
+        "source": "shippingservice",
+        "target": "cartservice",
+        "edge_type": "endpoint_mismatch",
+        "weight": 1.0,
+        "evidence": [
+          "endpoint_owner:shippingservice:10.244.2.45"
+        ]
+      },
+      "evidence_id": "endpoint_owner:shippingservice:10.244.2.45",
+      "requires": []
+    }
+  ],
+  "plan": {
+    "experiment_id": "case00446",
+    "change_type": "observation_supported_updates",
+    "confidence": 0.0,
+    "causal_role": "not_inferred",
+    "node_ops": [],
+    "edge_ops": [
+      {
+        "op": "REMOVE_EDGE",
+        "source": "shippingservice",
+        "target": "pod:shippingservice-6c84c75b8d-jnjqf",
+        "old_source": "shippingservice",
+        "old_target": "pod:shippingservice-6c84c75b8d-jnjqf",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": null,
+        "attrs": {},
+        "evidence": [
+          "topology_diff:shippingservice->pod:shippingservice-6c84c75b8d-jnjqf"
+        ]
+      },
+      {
+        "op": "ADD_EDGE",
+        "source": "cartservice",
+        "target": "shippingservice",
+        "old_source": "cartservice",
+        "old_target": "shippingservice",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:cartservice->shippingservice"
+        ]
+      },
+      {
+        "op": "ADD_EDGE",
+        "source": "shippingservice",
+        "target": "pod:cartservice-5967c9cd9b-2czh7",
+        "old_source": "shippingservice",
+        "old_target": "pod:cartservice-5967c9cd9b-2czh7",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:shippingservice->pod:cartservice-5967c9cd9b-2czh7"
+        ]
+      },
+      {
+        "op": "ADD_TRACE_MISMATCH_EDGE",
+        "source": "shippingservice",
+        "target": "cartservice",
+        "old_source": "shippingservice",
+        "old_target": "cartservice",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "endpoint_mismatch",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "endpoint_owner:shippingservice:10.244.2.45"
+        ]
+      }
+    ],
+    "weight_ops": [],
+    "state_transfer": {},
+    "evidence": [
+      "topology_diff:shippingservice->pod:shippingservice-6c84c75b8d-jnjqf",
+      "during:cartservice->shippingservice",
+      "during:shippingservice->pod:cartservice-5967c9cd9b-2czh7",
+      "endpoint_owner:shippingservice:10.244.2.45"
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "call_number": 2,
+  "purpose": "baseline-runtime-sub-audit",
+  "timestamp": null,
+  "recorded_at": "2026-09-26T16:23:07.446201+00:00",
+  "tool": "collaboration.spawn_agent",
+  "model": "gpt-6-astra",
+  "reasoning_effort": "ultra",
+  "fork_turns": "all (inherited)",
+  "files_referenced": [
+    "experiments/e2r/isolated_boutique.yaml",
+    "experiments/e2r/isolated_environment.json",
+    "experiments/e2r/runs/recovery_baseline_v1/baseline.json",
+    "experiments/e2r/runs/recovery_baseline_v2/baseline.json"
+  ],
+  "prompt": "Read-only independent deterministic sub-audit for M4. Inspect experiments/e2r/isolated_boutique.yaml, isolated_environment.json, runs/recovery_baseline_v1/baseline.json, runs/recovery_baseline_v2/baseline.json. Recompute baseline metrics from every raw latency list; verify pre/post v2 pod UID/containerID/restart/ready, deployment/service identity, manifest last-applied template match, no-fault flags, v1-v2 changed sidecar only and intentional runtime reset. Do not use any network/Kubernetes/API/GPU or mutate implementation/results. Save your evidence/check summary to .aris/traces/experiment-audit/20260927_m4_sanity/baseline_runtime_checks.json and baseline_runtime_checks.md (create directory if needed). Give exact file:line references and caveats, hash inputs. Parent auditor will integrate your findings. No need to spawn further reviewers.",
+  "followup_messages": [
+    {
+      "sender": "/root/m4_sanity_audit/baseline_runtime_checks",
+      "message": "Baseline files have six raw arrays each (900 samples/run). I am recomputing all windows and pooled metrics plus snapshot/manifest diffs. Please send the implementation's percentile rule/aggregation reference if another sub-auditor already identifies it; I will independently compare order-statistic and interpolated definitions from raw data."
+    },
+    {
+      "sender": "/root/m4_sanity_audit",
+      "message": "Percentile/aggregation references: rca_bench/workload_oracle.py:155\u2013167 uses nearest-rank ceil(.95*n)-1 over all finite latency samples (not success-only), throughput successes/elapsed. scripts/e2r/run_recovery_baseline.py:118\u2013129 pools all latency lists for p95 and uses median(window throughput); baseline span includes inter-window gaps. Independently recomputed 247 checks across 20 windows/3000 samples with no failures. Please save your snapshot findings and exact line references; deliberate rollout is recorded in refine-logs/FULL_EXPERIMENT_CODE_REVIEW.md:666\u2013701 but do not infer sidecar cause of v2 prehealth p95."
+    },
+    {
+      "sender": "/root/m4_sanity_audit",
+      "message": "I am drafting final report now. Please send/save final artifacts soon with snapshot metrics and caveats. Current reviewer context has root confirming no separate contemporaneous v3 runtime snapshots. Baseline source unchanged; future workload_oracle raw-probe enhancement occurred after v3 and is explicitly excluded."
+    }
+  ]
+}

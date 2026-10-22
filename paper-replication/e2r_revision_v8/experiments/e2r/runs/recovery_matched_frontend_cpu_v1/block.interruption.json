@@ -1,0 +1,78 @@
+{
+  "schema": "e2r_interrupted_block_finalization_v1",
+  "source_run": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1",
+  "source_hashes": {
+    "block.json": "59f875fffb5ffdbc55f823e617ffa18963323d02aa4e0605f27dcf8b72c5d925",
+    "00_no_action.json": "ab2ddd9dac089013b11b5e5b97e8a062bb6006985230b1469649113f7c714a0e",
+    "01_typed_cleanup.json": "bb7f73d828bd44eb5fd90e68ded1796d7bffcb46c79c910473de779b0092f00d"
+  },
+  "status": "failed_interrupted",
+  "planned_episode_count": 2,
+  "episode_attempts_started": 2,
+  "injection_attempts": 2,
+  "confirmed_fault_injections": 2,
+  "injection_unknown_outcomes": 0,
+  "repair_process_invocations": 1,
+  "repair_process_unknown_outcomes": 0,
+  "confirmed_repair_mutations": 1,
+  "oracle_statuses": [
+    "FAIL",
+    null
+  ],
+  "complete_matched_pairs": 0,
+  "no_action_complete": true,
+  "typed_episode_interrupted": true,
+  "typed_in_flight_evaluation_requests_unknown": true,
+  "valid_matched_comparison": false,
+  "rerun_or_replacement_authorized": false,
+  "late_fault_absence": {
+    "e2r-matched-cpu-noaction": {
+      "probe": {
+        "argv": [
+          "kubectl",
+          "get",
+          "stresschaos",
+          "e2r-matched-cpu-noaction",
+          "-n",
+          "e2r-supplement-20260925",
+          "-o",
+          "json"
+        ],
+        "returncode": 1,
+        "stdout": "",
+        "stderr": "Error from server (NotFound): stresschaos.chaos-mesh.org \"e2r-matched-cpu-noaction\" not found",
+        "client_context": {
+          "kubeconfig": "/etc/rancher/k3s/k3s.yaml"
+        }
+      },
+      "absent": true
+    },
+    "e2r-matched-cpu-typed": {
+      "probe": {
+        "argv": [
+          "kubectl",
+          "get",
+          "stresschaos",
+          "e2r-matched-cpu-typed",
+          "-n",
+          "e2r-supplement-20260925",
+          "-o",
+          "json"
+        ],
+        "returncode": 1,
+        "stdout": "",
+        "stderr": "Error from server (NotFound): stresschaos.chaos-mesh.org \"e2r-matched-cpu-typed\" not found",
+        "client_context": {
+          "kubeconfig": "/etc/rancher/k3s/k3s.yaml"
+        }
+      },
+      "absent": true
+    }
+  },
+  "late_runtime_matches_block_start": null,
+  "finalized_at": 1790475739.006009,
+  "limits": [
+    "This sidecar terminalizes accounting without altering source artifacts.",
+    "Late state cannot fill missing typed evaluation/technical/oracle/cleanup fields."
+  ]
+}

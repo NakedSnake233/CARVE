@@ -1,0 +1,128 @@
+{
+  "catalog": [
+    {
+      "id": "op0000",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:currencyservice-v2-646cc88594-p78d6",
+        "attrs": {
+          "type": "pod",
+          "service": "currencyservice",
+          "version": "v2.0.0"
+        },
+        "evidence": [
+          "during:pod:currencyservice-v2-646cc88594-p78d6"
+        ]
+      },
+      "evidence_id": "during:pod:currencyservice-v2-646cc88594-p78d6",
+      "requires": []
+    },
+    {
+      "id": "op0001",
+      "group": "edge_ops",
+      "operation": {
+        "op": "REMOVE_EDGE",
+        "source": "currencyservice",
+        "target": "pod:currencyservice-84754ffd69-9rwwm",
+        "evidence": [
+          "topology_diff:currencyservice->pod:currencyservice-84754ffd69-9rwwm"
+        ]
+      },
+      "evidence_id": "topology_diff:currencyservice->pod:currencyservice-84754ffd69-9rwwm",
+      "requires": []
+    },
+    {
+      "id": "op0002",
+      "group": "node_ops",
+      "operation": {
+        "op": "SPLIT_NODE",
+        "parent": "currencyservice",
+        "children": [
+          "currencyservice:unversioned",
+          "currencyservice:v2.0.0"
+        ],
+        "attrs": {
+          "type": "version",
+          "service": "currencyservice"
+        },
+        "evidence": [
+          "version_coexistence:currencyservice"
+        ]
+      },
+      "evidence_id": "version_coexistence:currencyservice",
+      "requires": []
+    }
+  ],
+  "plan": {
+    "experiment_id": "case00593",
+    "change_type": "observation_supported_updates",
+    "confidence": 0.0,
+    "causal_role": "not_inferred",
+    "node_ops": [
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:currencyservice-v2-646cc88594-p78d6",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "currencyservice",
+          "version": "v2.0.0"
+        },
+        "evidence": [
+          "during:pod:currencyservice-v2-646cc88594-p78d6"
+        ]
+      },
+      {
+        "op": "SPLIT_NODE",
+        "node_id": "",
+        "old_node": "",
+        "new_node": "",
+        "parent": "currencyservice",
+        "children": [
+          "currencyservice:unversioned",
+          "currencyservice:v2.0.0"
+        ],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "version",
+          "service": "currencyservice"
+        },
+        "evidence": [
+          "version_coexistence:currencyservice"
+        ]
+      }
+    ],
+    "edge_ops": [
+      {
+        "op": "REMOVE_EDGE",
+        "source": "currencyservice",
+        "target": "pod:currencyservice-84754ffd69-9rwwm",
+        "old_source": "currencyservice",
+        "old_target": "pod:currencyservice-84754ffd69-9rwwm",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": null,
+        "attrs": {},
+        "evidence": [
+          "topology_diff:currencyservice->pod:currencyservice-84754ffd69-9rwwm"
+        ]
+      }
+    ],
+    "weight_ops": [],
+    "state_transfer": {},
+    "evidence": [
+      "during:pod:currencyservice-v2-646cc88594-p78d6",
+      "topology_diff:currencyservice->pod:currencyservice-84754ffd69-9rwwm",
+      "version_coexistence:currencyservice"
+    ]
+  }
+}

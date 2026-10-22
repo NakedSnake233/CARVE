@@ -1,0 +1,86 @@
+{
+  "schema": "e2r_interruption_sidecar_v1",
+  "source_path": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/episodes/01_typed_cleanup.json",
+  "source_sha256": "bb7f73d828bd44eb5fd90e68ded1796d7bffcb46c79c910473de779b0092f00d",
+  "status": "interrupted_after_typed_repair_before_recorded_evaluation_completion",
+  "valid_recovery_outcome": false,
+  "valid_matched_comparison_member": false,
+  "saved_evaluation_window_count": 0,
+  "in_flight_evaluation_requests_unknown": true,
+  "saved_oracle_status": null,
+  "repair_process_attempted": true,
+  "repair_executed": true,
+  "late_observation_captured_at": 1790475739.006009,
+  "repair_completion_wall_time_reconstructed_from_trace": 1790441515.6804256,
+  "late_observation_delay_from_repair_seconds": 34223.32558345795,
+  "late_fault_absence": {
+    "e2r-matched-cpu-noaction": {
+      "probe": {
+        "argv": [
+          "kubectl",
+          "get",
+          "stresschaos",
+          "e2r-matched-cpu-noaction",
+          "-n",
+          "e2r-supplement-20260925",
+          "-o",
+          "json"
+        ],
+        "returncode": 1,
+        "stdout": "",
+        "stderr": "Error from server (NotFound): stresschaos.chaos-mesh.org \"e2r-matched-cpu-noaction\" not found",
+        "client_context": {
+          "kubeconfig": "/etc/rancher/k3s/k3s.yaml"
+        }
+      },
+      "absent": true
+    },
+    "e2r-matched-cpu-typed": {
+      "probe": {
+        "argv": [
+          "kubectl",
+          "get",
+          "stresschaos",
+          "e2r-matched-cpu-typed",
+          "-n",
+          "e2r-supplement-20260925",
+          "-o",
+          "json"
+        ],
+        "returncode": 1,
+        "stdout": "",
+        "stderr": "Error from server (NotFound): stresschaos.chaos-mesh.org \"e2r-matched-cpu-typed\" not found",
+        "client_context": {
+          "kubeconfig": "/etc/rancher/k3s/k3s.yaml"
+        }
+      },
+      "absent": true
+    }
+  },
+  "late_pod_probe": {
+    "argv": [
+      "kubectl",
+      "get",
+      "pods",
+      "-n",
+      "e2r-supplement-20260925",
+      "-o",
+      "json"
+    ],
+    "returncode": 1,
+    "stdout": "{\n    \"apiVersion\": \"v1\",\n    \"items\": [],\n    \"kind\": \"List\",\n    \"metadata\": {\n        \"resourceVersion\": \"\"\n    }\n}",
+    "stderr": "error: You must be logged in to the server (Unauthorized)",
+    "client_context": {
+      "kubeconfig": "${SCOPED_KUBECONFIG}"
+    }
+  },
+  "late_pods": null,
+  "late_runtime": null,
+  "late_runtime_observation_error": null,
+  "late_runtime_matches_block_start": null,
+  "limits": [
+    "Late observations are not contemporaneous cleanup or recovery evidence.",
+    "Original partial episode JSON is unchanged and remains authoritative.",
+    "The episode cannot be rerun/replaced under the frozen block."
+  ]
+}

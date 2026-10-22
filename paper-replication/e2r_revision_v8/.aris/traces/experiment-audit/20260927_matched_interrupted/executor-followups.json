@@ -1,0 +1,10 @@
+[
+  {
+    "from": "/root",
+    "message": "Sidecar-only terminalization completed under code-review PASS. Original hashes unchanged. New sidecars: block.interruption.json SHA100b1f4d1e28a06e67a7b0eff0e15b0f45c6c1ad8925a998e7181bb07a64daf4; typed interruption SHA5f0e12cb8aad3b33dabf5c4ad0c3dd22a36c2fe3bdd469dfe80f80cb4f0f7006. Both late Chaos GETs raw NotFound. Scoped token expired, so late pod probe raw rc1 Unauthorized and runtime_match=null; do not use earlier root-tool health as artifact evidence. Local immutable analysis at analysis_v1/analysis.json + REPORT.md recomputes saved windows and marks comparison invalid/complete_pairs0."
+  },
+  {
+    "from": "/root",
+    "message": "Tracker just updated: R042 ONE_CONTROL_COMPLETE_AUDIT_PENDING; R043 MATCHED_BLOCK_INTERRUPTED_INVALID (typed delete rc0, no complete eval/oracle, complete pairs0/no rerun); R050 matched audit running. Please re-read current tracker before final stale-status verdict."
+  }
+]

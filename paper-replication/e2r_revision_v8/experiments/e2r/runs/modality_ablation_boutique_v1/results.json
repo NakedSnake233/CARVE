@@ -1,0 +1,71 @@
+{
+  "status": "completed_observation_deletion_ablation",
+  "app": "boutique",
+  "test_incidents": 59,
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "summary": {
+    "full": {
+      "rows": 177,
+      "incidents": 59,
+      "AC@1": 0.8926553672316384,
+      "AC@3": 0.9548022598870056,
+      "AC@5": 0.9830508474576272,
+      "MRR": 0.9261770244821093,
+      "materialization_seconds": 0.18996286299079657,
+      "inference_seconds": 0.34082331135869026
+    },
+    "no_log": {
+      "rows": 177,
+      "incidents": 59,
+      "AC@1": 0.8983050847457628,
+      "AC@3": 0.943502824858757,
+      "AC@5": 0.9830508474576272,
+      "MRR": 0.9280602636534839,
+      "materialization_seconds": 0.13524837978184223,
+      "inference_seconds": 0.11737825628370047
+    },
+    "no_trace_features": {
+      "rows": 177,
+      "incidents": 59,
+      "AC@1": 0.807909604519774,
+      "AC@3": 0.8870056497175142,
+      "AC@5": 0.96045197740113,
+      "MRR": 0.8657788539144474,
+      "materialization_seconds": 0.13386600650846958,
+      "inference_seconds": 0.12236465653404593
+    },
+    "no_metric_features": {
+      "rows": 177,
+      "incidents": 59,
+      "AC@1": 0.5480225988700564,
+      "AC@3": 0.7288135593220338,
+      "AC@5": 0.7627118644067796,
+      "MRR": 0.6689960541655456,
+      "materialization_seconds": 0.13406337331980467,
+      "inference_seconds": 0.11700427997857332
+    },
+    "topology_only": {
+      "rows": 177,
+      "incidents": 59,
+      "AC@1": 0.6045197740112994,
+      "AC@3": 0.864406779661017,
+      "AC@5": 0.9491525423728814,
+      "MRR": 0.7366632425954462,
+      "materialization_seconds": 0.1222903779707849,
+      "inference_seconds": 0.11646487796679139
+    }
+  },
+  "runtime": {
+    "device": "cuda:0",
+    "torch": "2.11.0+cu130",
+    "cuda_runtime": "13.0"
+  },
+  "limits": [
+    "Saved compact call_edges do not identify whether an edge came from metrics or traces; no_trace_features retains call_edges.",
+    "This is frozen-scorer input deletion, not retraining for each modality."
+  ]
+}

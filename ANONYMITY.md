@@ -1,9 +1,9 @@
 # Anonymity and export handling
 
-The review ZIP contains no `.git` directory, commit history, SSH configuration, personal credentials, Python bytecode/cache, or local virtual environment. Personal source-path defaults were replaced in this distribution copy; original working files were preserved. Review commands operate on the distributed source root.
+The distributed file tree contains no SSH configuration, personal credentials, Python bytecode/cache, or local virtual environment. Personal source-path defaults were replaced in this distribution copy; original working files were preserved. Review commands operate on the distributed source root.
 
-Current source files and nested historical archive/checkpoint members were checked for known personal identifiers, credential patterns and private source-path markers. The outer review ZIP uses uniform timestamps and permissions and empty comments/extra fields. Historical v8 bytes are unchanged; its existing normalized metadata and members are inspected separately.
+Current source files and historical archive/checkpoint members were checked for known personal identifiers, credential patterns and private source-path markers before publication. Historical v8 files are now expanded for direct browsing; every member's bytes and the internal integrity manifest remain unchanged. Native model checkpoint serialization is retained. Original archive checksums in historical records refer to provenance only.
 
-Git hosting is a transport, not an anonymous reviewer identity. Its repository owner and profile remain visible. Use the downloadable ZIP as a submission attachment; do not use the personal repository URL as an anonymous review link. The separately pushed branch starts with an anonymous root commit, but that does not anonymize the hosting account.
+Use the configured Anonymous GitHub mirror as the reviewer entry point. Confirm its selected branch and commit after a source update, then inspect the visible files and links. Source hosting owner/profile and existing Git history remain identifying; they are not part of the anonymous review interface. Updating the source repository does not by itself prove that an existing anonymous mirror has refreshed.
 
 Original third-party attribution is retained; dependency authors are not treated as this submission's authors. The export adds no new license and preserves negative/unknown experimental records. A marker scan cannot guarantee immunity to all content-based reidentification.

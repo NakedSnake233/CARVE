@@ -1,0 +1,165 @@
+{
+  "catalog": [
+    {
+      "id": "op0000",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-preserve-service-v2-5df5dc5658-t95lg",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-preserve-service",
+          "version": "v2.0.0"
+        },
+        "evidence": [
+          "during:pod:ts-preserve-service-v2-5df5dc5658-t95lg"
+        ]
+      },
+      "evidence_id": "during:pod:ts-preserve-service-v2-5df5dc5658-t95lg",
+      "requires": []
+    },
+    {
+      "id": "op0001",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "ts-order-other-service",
+        "target": "pod:ts-order-other-service-67cf586847-tcw4n",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "evidence": [
+          "during:ts-order-other-service->pod:ts-order-other-service-67cf586847-tcw4n"
+        ]
+      },
+      "evidence_id": "during:ts-order-other-service->pod:ts-order-other-service-67cf586847-tcw4n",
+      "requires": []
+    },
+    {
+      "id": "op0002",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "ts-preserve-service",
+        "target": "pod:ts-preserve-service-v2-5df5dc5658-t95lg",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "evidence": [
+          "during:ts-preserve-service->pod:ts-preserve-service-v2-5df5dc5658-t95lg"
+        ]
+      },
+      "evidence_id": "during:ts-preserve-service->pod:ts-preserve-service-v2-5df5dc5658-t95lg",
+      "requires": [
+        "op0000"
+      ]
+    },
+    {
+      "id": "op0003",
+      "group": "node_ops",
+      "operation": {
+        "op": "SPLIT_NODE",
+        "parent": "ts-preserve-service",
+        "children": [
+          "ts-preserve-service:unversioned",
+          "ts-preserve-service:v2.0.0"
+        ],
+        "attrs": {
+          "type": "version",
+          "service": "ts-preserve-service"
+        },
+        "evidence": [
+          "version_coexistence:ts-preserve-service"
+        ]
+      },
+      "evidence_id": "version_coexistence:ts-preserve-service",
+      "requires": []
+    }
+  ],
+  "plan": {
+    "experiment_id": "case00741",
+    "change_type": "observation_supported_updates",
+    "confidence": 0.0,
+    "causal_role": "not_inferred",
+    "node_ops": [
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-preserve-service-v2-5df5dc5658-t95lg",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-preserve-service",
+          "version": "v2.0.0"
+        },
+        "evidence": [
+          "during:pod:ts-preserve-service-v2-5df5dc5658-t95lg"
+        ]
+      },
+      {
+        "op": "SPLIT_NODE",
+        "node_id": "",
+        "old_node": "",
+        "new_node": "",
+        "parent": "ts-preserve-service",
+        "children": [
+          "ts-preserve-service:unversioned",
+          "ts-preserve-service:v2.0.0"
+        ],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "version",
+          "service": "ts-preserve-service"
+        },
+        "evidence": [
+          "version_coexistence:ts-preserve-service"
+        ]
+      }
+    ],
+    "edge_ops": [
+      {
+        "op": "ADD_EDGE",
+        "source": "ts-order-other-service",
+        "target": "pod:ts-order-other-service-67cf586847-tcw4n",
+        "old_source": "ts-order-other-service",
+        "old_target": "pod:ts-order-other-service-67cf586847-tcw4n",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:ts-order-other-service->pod:ts-order-other-service-67cf586847-tcw4n"
+        ]
+      },
+      {
+        "op": "ADD_EDGE",
+        "source": "ts-preserve-service",
+        "target": "pod:ts-preserve-service-v2-5df5dc5658-t95lg",
+        "old_source": "ts-preserve-service",
+        "old_target": "pod:ts-preserve-service-v2-5df5dc5658-t95lg",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:ts-preserve-service->pod:ts-preserve-service-v2-5df5dc5658-t95lg"
+        ]
+      }
+    ],
+    "weight_ops": [],
+    "state_transfer": {},
+    "evidence": [
+      "during:pod:ts-preserve-service-v2-5df5dc5658-t95lg",
+      "during:ts-order-other-service->pod:ts-order-other-service-67cf586847-tcw4n",
+      "during:ts-preserve-service->pod:ts-preserve-service-v2-5df5dc5658-t95lg",
+      "version_coexistence:ts-preserve-service"
+    ]
+  }
+}

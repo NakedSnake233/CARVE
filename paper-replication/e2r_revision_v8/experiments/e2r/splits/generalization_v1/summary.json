@@ -1,0 +1,32 @@
+{
+  "lofo_T1": {
+    "train": 425,
+    "val": 87,
+    "test": 29
+  },
+  "lofo_T2": {
+    "train": 460,
+    "val": 94,
+    "test": 22
+  },
+  "lofo_T3": {
+    "train": 425,
+    "val": 87,
+    "test": 29
+  },
+  "lofo_T4": {
+    "train": 388,
+    "val": 80,
+    "test": 36
+  },
+  "boutique_to_trainticket": {
+    "train": 282,
+    "val": 59,
+    "test": 57
+  },
+  "trainticket_to_boutique": {
+    "train": 284,
+    "val": 57,
+    "test": 59
+  }
+}

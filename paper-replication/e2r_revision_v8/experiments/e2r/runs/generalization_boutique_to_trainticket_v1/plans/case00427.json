@@ -1,0 +1,147 @@
+{
+  "catalog": [
+    {
+      "id": "op0000",
+      "group": "edge_ops",
+      "operation": {
+        "op": "REMOVE_EDGE",
+        "source": "recommendationservice",
+        "target": "pod:recommendationservice-5dc8b478f6-tvdcz",
+        "evidence": [
+          "topology_diff:recommendationservice->pod:recommendationservice-5dc8b478f6-tvdcz"
+        ]
+      },
+      "evidence_id": "topology_diff:recommendationservice->pod:recommendationservice-5dc8b478f6-tvdcz",
+      "requires": []
+    },
+    {
+      "id": "op0001",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "checkoutservice",
+        "target": "recommendationservice",
+        "edge_type": "dependency",
+        "weight": 1.0,
+        "evidence": [
+          "during:checkoutservice->recommendationservice"
+        ]
+      },
+      "evidence_id": "during:checkoutservice->recommendationservice",
+      "requires": []
+    },
+    {
+      "id": "op0002",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "recommendationservice",
+        "target": "pod:checkoutservice-78cf67b9fc-c92xk",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "evidence": [
+          "during:recommendationservice->pod:checkoutservice-78cf67b9fc-c92xk"
+        ]
+      },
+      "evidence_id": "during:recommendationservice->pod:checkoutservice-78cf67b9fc-c92xk",
+      "requires": []
+    },
+    {
+      "id": "op0003",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_TRACE_MISMATCH_EDGE",
+        "source": "recommendationservice",
+        "target": "checkoutservice",
+        "edge_type": "endpoint_mismatch",
+        "weight": 1.0,
+        "evidence": [
+          "endpoint_owner:recommendationservice:10.244.1.136"
+        ]
+      },
+      "evidence_id": "endpoint_owner:recommendationservice:10.244.1.136",
+      "requires": []
+    }
+  ],
+  "plan": {
+    "experiment_id": "case00427",
+    "change_type": "observation_supported_updates",
+    "confidence": 0.0,
+    "causal_role": "not_inferred",
+    "node_ops": [],
+    "edge_ops": [
+      {
+        "op": "REMOVE_EDGE",
+        "source": "recommendationservice",
+        "target": "pod:recommendationservice-5dc8b478f6-tvdcz",
+        "old_source": "recommendationservice",
+        "old_target": "pod:recommendationservice-5dc8b478f6-tvdcz",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": null,
+        "attrs": {},
+        "evidence": [
+          "topology_diff:recommendationservice->pod:recommendationservice-5dc8b478f6-tvdcz"
+        ]
+      },
+      {
+        "op": "ADD_EDGE",
+        "source": "checkoutservice",
+        "target": "recommendationservice",
+        "old_source": "checkoutservice",
+        "old_target": "recommendationservice",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:checkoutservice->recommendationservice"
+        ]
+      },
+      {
+        "op": "ADD_EDGE",
+        "source": "recommendationservice",
+        "target": "pod:checkoutservice-78cf67b9fc-c92xk",
+        "old_source": "recommendationservice",
+        "old_target": "pod:checkoutservice-78cf67b9fc-c92xk",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:recommendationservice->pod:checkoutservice-78cf67b9fc-c92xk"
+        ]
+      },
+      {
+        "op": "ADD_TRACE_MISMATCH_EDGE",
+        "source": "recommendationservice",
+        "target": "checkoutservice",
+        "old_source": "recommendationservice",
+        "old_target": "checkoutservice",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "endpoint_mismatch",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "endpoint_owner:recommendationservice:10.244.1.136"
+        ]
+      }
+    ],
+    "weight_ops": [],
+    "state_transfer": {},
+    "evidence": [
+      "topology_diff:recommendationservice->pod:recommendationservice-5dc8b478f6-tvdcz",
+      "during:checkoutservice->recommendationservice",
+      "during:recommendationservice->pod:checkoutservice-78cf67b9fc-c92xk",
+      "endpoint_owner:recommendationservice:10.244.1.136"
+    ]
+  }
+}

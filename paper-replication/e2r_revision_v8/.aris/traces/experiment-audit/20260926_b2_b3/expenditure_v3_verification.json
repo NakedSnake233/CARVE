@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "source": "accounting_v2_verification.json: independently verified all five raw campaign journals",
+  "exact_change": "Unreported usage changed from 0 to null and aggregate renamed reported volume; all other counts/arithmetic unchanged.",
+  "attempts": 705,
+  "reported_usage_attempts": 702,
+  "unknown_usage_attempts": 3,
+  "reported_cache_inclusive_volume": 10351081,
+  "provider_cost": null
+}

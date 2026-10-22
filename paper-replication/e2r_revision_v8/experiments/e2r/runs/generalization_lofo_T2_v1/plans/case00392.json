@@ -1,0 +1,14 @@
+{
+  "catalog": [],
+  "plan": {
+    "experiment_id": "case00392",
+    "change_type": "observation_supported_updates",
+    "confidence": 0.0,
+    "causal_role": "not_inferred",
+    "node_ops": [],
+    "edge_ops": [],
+    "weight_ops": [],
+    "state_transfer": {},
+    "evidence": []
+  }
+}

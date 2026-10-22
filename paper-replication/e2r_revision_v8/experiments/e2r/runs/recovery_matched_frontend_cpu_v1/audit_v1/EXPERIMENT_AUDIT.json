@@ -1,0 +1,621 @@
+{
+  "audit_skill": "experiment-audit",
+  "verdict": "WARN",
+  "reason_code": "interrupted_treatment_zero_complete_pairs",
+  "summary": "Saved control trajectory and typed deletion evidence are internally consistent; treatment recovery is unobserved. Matched comparison invalid, complete pairs 0. No fabricated or mismatched saved metric found; retain all attempts and null outcome.",
+  "audited_input_hashes": {
+    "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/block.json": "sha256:59f875fffb5ffdbc55f823e617ffa18963323d02aa4e0605f27dcf8b72c5d925",
+    "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/episodes/00_no_action.json": "sha256:ab2ddd9dac089013b11b5e5b97e8a062bb6006985230b1469649113f7c714a0e",
+    "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/episodes/01_typed_cleanup.json": "sha256:bb7f73d828bd44eb5fd90e68ded1796d7bffcb46c79c910473de779b0092f00d",
+    "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/block.interruption.json": "sha256:100b1f4d1e28a06e67a7b0eff0e15b0f45c6c1ad8925a998e7181bb07a64daf4",
+    "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/episodes/01_typed_cleanup.interruption.json": "sha256:5f0e12cb8aad3b33dabf5c4ad0c3dd22a36c2fe3bdd469dfe80f80cb4f0f7006",
+    "experiments/e2r/recovery_matched_cpu_protocol_v1.json": "sha256:b01798e4174651abf550bfe4f5f7f8d84c48c414e904ad5e26a5f2e8c8e7032d",
+    "experiments/e2r/runs/recovery_baseline_v2/baseline.json": "sha256:3957fa90acce446bd248c6e493c2374307454cc96d4644b99ec60fc04b84642d",
+    "experiments/e2r/isolated_boutique.yaml": "sha256:9150029373d00e9882b83922071d69c12bcd36b04af5cab16ea90a2caa0882bb",
+    "scripts/e2r/run_recovery_matched_block.py": "sha256:0a059ef91220358b4442215dd21b5488b91615a69dfd8338f64b47434d1c06ca",
+    "scripts/e2r/run_recovery_sanity.py": "sha256:c49e45199958c65284de9e62a4c2bac2a227659d0a46a1ec5f6b73ff0c47a42b",
+    "scripts/e2r/finalize_interrupted_matched_block.py": "sha256:f45bbb9266c70185fa829a169140945bf03230274b844216ace2b394c9ab5268",
+    "scripts/e2r/run_recovery_baseline.py": "sha256:080ec0a903b3dffc3f5378c23aed469f78c43f2166acb0c0393088ebe7c1c296",
+    "rca_bench/workload_oracle.py": "sha256:a206c8eb750975c33b977c93a7c0eaae0d30340ccf27e3ca34a05d177ce3d7e3",
+    "rca_bench/recovery_oracle.py": "sha256:6e2ac9775e726c5a36adc225cf8a6f11ec2efecd0363095ce476fffd512e9dc4",
+    "methods/PlanRCAThinkRemed/safety_guard.py": "sha256:d0ac1b465cd3d1d2eff9ecd33936246e5bfc2647199d5ff201d0292cb640233f",
+    "methods/PlanRCAThinkRemed/schemas.py": "sha256:6b3db2fe8664b50e84f66b0aadc5aa8758b6a6d316e689a5611d3f868dd7e721",
+    "methods/PlanRCAThinkRemed/playbook_generator_agent.py": "sha256:a025ddec725a19c1f958d41f26f537857ac17d0cb1bb7ff1ae1be63705bf4b38",
+    "methods/PlanRCAThinkRemed/repair_planner_agent.py": "sha256:892fc9f94cc068079b3df75168e8ed4508e0d67b960e941e7adae82062c61fc3",
+    "tests/e2r/test_recovery_matched_block.py": "sha256:29b831cec5934806f47df12472bc88e3faf553c312dcb9ebeff3210a29d6f8e6",
+    "tests/test_workload_oracle.py": "sha256:a5978e5f70da148d39e62ef3b2070f79e3db92ff5b432ce772fec317e778881c",
+    "refine-logs/FULL_EXPERIMENT_CODE_REVIEW.md": "sha256:5511d98d0e587034ca95bb27d39b6313dc237aa1fe356a34148f2b727275132d",
+    "refine-logs/EXPERIMENT_TRACKER.md": "sha256:65e2d192875920628146bc94a03c568937aa4cf0e9514fa9ac447e6cc7372c69",
+    "refine-logs/EXPERIMENT_PLAN.md": "sha256:5dfd5aaddc52ffe490220a6b24fabf4263590cedd3c9512c1d638ae5328a01f0",
+    "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/analysis_v1/analysis.json": "sha256:dd725f727b7b243ec88160b38a691bb7fd63e6866451ca391409d5c39f40794b",
+    "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/analysis_v1/REPORT.md": "sha256:950592e1607a5f89ae71ad7732d059a061b4673fd2847096ef6bf68d25c8be59",
+    "paper/sections/4_evaluation.tex": "sha256:fa365364796cd862893e6e992776d33c2f8e531ec063c826150fe11f50533a71",
+    "paper/sections/5_validation.tex": "sha256:91d4268203a1ef2224a385341c868b9d4812a73c5827310e5b154cc2cdeb36c4"
+  },
+  "deterministic_verification": {
+    "no_action_and_baseline_comparisons": 212,
+    "typed_accounting_binding_checks": 116,
+    "total_checks": 328,
+    "mismatches": 0,
+    "acceptance_status": "accepted",
+    "review_independence": "deterministic"
+  },
+  "verification_artifacts": [
+    "recompute_noaction.py",
+    "recompute_noaction.json",
+    "recompute_typed_and_accounting.py",
+    "recompute_typed_and_accounting.json"
+  ],
+  "trace_path": ".aris/traces/experiment-audit/20260927_matched_interrupted",
+  "agent_id": "/root/matched_interruption_audit",
+  "verdict_id": "/root/matched_interruption_audit:20260927_matched_interrupted",
+  "executor_model": "codex-gpt-6-astra",
+  "executor_family": "openai",
+  "reviewer_model": "gpt-6-astra",
+  "reviewer_family": "openai",
+  "reviewer_reasoning": "ultra",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "generated_at": "2026-09-27T02:33:20.767570+00:00",
+  "date": "2026-09-27",
+  "auditor": "gpt-6-astra-ultra",
+  "overall_verdict": "warn",
+  "integrity_status": "warn",
+  "integrity_blockers": [],
+  "comparison_status": "invalid",
+  "valid_matched_comparison": false,
+  "complete_matched_pairs": 0,
+  "accounting": {
+    "planned_episode_count": 2,
+    "episode_attempts_started": 2,
+    "injection_attempts": 2,
+    "confirmed_fault_injections": 2,
+    "injection_unknown_outcomes": 0,
+    "repair_process_invocations": 1,
+    "repair_process_unknown_outcomes": 0,
+    "confirmed_repair_mutations": 1,
+    "oracle_statuses": [
+      "FAIL",
+      null
+    ],
+    "complete_matched_pairs": 0
+  },
+  "saved_observations": {
+    "baseline_windows": 6,
+    "baseline_latency_observations": 900,
+    "control_windows": 5,
+    "control_latency_observations": 750,
+    "typed_windows": 2,
+    "typed_latency_observations": 300,
+    "matched_block_latency_observations": 1050,
+    "evaluation_windows_saved": {
+      "no_action": 3,
+      "typed_cleanup": 0
+    },
+    "evaluation_windows_planned": {
+      "no_action": 3,
+      "typed_cleanup": 3
+    },
+    "total_issued_including_inflight": "unknown"
+  },
+  "no_action": {
+    "valid_standalone_trajectory": true,
+    "status": "complete_expected",
+    "oracle_status": "FAIL",
+    "windows": [
+      {
+        "window_id": "no_action-pre",
+        "attempts": 150,
+        "successes_recorded": 150,
+        "errors_from_recorded_aggregate": 0,
+        "latency_count": 150,
+        "latency_mean_ms": 15.676435303563872,
+        "latency_p95_ms": 16.786579973995686,
+        "p95_rank_one_based": 143,
+        "latency_min_ms": 11.648186948150396,
+        "latency_max_ms": 43.06459706276655,
+        "throughput_rps": 4.99743826517097,
+        "error_rate": 0.0,
+        "monotonic_elapsed_seconds_recorded": 30.01537828799337,
+        "wall_duration_seconds": 30.015376806259155,
+        "wall_minus_monotonic_seconds": -1.4817342162132263e-06,
+        "state_canary_ok_recorded": true,
+        "start_time_recorded": 1790441202.4787774,
+        "end_time_recorded": 1790441232.4941542,
+        "evidence": [
+          "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/episodes/00_no_action.json:47",
+          "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/episodes/00_no_action.json:53"
+        ],
+        "business_threshold_checks": {
+          "error_rate_ok": true,
+          "p95_ok": true,
+          "throughput_ok": true,
+          "state_canary_ok_recorded": true
+        },
+        "p95_ratio_to_baseline": 0.9191531214316399
+      },
+      {
+        "window_id": "no_action-fault-validation",
+        "attempts": 150,
+        "successes_recorded": 150,
+        "errors_from_recorded_aggregate": 0,
+        "latency_count": 150,
+        "latency_mean_ms": 878.7293362586448,
+        "latency_p95_ms": 1359.6097487024963,
+        "p95_rank_one_based": 143,
+        "latency_min_ms": 360.1555861532688,
+        "latency_max_ms": 1999.7528200037777,
+        "throughput_rps": 4.876480284977113,
+        "error_rate": 0.0,
+        "monotonic_elapsed_seconds_recorded": 30.759890583809465,
+        "wall_duration_seconds": 30.75989055633545,
+        "wall_minus_monotonic_seconds": -2.7474015951156616e-08,
+        "state_canary_ok_recorded": true,
+        "start_time_recorded": 1790441262.7643569,
+        "end_time_recorded": 1790441293.5242474,
+        "evidence": [
+          "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/episodes/00_no_action.json:221",
+          "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/episodes/00_no_action.json:227"
+        ],
+        "business_threshold_checks": {
+          "error_rate_ok": true,
+          "p95_ok": false,
+          "throughput_ok": true,
+          "state_canary_ok_recorded": true
+        },
+        "p95_ratio_to_baseline": 74.44575049740314
+      },
+      {
+        "window_id": "no_action-evaluation-0",
+        "attempts": 150,
+        "successes_recorded": 150,
+        "errors_from_recorded_aggregate": 0,
+        "latency_count": 150,
+        "latency_mean_ms": 946.3970578213533,
+        "latency_p95_ms": 1500.6846310570836,
+        "p95_rank_one_based": 143,
+        "latency_min_ms": 302.85599594935775,
+        "latency_max_ms": 1700.5455228500068,
+        "throughput_rps": 4.83986119409073,
+        "error_rate": 0.0,
+        "monotonic_elapsed_seconds_recorded": 30.99262437177822,
+        "wall_duration_seconds": 30.99262285232544,
+        "wall_minus_monotonic_seconds": -1.5194527804851532e-06,
+        "state_canary_ok_recorded": true,
+        "start_time_recorded": 1790441294.130983,
+        "end_time_recorded": 1790441325.123606,
+        "evidence": [
+          "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/episodes/00_no_action.json:554",
+          "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/episodes/00_no_action.json:584",
+          "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/episodes/00_no_action.json:1249"
+        ],
+        "business_threshold_checks": {
+          "error_rate_ok": true,
+          "p95_ok": false,
+          "throughput_ok": true,
+          "state_canary_ok_recorded": true
+        },
+        "p95_ratio_to_baseline": 82.17033875020347
+      },
+      {
+        "window_id": "no_action-evaluation-1",
+        "attempts": 150,
+        "successes_recorded": 150,
+        "errors_from_recorded_aggregate": 0,
+        "latency_count": 150,
+        "latency_mean_ms": 904.3455117785683,
+        "latency_p95_ms": 1501.2616850435734,
+        "p95_rank_one_based": 143,
+        "latency_min_ms": 364.97038789093494,
+        "latency_max_ms": 1763.494599610567,
+        "throughput_rps": 4.875425808027974,
+        "error_rate": 0.0,
+        "monotonic_elapsed_seconds_recorded": 30.766543458215892,
+        "wall_duration_seconds": 30.766542673110962,
+        "wall_minus_monotonic_seconds": -7.851049304008484e-07,
+        "state_canary_ok_recorded": true,
+        "start_time_recorded": 1790441326.4587448,
+        "end_time_recorded": 1790441357.2252874,
+        "evidence": [
+          "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/episodes/00_no_action.json:565",
+          "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/episodes/00_no_action.json:745",
+          "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/episodes/00_no_action.json:1268"
+        ],
+        "business_threshold_checks": {
+          "error_rate_ok": true,
+          "p95_ok": false,
+          "throughput_ok": true,
+          "state_canary_ok_recorded": true
+        },
+        "p95_ratio_to_baseline": 82.2019354765014
+      },
+      {
+        "window_id": "no_action-evaluation-2",
+        "attempts": 150,
+        "successes_recorded": 150,
+        "errors_from_recorded_aggregate": 0,
+        "latency_count": 150,
+        "latency_mean_ms": 964.091991915678,
+        "latency_p95_ms": 1399.6652089990675,
+        "p95_rank_one_based": 143,
+        "latency_min_ms": 367.8806428797543,
+        "latency_max_ms": 1599.6916149742901,
+        "throughput_rps": 4.781646495579526,
+        "error_rate": 0.0,
+        "monotonic_elapsed_seconds_recorded": 31.369947598315775,
+        "wall_duration_seconds": 31.369946718215942,
+        "wall_minus_monotonic_seconds": -8.800998330116272e-07,
+        "state_canary_ok_recorded": true,
+        "start_time_recorded": 1790441358.4562464,
+        "end_time_recorded": 1790441389.826193,
+        "evidence": [
+          "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/episodes/00_no_action.json:576",
+          "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/episodes/00_no_action.json:906",
+          "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/episodes/00_no_action.json:1287"
+        ],
+        "business_threshold_checks": {
+          "error_rate_ok": true,
+          "p95_ok": false,
+          "throughput_ok": true,
+          "state_canary_ok_recorded": true
+        },
+        "p95_ratio_to_baseline": 76.63899661537407
+      }
+    ],
+    "technical": {
+      "checks": {
+        "fault_absent": false,
+        "resource_restored": true,
+        "ready_endpoints": true
+      },
+      "raw_probe_statuses": [
+        "PASS",
+        "PASS",
+        "PASS"
+      ],
+      "deployment_spec_replicas": 1,
+      "deployment_ready_replicas": 1,
+      "ready_endpoint_addresses": [
+        {
+          "ip": "10.42.0.101",
+          "nodeName": "anonymous-k3s-node",
+          "targetRef": {
+            "kind": "Pod",
+            "name": "frontend-575dcbd8d6-wcpbg",
+            "namespace": "e2r-supplement-20260925",
+            "uid": "ca664d5b-d3a9-48c6-98f4-d33b5c363176"
+          }
+        }
+      ],
+      "evidence": [
+        "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/episodes/00_no_action.json:1141"
+      ]
+    },
+    "timing": {
+      "recorded_monotonic_fault_ages": {
+        "no_action_marker_fault_age_seconds": 61.489165029954165,
+        "pre_technical_fault_age_seconds": 157.7265452221036,
+        "technical_observation_fault_age_seconds": 158.11121950577945,
+        "final_observation_fault_age_seconds": 158.11700530489907,
+        "cleanup_start_fault_age_seconds": 158.11908659385517,
+        "cleanup_completion_fault_age_seconds": 158.68644268298522
+      },
+      "predicates": {
+        "evaluation_start_budgets_pass": true,
+        "pretechnical_worst_case_budget_pass": true,
+        "technical_before_deadline": true,
+        "final_saved_observation_before_deadline": true,
+        "cleanup_before_deadline": true,
+        "technical_before_configured_auto_expiry": true,
+        "cleanup_before_configured_auto_expiry": true,
+        "age_order_monotonic": true
+      },
+      "wall_clock_cross_checks": [
+        {
+          "window_id": "no_action-pre",
+          "start_fault_age_wall_seconds": -30.028602838516235,
+          "end_fault_age_wall_seconds": -0.013226032257080078,
+          "freshness_age_seconds": 158.13013243675232
+        },
+        {
+          "window_id": "no_action-fault-validation",
+          "start_fault_age_wall_seconds": 30.25697660446167,
+          "end_fault_age_wall_seconds": 61.01686716079712,
+          "freshness_age_seconds": 97.10003924369812
+        },
+        {
+          "window_id": "no_action-evaluation-0",
+          "start_fault_age_wall_seconds": 61.623602867126465,
+          "end_fault_age_wall_seconds": 92.6162257194519,
+          "freshness_age_seconds": 65.50068068504333
+        },
+        {
+          "window_id": "no_action-evaluation-1",
+          "start_fault_age_wall_seconds": 93.95136451721191,
+          "end_fault_age_wall_seconds": 124.71790719032288,
+          "freshness_age_seconds": 33.39899921417236
+        },
+        {
+          "window_id": "no_action-evaluation-2",
+          "start_fault_age_wall_seconds": 125.94886612892151,
+          "end_fault_age_wall_seconds": 157.31881284713745,
+          "freshness_age_seconds": 0.7980935573577881
+        }
+      ],
+      "marker_wall_age_seconds": 61.48916506767273,
+      "evaluated_at_wall_age_seconds": 158.11690640449524,
+      "completed_at_wall_age_seconds": 158.9588668346405,
+      "technical_budget_sum_seconds": 166.7265452221036,
+      "final_deadline_margin_seconds": 6.882994695100933,
+      "technical_deadline_margin_seconds": 11.888780494220555,
+      "cleanup_deadline_margin_seconds": 16.313557317014784
+    },
+    "cleanup_runtime": {
+      "cleanup_returncode": 0,
+      "absence_returncode": 1,
+      "cleanup_verified_absent": true,
+      "cleanup_ok": true,
+      "pod_count": 12,
+      "container_count": 24,
+      "restart_count_sum": 0,
+      "runtime_matches_block_initial": true,
+      "runtime_matches_baseline_before_and_after": true,
+      "post_cleanup_runtime": {
+        "0a838b53-19c2-46d1-84ba-c5493c844049": {
+          "server": 0,
+          "sidecar-busybox": 0
+        },
+        "ea668207-2bc9-427e-81eb-65936ac18de1": {
+          "server": 0,
+          "sidecar-busybox": 0
+        },
+        "5f6095c7-c767-4ea2-be60-0654deb3fb4b": {
+          "server": 0,
+          "sidecar-busybox": 0
+        },
+        "6b24d2dc-9c05-4596-b0a7-d87cc9dbfcc1": {
+          "server": 0,
+          "sidecar-busybox": 0
+        },
+        "daa97f92-8676-479e-8bfa-b03220dab29f": {
+          "server": 0,
+          "sidecar-busybox": 0
+        },
+        "ca664d5b-d3a9-48c6-98f4-d33b5c363176": {
+          "server": 0,
+          "sidecar-busybox": 0
+        },
+        "81d34579-b1da-4832-9c08-450b030501a1": {
+          "main": 0,
+          "sidecar-busybox": 0
+        },
+        "413458b5-ce2d-4e62-b3c2-2db54905509a": {
+          "server": 0,
+          "sidecar-busybox": 0
+        },
+        "3b33831b-857c-4086-95e7-00e729fa91fe": {
+          "server": 0,
+          "sidecar-busybox": 0
+        },
+        "ea052333-47ae-4696-a2d7-cf367cc68123": {
+          "server": 0,
+          "sidecar-busybox": 0
+        },
+        "7e898c0b-5717-4864-bfca-f9052100e6cd": {
+          "redis": 0,
+          "sidecar-busybox": 0
+        },
+        "443cee0a-2082-42a9-bbee-c82c9fe390a8": {
+          "server": 0,
+          "sidecar-busybox": 0
+        }
+      }
+    }
+  },
+  "typed": {
+    "valid_recovery_outcome": false,
+    "status": "interrupted_after_typed_repair_before_recorded_evaluation_completion",
+    "windows": [
+      {
+        "window_id": "typed_cleanup-pre",
+        "samples": 150,
+        "successes": 150,
+        "mean_latency_ms_audit_derived": 20.247440716872614,
+        "p95_ms": 19.501911010593176,
+        "min_latency_ms": 12.255670968443155,
+        "max_latency_ms": 190.40724774822593,
+        "throughput_rps": 4.997199076242644,
+        "error_rate": 0.0,
+        "elapsed_seconds": 30.016814962029457,
+        "wall_interval_seconds": 30.01681351661682,
+        "start_time": 1790441421.8242657,
+        "end_time": 1790441451.8410792,
+        "business_criteria": {
+          "latency": true,
+          "throughput": true,
+          "error": true,
+          "canary": true
+        }
+      },
+      {
+        "window_id": "typed_cleanup-fault-validation",
+        "samples": 150,
+        "successes": 150,
+        "mean_latency_ms_audit_derived": 962.8159837704152,
+        "p95_ms": 1399.2593279108405,
+        "min_latency_ms": 437.2609262354672,
+        "max_latency_ms": 1633.6670983582735,
+        "throughput_rps": 4.726677502356213,
+        "error_rate": 0.0,
+        "elapsed_seconds": 31.73476504907012,
+        "wall_interval_seconds": 31.734763860702515,
+        "start_time": 1790441482.0889091,
+        "end_time": 1790441513.823673,
+        "business_criteria": {
+          "latency": false,
+          "throughput": true,
+          "error": true,
+          "canary": true
+        }
+      }
+    ],
+    "repair_returncode": 0,
+    "repair_completion_fault_age_seconds": 63.82447475893423,
+    "saved_evaluation_window_count": 0,
+    "saved_oracle_status": null,
+    "missing_fields": [
+      "technical",
+      "oracle",
+      "cleanup",
+      "cleanup_absence_probe",
+      "cleanup_verified_absent",
+      "completed_at",
+      "post_cleanup_pods",
+      "post_cleanup_runtime",
+      "runtime_identity_unchanged"
+    ],
+    "in_flight_evaluation_requests_unknown": true
+  },
+  "late_observation": {
+    "delay_from_reconstructed_repair_seconds": 34223.32558345795,
+    "both_exact_fault_objects_absent": true,
+    "pod_probe_returncode": 1,
+    "pod_probe_error": "Unauthorized",
+    "reported_cause": "expired scoped token",
+    "runtime_matches_block_start": null,
+    "contemporaneous_recovery_or_cleanup_evidence": false
+  },
+  "checks": {
+    "gt_provenance": {
+      "status": "warn",
+      "details": "Real isolated HTTP/Chaos/controller observations against separate no-fault calibration; no fabricated model-output reference found. Target/category and RCA confidence 0.99 are supplied by the known injection contract, not independently predicted diagnosis. Canary is product GET availability, not persistent-state verification.",
+      "evidence": [
+        "scripts/e2r/run_recovery_matched_block.py:152",
+        "scripts/e2r/run_recovery_matched_block.py:155",
+        "scripts/e2r/run_recovery_sanity.py:56"
+      ]
+    },
+    "score_normalization": {
+      "status": "pass",
+      "details": "All 1950 saved latency observations (900 calibration, 750 control, 300 typed pre/fault) retained; all 13 completed windows recompute. Nearest-rank p95 and aggregate successes/elapsed throughput match. Frozen thresholds use the separate measured baseline, not model prediction statistics. Means are audit-derived, not originally claimed metrics.",
+      "evidence": [
+        "rca_bench/workload_oracle.py:155",
+        "scripts/e2r/run_recovery_baseline.py:118",
+        "rca_bench/recovery_oracle.py:89"
+      ]
+    },
+    "result_existence": {
+      "status": "warn",
+      "details": "All saved numbers checked agree. Control full raw technical/oracle/cleanup and runtime results are present. Typed has zero saved evaluation windows and no technical/oracle/cleanup/completion fields; successful delete is not recovery success. Sidecars correctly preserve null and invalid comparison; late pod read was Unauthorized.",
+      "evidence": [
+        "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/episodes/00_no_action.json:1141",
+        "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/episodes/01_typed_cleanup.json:548",
+        "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/episodes/01_typed_cleanup.json:558",
+        "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/episodes/01_typed_cleanup.interruption.json:60"
+      ]
+    },
+    "dead_code": {
+      "status": "pass",
+      "details": "Control collector, raw technical predicates and independent oracle replay all produce saved results. Typed execution output exists; its later evaluation/technical/oracle stages have no completed saved output and are not claimed. Optional build_business_oracle wrapper is outside this runner path.",
+      "evidence": [
+        "scripts/e2r/run_recovery_matched_block.py:213",
+        "scripts/e2r/run_recovery_matched_block.py:229",
+        "scripts/e2r/run_recovery_matched_block.py:253",
+        "rca_bench/workload_oracle.py:312"
+      ]
+    },
+    "scope": {
+      "status": "warn",
+      "details": "One namespace/service/fault profile, two planned and started episodes, one complete control trajectory, interrupted treatment, zero complete pairs. No comparative business delta, causal recovery effect, recovery rate, diagnosis/graph benefit, persistent-state integrity or production claim is supported. No retry/replacement or successful-only episode filtering found in audited directory/code/analysis.",
+      "evidence": [
+        "experiments/e2r/recovery_matched_cpu_protocol_v1.json:6",
+        "experiments/e2r/recovery_matched_cpu_protocol_v1.json:57",
+        "scripts/e2r/run_recovery_matched_block.py:406",
+        "refine-logs/EXPERIMENT_TRACKER.md:27"
+      ]
+    },
+    "eval_type": "self_supervised_proxy",
+    "eval_type_detail": "Legacy audit taxonomy: no independently evaluated diagnosis ground truth; outcome criteria compare live workload to a separate no-fault baseline. Precise subtype: live_isolated_known_target_controlled_fault_interrupted. This is actual isolated-cluster measurement, not simulated or model-generated synthetic data.",
+    "fingerprints": {
+      "status": "pass",
+      "details": "All three original source hashes match approved immutable values; protocol, baseline, manifest, matched runner, collector, oracle and finalizer match reviewed fingerprints. Both interruption sidecars are content-hashed. Original files unchanged during audit."
+    },
+    "no_action_trajectory": {
+      "status": "pass",
+      "details": "750 saved latency observations, all pre/fault/evaluation metrics exact. Control UID active at every saved read; three business windows fail p95. Raw technical checks False/True/True and entire FAIL oracle reproduce. Cleanup rc0, NotFound, deadlines and 12-pod/24-container/zero-restart runtime identity verified."
+    },
+    "interrupted_typed_outcome": {
+      "status": "warn",
+      "details": "300 saved pre/fault latency observations, correct exact UID/precondition and scoped successful delete at 63.82447475893423s. Zero of three planned evaluation windows saved. Outcome, contemporaneous technical checks, cleanup and runtime unknown. Unpersisted in-flight evaluation request count unknown."
+    },
+    "accounting": {
+      "status": "pass",
+      "details": "Sidecar reconciles stale block snapshot to planned/started/injected=2/2/2, repair invocation/mutation=1/1, statuses=[FAIL,null], complete pairs=0; preflight and final cleanup are not counted as treatment repairs."
+    },
+    "late_evidence": {
+      "status": "warn",
+      "details": "Both exact Chaos GETs record NotFound 34223.32558345795s after reconstructed repair completion. Scoped pod GET records rc1 Unauthorized, so late pods/runtime/runtime match remain null. Executor reports token expiry; stderr alone proves authorization failure. Late absence cannot supply original technical/cleanup/oracle fields."
+    }
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "In this one recorded no-action episode, all three evaluation windows exceeded the frozen p95 threshold while the same fault UID reported active at each saved probe.",
+      "impact": "supported"
+    },
+    {
+      "id": "C2",
+      "claim": "The typed scoped exact-object deletion returned rc0 before its repair deadline.",
+      "impact": "supported"
+    },
+    {
+      "id": "C3",
+      "claim": "The typed episode recovered successfully or failed recovery.",
+      "impact": "unsupported",
+      "reason": "No completed saved recovery evaluation or oracle; outcome remains unobserved."
+    },
+    {
+      "id": "C4",
+      "claim": "Typed cleanup improves recovery relative to no action.",
+      "impact": "unsupported",
+      "reason": "0 complete matched pairs."
+    },
+    {
+      "id": "C5",
+      "claim": "Late objects were absent.",
+      "impact": "needs_qualifier",
+      "reason": "Only late exact-name NotFound; no original deadline or runtime inference."
+    },
+    {
+      "id": "C6",
+      "claim": "Both episodes or the full R042/R043 campaign are completed.",
+      "impact": "unsupported",
+      "reason": "Only control completed; treatment interrupted and campaign scope unmet."
+    },
+    {
+      "id": "C7",
+      "claim": "The evidence establishes graph/RCA benefit, broad operational restoration or production safety.",
+      "impact": "unsupported"
+    }
+  ],
+  "limitations": [
+    "Raw diagnostics contain sorted latency observations and aggregate attempts/successes, not per-request status, dispatch/completion timestamps or response bodies. Error rates and throughput are recomputed from recorded aggregates.",
+    "Canary booleans and wall/monotonic clock readings are recorded inputs, not independently re-observed. No raw canary response/status/latency is saved. Canary checks occur after each workload window end and elapsed measurement.",
+    "Request latency starts inside _request after scheduled-worker waiting, and covers reading only the first 1024 response bytes. It excludes executor scheduling backlog and the canary; it is not full HTTP response or end-to-end business transaction latency.",
+    "Deadline predicates are recomputed from recorded monotonic ages; clock readings cannot be reconstructed from absent per-request timestamps. Wall timestamps are separate consistency evidence with microsecond clock-read differences.",
+    "resource_restored checks ready replica counts and ready_endpoints checks a nonempty address list. Neither predicate independently measures CPU recovery. The active fault predicate examines selector and Chaos conditions.",
+    "The saved final_observation_fault_age_seconds is recorded after technical probes and oracle evaluation, not at the final workload-window end.",
+    "Runtime stability means the saved 12 pod UIDs, two ready Running containers per pod, and restart counts match before/after; snapshots do not rule out every transient between observations.",
+    "All replay uses stored raw data; no fresh external observations.",
+    "Saved elapsed/clock values and canary booleans cannot be independently measured from absent per-request timestamps/responses.",
+    "Unauthorized proves late scoped read failure; expired token is the executor-reported cause, not derivable solely from stderr.",
+    "No hidden episode/retry exists in audited directory or runner control flow; absence elsewhere is not proven."
+  ],
+  "action_items": [
+    "Retain original snapshots and interruption sidecars together; consumers must use sidecar accounting and original measurement authority.",
+    "Keep typed oracle null and pair count zero; do not substitute late health, v3 sanity or a replacement arm.",
+    "Label R042 as one audited control only and R043 as interrupted/invalid; neither planned campaign is done.",
+    "Treat code-review line 902 late-health statement as an earlier executor report, not raw sidecar runtime evidence.",
+    "No new live action, retry or replacement is authorized by this audit."
+  ]
+}

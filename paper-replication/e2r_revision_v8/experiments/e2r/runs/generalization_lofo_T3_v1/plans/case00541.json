@@ -1,0 +1,152 @@
+{
+  "catalog": [
+    {
+      "id": "op0000",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-order-service-5755fc9ccd-xvb4v",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-order-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-order-service-5755fc9ccd-xvb4v"
+        ]
+      },
+      "evidence_id": "during:pod:ts-order-service-5755fc9ccd-xvb4v",
+      "requires": []
+    },
+    {
+      "id": "op0001",
+      "group": "edge_ops",
+      "operation": {
+        "op": "REMOVE_EDGE",
+        "source": "ts-ticketinfo-service",
+        "target": "pod:ts-ticketinfo-service-854b89fccd-7s96j",
+        "evidence": [
+          "topology_diff:ts-ticketinfo-service->pod:ts-ticketinfo-service-854b89fccd-7s96j"
+        ]
+      },
+      "evidence_id": "topology_diff:ts-ticketinfo-service->pod:ts-ticketinfo-service-854b89fccd-7s96j",
+      "requires": []
+    },
+    {
+      "id": "op0002",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "ts-ticketinfo-service",
+        "target": "pod:ts-station-service-ff96f8f6b-m7brx",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "evidence": [
+          "during:ts-ticketinfo-service->pod:ts-station-service-ff96f8f6b-m7brx"
+        ]
+      },
+      "evidence_id": "during:ts-ticketinfo-service->pod:ts-station-service-ff96f8f6b-m7brx",
+      "requires": []
+    },
+    {
+      "id": "op0003",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_TRACE_MISMATCH_EDGE",
+        "source": "ts-ticketinfo-service",
+        "target": "ts-station-service",
+        "edge_type": "endpoint_mismatch",
+        "weight": 1.0,
+        "evidence": [
+          "endpoint_owner:ts-ticketinfo-service:10.244.2.160"
+        ]
+      },
+      "evidence_id": "endpoint_owner:ts-ticketinfo-service:10.244.2.160",
+      "requires": []
+    }
+  ],
+  "plan": {
+    "experiment_id": "case00541",
+    "change_type": "observation_supported_updates",
+    "confidence": 0.0,
+    "causal_role": "not_inferred",
+    "node_ops": [
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-order-service-5755fc9ccd-xvb4v",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-order-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-order-service-5755fc9ccd-xvb4v"
+        ]
+      }
+    ],
+    "edge_ops": [
+      {
+        "op": "REMOVE_EDGE",
+        "source": "ts-ticketinfo-service",
+        "target": "pod:ts-ticketinfo-service-854b89fccd-7s96j",
+        "old_source": "ts-ticketinfo-service",
+        "old_target": "pod:ts-ticketinfo-service-854b89fccd-7s96j",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": null,
+        "attrs": {},
+        "evidence": [
+          "topology_diff:ts-ticketinfo-service->pod:ts-ticketinfo-service-854b89fccd-7s96j"
+        ]
+      },
+      {
+        "op": "ADD_EDGE",
+        "source": "ts-ticketinfo-service",
+        "target": "pod:ts-station-service-ff96f8f6b-m7brx",
+        "old_source": "ts-ticketinfo-service",
+        "old_target": "pod:ts-station-service-ff96f8f6b-m7brx",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:ts-ticketinfo-service->pod:ts-station-service-ff96f8f6b-m7brx"
+        ]
+      },
+      {
+        "op": "ADD_TRACE_MISMATCH_EDGE",
+        "source": "ts-ticketinfo-service",
+        "target": "ts-station-service",
+        "old_source": "ts-ticketinfo-service",
+        "old_target": "ts-station-service",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "endpoint_mismatch",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "endpoint_owner:ts-ticketinfo-service:10.244.2.160"
+        ]
+      }
+    ],
+    "weight_ops": [],
+    "state_transfer": {},
+    "evidence": [
+      "during:pod:ts-order-service-5755fc9ccd-xvb4v",
+      "topology_diff:ts-ticketinfo-service->pod:ts-ticketinfo-service-854b89fccd-7s96j",
+      "during:ts-ticketinfo-service->pod:ts-station-service-ff96f8f6b-m7brx",
+      "endpoint_owner:ts-ticketinfo-service:10.244.2.160"
+    ]
+  }
+}

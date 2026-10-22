@@ -1,0 +1,114 @@
+{
+  "catalog": [
+    {
+      "id": "op0000",
+      "group": "edge_ops",
+      "operation": {
+        "op": "REMOVE_EDGE",
+        "source": "shippingservice",
+        "target": "pod:shippingservice-6c84c75b8d-8gjlz",
+        "evidence": [
+          "topology_diff:shippingservice->pod:shippingservice-6c84c75b8d-8gjlz"
+        ]
+      },
+      "evidence_id": "topology_diff:shippingservice->pod:shippingservice-6c84c75b8d-8gjlz",
+      "requires": []
+    },
+    {
+      "id": "op0001",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "shippingservice",
+        "target": "pod:checkoutservice-78cf67b9fc-gvjsd",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "evidence": [
+          "during:shippingservice->pod:checkoutservice-78cf67b9fc-gvjsd"
+        ]
+      },
+      "evidence_id": "during:shippingservice->pod:checkoutservice-78cf67b9fc-gvjsd",
+      "requires": []
+    },
+    {
+      "id": "op0002",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_TRACE_MISMATCH_EDGE",
+        "source": "shippingservice",
+        "target": "checkoutservice",
+        "edge_type": "endpoint_mismatch",
+        "weight": 1.0,
+        "evidence": [
+          "endpoint_owner:shippingservice:10.244.1.229"
+        ]
+      },
+      "evidence_id": "endpoint_owner:shippingservice:10.244.1.229",
+      "requires": []
+    }
+  ],
+  "plan": {
+    "experiment_id": "case00443",
+    "change_type": "observation_supported_updates",
+    "confidence": 0.0,
+    "causal_role": "not_inferred",
+    "node_ops": [],
+    "edge_ops": [
+      {
+        "op": "REMOVE_EDGE",
+        "source": "shippingservice",
+        "target": "pod:shippingservice-6c84c75b8d-8gjlz",
+        "old_source": "shippingservice",
+        "old_target": "pod:shippingservice-6c84c75b8d-8gjlz",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": null,
+        "attrs": {},
+        "evidence": [
+          "topology_diff:shippingservice->pod:shippingservice-6c84c75b8d-8gjlz"
+        ]
+      },
+      {
+        "op": "ADD_EDGE",
+        "source": "shippingservice",
+        "target": "pod:checkoutservice-78cf67b9fc-gvjsd",
+        "old_source": "shippingservice",
+        "old_target": "pod:checkoutservice-78cf67b9fc-gvjsd",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:shippingservice->pod:checkoutservice-78cf67b9fc-gvjsd"
+        ]
+      },
+      {
+        "op": "ADD_TRACE_MISMATCH_EDGE",
+        "source": "shippingservice",
+        "target": "checkoutservice",
+        "old_source": "shippingservice",
+        "old_target": "checkoutservice",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "endpoint_mismatch",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "endpoint_owner:shippingservice:10.244.1.229"
+        ]
+      }
+    ],
+    "weight_ops": [],
+    "state_transfer": {},
+    "evidence": [
+      "topology_diff:shippingservice->pod:shippingservice-6c84c75b8d-8gjlz",
+      "during:shippingservice->pod:checkoutservice-78cf67b9fc-gvjsd",
+      "endpoint_owner:shippingservice:10.244.1.229"
+    ]
+  }
+}

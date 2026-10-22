@@ -1,0 +1,280 @@
+{
+  "catalog": [
+    {
+      "id": "op0000",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-food-service-v2-76d8645f86-89rk4",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-food-service",
+          "version": "v2.0.0"
+        },
+        "evidence": [
+          "during:pod:ts-food-service-v2-76d8645f86-89rk4"
+        ]
+      },
+      "evidence_id": "during:pod:ts-food-service-v2-76d8645f86-89rk4",
+      "requires": []
+    },
+    {
+      "id": "op0001",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-travel2-service-c549f6bfd-b2vpn",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-travel2-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-travel2-service-c549f6bfd-b2vpn"
+        ]
+      },
+      "evidence_id": "during:pod:ts-travel2-service-c549f6bfd-b2vpn",
+      "requires": []
+    },
+    {
+      "id": "op0002",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-travel2-service-c549f6bfd-nklq6",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-travel2-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-travel2-service-c549f6bfd-nklq6"
+        ]
+      },
+      "evidence_id": "during:pod:ts-travel2-service-c549f6bfd-nklq6",
+      "requires": []
+    },
+    {
+      "id": "op0003",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-travel2-service-c549f6bfd-qtlvz",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-travel2-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-travel2-service-c549f6bfd-qtlvz"
+        ]
+      },
+      "evidence_id": "during:pod:ts-travel2-service-c549f6bfd-qtlvz",
+      "requires": []
+    },
+    {
+      "id": "op0004",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-travel2-service-c549f6bfd-vbztb",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-travel2-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-travel2-service-c549f6bfd-vbztb"
+        ]
+      },
+      "evidence_id": "during:pod:ts-travel2-service-c549f6bfd-vbztb",
+      "requires": []
+    },
+    {
+      "id": "op0005",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "ts-food-service",
+        "target": "pod:ts-food-service-v2-76d8645f86-89rk4",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "evidence": [
+          "during:ts-food-service->pod:ts-food-service-v2-76d8645f86-89rk4"
+        ]
+      },
+      "evidence_id": "during:ts-food-service->pod:ts-food-service-v2-76d8645f86-89rk4",
+      "requires": [
+        "op0000"
+      ]
+    },
+    {
+      "id": "op0006",
+      "group": "node_ops",
+      "operation": {
+        "op": "SPLIT_NODE",
+        "parent": "ts-food-service",
+        "children": [
+          "ts-food-service:unversioned",
+          "ts-food-service:v2.0.0"
+        ],
+        "attrs": {
+          "type": "version",
+          "service": "ts-food-service"
+        },
+        "evidence": [
+          "version_coexistence:ts-food-service"
+        ]
+      },
+      "evidence_id": "version_coexistence:ts-food-service",
+      "requires": []
+    }
+  ],
+  "plan": {
+    "experiment_id": "case00687",
+    "change_type": "observation_supported_updates",
+    "confidence": 0.0,
+    "causal_role": "not_inferred",
+    "node_ops": [
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-food-service-v2-76d8645f86-89rk4",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-food-service",
+          "version": "v2.0.0"
+        },
+        "evidence": [
+          "during:pod:ts-food-service-v2-76d8645f86-89rk4"
+        ]
+      },
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-travel2-service-c549f6bfd-b2vpn",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-travel2-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-travel2-service-c549f6bfd-b2vpn"
+        ]
+      },
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-travel2-service-c549f6bfd-nklq6",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-travel2-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-travel2-service-c549f6bfd-nklq6"
+        ]
+      },
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-travel2-service-c549f6bfd-qtlvz",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-travel2-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-travel2-service-c549f6bfd-qtlvz"
+        ]
+      },
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-travel2-service-c549f6bfd-vbztb",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-travel2-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-travel2-service-c549f6bfd-vbztb"
+        ]
+      },
+      {
+        "op": "SPLIT_NODE",
+        "node_id": "",
+        "old_node": "",
+        "new_node": "",
+        "parent": "ts-food-service",
+        "children": [
+          "ts-food-service:unversioned",
+          "ts-food-service:v2.0.0"
+        ],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "version",
+          "service": "ts-food-service"
+        },
+        "evidence": [
+          "version_coexistence:ts-food-service"
+        ]
+      }
+    ],
+    "edge_ops": [
+      {
+        "op": "ADD_EDGE",
+        "source": "ts-food-service",
+        "target": "pod:ts-food-service-v2-76d8645f86-89rk4",
+        "old_source": "ts-food-service",
+        "old_target": "pod:ts-food-service-v2-76d8645f86-89rk4",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:ts-food-service->pod:ts-food-service-v2-76d8645f86-89rk4"
+        ]
+      }
+    ],
+    "weight_ops": [],
+    "state_transfer": {},
+    "evidence": [
+      "during:pod:ts-food-service-v2-76d8645f86-89rk4",
+      "during:pod:ts-travel2-service-c549f6bfd-b2vpn",
+      "during:pod:ts-travel2-service-c549f6bfd-nklq6",
+      "during:pod:ts-travel2-service-c549f6bfd-qtlvz",
+      "during:pod:ts-travel2-service-c549f6bfd-vbztb",
+      "during:ts-food-service->pod:ts-food-service-v2-76d8645f86-89rk4",
+      "version_coexistence:ts-food-service"
+    ]
+  }
+}

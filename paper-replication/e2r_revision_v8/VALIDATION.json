@@ -1,0 +1,556 @@
+{
+  "status": "PASS",
+  "redaction_count": 133,
+  "redactions": [
+    {
+      "file": "rca_bench/README.md",
+      "category": "local_project_root"
+    },
+    {
+      "file": "rca_bench/README.md",
+      "category": "local_microremed_root"
+    },
+    {
+      "file": "rca_bench/cli.py",
+      "category": "local_microremed_root"
+    },
+    {
+      "file": "scripts/e2r/create_scoped_kubeconfig.py",
+      "category": "scoped_kubeconfig_path"
+    },
+    {
+      "file": "scripts/e2r/run_recovery_sanity.py",
+      "category": "scoped_kubeconfig_path"
+    },
+    {
+      "file": "tests/test_safety_guard.py",
+      "category": "scoped_kubeconfig_path"
+    },
+    {
+      "file": "refine-logs/FULL_EXPERIMENT_CODE_REVIEW.md",
+      "category": "local_project_root"
+    },
+    {
+      "file": "refine-logs/FULL_EXPERIMENT_CODE_REVIEW.md",
+      "category": "scoped_kubeconfig_path"
+    },
+    {
+      "file": "refine-logs/FULL_EXPERIMENT_CODE_REVIEW.md",
+      "category": "local_home"
+    },
+    {
+      "file": "findings.md",
+      "category": "gpu_ssh"
+    },
+    {
+      "file": "experiments/e2r/isolated_environment.json",
+      "category": "local_microremed_root"
+    },
+    {
+      "file": ".aris/traces/experiment-audit/20260926_b2_b3/001-b2-b3.meta.json",
+      "category": "local_project_root"
+    },
+    {
+      "file": ".aris/traces/experiment-audit/20260926_b2_b3/001-b2-b3.request.json",
+      "category": "local_project_root"
+    },
+    {
+      "file": ".aris/traces/experiment-audit/20260926_b2_b3/001-b2-b3.request.json",
+      "category": "local_home"
+    },
+    {
+      "file": ".aris/traces/experiment-audit/20260926_b2_b3/001-b2-b3.response.md",
+      "category": "local_dyrca_root"
+    },
+    {
+      "file": ".aris/traces/experiment-audit/20260926_b2_b3/002-generalization-scaling.meta.json",
+      "category": "local_project_root"
+    },
+    {
+      "file": ".aris/traces/experiment-audit/20260926_b2_b3/002-generalization-scaling.request.json",
+      "category": "local_project_root"
+    },
+    {
+      "file": ".aris/traces/experiment-audit/20260926_b2_b3/002-generalization-scaling.response.md",
+      "category": "local_project_root"
+    },
+    {
+      "file": ".aris/traces/experiment-audit/20260926_b2_b3/accounting_v2_hashes.json",
+      "category": "local_project_root"
+    },
+    {
+      "file": ".aris/traces/experiment-audit/20260926_b2_b3/audited_input_hashes.json",
+      "category": "local_project_root"
+    },
+    {
+      "file": ".aris/traces/experiment-audit/20260926_b2_b3/audited_input_hashes.json",
+      "category": "local_dyrca_root"
+    },
+    {
+      "file": ".aris/traces/experiment-audit/20260926_b2_b3/expenditure_v3_hashes.json",
+      "category": "local_project_root"
+    },
+    {
+      "file": ".aris/traces/experiment-audit/20260926_b2_b3/finalize_audit.py",
+      "category": "local_project_root"
+    },
+    {
+      "file": ".aris/traces/experiment-audit/20260926_b2_b3/generalization_scaling/REVIEW.md",
+      "category": "local_dyrca_root"
+    },
+    {
+      "file": ".aris/traces/experiment-audit/20260926_b2_b3/generalization_scaling/forensic_audit.py",
+      "category": "local_project_root"
+    },
+    {
+      "file": ".aris/traces/experiment-audit/20260926_b2_b3/generalization_scaling/sha256_inventory.json",
+      "category": "local_project_root"
+    },
+    {
+      "file": ".aris/traces/experiment-audit/20260926_b2_b3/generalization_scaling/sha256_inventory.json",
+      "category": "local_dyrca_root"
+    },
+    {
+      "file": ".aris/traces/experiment-audit/20260926_b2_b3/qwen_proxy_hashes.json",
+      "category": "local_project_root"
+    },
+    {
+      "file": ".aris/traces/experiment-audit/20260926_b2_b3/qwen_proxy_hashes.json",
+      "category": "local_dyrca_root"
+    },
+    {
+      "file": ".aris/traces/experiment-audit/20260926_b2_b3/qwen_supplement_hashes.json",
+      "category": "local_project_root"
+    },
+    {
+      "file": ".aris/traces/experiment-audit/20260926_b2_b3/qwen_supplement_hashes.json",
+      "category": "local_dyrca_root"
+    },
+    {
+      "file": ".aris/traces/experiment-audit/20260926_b2_b3/run.meta.json",
+      "category": "local_project_root"
+    },
+    {
+      "file": ".aris/traces/experiment-audit/20260926_b2_b3/save_review_trace.py",
+      "category": "local_project_root"
+    },
+    {
+      "file": ".aris/traces/experiment-audit/20260926_b2_b3/save_review_trace.py",
+      "category": "local_home"
+    },
+    {
+      "file": ".aris/traces/experiment-audit/20260926_b2_b3/verify_accounting_v2.py",
+      "category": "local_project_root"
+    },
+    {
+      "file": ".aris/traces/experiment-audit/20260926_b2_b3/verify_expenditure_v3.py",
+      "category": "local_project_root"
+    },
+    {
+      "file": ".aris/traces/experiment-audit/20260926_b2_b3/verify_qwen_proxy.py",
+      "category": "local_project_root"
+    },
+    {
+      "file": ".aris/traces/experiment-audit/20260926_b2_b3/verify_qwen_supplement.py",
+      "category": "local_project_root"
+    },
+    {
+      "file": ".aris/traces/experiment-audit/20260927_m4_sanity/001-m4-sanity-audit.request.json",
+      "category": "local_project_root"
+    },
+    {
+      "file": ".aris/traces/experiment-audit/20260927_m4_sanity/001-m4-sanity-audit.request.json",
+      "category": "local_home"
+    },
+    {
+      "file": ".aris/traces/experiment-audit/20260927_m4_sanity/001-m4-sanity-audit.response.md",
+      "category": "local_home"
+    },
+    {
+      "file": ".aris/traces/experiment-audit/20260927_m4_sanity/002-baseline-runtime-sub-audit.request.json",
+      "category": "local_project_root"
+    },
+    {
+      "file": ".aris/traces/experiment-audit/20260927_m4_sanity/audited_source_snapshots/findings.md",
+      "category": "gpu_ssh"
+    },
+    {
+      "file": ".aris/traces/experiment-audit/20260927_m4_sanity/audited_source_snapshots/refine-logs/FULL_EXPERIMENT_CODE_REVIEW.md",
+      "category": "local_project_root"
+    },
+    {
+      "file": ".aris/traces/experiment-audit/20260927_m4_sanity/audited_source_snapshots/refine-logs/FULL_EXPERIMENT_CODE_REVIEW.md",
+      "category": "scoped_kubeconfig_path"
+    },
+    {
+      "file": ".aris/traces/experiment-audit/20260927_m4_sanity/audited_source_snapshots/refine-logs/FULL_EXPERIMENT_CODE_REVIEW.md",
+      "category": "local_home"
+    },
+    {
+      "file": ".aris/traces/experiment-audit/20260927_m4_sanity/audited_source_snapshots/scripts/e2r/run_recovery_sanity.py",
+      "category": "scoped_kubeconfig_path"
+    },
+    {
+      "file": ".aris/traces/experiment-audit/20260927_m4_sanity/recompute.py",
+      "category": "local_project_root"
+    },
+    {
+      "file": ".aris/traces/experiment-audit/20260927_m4_sanity/recompute.py",
+      "category": "scoped_kubeconfig_path"
+    },
+    {
+      "file": ".aris/traces/experiment-audit/20260927_m4_sanity/run.meta.json",
+      "category": "local_project_root"
+    },
+    {
+      "file": ".aris/traces/experiment-audit/20260927_m4_sanity/save_trace_metadata.py",
+      "category": "local_project_root"
+    },
+    {
+      "file": ".aris/traces/experiment-audit/20260927_m4_sanity/save_trace_metadata.py",
+      "category": "local_home"
+    },
+    {
+      "file": ".aris/traces/experiment-audit/20260927_m4_sanity/write_report.py",
+      "category": "local_project_root"
+    },
+    {
+      "file": ".aris/traces/experiment-audit/20260927_m4_sanity/write_report.py",
+      "category": "local_home"
+    },
+    {
+      "file": ".aris/traces/experiment-audit/20260927_matched_interrupted/001-interruption-audit.request.json",
+      "category": "local_project_root"
+    },
+    {
+      "file": ".aris/traces/experiment-audit/20260927_matched_interrupted/001-interruption-audit.request.json",
+      "category": "local_home"
+    },
+    {
+      "file": ".aris/traces/experiment-audit/20260927_matched_interrupted/001-interruption-audit.response.md",
+      "category": "scoped_kubeconfig_path"
+    },
+    {
+      "file": ".aris/traces/experiment-audit/20260927_matched_interrupted/002-supporting-facts.request.json",
+      "category": "local_project_root"
+    },
+    {
+      "file": ".aris/traces/experiment-audit/20260927_matched_interrupted/002-supporting-facts.response.md",
+      "category": "local_project_root"
+    },
+    {
+      "file": ".aris/traces/experiment-audit/20260927_matched_interrupted/EXPERIMENT_AUDIT.json",
+      "category": "node_name"
+    },
+    {
+      "file": ".aris/traces/experiment-audit/20260927_matched_interrupted/recompute_noaction.json",
+      "category": "node_name"
+    },
+    {
+      "file": ".aris/traces/experiment-audit/20260927_matched_interrupted/recompute_noaction.py",
+      "category": "scoped_kubeconfig_path"
+    },
+    {
+      "file": ".aris/traces/experiment-audit/20260927_matched_interrupted/recompute_typed_and_accounting.json",
+      "category": "local_project_root"
+    },
+    {
+      "file": ".aris/traces/experiment-audit/20260927_matched_interrupted/recompute_typed_and_accounting.json",
+      "category": "local_home"
+    },
+    {
+      "file": ".aris/traces/experiment-audit/20260927_matched_interrupted/recompute_typed_and_accounting.py",
+      "category": "scoped_kubeconfig_path"
+    },
+    {
+      "file": ".aris/traces/experiment-audit/20260927_matched_interrupted/run.meta.json",
+      "category": "local_project_root"
+    },
+    {
+      "file": ".aris/traces/experiment-audit/20260927_artifact_release/offline_test_replay.json",
+      "category": "local_project_root"
+    },
+    {
+      "file": ".aris/traces/experiment-audit/20260927_artifact_release/offline_test_replay.json",
+      "category": "local_dyrca_root"
+    },
+    {
+      "file": ".aris/traces/experiment-audit/20260927_artifact_release/v7/verify_map_and_folded_markers.py",
+      "category": "local_project_root"
+    },
+    {
+      "file": ".aris/traces/experiment-audit/20260927_artifact_release/v7/verify_release.py",
+      "category": "local_project_root"
+    },
+    {
+      "file": ".aris/traces/experiment-audit/20260927_artifact_release/v7/verify_release.py",
+      "category": "local_username"
+    },
+    {
+      "file": ".aris/traces/experiment-audit/20260927_artifact_release/verify_release.py",
+      "category": "local_project_root"
+    },
+    {
+      "file": ".aris/traces/experiment-audit/20260927_artifact_release/verify_release.py",
+      "category": "local_username"
+    },
+    {
+      "file": ".aris/traces/research-review/20260926_e2r_design/run.meta.json",
+      "category": "local_project_root"
+    },
+    {
+      "file": "experiments/e2r/runs/full_data_v2/manifest.json",
+      "category": "local_project_root"
+    },
+    {
+      "file": "experiments/e2r/runs/full_data_v2/manifest.json",
+      "category": "local_dyrca_root"
+    },
+    {
+      "file": "experiments/e2r/runs/gpu_full_4090d/results.json",
+      "category": "remote_project_root"
+    },
+    {
+      "file": "experiments/e2r/runs/gpu_train_reference_v1/results.json",
+      "category": "remote_project_root"
+    },
+    {
+      "file": "experiments/e2r/runs/gpu_train_runtime_v1/results.json",
+      "category": "remote_project_root"
+    },
+    {
+      "file": "experiments/e2r/runs/gpu_train_node_only_v1/results.json",
+      "category": "remote_project_root"
+    },
+    {
+      "file": "experiments/e2r/runs/m1_matrix_v3/EXPERIMENT_AUDIT.json",
+      "category": "local_dyrca_root"
+    },
+    {
+      "file": "experiments/e2r/runs/m1_matrix_v3/EXPERIMENT_AUDIT.md",
+      "category": "local_dyrca_root"
+    },
+    {
+      "file": "experiments/e2r/runs/m2_qwen38_pilot_formal_v1/campaign.json",
+      "category": "local_project_root"
+    },
+    {
+      "file": "experiments/e2r/runs/m2_qwen38_pilot_formal_v2/campaign.json",
+      "category": "local_project_root"
+    },
+    {
+      "file": "experiments/e2r/runs/m2_qwen38_formal_v1/campaign.json",
+      "category": "local_project_root"
+    },
+    {
+      "file": "experiments/e2r/runs/m2_qwen38_combined_campaign_v1/campaign.json",
+      "category": "local_project_root"
+    },
+    {
+      "file": "experiments/e2r/runs/m2_qwen38_pilot_scores_v2/results.json",
+      "category": "remote_project_root"
+    },
+    {
+      "file": "experiments/e2r/runs/m2_qwen38_formal_scores_v1/results.json",
+      "category": "remote_project_root"
+    },
+    {
+      "file": "experiments/e2r/runs/m2_qwen38_combined_scores_v1/results.json",
+      "category": "remote_project_root"
+    },
+    {
+      "file": "experiments/e2r/runs/m2_qwen38_combined_scores_v1/results.json",
+      "category": "local_project_root"
+    },
+    {
+      "file": "experiments/e2r/runs/m2_deepseek41_compat_v1/campaign.json",
+      "category": "local_project_root"
+    },
+    {
+      "file": "experiments/e2r/runs/m2_gpt56luna_compat_v1/campaign.json",
+      "category": "local_project_root"
+    },
+    {
+      "file": "experiments/e2r/runs/generalization_lofo_T1_v1/results.json",
+      "category": "remote_project_root"
+    },
+    {
+      "file": "experiments/e2r/runs/generalization_lofo_T2_v1/results.json",
+      "category": "remote_project_root"
+    },
+    {
+      "file": "experiments/e2r/runs/generalization_lofo_T3_v1/results.json",
+      "category": "remote_project_root"
+    },
+    {
+      "file": "experiments/e2r/runs/generalization_lofo_T4_v1/results.json",
+      "category": "remote_project_root"
+    },
+    {
+      "file": "experiments/e2r/runs/generalization_boutique_to_trainticket_v1/results.json",
+      "category": "remote_project_root"
+    },
+    {
+      "file": "experiments/e2r/runs/generalization_trainticket_to_boutique_v1/results.json",
+      "category": "remote_project_root"
+    },
+    {
+      "file": "experiments/e2r/runs/b2_b3_audit_v1/EXPERIMENT_AUDIT.json",
+      "category": "local_project_root"
+    },
+    {
+      "file": "experiments/e2r/runs/b2_b3_audit_v1/EXPERIMENT_AUDIT.json",
+      "category": "local_dyrca_root"
+    },
+    {
+      "file": "experiments/e2r/runs/b2_b3_audit_v1/EXPERIMENT_AUDIT.md",
+      "category": "local_dyrca_root"
+    },
+    {
+      "file": "experiments/e2r/runs/recovery_baseline_v1/baseline.json",
+      "category": "node_name"
+    },
+    {
+      "file": "experiments/e2r/runs/recovery_baseline_v2/baseline.json",
+      "category": "node_name"
+    },
+    {
+      "file": "experiments/e2r/runs/recovery_baseline_comparison_v1/analysis.json",
+      "category": "local_project_root"
+    },
+    {
+      "file": "experiments/e2r/runs/recovery_sanity_frontend_cpu_v1/trace.json",
+      "category": "scoped_kubeconfig_path"
+    },
+    {
+      "file": "experiments/e2r/runs/recovery_sanity_frontend_cpu_v1/trace.json",
+      "category": "local_home"
+    },
+    {
+      "file": "experiments/e2r/runs/recovery_sanity_frontend_cpu_v2/trace.json",
+      "category": "local_project_root"
+    },
+    {
+      "file": "experiments/e2r/runs/recovery_sanity_frontend_cpu_v2/trace.json",
+      "category": "scoped_kubeconfig_path"
+    },
+    {
+      "file": "experiments/e2r/runs/recovery_sanity_frontend_cpu_v2/trace.json",
+      "category": "local_home"
+    },
+    {
+      "file": "experiments/e2r/runs/recovery_sanity_frontend_cpu_v3/trace.json",
+      "category": "local_project_root"
+    },
+    {
+      "file": "experiments/e2r/runs/recovery_sanity_frontend_cpu_v3/trace.json",
+      "category": "scoped_kubeconfig_path"
+    },
+    {
+      "file": "experiments/e2r/runs/recovery_sanity_frontend_cpu_v3/trace.json",
+      "category": "local_home"
+    },
+    {
+      "file": "experiments/e2r/runs/m4_sanity_audit_v1/EXPERIMENT_AUDIT.md",
+      "category": "local_home"
+    },
+    {
+      "file": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/analysis_v1/analysis.json",
+      "category": "local_project_root"
+    },
+    {
+      "file": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/analysis_v1/analysis.json",
+      "category": "local_home"
+    },
+    {
+      "file": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/audit_v1/EXPERIMENT_AUDIT.json",
+      "category": "node_name"
+    },
+    {
+      "file": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/audit_v1/EXPERIMENT_AUDIT.md",
+      "category": "scoped_kubeconfig_path"
+    },
+    {
+      "file": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/audit_v1/recompute_noaction.json",
+      "category": "node_name"
+    },
+    {
+      "file": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/audit_v1/recompute_noaction.py",
+      "category": "scoped_kubeconfig_path"
+    },
+    {
+      "file": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/audit_v1/recompute_typed_and_accounting.json",
+      "category": "local_project_root"
+    },
+    {
+      "file": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/audit_v1/recompute_typed_and_accounting.json",
+      "category": "local_home"
+    },
+    {
+      "file": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/audit_v1/recompute_typed_and_accounting.py",
+      "category": "scoped_kubeconfig_path"
+    },
+    {
+      "file": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/block.interruption.json",
+      "category": "local_project_root"
+    },
+    {
+      "file": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/block.json",
+      "category": "local_project_root"
+    },
+    {
+      "file": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/block.json",
+      "category": "node_name"
+    },
+    {
+      "file": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/block.json",
+      "category": "local_home"
+    },
+    {
+      "file": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/episodes/00_no_action.json",
+      "category": "scoped_kubeconfig_path"
+    },
+    {
+      "file": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/episodes/00_no_action.json",
+      "category": "node_name"
+    },
+    {
+      "file": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/episodes/01_typed_cleanup.interruption.json",
+      "category": "local_project_root"
+    },
+    {
+      "file": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/episodes/01_typed_cleanup.interruption.json",
+      "category": "scoped_kubeconfig_path"
+    },
+    {
+      "file": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/episodes/01_typed_cleanup.json",
+      "category": "local_project_root"
+    },
+    {
+      "file": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/episodes/01_typed_cleanup.json",
+      "category": "scoped_kubeconfig_path"
+    },
+    {
+      "file": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/episodes/01_typed_cleanup.json",
+      "category": "local_home"
+    }
+  ],
+  "forbidden_matches": [],
+  "excluded_secrets": [
+    "llm_rca_config.json",
+    "datasets/aiops2022/llm_config.json",
+    "SSH credentials",
+    "scoped kubeconfig/token"
+  ],
+  "builder_payload_file_count": 7318,
+  "builder_payload_bytes": 165650627,
+  "manifest_entry_count": 7320,
+  "full_package_file_count_including_manifest": 7321,
+  "manifest_scope": "all regular files except MANIFEST.json itself",
+  "offline_tests": {
+    "status": "PASS",
+    "tests_passed": 12,
+    "command": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=${ARTIFACT_ROOT} DYRCA_ROOT=${DYRCA_ROOT} python -m pytest -c /dev/null --confcutdir=${ARTIFACT_ROOT} tests/e2r/test_multi_root_proxy.py tests/e2r/test_m2_formal_pipeline.py tests/e2r/test_observation.py -q -p no:cacheprovider"
+  },
+  "sealed": true
+}

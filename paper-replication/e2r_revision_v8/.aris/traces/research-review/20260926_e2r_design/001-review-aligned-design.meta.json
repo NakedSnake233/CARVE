@@ -1,0 +1,14 @@
+{
+  "call_number": 1,
+  "purpose": "review-aligned-experiment-design",
+  "timestamp": "2026-09-26T18:48:43+09:00",
+  "agent_id": "/root/review_aligned_design",
+  "model": "gpt-6-astra",
+  "reasoning_effort": "ultra",
+  "reviewer_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "status": "ok",
+  "response_path": "001-review-aligned-design.response.md",
+  "deliverable_path": "RESEARCH_REVIEW_20260926_E2R_DESIGN.md"
+}

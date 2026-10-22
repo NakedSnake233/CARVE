@@ -1,0 +1,859 @@
+{
+  "schema": "e2r_anonymization_map_v1",
+  "note": "Source hashes refer to private pre-scrub bytes; staged hashes bind publishable bytes.",
+  "transformed_files": [
+    {
+      "path": "rca_bench/README.md",
+      "source_sha256": "344ce31743e9cffe554be03727db9daa6d90d53196aaf0eb103290e0a0ae621b",
+      "staged_sha256": "be139e3190a63cb8178e54cb4c1892caf1ec81c5e46a21d574033d6e9bf1b093",
+      "transforms": [
+        "local_microremed_root",
+        "local_project_root"
+      ]
+    },
+    {
+      "path": "rca_bench/cli.py",
+      "source_sha256": "904042f6908fa8307156e9f79032ddba0e43146ca97bc65c68cb39a1bc7d320d",
+      "staged_sha256": "26983765893641d88bacfdbbddde982facfa66c13a5fc88b63a048531e72f4ae",
+      "transforms": [
+        "local_microremed_root"
+      ]
+    },
+    {
+      "path": "scripts/e2r/create_scoped_kubeconfig.py",
+      "source_sha256": "056ed0e07b2a836bf23fe61460c6eec06b49986b9040e7e803fcbed309abe836",
+      "staged_sha256": "ff181db7137e2992e3b96888751e70f5bbf7d10d8de369d2492492f7396988aa",
+      "transforms": [
+        "scoped_kubeconfig_path"
+      ]
+    },
+    {
+      "path": "scripts/e2r/run_recovery_sanity.py",
+      "source_sha256": "c49e45199958c65284de9e62a4c2bac2a227659d0a46a1ec5f6b73ff0c47a42b",
+      "staged_sha256": "5a43775c42d1a3f35c044432c7fe46638d7178bd1fe61f0b72c60ce6a9ac1306",
+      "transforms": [
+        "scoped_kubeconfig_path"
+      ]
+    },
+    {
+      "path": "tests/test_safety_guard.py",
+      "source_sha256": "6b7918bdc38dc65f97025a89b7aa36424a321f5ac9035113c005e50f4b838195",
+      "staged_sha256": "4d940d0f226e0493edf1f403b849ff290b5b01bb84bdc8fc63404637a06ed3a2",
+      "transforms": [
+        "scoped_kubeconfig_path"
+      ]
+    },
+    {
+      "path": "refine-logs/FULL_EXPERIMENT_CODE_REVIEW.md",
+      "source_sha256": "5511d98d0e587034ca95bb27d39b6313dc237aa1fe356a34148f2b727275132d",
+      "staged_sha256": "650c1183a1eef4db0125bc51d17e8733b86a23e81dcf0bebc81c9e2826daf6b5",
+      "transforms": [
+        "local_home",
+        "local_project_root",
+        "scoped_kubeconfig_path"
+      ]
+    },
+    {
+      "path": "findings.md",
+      "source_sha256": "0c7070e93ad4c6a9f5d47087bd4b3e395f6eafc6e52b9354851bdce28726011b",
+      "staged_sha256": "a347e6d5d2ed201b3bc8bd5c37146c276ba0bbec16afdfb3b6df87039e080055",
+      "transforms": [
+        "gpu_ssh"
+      ]
+    },
+    {
+      "path": "experiments/e2r/isolated_environment.json",
+      "source_sha256": "e609874865aac726703127483c822450071e6e04979676fecb09908fd84122f6",
+      "staged_sha256": "684ab145b478ca3203e0779dcf240c9368a1705df5f99f188139bd678c96c07a",
+      "transforms": [
+        "local_microremed_root"
+      ]
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260926_b2_b3/001-b2-b3.meta.json",
+      "source_sha256": "a668a1c2f9d66507b4e095eec69c86b4f143c9a427b0f3faa9dd2f4796c40384",
+      "staged_sha256": "fb2ba4f7fbfeec5348feb73fce7f25c0614300b2a0b03139897df58a61165f0c",
+      "transforms": [
+        "local_project_root"
+      ]
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260926_b2_b3/001-b2-b3.request.json",
+      "source_sha256": "6e166bed52b5becb408624690a83db188162f22ece972e168988202980a61124",
+      "staged_sha256": "faba8a846d8193a1880ca6d38fe427bcbdbcbd5bfc15ea1a73e1221fc9e23b52",
+      "transforms": [
+        "local_home",
+        "local_project_root"
+      ]
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260926_b2_b3/001-b2-b3.response.md",
+      "source_sha256": "554f495b4ac0990e247dac5963ac8e798505a4f902ae22be1a491300f6e6a029",
+      "staged_sha256": "a5b0205fa0b483f900fdec5f2867d5e4d16e931e245ff17d28b39282a57aa536",
+      "transforms": [
+        "local_dyrca_root"
+      ]
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260926_b2_b3/002-generalization-scaling.meta.json",
+      "source_sha256": "ad2fedc970961c9b91bace77a26279d44aa2d0ab432697ae04debf03f5649063",
+      "staged_sha256": "34ed0e9082e71154d1067d416ff58d43d64ae4660ea70f2d9f228a0c2e404537",
+      "transforms": [
+        "local_project_root"
+      ]
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260926_b2_b3/002-generalization-scaling.request.json",
+      "source_sha256": "470758a14f95f08f4193e09e38b12449142a60baf56e6b763d8e886dde566e82",
+      "staged_sha256": "1269165522486164ec0508c93a85f981f6cf2b7bd49f8e1430312a21998f3ecb",
+      "transforms": [
+        "local_project_root"
+      ]
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260926_b2_b3/002-generalization-scaling.response.md",
+      "source_sha256": "ae727152bb76db50766fe2c4d2c08a4ad649d822714b61770c728c880b79b549",
+      "staged_sha256": "4c9b5d2352ee806ff2eadb089199bc75caa3c8961581df139eecadb654b632ac",
+      "transforms": [
+        "local_project_root"
+      ]
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260926_b2_b3/accounting_v2_hashes.json",
+      "source_sha256": "65fbf5fe3b5312eea2ab40ac496a8c08c9d8dc87eb672138992adb80af8ffa09",
+      "staged_sha256": "7b3d4f5f3a59a2384c54d12167daa8137c0090326d62ac0487d16118ffae374b",
+      "transforms": [
+        "local_project_root",
+        "project_path_to_relative"
+      ]
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260926_b2_b3/audited_input_hashes.json",
+      "source_sha256": "28d36bc9f9af036a320ade400fed815e98f7b52a0df84478d2eaf0511956d3a9",
+      "staged_sha256": "d54ed6456411db38a1771d658263af4bf2b1e68ec07115aba18245527617078e",
+      "transforms": [
+        "local_dyrca_root",
+        "local_project_root",
+        "project_path_to_relative"
+      ]
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260926_b2_b3/expenditure_v3_hashes.json",
+      "source_sha256": "f20c0c4f1f7ccfff7c4530bccd3c93b71c889098da7a870b9e688a913e3dd65d",
+      "staged_sha256": "2681670d0b0d61b05fd68f0b1bcd55ef967c867e5edfad07ee1922a56bc96d5f",
+      "transforms": [
+        "local_project_root",
+        "project_path_to_relative"
+      ]
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260926_b2_b3/finalize_audit.py",
+      "source_sha256": "520d5797d6eb2716534c266f23fa546b930e51be2fc4b506da874ca74e91a388",
+      "staged_sha256": "0d622fc5a0f24b3bf32eeb60f949663c900eb285d49a7730c6496a1b2f56a8ad",
+      "transforms": [
+        "local_project_root"
+      ]
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260926_b2_b3/generalization_scaling/REVIEW.md",
+      "source_sha256": "a0e7d88fc3c505fe1bde0f4c67c5be9b9391bb57fa607a984164facc7ca5d954",
+      "staged_sha256": "b63ddc4bb451358b8fe4326f7d24e7f8f6111ee896330cbafeb6b4d636a9d87e",
+      "transforms": [
+        "local_dyrca_root"
+      ]
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260926_b2_b3/generalization_scaling/forensic_audit.py",
+      "source_sha256": "fff698e8c60bbe0d4ffebbde48b6f416badc6a8803326e6181170b2735727eb9",
+      "staged_sha256": "0a2d1fb423955867c6b8f97199a0b086f42e5424525c3fb8a0fb218a82d69b36",
+      "transforms": [
+        "local_project_root"
+      ]
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260926_b2_b3/generalization_scaling/sha256_inventory.json",
+      "source_sha256": "1e00f2088248cf98a0f78def533a288d05208c0ac2d0ad15c73a5fa4f0a73c34",
+      "staged_sha256": "18524241efa21486898d88dcc58460cb0352b5354aa5a2f8fd05a8792d6187c2",
+      "transforms": [
+        "local_dyrca_root",
+        "local_project_root",
+        "project_path_to_relative"
+      ]
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260926_b2_b3/qwen_proxy_hashes.json",
+      "source_sha256": "90119750d4b542eeb61b6d09d3ab6bae73c906fb83ca64febc24307936e5de0f",
+      "staged_sha256": "ec1f5f28ad1112af5bc7233ae8ef0edeb35e8553c4d8685b9abadcb0c81f9bc4",
+      "transforms": [
+        "local_dyrca_root",
+        "local_project_root",
+        "project_path_to_relative"
+      ]
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260926_b2_b3/qwen_supplement_hashes.json",
+      "source_sha256": "b38d9492202e2e2a9a3d3ecb05c134937d0aeacecbf7bc4d55966c6020406c16",
+      "staged_sha256": "8cc74d40a064876237720d652714fc6d11690a44defa17d53855375cec213f73",
+      "transforms": [
+        "local_dyrca_root",
+        "local_project_root",
+        "project_path_to_relative"
+      ]
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260926_b2_b3/run.meta.json",
+      "source_sha256": "8449ebdc500a164d6e91082a4f02f506235581e9124d7315f19b57134682a1a1",
+      "staged_sha256": "bd410f393abfa10d4d72cd42c53dc42be60d65de3439418a81ce292b41a3e22b",
+      "transforms": [
+        "local_project_root"
+      ]
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260926_b2_b3/save_review_trace.py",
+      "source_sha256": "037a37141faa72ae3af7c8fa01d55e862ee0ee74bf730845c441f4b02f2cc08d",
+      "staged_sha256": "c1a342146d63ad41691d59c21e36d160ec6ad95d6c8977351f7385e04185815e",
+      "transforms": [
+        "local_home",
+        "local_project_root"
+      ]
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260926_b2_b3/verify_accounting_v2.py",
+      "source_sha256": "e5fad66cf3b5803fa4283f1df38e027d29cd6434c0a4cee1dbbac321fb67b8ea",
+      "staged_sha256": "c7a296d871eabd045984a6cf03cd77b44d876409dc08252b99e465ed145576af",
+      "transforms": [
+        "local_project_root"
+      ]
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260926_b2_b3/verify_expenditure_v3.py",
+      "source_sha256": "38bed3b9b3e98c32b958bc42569eeae039c25a82e6a5ab5014f179486713b245",
+      "staged_sha256": "ec59f6bc73fe1315a06eb15931ef15e85c6c339016f85dd29a4caa900f8341df",
+      "transforms": [
+        "local_project_root"
+      ]
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260926_b2_b3/verify_qwen_proxy.py",
+      "source_sha256": "eaad4153ee1746b0513b1635eebe390095e2e7765cb3ab05e49d394d9f65fdbd",
+      "staged_sha256": "b0cdf02adb4323d4d0f0f1bfa79a094860d5759d61340bf719a625e10711727e",
+      "transforms": [
+        "local_project_root"
+      ]
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260926_b2_b3/verify_qwen_supplement.py",
+      "source_sha256": "d5d57406d491efc99068f08e7d4d529d5898788d36e09d7c54f3d66ce1252299",
+      "staged_sha256": "eafcdcc208d29580544656a50b0659423fbc47f54c94b5a483a3cb196cc1bbb0",
+      "transforms": [
+        "local_project_root"
+      ]
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260927_m4_sanity/001-m4-sanity-audit.request.json",
+      "source_sha256": "59574d2c4363cf91eefabb709e4be39a1b4cb58fb3dee06d477d8da6c4f0f302",
+      "staged_sha256": "eb7c818ffeca20b02670acec301371609a1ac3bab93c381488bedc4f33dbc90b",
+      "transforms": [
+        "local_home",
+        "local_project_root"
+      ]
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260927_m4_sanity/001-m4-sanity-audit.response.md",
+      "source_sha256": "060d05e4d4512bc86381bad9da8cc059c4a0fd21bb07fde28d5fa03f45bfc977",
+      "staged_sha256": "78dcd5d8133014be4eaff9d399af2315aaa620c32e1b249f70ca933bc3f3125f",
+      "transforms": [
+        "local_home"
+      ]
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260927_m4_sanity/002-baseline-runtime-sub-audit.request.json",
+      "source_sha256": "005ab5702e747a0db2f89f9388131eaea1602f356aaa9eefd69e07da67bc4b99",
+      "staged_sha256": "4e6bed4c6267f3d077e13411ad2556c04bf9c6ce868d21f9fc223ff763b66e72",
+      "transforms": [
+        "local_project_root",
+        "project_path_to_relative"
+      ]
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260927_m4_sanity/audited_source_snapshots/findings.md",
+      "source_sha256": "696ff7d45654b7c3e3185d55743b67e9882ed19162e2141a724ade07b0fb2a61",
+      "staged_sha256": "884cf2182bd17a932951897f43cdaaaf362c5e9516fc5d90c4eb3ce5eb49e34b",
+      "transforms": [
+        "gpu_ssh"
+      ]
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260927_m4_sanity/audited_source_snapshots/refine-logs/FULL_EXPERIMENT_CODE_REVIEW.md",
+      "source_sha256": "297593d8f41a51b5a6e8e03b49314e2fa0535601cb1b93e51c5b8e2a895c3173",
+      "staged_sha256": "420a14062641b38a5517afebb34b0b8665089d55bab3908fb9e8acbe02ab17c2",
+      "transforms": [
+        "local_home",
+        "local_project_root",
+        "scoped_kubeconfig_path"
+      ]
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260927_m4_sanity/audited_source_snapshots/scripts/e2r/run_recovery_sanity.py",
+      "source_sha256": "c49e45199958c65284de9e62a4c2bac2a227659d0a46a1ec5f6b73ff0c47a42b",
+      "staged_sha256": "5a43775c42d1a3f35c044432c7fe46638d7178bd1fe61f0b72c60ce6a9ac1306",
+      "transforms": [
+        "scoped_kubeconfig_path"
+      ]
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260927_m4_sanity/recompute.py",
+      "source_sha256": "6cafc8232e795ca5b72221b191ff446599ab3e6c3d92878e0a2f470987eccd4b",
+      "staged_sha256": "376e0e7a9ebc6805a3a4d949d2deb44a7a2f287f162fe5aec18eee625bd61359",
+      "transforms": [
+        "local_project_root",
+        "scoped_kubeconfig_path"
+      ]
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260927_m4_sanity/run.meta.json",
+      "source_sha256": "64838abe6b454d55c35d783af6c9f1a2285d65e0592a04403f355e73c0834915",
+      "staged_sha256": "15b9f7643858932b4375a1a7af341eea4c4695920cdfd620f9f0b3a3a2e73b8f",
+      "transforms": [
+        "local_project_root"
+      ]
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260927_m4_sanity/save_trace_metadata.py",
+      "source_sha256": "bba3fdfd77e24a6910c53724302aca596b4f01e8046eaab3accdff7ae6e97a25",
+      "staged_sha256": "9f30ffb1a5e8177ea53068ba6880ceded66028ce825ed38de38f4c739f3a8785",
+      "transforms": [
+        "local_home",
+        "local_project_root"
+      ]
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260927_m4_sanity/write_report.py",
+      "source_sha256": "ec786314042c2a07f55b46435ebafb53f3cc36e63012beee13f3b5a40df93278",
+      "staged_sha256": "925fb299202c71806ca783628fabd649c24bb772068d2ae3b6ec9f85fd670d06",
+      "transforms": [
+        "local_home",
+        "local_project_root"
+      ]
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260927_matched_interrupted/001-interruption-audit.request.json",
+      "source_sha256": "74ac63cf5c776c9ca7da1e229757a8e7345b50ae2f530bd9b17e9d7d4b0d0e26",
+      "staged_sha256": "35259c7226d20ad4a0b8268be14fb7829e10e7622a795143ab378687fdba7e16",
+      "transforms": [
+        "local_home",
+        "local_project_root"
+      ]
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260927_matched_interrupted/001-interruption-audit.response.md",
+      "source_sha256": "189d0ca3fc93073ff763bb75afaa0694772caffd814b31176153a075928bb0f6",
+      "staged_sha256": "14dd236b7f875116adeb48ce948a71391b86ba780c1d1698de7259dfca05d3c1",
+      "transforms": [
+        "scoped_kubeconfig_path"
+      ]
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260927_matched_interrupted/002-supporting-facts.request.json",
+      "source_sha256": "ea430edf1b614a26a6da38ad24de42e373619317e3d1a2ea0d6b9a75c1119639",
+      "staged_sha256": "48406694bab0189b0f206bc9e86c41cb3d0ca0d74a150fe26beb09c8a7e8eee8",
+      "transforms": [
+        "local_project_root",
+        "project_path_to_relative"
+      ]
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260927_matched_interrupted/002-supporting-facts.response.md",
+      "source_sha256": "0d45a5b35ef6ae180b6df4837c743f222abdf7c6356c4035b6f0936b4aa655c2",
+      "staged_sha256": "ba3f64be9972b53f748e2f1a7105c1126b85cb8442a678e1f2868eea8babb64a",
+      "transforms": [
+        "local_project_root"
+      ]
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260927_matched_interrupted/EXPERIMENT_AUDIT.json",
+      "source_sha256": "f093321a4ed7a681888380b5b1af618b5ec761c18d30a8000072d010094cd60c",
+      "staged_sha256": "d7ae1f760634bcc52631a75900a896127be802c7197978c430f5e4674d958f64",
+      "transforms": [
+        "node_name"
+      ]
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260927_matched_interrupted/recompute_noaction.json",
+      "source_sha256": "8929e54784a71d5326917af4a9f6c1a94ed2d60edf45e65b1ba6936d13c7d6f6",
+      "staged_sha256": "20def28c6c64c34efc679a17173f809ef39ad5b77209b6933c77c34d4ead3b85",
+      "transforms": [
+        "node_name"
+      ]
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260927_matched_interrupted/recompute_noaction.py",
+      "source_sha256": "551c31bfa0bacbd9c1abc73bb4dfb4fa134c57ea40bc491aafc5c7a0dfc79f59",
+      "staged_sha256": "58fc31df319edb3d5f0a7075999e67b169cadf945d34ecd19449715c7728c02c",
+      "transforms": [
+        "scoped_kubeconfig_path"
+      ]
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260927_matched_interrupted/recompute_typed_and_accounting.json",
+      "source_sha256": "84f522fa45b445eabb6f98ec94a8cce8928fde25835c0a786d820727335f399c",
+      "staged_sha256": "f4184b9ba1145367f0b40e2e43141af3d23d81f6fc74737589b8bd0801ff8003",
+      "transforms": [
+        "local_home",
+        "local_project_root",
+        "project_path_to_relative"
+      ]
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260927_matched_interrupted/recompute_typed_and_accounting.py",
+      "source_sha256": "3f055d0ce964d7414541c697b320ab40d58b5926eb7972eaafb1c531be10cace",
+      "staged_sha256": "4448804b1731194319acf1257196fe6107824a3390cb43f3bbd6eb89c10ac9d5",
+      "transforms": [
+        "scoped_kubeconfig_path"
+      ]
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260927_matched_interrupted/run.meta.json",
+      "source_sha256": "585c00f39fa935cf07321a0da9f38c015b1cbbeed3e4f248367c2a4c2bc75110",
+      "staged_sha256": "3e52db22682d689081e00d276f44d378d3c98660a51addd809583000fbe7c598",
+      "transforms": [
+        "local_project_root"
+      ]
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260927_artifact_release/offline_test_replay.json",
+      "source_sha256": "6977a2acff3c89c1d76c8189ea5ac7117dd7e2b1b424017a306107dddd0d59b8",
+      "staged_sha256": "208d97204d31d8dec927ad3a15763c65149b1cf0cb84c67c98b7b501115ddf8f",
+      "transforms": [
+        "local_dyrca_root",
+        "local_project_root",
+        "project_path_to_relative"
+      ]
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260927_artifact_release/v7/verify_map_and_folded_markers.py",
+      "source_sha256": "4444f546e9c596d30c6e8270da33aad276423241c6540c1b38879d325aa90e5c",
+      "staged_sha256": "4116edf2c44857c8dd9577ad2b809ad4a676dd1930345bae5898e9b4f0ff1ed3",
+      "transforms": [
+        "local_project_root"
+      ]
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260927_artifact_release/v7/verify_release.py",
+      "source_sha256": "959cb5ce751e629065e8e1d4e12f960d121112d3123d2baf875e975dbcd3517d",
+      "staged_sha256": "86a52e61a418b42d4e6f98acd7dbfde41143a8f4520a9bfb432e68cb7c903c0f",
+      "transforms": [
+        "local_project_root",
+        "local_username"
+      ]
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260927_artifact_release/verify_release.py",
+      "source_sha256": "ac5737d5b370eb35157abaf14eb77f6e433661c480ec0b5cd060864f11d4a85e",
+      "staged_sha256": "4ffb702acfdeff52e7a2e8606f7eaf8fca98cbf54dd9900d8b19e173db977ecb",
+      "transforms": [
+        "local_project_root",
+        "local_username"
+      ]
+    },
+    {
+      "path": ".aris/traces/research-review/20260926_e2r_design/run.meta.json",
+      "source_sha256": "af8e2ca70393c3124de33ac7a9b91cf476e30b1ecddba1a24aef5a2898470800",
+      "staged_sha256": "69c56e89155ba7d28e33b4a6bd2d59a26622f2d4460af9208c0216004b8aa148",
+      "transforms": [
+        "local_project_root"
+      ]
+    },
+    {
+      "path": "experiments/e2r/runs/full_data_v2/manifest.json",
+      "source_sha256": "b5ae9921b196d9708d32d635db91c011724c95ec5440c2681e3d635115f77c22",
+      "staged_sha256": "f3070847204c2ce36e4ac6f506bb7e6a4f90ac41dc0af2dcd3a47c0b9fccd92d",
+      "transforms": [
+        "local_dyrca_root",
+        "local_project_root",
+        "project_path_to_relative",
+        "relocatable_observation_manifest"
+      ]
+    },
+    {
+      "path": "experiments/e2r/runs/gpu_full_4090d/results.json",
+      "source_sha256": "bbc131436228c09cc460e0ec94dd52cd494699c3e15087e0435de8888d77c337",
+      "staged_sha256": "9b3b2370d7664967ae91a0462ad7d1a4199075c2acbcafe8132b2562d3f68f51",
+      "transforms": [
+        "project_path_to_relative",
+        "remote_project_root"
+      ]
+    },
+    {
+      "path": "experiments/e2r/runs/gpu_train_reference_v1/results.json",
+      "source_sha256": "0f892fa4ba3fba6de62bda991e9e9df53855f5a85a98fd55b7d3d12f61b6baca",
+      "staged_sha256": "4e368135498e86fba8ad2810e3d649495b345c47f84d9a2f52c54a0bd75b8908",
+      "transforms": [
+        "project_path_to_relative",
+        "remote_project_root"
+      ]
+    },
+    {
+      "path": "experiments/e2r/runs/gpu_train_runtime_v1/results.json",
+      "source_sha256": "b96c94fc846000c5ea5ae5e950c5ab1be003751bc8877f321867b661705aaa38",
+      "staged_sha256": "3e5daaf3326a1d76bfde94a43043372a27b3b8227fe44be2c0ded10f403a2327",
+      "transforms": [
+        "project_path_to_relative",
+        "remote_project_root"
+      ]
+    },
+    {
+      "path": "experiments/e2r/runs/gpu_train_node_only_v1/results.json",
+      "source_sha256": "3f0320b35d135db5540cb99d43c7deeefa59148ef81e502c5ba32c6bc8e0b371",
+      "staged_sha256": "ee9eed141ccd9c13dfea4737d3a4a58a93e1cec73f65711bce6ef054575692ee",
+      "transforms": [
+        "project_path_to_relative",
+        "remote_project_root"
+      ]
+    },
+    {
+      "path": "experiments/e2r/runs/m1_matrix_v3/EXPERIMENT_AUDIT.json",
+      "source_sha256": "891aedbf5ad545ea4a0568d51862f04118a2328f4d6a8e9284fb52ebac609e6a",
+      "staged_sha256": "7223cd1b185514397cd50e2f302b9b622a18fc9c4b4154dcb28e2da62047cf7f",
+      "transforms": [
+        "local_dyrca_root"
+      ]
+    },
+    {
+      "path": "experiments/e2r/runs/m1_matrix_v3/EXPERIMENT_AUDIT.md",
+      "source_sha256": "d70f517afa8ce9fcb7164f20f20de47f078aaed7f2898ab4ef7d816429083bdc",
+      "staged_sha256": "f1c7901c680465b9b38d6a38c2e9910755c98eb0de7df647e5dff58650401216",
+      "transforms": [
+        "local_dyrca_root"
+      ]
+    },
+    {
+      "path": "experiments/e2r/runs/m2_qwen38_pilot_formal_v1/campaign.json",
+      "source_sha256": "d3cfbf53e535f6164e89fcbc4d92b60a4f719a197c36329f8af405846f2c574c",
+      "staged_sha256": "56ba1f19e6c8d4fce5c62eda61f48bf7a7d41ca987f91240e5ba66b85e4d281c",
+      "transforms": [
+        "local_project_root",
+        "project_path_to_relative"
+      ]
+    },
+    {
+      "path": "experiments/e2r/runs/m2_qwen38_pilot_formal_v2/campaign.json",
+      "source_sha256": "9783e444a00b0d39ae94627cfe50d311f760d7eb4ea1b3109544288658e509f3",
+      "staged_sha256": "65ac8362cc509b7165f3243fbe814d07022c50fad467c1c136d5af996bdf3f8f",
+      "transforms": [
+        "local_project_root",
+        "project_path_to_relative"
+      ]
+    },
+    {
+      "path": "experiments/e2r/runs/m2_qwen38_formal_v1/campaign.json",
+      "source_sha256": "46704043143798d1ccb10d4835d1a201ff9c9ddfbf393066170a6777574516c6",
+      "staged_sha256": "da1aced0b57aefd290953b581b04d7d09c2faecc2bcf36d844367917e0ff3c97",
+      "transforms": [
+        "local_project_root",
+        "project_path_to_relative"
+      ]
+    },
+    {
+      "path": "experiments/e2r/runs/m2_qwen38_combined_campaign_v1/campaign.json",
+      "source_sha256": "b3d38438c75dd22dfeb425101bff69f40f98bf2592d5e9d40dcaeb8e54733eb0",
+      "staged_sha256": "aa101b1729c1aca389ad7d0941de0645abe60fe4d3af8b04b7806e02ea6dca7a",
+      "transforms": [
+        "local_project_root",
+        "project_path_to_relative"
+      ]
+    },
+    {
+      "path": "experiments/e2r/runs/m2_qwen38_pilot_scores_v2/results.json",
+      "source_sha256": "9b51b9af900c43b037f3d3f05ffff4576ea1b7f4844bd36b8e28a372abb0818a",
+      "staged_sha256": "4700d11001215f3bee608c15770e1315c1787be1822c2d55b29a242c9b18ba16",
+      "transforms": [
+        "project_path_to_relative",
+        "remote_project_root"
+      ]
+    },
+    {
+      "path": "experiments/e2r/runs/m2_qwen38_formal_scores_v1/results.json",
+      "source_sha256": "52ea3b29112cf761de92839ebea2aaf0805fecd27cfae2559519759c41ae8ae0",
+      "staged_sha256": "29d802eec6d8a0d8331ba9564967c69d5fac383ea5e36f7aef6f3fc7cfa68442",
+      "transforms": [
+        "project_path_to_relative",
+        "remote_project_root"
+      ]
+    },
+    {
+      "path": "experiments/e2r/runs/m2_qwen38_combined_scores_v1/results.json",
+      "source_sha256": "52e7fcd584a33d12920d1fafacf8c1ed7fc0373d8a6d64b23a4bfa1ff124dfcf",
+      "staged_sha256": "dff50548a638abcedef9257eaf0693d9c1f24286c8e5b75a08efb268669496b1",
+      "transforms": [
+        "local_project_root",
+        "project_path_to_relative",
+        "remote_project_root"
+      ]
+    },
+    {
+      "path": "experiments/e2r/runs/m2_deepseek41_compat_v1/campaign.json",
+      "source_sha256": "fbf9587176faa596dd0903e3163fcff3e7c492397ea0053814ff446832ff4182",
+      "staged_sha256": "88eedf0f9b8437ea5fd3151a87872633bb71151aa6069ff095b002fd31b6e256",
+      "transforms": [
+        "local_project_root",
+        "project_path_to_relative"
+      ]
+    },
+    {
+      "path": "experiments/e2r/runs/m2_gpt56luna_compat_v1/campaign.json",
+      "source_sha256": "fdc9ac19e0219fccd4fb2a18b36eef35376ef3f1eddefb29f8ba2ecb1f093fe0",
+      "staged_sha256": "e53b79a77536aa34d502e19277ff5ad6e296cc53cd333a68815a729f396e71da",
+      "transforms": [
+        "local_project_root",
+        "project_path_to_relative"
+      ]
+    },
+    {
+      "path": "experiments/e2r/runs/generalization_lofo_T1_v1/results.json",
+      "source_sha256": "8bb706f3bc56aa895bed6e7d0cc2d60f1b501a6a0e2608c53254804425dd4a6d",
+      "staged_sha256": "53ee095be29898d917ea948fdba23897454be40a88896526c2eba70ee2bbd209",
+      "transforms": [
+        "project_path_to_relative",
+        "remote_project_root"
+      ]
+    },
+    {
+      "path": "experiments/e2r/runs/generalization_lofo_T2_v1/results.json",
+      "source_sha256": "ecb5a498c907ee3c76d3d0e40db83af9f926d5548bc08a3f460998b353af81e6",
+      "staged_sha256": "b06cb98ad279b98d82ad80dc2743af7d81c008d9a7d5eb98a83c75604d71fe75",
+      "transforms": [
+        "project_path_to_relative",
+        "remote_project_root"
+      ]
+    },
+    {
+      "path": "experiments/e2r/runs/generalization_lofo_T3_v1/results.json",
+      "source_sha256": "ad9be6c0ce904efdf8ecc339385abf16aa33870e72277ddc2f73bb4e20d74d34",
+      "staged_sha256": "a9e7d19595327707885a002740742a1bc76c75c584d390765f5ce7ed2856c6da",
+      "transforms": [
+        "project_path_to_relative",
+        "remote_project_root"
+      ]
+    },
+    {
+      "path": "experiments/e2r/runs/generalization_lofo_T4_v1/results.json",
+      "source_sha256": "18ad057709ff496acb813daa9ed5c8ecf24538322e3dff2cf445a6360b883d67",
+      "staged_sha256": "1bed2fd703f7310a5bb92e9fe75663e1a9cf2ed6369f0789782a12432a6ec376",
+      "transforms": [
+        "project_path_to_relative",
+        "remote_project_root"
+      ]
+    },
+    {
+      "path": "experiments/e2r/runs/generalization_boutique_to_trainticket_v1/results.json",
+      "source_sha256": "743657ae28ec75490236e8fe204cc73dbb1a0b7ce8bf54e975073eec54b88268",
+      "staged_sha256": "387b43df20dd3ba2f6a5e0e723afc6b2ed6da3dbece4632ce73c2f71daf8f828",
+      "transforms": [
+        "project_path_to_relative",
+        "remote_project_root"
+      ]
+    },
+    {
+      "path": "experiments/e2r/runs/generalization_trainticket_to_boutique_v1/results.json",
+      "source_sha256": "08226230c3bcaa6423d0318e0c1f53824f5ab5ef4795b92e380c6e7dd156205e",
+      "staged_sha256": "7b1c4474b794a9cd272a89890366cb6bb2ea3ef76d7291c69e545e1c7ce2dbf3",
+      "transforms": [
+        "project_path_to_relative",
+        "remote_project_root"
+      ]
+    },
+    {
+      "path": "experiments/e2r/runs/b2_b3_audit_v1/EXPERIMENT_AUDIT.json",
+      "source_sha256": "d514aad54b92be797c78347cfefe8b15a149f702ab157e475c5b4543912296c6",
+      "staged_sha256": "5ddb37ec077be6f04c414d1d7dd0e8f865ff1c3f1d5c2ae4f36145c2c4dc694d",
+      "transforms": [
+        "local_dyrca_root",
+        "local_project_root",
+        "project_path_to_relative"
+      ]
+    },
+    {
+      "path": "experiments/e2r/runs/b2_b3_audit_v1/EXPERIMENT_AUDIT.md",
+      "source_sha256": "554f495b4ac0990e247dac5963ac8e798505a4f902ae22be1a491300f6e6a029",
+      "staged_sha256": "a5b0205fa0b483f900fdec5f2867d5e4d16e931e245ff17d28b39282a57aa536",
+      "transforms": [
+        "local_dyrca_root"
+      ]
+    },
+    {
+      "path": "experiments/e2r/runs/recovery_baseline_v1/baseline.json",
+      "source_sha256": "b9c4c39b77b6640390746b77167ab5f69f2dca72598b59399b150d4dc9c563bf",
+      "staged_sha256": "27dafeba810bad7158a4ce8679a3445a8ae2f0c5d9e3d278d654f1aa2397d444",
+      "transforms": [
+        "node_name"
+      ]
+    },
+    {
+      "path": "experiments/e2r/runs/recovery_baseline_v2/baseline.json",
+      "source_sha256": "3957fa90acce446bd248c6e493c2374307454cc96d4644b99ec60fc04b84642d",
+      "staged_sha256": "42019aea14176ea46fcc1faff6cbbad76713ed9cf00b3abcc9c353f221173db9",
+      "transforms": [
+        "node_name"
+      ]
+    },
+    {
+      "path": "experiments/e2r/runs/recovery_baseline_comparison_v1/analysis.json",
+      "source_sha256": "7fe9e8a658f46c0de04e043ac714216817b9ab6245bab103fdcbd45c24a51a3c",
+      "staged_sha256": "a07cd87e788c9be3b1e1f895e736299b59a11ef44bbddf1b3fda214a097d0ebe",
+      "transforms": [
+        "local_project_root",
+        "project_path_to_relative"
+      ]
+    },
+    {
+      "path": "experiments/e2r/runs/recovery_sanity_frontend_cpu_v1/trace.json",
+      "source_sha256": "346a326e1c0cd88dea291932d521415ec182bcc46d54b53a3abff627a4fd1991",
+      "staged_sha256": "dd8177a11cf5b2624049f31128ebf351e70355e6f9a4064ca71c7148cb19d061",
+      "transforms": [
+        "local_home",
+        "scoped_kubeconfig_path"
+      ]
+    },
+    {
+      "path": "experiments/e2r/runs/recovery_sanity_frontend_cpu_v2/trace.json",
+      "source_sha256": "47122d445bcde4e11899fa02161ca0cf48f7d8e77c4bb582f3218f9568a28f23",
+      "staged_sha256": "0145dc561fa022e89ac8c017dbb80be28e64b3a1b573f01c23e83a4a256d56a9",
+      "transforms": [
+        "local_home",
+        "local_project_root",
+        "project_path_to_relative",
+        "scoped_kubeconfig_path"
+      ]
+    },
+    {
+      "path": "experiments/e2r/runs/recovery_sanity_frontend_cpu_v3/trace.json",
+      "source_sha256": "33cff9667822ef297d508809f57a758a9fb3dc975a757f46dd10ad47b4cad761",
+      "staged_sha256": "f100e1d959139b6fe23a80f4dcf6e308b2f60fa3bb24ba92a80937809034010d",
+      "transforms": [
+        "local_home",
+        "local_project_root",
+        "project_path_to_relative",
+        "scoped_kubeconfig_path"
+      ]
+    },
+    {
+      "path": "experiments/e2r/runs/m4_sanity_audit_v1/EXPERIMENT_AUDIT.md",
+      "source_sha256": "060d05e4d4512bc86381bad9da8cc059c4a0fd21bb07fde28d5fa03f45bfc977",
+      "staged_sha256": "78dcd5d8133014be4eaff9d399af2315aaa620c32e1b249f70ca933bc3f3125f",
+      "transforms": [
+        "local_home"
+      ]
+    },
+    {
+      "path": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/analysis_v1/analysis.json",
+      "source_sha256": "dd725f727b7b243ec88160b38a691bb7fd63e6866451ca391409d5c39f40794b",
+      "staged_sha256": "eabedec9f231ca29b093e3cbfe0d6c20ba3fc1f50a4e9a3a22ed37e4278318d8",
+      "transforms": [
+        "local_home",
+        "local_project_root",
+        "project_path_to_relative"
+      ]
+    },
+    {
+      "path": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/audit_v1/EXPERIMENT_AUDIT.json",
+      "source_sha256": "f093321a4ed7a681888380b5b1af618b5ec761c18d30a8000072d010094cd60c",
+      "staged_sha256": "d7ae1f760634bcc52631a75900a896127be802c7197978c430f5e4674d958f64",
+      "transforms": [
+        "node_name"
+      ]
+    },
+    {
+      "path": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/audit_v1/EXPERIMENT_AUDIT.md",
+      "source_sha256": "189d0ca3fc93073ff763bb75afaa0694772caffd814b31176153a075928bb0f6",
+      "staged_sha256": "14dd236b7f875116adeb48ce948a71391b86ba780c1d1698de7259dfca05d3c1",
+      "transforms": [
+        "scoped_kubeconfig_path"
+      ]
+    },
+    {
+      "path": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/audit_v1/recompute_noaction.json",
+      "source_sha256": "8929e54784a71d5326917af4a9f6c1a94ed2d60edf45e65b1ba6936d13c7d6f6",
+      "staged_sha256": "20def28c6c64c34efc679a17173f809ef39ad5b77209b6933c77c34d4ead3b85",
+      "transforms": [
+        "node_name"
+      ]
+    },
+    {
+      "path": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/audit_v1/recompute_noaction.py",
+      "source_sha256": "551c31bfa0bacbd9c1abc73bb4dfb4fa134c57ea40bc491aafc5c7a0dfc79f59",
+      "staged_sha256": "58fc31df319edb3d5f0a7075999e67b169cadf945d34ecd19449715c7728c02c",
+      "transforms": [
+        "scoped_kubeconfig_path"
+      ]
+    },
+    {
+      "path": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/audit_v1/recompute_typed_and_accounting.json",
+      "source_sha256": "84f522fa45b445eabb6f98ec94a8cce8928fde25835c0a786d820727335f399c",
+      "staged_sha256": "f4184b9ba1145367f0b40e2e43141af3d23d81f6fc74737589b8bd0801ff8003",
+      "transforms": [
+        "local_home",
+        "local_project_root",
+        "project_path_to_relative"
+      ]
+    },
+    {
+      "path": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/audit_v1/recompute_typed_and_accounting.py",
+      "source_sha256": "3f055d0ce964d7414541c697b320ab40d58b5926eb7972eaafb1c531be10cace",
+      "staged_sha256": "4448804b1731194319acf1257196fe6107824a3390cb43f3bbd6eb89c10ac9d5",
+      "transforms": [
+        "scoped_kubeconfig_path"
+      ]
+    },
+    {
+      "path": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/block.interruption.json",
+      "source_sha256": "100b1f4d1e28a06e67a7b0eff0e15b0f45c6c1ad8925a998e7181bb07a64daf4",
+      "staged_sha256": "196f345437277066ae6f20299130ff655bc9e12b29a13899dd22c94cd964f70b",
+      "transforms": [
+        "local_project_root",
+        "project_path_to_relative"
+      ]
+    },
+    {
+      "path": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/block.json",
+      "source_sha256": "59f875fffb5ffdbc55f823e617ffa18963323d02aa4e0605f27dcf8b72c5d925",
+      "staged_sha256": "b602c17d4da484381739e40d6cee3c11cc3148508c5d789ac5f638024b0fea3d",
+      "transforms": [
+        "local_home",
+        "local_project_root",
+        "node_name",
+        "project_path_to_relative"
+      ]
+    },
+    {
+      "path": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/episodes/00_no_action.json",
+      "source_sha256": "ab2ddd9dac089013b11b5e5b97e8a062bb6006985230b1469649113f7c714a0e",
+      "staged_sha256": "184f33c1ee99939b69862e3cd4683cb36f5a22978389768d7c4bde3d5e952d44",
+      "transforms": [
+        "node_name",
+        "scoped_kubeconfig_path"
+      ]
+    },
+    {
+      "path": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/episodes/01_typed_cleanup.interruption.json",
+      "source_sha256": "5f0e12cb8aad3b33dabf5c4ad0c3dd22a36c2fe3bdd469dfe80f80cb4f0f7006",
+      "staged_sha256": "0e85c2c02709e87f5700e61f1c1344025edada63d94a81be0f676b6db4b8a38a",
+      "transforms": [
+        "local_project_root",
+        "project_path_to_relative",
+        "scoped_kubeconfig_path"
+      ]
+    },
+    {
+      "path": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/episodes/01_typed_cleanup.json",
+      "source_sha256": "bb7f73d828bd44eb5fd90e68ded1796d7bffcb46c79c910473de779b0092f00d",
+      "staged_sha256": "f68149621f645cae48a78c1d85cffcdaf9afe7306a3a350fc83a782de912e001",
+      "transforms": [
+        "local_home",
+        "local_project_root",
+        "project_path_to_relative",
+        "scoped_kubeconfig_path"
+      ]
+    }
+  ]
+}

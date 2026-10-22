@@ -1,0 +1,132 @@
+{
+  "catalog": [
+    {
+      "id": "op0000",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-travel-service-v2-94846cfc8-wqjkz",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-travel-service",
+          "version": "v2.0.0"
+        },
+        "evidence": [
+          "during:pod:ts-travel-service-v2-94846cfc8-wqjkz"
+        ]
+      },
+      "evidence_id": "during:pod:ts-travel-service-v2-94846cfc8-wqjkz",
+      "requires": []
+    },
+    {
+      "id": "op0001",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "ts-travel-service",
+        "target": "pod:ts-travel-service-v2-94846cfc8-wqjkz",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "evidence": [
+          "during:ts-travel-service->pod:ts-travel-service-v2-94846cfc8-wqjkz"
+        ]
+      },
+      "evidence_id": "during:ts-travel-service->pod:ts-travel-service-v2-94846cfc8-wqjkz",
+      "requires": [
+        "op0000"
+      ]
+    },
+    {
+      "id": "op0002",
+      "group": "node_ops",
+      "operation": {
+        "op": "SPLIT_NODE",
+        "parent": "ts-travel-service",
+        "children": [
+          "ts-travel-service:unversioned",
+          "ts-travel-service:v2.0.0"
+        ],
+        "attrs": {
+          "type": "version",
+          "service": "ts-travel-service"
+        },
+        "evidence": [
+          "version_coexistence:ts-travel-service"
+        ]
+      },
+      "evidence_id": "version_coexistence:ts-travel-service",
+      "requires": []
+    }
+  ],
+  "plan": {
+    "experiment_id": "case00754",
+    "change_type": "observation_supported_updates",
+    "confidence": 0.0,
+    "causal_role": "not_inferred",
+    "node_ops": [
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-travel-service-v2-94846cfc8-wqjkz",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-travel-service",
+          "version": "v2.0.0"
+        },
+        "evidence": [
+          "during:pod:ts-travel-service-v2-94846cfc8-wqjkz"
+        ]
+      },
+      {
+        "op": "SPLIT_NODE",
+        "node_id": "",
+        "old_node": "",
+        "new_node": "",
+        "parent": "ts-travel-service",
+        "children": [
+          "ts-travel-service:unversioned",
+          "ts-travel-service:v2.0.0"
+        ],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "version",
+          "service": "ts-travel-service"
+        },
+        "evidence": [
+          "version_coexistence:ts-travel-service"
+        ]
+      }
+    ],
+    "edge_ops": [
+      {
+        "op": "ADD_EDGE",
+        "source": "ts-travel-service",
+        "target": "pod:ts-travel-service-v2-94846cfc8-wqjkz",
+        "old_source": "ts-travel-service",
+        "old_target": "pod:ts-travel-service-v2-94846cfc8-wqjkz",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:ts-travel-service->pod:ts-travel-service-v2-94846cfc8-wqjkz"
+        ]
+      }
+    ],
+    "weight_ops": [],
+    "state_transfer": {},
+    "evidence": [
+      "during:pod:ts-travel-service-v2-94846cfc8-wqjkz",
+      "during:ts-travel-service->pod:ts-travel-service-v2-94846cfc8-wqjkz",
+      "version_coexistence:ts-travel-service"
+    ]
+  }
+}

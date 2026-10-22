@@ -1,0 +1,85 @@
+{
+  "comparison_fields": [
+    {
+      "file": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/block.interruption.json",
+      "key_path": ".oracle_statuses",
+      "value": [
+        "FAIL",
+        null
+      ]
+    },
+    {
+      "file": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/block.interruption.json",
+      "key_path": ".complete_matched_pairs",
+      "value": 0
+    },
+    {
+      "file": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/block.interruption.json",
+      "key_path": ".valid_matched_comparison",
+      "value": false
+    },
+    {
+      "file": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/block.json",
+      "key_path": ".oracle_statuses",
+      "value": [
+        "FAIL"
+      ]
+    },
+    {
+      "file": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/audit_v1/recompute_typed_and_accounting.json",
+      "key_path": ".accounting.oracle_statuses",
+      "value": [
+        "FAIL",
+        null
+      ]
+    },
+    {
+      "file": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/audit_v1/recompute_typed_and_accounting.json",
+      "key_path": ".accounting.complete_matched_pairs",
+      "value": 0
+    },
+    {
+      "file": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/audit_v1/EXPERIMENT_AUDIT.json",
+      "key_path": ".valid_matched_comparison",
+      "value": false
+    },
+    {
+      "file": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/audit_v1/EXPERIMENT_AUDIT.json",
+      "key_path": ".complete_matched_pairs",
+      "value": 0
+    },
+    {
+      "file": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/audit_v1/EXPERIMENT_AUDIT.json",
+      "key_path": ".accounting.oracle_statuses",
+      "value": [
+        "FAIL",
+        null
+      ]
+    },
+    {
+      "file": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/audit_v1/EXPERIMENT_AUDIT.json",
+      "key_path": ".accounting.complete_matched_pairs",
+      "value": 0
+    },
+    {
+      "file": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/analysis_v1/analysis.json",
+      "key_path": ".valid_matched_comparison",
+      "value": false
+    },
+    {
+      "file": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/analysis_v1/analysis.json",
+      "key_path": ".complete_matched_pairs",
+      "value": 0
+    },
+    {
+      "file": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/analysis_v1/analysis.json",
+      "key_path": ".accounting.oracle_statuses",
+      "value": [
+        "FAIL",
+        null
+      ]
+    }
+  ],
+  "true_comparison_flags": [],
+  "positive_pair_counts": []
+}

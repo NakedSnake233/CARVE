@@ -1,0 +1,93 @@
+{
+  "catalog": [
+    {
+      "id": "op0000",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-station-service-ff96f8f6b-vb56d",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-station-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-station-service-ff96f8f6b-vb56d"
+        ]
+      },
+      "evidence_id": "during:pod:ts-station-service-ff96f8f6b-vb56d",
+      "requires": []
+    },
+    {
+      "id": "op0001",
+      "group": "node_ops",
+      "operation": {
+        "op": "ALIGN_NODE",
+        "old_node": "pod:ts-station-service-ff96f8f6b-sdjsp",
+        "new_node": "pod:ts-station-service-ff96f8f6b-vb56d",
+        "service": "ts-station-service",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-station-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "identity_change:ts-station-service"
+        ]
+      },
+      "evidence_id": "identity_change:ts-station-service",
+      "requires": []
+    }
+  ],
+  "plan": {
+    "experiment_id": "case00320",
+    "change_type": "observation_supported_updates",
+    "confidence": 0.0,
+    "causal_role": "not_inferred",
+    "node_ops": [
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-station-service-ff96f8f6b-vb56d",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-station-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-station-service-ff96f8f6b-vb56d"
+        ]
+      },
+      {
+        "op": "ALIGN_NODE",
+        "node_id": "",
+        "old_node": "pod:ts-station-service-ff96f8f6b-sdjsp",
+        "new_node": "pod:ts-station-service-ff96f8f6b-vb56d",
+        "parent": "",
+        "children": [],
+        "service": "ts-station-service",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-station-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "identity_change:ts-station-service"
+        ]
+      }
+    ],
+    "edge_ops": [],
+    "weight_ops": [],
+    "state_transfer": {},
+    "evidence": [
+      "during:pod:ts-station-service-ff96f8f6b-vb56d",
+      "identity_change:ts-station-service"
+    ]
+  }
+}

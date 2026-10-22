@@ -1,0 +1,12 @@
+{
+  "commands": [
+    "PYTHONDONTWRITEBYTECODE=1 .venv-e2r/bin/python experiments/e2r/runs/recovery_matched_frontend_cpu_v1/audit_v1/recompute_typed_and_accounting.py",
+    "python experiments/e2r/runs/recovery_matched_frontend_cpu_v1/audit_v1/recompute_noaction.py"
+  ],
+  "results": {
+    "typed_accounting_checks": 116,
+    "control_baseline_comparisons": 212,
+    "mismatches": 0
+  },
+  "no_external_actions": true
+}

@@ -1,0 +1,4015 @@
+{
+  "schema": "e2r_recovery_matched_block_v1",
+  "status": "in_progress",
+  "protocol_path": "experiments/e2r/recovery_matched_cpu_protocol_v1.json",
+  "protocol_sha256": "b01798e4174651abf550bfe4f5f7f8d84c48c414e904ad5e26a5f2e8c8e7032d",
+  "baseline_path": "experiments/e2r/runs/recovery_baseline_v2/baseline.json",
+  "baseline_sha256": "3957fa90acce446bd248c6e493c2374307454cc96d4644b99ec60fc04b84642d",
+  "manifest_path": "experiments/e2r/isolated_boutique.yaml",
+  "manifest_sha256": "9150029373d00e9882b83922071d69c12bcd36b04af5cab16ea90a2caa0882bb",
+  "arms_in_order": [
+    "no_action",
+    "typed_cleanup"
+  ],
+  "planned_episode_count": 2,
+  "episode_attempts_started": 1,
+  "injection_attempts": 1,
+  "fault_injections": 1,
+  "injection_unknown_outcomes": 0,
+  "repair_process_invocations": 0,
+  "repair_process_unknown_outcomes": 0,
+  "repair_mutations": 0,
+  "started_at": 1790441200.5377474,
+  "episodes": [
+    {
+      "index": 0,
+      "arm": "no_action",
+      "path": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/episodes/00_no_action.json",
+      "completed_expected": true
+    }
+  ],
+  "rbac_checks": {
+    "isolated_get": true,
+    "isolated_delete_chaos": true,
+    "isolated_portforward": true,
+    "user_namespace_denied": false
+  },
+  "ansible_preflight": {
+    "returncode": 0,
+    "stdout": "\nPLAY [PlanRCAThinkRemed remediation] *******************************************\n\nTASK [WaitAndVerify on target/n/a] *********************************************\nchanged: [localhost]\n\nTASK [report WaitAndVerify on target/n/a] **************************************\nok: [localhost] => {\n    \"planrca_step_0.stdout_lines\": [\n        \"NAME                                     READY   STATUS    RESTARTS   AGE\",\n        \"adservice-75fbc5fb79-9ht96               2/2     Running   0          54m\",\n        \"cartservice-57f75ddddc-hdgzg             2/2     Running   0          59m\",\n        \"checkoutservice-55db6cfd66-jfk7q         2/2     Running   0          60m\",\n        \"currencyservice-5957d6db75-vp9hb         2/2     Running   0          59m\",\n        \"emailservice-6d86bdfd4-lgf57             2/2     Running   0          60m\",\n        \"frontend-575dcbd8d6-wcpbg                2/2     Running   0          59m\",\n        \"loadgenerator-9dd77bb5c-mnhhd            2/2     Running   0          54m\",\n        \"paymentservice-74c69df798-swqwx          2/2     Running   0          60m\",\n        \"productcatalogservice-74667c88f6-rjlrl   2/2     Running   0          59m\",\n        \"recommendationservice-f9fdcbff5-xr6fn    2/2     Running   0          60m\",\n        \"redis-cart-6995d49-z7dzw                 2/2     Running   0          57m\",\n        \"shippingservice-87f84748b-5bqjf          2/2     Running   0          57m\"\n    ]\n}\n\nPLAY RECAP *********************************************************************\nlocalhost                  : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   \n\n",
+    "stderr": "[WARNING]: Host 'localhost' is using the discovered Python interpreter at '${LOCAL_HOME}/anaconda3/bin/python3.13', but future installation of another Python interpreter could cause a different interpreter to be discovered. See https://docs.ansible.com/ansible-core/2.21/reference_appendices/interpreter_discovery.html for more information.\n",
+    "seconds": 0.9532260373234749,
+    "executable": ".venv-e2r/bin/ansible-playbook",
+    "timeout_seconds": 20
+  },
+  "initial_pods": {
+    "apiVersion": "v1",
+    "items": [
+      {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "metadata": {
+          "creationTimestamp": "2026-09-26T15:51:45Z",
+          "generateName": "adservice-75fbc5fb79-",
+          "generation": 1,
+          "labels": {
+            "app": "adservice",
+            "pod-template-hash": "75fbc5fb79"
+          },
+          "name": "adservice-75fbc5fb79-9ht96",
+          "namespace": "e2r-supplement-20260925",
+          "ownerReferences": [
+            {
+              "apiVersion": "apps/v1",
+              "blockOwnerDeletion": true,
+              "controller": true,
+              "kind": "ReplicaSet",
+              "name": "adservice-75fbc5fb79",
+              "uid": "f1cdbd16-4828-4521-b86e-ab6138d3b265"
+            }
+          ],
+          "resourceVersion": "8501326",
+          "uid": "0a838b53-19c2-46d1-84ba-c5493c844049"
+        },
+        "spec": {
+          "containers": [
+            {
+              "env": [
+                {
+                  "name": "PORT",
+                  "value": "9555"
+                },
+                {
+                  "name": "ENABLE_TRACING",
+                  "value": "0"
+                },
+                {
+                  "name": "COLLECTOR_SERVICE_ADDR",
+                  "value": "jaeger-collector:4317"
+                },
+                {
+                  "name": "OTEL_SERVICE_NAME",
+                  "value": "adservice"
+                }
+              ],
+              "image": "gcr.m.daocloud.io/google-samples/microservices-demo/adservice:v0.10.1",
+              "imagePullPolicy": "IfNotPresent",
+              "livenessProbe": {
+                "failureThreshold": 3,
+                "grpc": {
+                  "port": 9555,
+                  "service": ""
+                },
+                "initialDelaySeconds": 20,
+                "periodSeconds": 15,
+                "successThreshold": 1,
+                "timeoutSeconds": 1
+              },
+              "name": "server",
+              "ports": [
+                {
+                  "containerPort": 9555,
+                  "protocol": "TCP"
+                }
+              ],
+              "readinessProbe": {
+                "failureThreshold": 3,
+                "grpc": {
+                  "port": 9555,
+                  "service": ""
+                },
+                "initialDelaySeconds": 20,
+                "periodSeconds": 15,
+                "successThreshold": 1,
+                "timeoutSeconds": 1
+              },
+              "resources": {
+                "limits": {
+                  "cpu": "300m",
+                  "memory": "2000Mi"
+                },
+                "requests": {
+                  "cpu": "200m",
+                  "memory": "180Mi"
+                }
+              },
+              "terminationMessagePath": "/dev/termination-log",
+              "terminationMessagePolicy": "File",
+              "volumeMounts": [
+                {
+                  "mountPath": "/var/log/mysql",
+                  "name": "mysql-logs"
+                }
+              ]
+            },
+            {
+              "command": [
+                "sh",
+                "-c",
+                "sleep 2147483647"
+              ],
+              "image": "busybox:1.35",
+              "imagePullPolicy": "IfNotPresent",
+              "name": "sidecar-busybox",
+              "resources": {
+                "limits": {
+                  "cpu": "50m",
+                  "memory": "64Mi"
+                },
+                "requests": {
+                  "cpu": "50m",
+                  "memory": "64Mi"
+                }
+              },
+              "securityContext": {
+                "capabilities": {
+                  "add": [
+                    "NET_RAW"
+                  ]
+                }
+              },
+              "terminationMessagePath": "/dev/termination-log",
+              "terminationMessagePolicy": "File",
+              "volumeMounts": [
+                {
+                  "mountPath": "/var/log/mysql",
+                  "name": "mysql-logs"
+                }
+              ]
+            }
+          ],
+          "dnsPolicy": "ClusterFirst",
+          "enableServiceLinks": true,
+          "nodeName": "anonymous-k3s-node",
+          "preemptionPolicy": "PreemptLowerPriority",
+          "priority": 0,
+          "restartPolicy": "Always",
+          "schedulerName": "default-scheduler",
+          "securityContext": {},
+          "serviceAccount": "e2r-workload",
+          "serviceAccountName": "e2r-workload",
+          "terminationGracePeriodSeconds": 5,
+          "tolerations": [
+            {
+              "effect": "NoExecute",
+              "key": "node.kubernetes.io/not-ready",
+              "operator": "Exists",
+              "tolerationSeconds": 300
+            },
+            {
+              "effect": "NoExecute",
+              "key": "node.kubernetes.io/unreachable",
+              "operator": "Exists",
+              "tolerationSeconds": 300
+            }
+          ],
+          "volumes": [
+            {
+              "emptyDir": {},
+              "name": "mysql-logs"
+            }
+          ]
+        },
+        "status": {
+          "conditions": [
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-26T15:51:46Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "PodReadyToStartContainers"
+            },
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-26T15:51:45Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "Initialized"
+            },
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-26T15:52:17Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "Ready"
+            },
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-26T15:52:17Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "ContainersReady"
+            },
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-26T15:51:45Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "PodScheduled"
+            }
+          ],
+          "containerStatuses": [
+            {
+              "allocatedResources": {
+                "cpu": "200m",
+                "memory": "180Mi"
+              },
+              "containerID": "containerd://ea5003e12c13cbda8ee1760454dee305096161acb0aa82b805790e8106bdd105",
+              "image": "gcr.m.daocloud.io/google-samples/microservices-demo/adservice:v0.10.1",
+              "imageID": "sha256:ba213faab1a2553dbfcabe313a3a92d17eb86893741b759de5fd4cd139b6e6e7",
+              "lastState": {},
+              "name": "server",
+              "ready": true,
+              "resources": {
+                "limits": {
+                  "cpu": "300m",
+                  "memory": "2000Mi"
+                },
+                "requests": {
+                  "cpu": "200m",
+                  "memory": "180Mi"
+                }
+              },
+              "restartCount": 0,
+              "started": true,
+              "state": {
+                "running": {
+                  "startedAt": "2026-09-26T15:51:45Z"
+                }
+              },
+              "user": {
+                "linux": {
+                  "gid": 0,
+                  "supplementalGroups": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    6,
+                    10,
+                    11,
+                    20,
+                    26,
+                    27
+                  ],
+                  "uid": 0
+                }
+              },
+              "volumeMounts": [
+                {
+                  "mountPath": "/var/log/mysql",
+                  "name": "mysql-logs"
+                }
+              ]
+            },
+            {
+              "allocatedResources": {
+                "cpu": "50m",
+                "memory": "64Mi"
+              },
+              "containerID": "containerd://7f87a7524406ec90742b6d5ce14505626dbdec2f41a0b83764372094258e6429",
+              "image": "docker.io/library/busybox:1.35",
+              "imageID": "docker.io/library/busybox@sha256:98ad9d1a2be345201bb0709b0d38655eb1b370145c7d94ca1fe9c421f76e245a",
+              "lastState": {},
+              "name": "sidecar-busybox",
+              "ready": true,
+              "resources": {
+                "limits": {
+                  "cpu": "50m",
+                  "memory": "64Mi"
+                },
+                "requests": {
+                  "cpu": "50m",
+                  "memory": "64Mi"
+                }
+              },
+              "restartCount": 0,
+              "started": true,
+              "state": {
+                "running": {
+                  "startedAt": "2026-09-26T15:51:46Z"
+                }
+              },
+              "user": {
+                "linux": {
+                  "gid": 0,
+                  "supplementalGroups": [
+                    0,
+                    10
+                  ],
+                  "uid": 0
+                }
+              },
+              "volumeMounts": [
+                {
+                  "mountPath": "/var/log/mysql",
+                  "name": "mysql-logs"
+                }
+              ]
+            }
+          ],
+          "hostIP": "10.2.14.115",
+          "hostIPs": [
+            {
+              "ip": "10.2.14.115"
+            }
+          ],
+          "observedGeneration": 1,
+          "phase": "Running",
+          "podIP": "10.42.0.107",
+          "podIPs": [
+            {
+              "ip": "10.42.0.107"
+            }
+          ],
+          "qosClass": "Burstable",
+          "startTime": "2026-09-26T15:51:45Z"
+        }
+      },
+      {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "metadata": {
+          "creationTimestamp": "2026-09-26T15:47:39Z",
+          "generateName": "cartservice-57f75ddddc-",
+          "generation": 1,
+          "labels": {
+            "app": "cartservice",
+            "pod-template-hash": "57f75ddddc"
+          },
+          "name": "cartservice-57f75ddddc-hdgzg",
+          "namespace": "e2r-supplement-20260925",
+          "ownerReferences": [
+            {
+              "apiVersion": "apps/v1",
+              "blockOwnerDeletion": true,
+              "controller": true,
+              "kind": "ReplicaSet",
+              "name": "cartservice-57f75ddddc",
+              "uid": "2b0694b0-79bb-4b88-b4b4-53bf4f9c1bae"
+            }
+          ],
+          "resourceVersion": "8500774",
+          "uid": "ea668207-2bc9-427e-81eb-65936ac18de1"
+        },
+        "spec": {
+          "containers": [
+            {
+              "env": [
+                {
+                  "name": "REDIS_ADDR",
+                  "value": "redis-cart:6379"
+                },
+                {
+                  "name": "ENABLE_TRACING",
+                  "value": "0"
+                },
+                {
+                  "name": "COLLECTOR_SERVICE_ADDR",
+                  "value": "jaeger-collector:4317"
+                },
+                {
+                  "name": "OTEL_SERVICE_NAME",
+                  "value": "cartservice"
+                }
+              ],
+              "image": "gcr.m.daocloud.io/google-samples/microservices-demo/cartservice:v0.10.1",
+              "imagePullPolicy": "IfNotPresent",
+              "livenessProbe": {
+                "failureThreshold": 3,
+                "grpc": {
+                  "port": 7070,
+                  "service": ""
+                },
+                "initialDelaySeconds": 15,
+                "periodSeconds": 10,
+                "successThreshold": 1,
+                "timeoutSeconds": 1
+              },
+              "name": "server",
+              "ports": [
+                {
+                  "containerPort": 7070,
+                  "protocol": "TCP"
+                }
+              ],
+              "readinessProbe": {
+                "failureThreshold": 3,
+                "grpc": {
+                  "port": 7070,
+                  "service": ""
+                },
+                "initialDelaySeconds": 15,
+                "periodSeconds": 10,
+                "successThreshold": 1,
+                "timeoutSeconds": 1
+              },
+              "resources": {
+                "limits": {
+                  "cpu": "300m",
+                  "memory": "2000Mi"
+                },
+                "requests": {
+                  "cpu": "200m",
+                  "memory": "64Mi"
+                }
+              },
+              "terminationMessagePath": "/dev/termination-log",
+              "terminationMessagePolicy": "File",
+              "volumeMounts": [
+                {
+                  "mountPath": "/var/log/mysql",
+                  "name": "mysql-logs"
+                }
+              ]
+            },
+            {
+              "command": [
+                "sh",
+                "-c",
+                "sleep 2147483647"
+              ],
+              "image": "busybox:1.35",
+              "imagePullPolicy": "IfNotPresent",
+              "name": "sidecar-busybox",
+              "resources": {
+                "limits": {
+                  "cpu": "50m",
+                  "memory": "64Mi"
+                },
+                "requests": {
+                  "cpu": "50m",
+                  "memory": "64Mi"
+                }
+              },
+              "securityContext": {
+                "capabilities": {
+                  "add": [
+                    "NET_RAW"
+                  ]
+                }
+              },
+              "terminationMessagePath": "/dev/termination-log",
+              "terminationMessagePolicy": "File",
+              "volumeMounts": [
+                {
+                  "mountPath": "/var/log/mysql",
+                  "name": "mysql-logs"
+                }
+              ]
+            }
+          ],
+          "dnsPolicy": "ClusterFirst",
+          "enableServiceLinks": true,
+          "nodeName": "anonymous-k3s-node",
+          "preemptionPolicy": "PreemptLowerPriority",
+          "priority": 0,
+          "restartPolicy": "Always",
+          "schedulerName": "default-scheduler",
+          "securityContext": {},
+          "serviceAccount": "e2r-workload",
+          "serviceAccountName": "e2r-workload",
+          "terminationGracePeriodSeconds": 5,
+          "tolerations": [
+            {
+              "effect": "NoExecute",
+              "key": "node.kubernetes.io/not-ready",
+              "operator": "Exists",
+              "tolerationSeconds": 300
+            },
+            {
+              "effect": "NoExecute",
+              "key": "node.kubernetes.io/unreachable",
+              "operator": "Exists",
+              "tolerationSeconds": 300
+            }
+          ],
+          "volumes": [
+            {
+              "emptyDir": {},
+              "name": "mysql-logs"
+            }
+          ]
+        },
+        "status": {
+          "conditions": [
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-26T15:47:40Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "PodReadyToStartContainers"
+            },
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-26T15:47:39Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "Initialized"
+            },
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-26T15:48:01Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "Ready"
+            },
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-26T15:48:01Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "ContainersReady"
+            },
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-26T15:47:39Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "PodScheduled"
+            }
+          ],
+          "containerStatuses": [
+            {
+              "allocatedResources": {
+                "cpu": "200m",
+                "memory": "64Mi"
+              },
+              "containerID": "containerd://a49aee6b56b3024ea453a1ab2531b6232d9e6cbc41ecd145ace3d6242806eb4b",
+              "image": "gcr.m.daocloud.io/google-samples/microservices-demo/cartservice:v0.10.1",
+              "imageID": "sha256:320f489912a65cee07773a33ab012aba04e61a913db2a5f08a01d52de798a159",
+              "lastState": {},
+              "name": "server",
+              "ready": true,
+              "resources": {
+                "limits": {
+                  "cpu": "300m",
+                  "memory": "2000Mi"
+                },
+                "requests": {
+                  "cpu": "200m",
+                  "memory": "64Mi"
+                }
+              },
+              "restartCount": 0,
+              "started": true,
+              "state": {
+                "running": {
+                  "startedAt": "2026-09-26T15:47:39Z"
+                }
+              },
+              "user": {
+                "linux": {
+                  "gid": 0,
+                  "supplementalGroups": [
+                    0
+                  ],
+                  "uid": 1000
+                }
+              },
+              "volumeMounts": [
+                {
+                  "mountPath": "/var/log/mysql",
+                  "name": "mysql-logs"
+                }
+              ]
+            },
+            {
+              "allocatedResources": {
+                "cpu": "50m",
+                "memory": "64Mi"
+              },
+              "containerID": "containerd://95a30bf30cfa2a2e2495918cf50b52db107f636be0619eba7cffad0c946faec9",
+              "image": "docker.io/library/busybox:1.35",
+              "imageID": "docker.io/library/busybox@sha256:98ad9d1a2be345201bb0709b0d38655eb1b370145c7d94ca1fe9c421f76e245a",
+              "lastState": {},
+              "name": "sidecar-busybox",
+              "ready": true,
+              "resources": {
+                "limits": {
+                  "cpu": "50m",
+                  "memory": "64Mi"
+                },
+                "requests": {
+                  "cpu": "50m",
+                  "memory": "64Mi"
+                }
+              },
+              "restartCount": 0,
+              "started": true,
+              "state": {
+                "running": {
+                  "startedAt": "2026-09-26T15:47:40Z"
+                }
+              },
+              "user": {
+                "linux": {
+                  "gid": 0,
+                  "supplementalGroups": [
+                    0,
+                    10
+                  ],
+                  "uid": 0
+                }
+              },
+              "volumeMounts": [
+                {
+                  "mountPath": "/var/log/mysql",
+                  "name": "mysql-logs"
+                }
+              ]
+            }
+          ],
+          "hostIP": "10.2.14.115",
+          "hostIPs": [
+            {
+              "ip": "10.2.14.115"
+            }
+          ],
+          "observedGeneration": 1,
+          "phase": "Running",
+          "podIP": "10.42.0.104",
+          "podIPs": [
+            {
+              "ip": "10.42.0.104"
+            }
+          ],
+          "qosClass": "Burstable",
+          "startTime": "2026-09-26T15:47:39Z"
+        }
+      },
+      {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "metadata": {
+          "creationTimestamp": "2026-09-26T15:46:11Z",
+          "generateName": "checkoutservice-55db6cfd66-",
+          "generation": 1,
+          "labels": {
+            "app": "checkoutservice",
+            "pod-template-hash": "55db6cfd66"
+          },
+          "name": "checkoutservice-55db6cfd66-jfk7q",
+          "namespace": "e2r-supplement-20260925",
+          "ownerReferences": [
+            {
+              "apiVersion": "apps/v1",
+              "blockOwnerDeletion": true,
+              "controller": true,
+              "kind": "ReplicaSet",
+              "name": "checkoutservice-55db6cfd66",
+              "uid": "105c9fbd-d94f-49db-b4ae-1eafe8206199"
+            }
+          ],
+          "resourceVersion": "8500251",
+          "uid": "5f6095c7-c767-4ea2-be60-0654deb3fb4b"
+        },
+        "spec": {
+          "containers": [
+            {
+              "env": [
+                {
+                  "name": "PORT",
+                  "value": "5050"
+                },
+                {
+                  "name": "PRODUCT_CATALOG_SERVICE_ADDR",
+                  "value": "productcatalogservice:3550"
+                },
+                {
+                  "name": "SHIPPING_SERVICE_ADDR",
+                  "value": "shippingservice:50051"
+                },
+                {
+                  "name": "PAYMENT_SERVICE_ADDR",
+                  "value": "paymentservice:50051"
+                },
+                {
+                  "name": "EMAIL_SERVICE_ADDR",
+                  "value": "emailservice:5000"
+                },
+                {
+                  "name": "CURRENCY_SERVICE_ADDR",
+                  "value": "currencyservice:7000"
+                },
+                {
+                  "name": "CART_SERVICE_ADDR",
+                  "value": "cartservice:7070"
+                },
+                {
+                  "name": "DISABLE_PROFILER",
+                  "value": "1"
+                },
+                {
+                  "name": "ENABLE_TRACING",
+                  "value": "0"
+                },
+                {
+                  "name": "COLLECTOR_SERVICE_ADDR",
+                  "value": "jaeger-collector:4317"
+                },
+                {
+                  "name": "OTEL_SERVICE_NAME",
+                  "value": "checkoutservice"
+                }
+              ],
+              "image": "gcr.m.daocloud.io/google-samples/microservices-demo/checkoutservice:v0.10.1",
+              "imagePullPolicy": "IfNotPresent",
+              "livenessProbe": {
+                "failureThreshold": 3,
+                "grpc": {
+                  "port": 5050,
+                  "service": ""
+                },
+                "periodSeconds": 10,
+                "successThreshold": 1,
+                "timeoutSeconds": 1
+              },
+              "name": "server",
+              "ports": [
+                {
+                  "containerPort": 5050,
+                  "protocol": "TCP"
+                }
+              ],
+              "readinessProbe": {
+                "failureThreshold": 3,
+                "grpc": {
+                  "port": 5050,
+                  "service": ""
+                },
+                "periodSeconds": 10,
+                "successThreshold": 1,
+                "timeoutSeconds": 1
+              },
+              "resources": {
+                "limits": {
+                  "cpu": "200m",
+                  "memory": "2000Mi"
+                },
+                "requests": {
+                  "cpu": "100m",
+                  "memory": "64Mi"
+                }
+              },
+              "terminationMessagePath": "/dev/termination-log",
+              "terminationMessagePolicy": "File",
+              "volumeMounts": [
+                {
+                  "mountPath": "/var/log/mysql",
+                  "name": "mysql-logs"
+                }
+              ]
+            },
+            {
+              "command": [
+                "sh",
+                "-c",
+                "sleep 2147483647"
+              ],
+              "image": "busybox:1.35",
+              "imagePullPolicy": "IfNotPresent",
+              "name": "sidecar-busybox",
+              "resources": {
+                "limits": {
+                  "cpu": "50m",
+                  "memory": "64Mi"
+                },
+                "requests": {
+                  "cpu": "50m",
+                  "memory": "64Mi"
+                }
+              },
+              "securityContext": {
+                "capabilities": {
+                  "add": [
+                    "NET_RAW"
+                  ]
+                }
+              },
+              "terminationMessagePath": "/dev/termination-log",
+              "terminationMessagePolicy": "File",
+              "volumeMounts": [
+                {
+                  "mountPath": "/var/log/mysql",
+                  "name": "mysql-logs"
+                }
+              ]
+            }
+          ],
+          "dnsPolicy": "ClusterFirst",
+          "enableServiceLinks": true,
+          "nodeName": "anonymous-k3s-node",
+          "preemptionPolicy": "PreemptLowerPriority",
+          "priority": 0,
+          "restartPolicy": "Always",
+          "schedulerName": "default-scheduler",
+          "securityContext": {},
+          "serviceAccount": "e2r-workload",
+          "serviceAccountName": "e2r-workload",
+          "terminationGracePeriodSeconds": 30,
+          "tolerations": [
+            {
+              "effect": "NoExecute",
+              "key": "node.kubernetes.io/not-ready",
+              "operator": "Exists",
+              "tolerationSeconds": 300
+            },
+            {
+              "effect": "NoExecute",
+              "key": "node.kubernetes.io/unreachable",
+              "operator": "Exists",
+              "tolerationSeconds": 300
+            }
+          ],
+          "volumes": [
+            {
+              "emptyDir": {},
+              "name": "mysql-logs"
+            }
+          ]
+        },
+        "status": {
+          "conditions": [
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-26T15:46:13Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "PodReadyToStartContainers"
+            },
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-26T15:46:11Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "Initialized"
+            },
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-26T15:46:13Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "Ready"
+            },
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-26T15:46:13Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "ContainersReady"
+            },
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-26T15:46:11Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "PodScheduled"
+            }
+          ],
+          "containerStatuses": [
+            {
+              "allocatedResources": {
+                "cpu": "100m",
+                "memory": "64Mi"
+              },
+              "containerID": "containerd://f4782ed57761fd691389537ed74cbc441a1c6c7b1e88a0b4beb9d9d9c898d1a5",
+              "image": "gcr.m.daocloud.io/google-samples/microservices-demo/checkoutservice:v0.10.1",
+              "imageID": "sha256:3ec48884a578c7cdadad9fc3a2fb3c916aeceaee9c7b5b6ab9fea7837cfdf8c6",
+              "lastState": {},
+              "name": "server",
+              "ready": true,
+              "resources": {
+                "limits": {
+                  "cpu": "200m",
+                  "memory": "2000Mi"
+                },
+                "requests": {
+                  "cpu": "100m",
+                  "memory": "64Mi"
+                }
+              },
+              "restartCount": 0,
+              "started": true,
+              "state": {
+                "running": {
+                  "startedAt": "2026-09-26T15:46:12Z"
+                }
+              },
+              "user": {
+                "linux": {
+                  "gid": 0,
+                  "supplementalGroups": [
+                    0
+                  ],
+                  "uid": 0
+                }
+              },
+              "volumeMounts": [
+                {
+                  "mountPath": "/var/log/mysql",
+                  "name": "mysql-logs"
+                }
+              ]
+            },
+            {
+              "allocatedResources": {
+                "cpu": "50m",
+                "memory": "64Mi"
+              },
+              "containerID": "containerd://53c4854c3e4427b34280dcbdc4c3465e3818be3accabe3530e48f20dd2933d70",
+              "image": "docker.io/library/busybox:1.35",
+              "imageID": "docker.io/library/busybox@sha256:98ad9d1a2be345201bb0709b0d38655eb1b370145c7d94ca1fe9c421f76e245a",
+              "lastState": {},
+              "name": "sidecar-busybox",
+              "ready": true,
+              "resources": {
+                "limits": {
+                  "cpu": "50m",
+                  "memory": "64Mi"
+                },
+                "requests": {
+                  "cpu": "50m",
+                  "memory": "64Mi"
+                }
+              },
+              "restartCount": 0,
+              "started": true,
+              "state": {
+                "running": {
+                  "startedAt": "2026-09-26T15:46:12Z"
+                }
+              },
+              "user": {
+                "linux": {
+                  "gid": 0,
+                  "supplementalGroups": [
+                    0,
+                    10
+                  ],
+                  "uid": 0
+                }
+              },
+              "volumeMounts": [
+                {
+                  "mountPath": "/var/log/mysql",
+                  "name": "mysql-logs"
+                }
+              ]
+            }
+          ],
+          "hostIP": "10.2.14.115",
+          "hostIPs": [
+            {
+              "ip": "10.2.14.115"
+            }
+          ],
+          "observedGeneration": 1,
+          "phase": "Running",
+          "podIP": "10.42.0.98",
+          "podIPs": [
+            {
+              "ip": "10.42.0.98"
+            }
+          ],
+          "qosClass": "Burstable",
+          "startTime": "2026-09-26T15:46:11Z"
+        }
+      },
+      {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "metadata": {
+          "creationTimestamp": "2026-09-26T15:47:39Z",
+          "generateName": "currencyservice-5957d6db75-",
+          "generation": 1,
+          "labels": {
+            "app": "currencyservice",
+            "pod-template-hash": "5957d6db75"
+          },
+          "name": "currencyservice-5957d6db75-vp9hb",
+          "namespace": "e2r-supplement-20260925",
+          "ownerReferences": [
+            {
+              "apiVersion": "apps/v1",
+              "blockOwnerDeletion": true,
+              "controller": true,
+              "kind": "ReplicaSet",
+              "name": "currencyservice-5957d6db75",
+              "uid": "2bdc0b36-63fa-4cc6-a465-89d79e2b05d1"
+            }
+          ],
+          "resourceVersion": "8500742",
+          "uid": "6b24d2dc-9c05-4596-b0a7-d87cc9dbfcc1"
+        },
+        "spec": {
+          "containers": [
+            {
+              "env": [
+                {
+                  "name": "PORT",
+                  "value": "7000"
+                },
+                {
+                  "name": "DISABLE_PROFILER",
+                  "value": "1"
+                },
+                {
+                  "name": "DISABLE_DEBUGGER",
+                  "value": "1"
+                },
+                {
+                  "name": "ENABLE_TRACING",
+                  "value": "0"
+                },
+                {
+                  "name": "COLLECTOR_SERVICE_ADDR",
+                  "value": "jaeger-collector:4317"
+                },
+                {
+                  "name": "OTEL_SERVICE_NAME",
+                  "value": "currencyservice"
+                }
+              ],
+              "image": "gcr.m.daocloud.io/google-samples/microservices-demo/currencyservice:v0.10.1",
+              "imagePullPolicy": "IfNotPresent",
+              "livenessProbe": {
+                "failureThreshold": 3,
+                "grpc": {
+                  "port": 7000,
+                  "service": ""
+                },
+                "periodSeconds": 10,
+                "successThreshold": 1,
+                "timeoutSeconds": 1
+              },
+              "name": "server",
+              "ports": [
+                {
+                  "containerPort": 7000,
+                  "name": "grpc",
+                  "protocol": "TCP"
+                }
+              ],
+              "readinessProbe": {
+                "failureThreshold": 3,
+                "grpc": {
+                  "port": 7000,
+                  "service": ""
+                },
+                "periodSeconds": 10,
+                "successThreshold": 1,
+                "timeoutSeconds": 1
+              },
+              "resources": {
+                "limits": {
+                  "cpu": "200m",
+                  "memory": "2000Mi"
+                },
+                "requests": {
+                  "cpu": "100m",
+                  "memory": "64Mi"
+                }
+              },
+              "terminationMessagePath": "/dev/termination-log",
+              "terminationMessagePolicy": "File",
+              "volumeMounts": [
+                {
+                  "mountPath": "/var/log/mysql",
+                  "name": "mysql-logs"
+                }
+              ]
+            },
+            {
+              "command": [
+                "sh",
+                "-c",
+                "sleep 2147483647"
+              ],
+              "image": "busybox:1.35",
+              "imagePullPolicy": "IfNotPresent",
+              "name": "sidecar-busybox",
+              "resources": {
+                "limits": {
+                  "cpu": "50m",
+                  "memory": "64Mi"
+                },
+                "requests": {
+                  "cpu": "50m",
+                  "memory": "64Mi"
+                }
+              },
+              "securityContext": {
+                "capabilities": {
+                  "add": [
+                    "NET_RAW"
+                  ]
+                }
+              },
+              "terminationMessagePath": "/dev/termination-log",
+              "terminationMessagePolicy": "File",
+              "volumeMounts": [
+                {
+                  "mountPath": "/var/log/mysql",
+                  "name": "mysql-logs"
+                }
+              ]
+            }
+          ],
+          "dnsPolicy": "ClusterFirst",
+          "enableServiceLinks": true,
+          "nodeName": "anonymous-k3s-node",
+          "preemptionPolicy": "PreemptLowerPriority",
+          "priority": 0,
+          "restartPolicy": "Always",
+          "schedulerName": "default-scheduler",
+          "securityContext": {},
+          "serviceAccount": "e2r-workload",
+          "serviceAccountName": "e2r-workload",
+          "terminationGracePeriodSeconds": 5,
+          "tolerations": [
+            {
+              "effect": "NoExecute",
+              "key": "node.kubernetes.io/not-ready",
+              "operator": "Exists",
+              "tolerationSeconds": 300
+            },
+            {
+              "effect": "NoExecute",
+              "key": "node.kubernetes.io/unreachable",
+              "operator": "Exists",
+              "tolerationSeconds": 300
+            }
+          ],
+          "volumes": [
+            {
+              "emptyDir": {},
+              "name": "mysql-logs"
+            }
+          ]
+        },
+        "status": {
+          "conditions": [
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-26T15:47:41Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "PodReadyToStartContainers"
+            },
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-26T15:47:39Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "Initialized"
+            },
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-26T15:47:52Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "Ready"
+            },
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-26T15:47:52Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "ContainersReady"
+            },
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-26T15:47:39Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "PodScheduled"
+            }
+          ],
+          "containerStatuses": [
+            {
+              "allocatedResources": {
+                "cpu": "100m",
+                "memory": "64Mi"
+              },
+              "containerID": "containerd://c1508fed98ee8a166740c1870e254b3708aabe6cf1b2566d79b3ed74f8c9e18e",
+              "image": "gcr.m.daocloud.io/google-samples/microservices-demo/currencyservice:v0.10.1",
+              "imageID": "sha256:fea8f3a94aa4222d2a12ce6492af546b963a8791c4f2e8a6b3328330211c6084",
+              "lastState": {},
+              "name": "server",
+              "ready": true,
+              "resources": {
+                "limits": {
+                  "cpu": "200m",
+                  "memory": "2000Mi"
+                },
+                "requests": {
+                  "cpu": "100m",
+                  "memory": "64Mi"
+                }
+              },
+              "restartCount": 0,
+              "started": true,
+              "state": {
+                "running": {
+                  "startedAt": "2026-09-26T15:47:40Z"
+                }
+              },
+              "user": {
+                "linux": {
+                  "gid": 0,
+                  "supplementalGroups": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    6,
+                    10,
+                    11,
+                    20,
+                    26,
+                    27
+                  ],
+                  "uid": 0
+                }
+              },
+              "volumeMounts": [
+                {
+                  "mountPath": "/var/log/mysql",
+                  "name": "mysql-logs"
+                }
+              ]
+            },
+            {
+              "allocatedResources": {
+                "cpu": "50m",
+                "memory": "64Mi"
+              },
+              "containerID": "containerd://e5dbfb81bc3cd70b1a7da6d6359700518f3556fe67e8aaa8e4885be9971281ea",
+              "image": "docker.io/library/busybox:1.35",
+              "imageID": "docker.io/library/busybox@sha256:98ad9d1a2be345201bb0709b0d38655eb1b370145c7d94ca1fe9c421f76e245a",
+              "lastState": {},
+              "name": "sidecar-busybox",
+              "ready": true,
+              "resources": {
+                "limits": {
+                  "cpu": "50m",
+                  "memory": "64Mi"
+                },
+                "requests": {
+                  "cpu": "50m",
+                  "memory": "64Mi"
+                }
+              },
+              "restartCount": 0,
+              "started": true,
+              "state": {
+                "running": {
+                  "startedAt": "2026-09-26T15:47:40Z"
+                }
+              },
+              "user": {
+                "linux": {
+                  "gid": 0,
+                  "supplementalGroups": [
+                    0,
+                    10
+                  ],
+                  "uid": 0
+                }
+              },
+              "volumeMounts": [
+                {
+                  "mountPath": "/var/log/mysql",
+                  "name": "mysql-logs"
+                }
+              ]
+            }
+          ],
+          "hostIP": "10.2.14.115",
+          "hostIPs": [
+            {
+              "ip": "10.2.14.115"
+            }
+          ],
+          "observedGeneration": 1,
+          "phase": "Running",
+          "podIP": "10.42.0.103",
+          "podIPs": [
+            {
+              "ip": "10.42.0.103"
+            }
+          ],
+          "qosClass": "Burstable",
+          "startTime": "2026-09-26T15:47:39Z"
+        }
+      },
+      {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "metadata": {
+          "creationTimestamp": "2026-09-26T15:46:11Z",
+          "generateName": "emailservice-6d86bdfd4-",
+          "generation": 1,
+          "labels": {
+            "app": "emailservice",
+            "pod-template-hash": "6d86bdfd4"
+          },
+          "name": "emailservice-6d86bdfd4-lgf57",
+          "namespace": "e2r-supplement-20260925",
+          "ownerReferences": [
+            {
+              "apiVersion": "apps/v1",
+              "blockOwnerDeletion": true,
+              "controller": true,
+              "kind": "ReplicaSet",
+              "name": "emailservice-6d86bdfd4",
+              "uid": "f8277240-bc08-4c9a-85fb-79891ff1bb3c"
+            }
+          ],
+          "resourceVersion": "8500320",
+          "uid": "daa97f92-8676-479e-8bfa-b03220dab29f"
+        },
+        "spec": {
+          "containers": [
+            {
+              "env": [
+                {
+                  "name": "PORT",
+                  "value": "8080"
+                },
+                {
+                  "name": "DISABLE_PROFILER",
+                  "value": "1"
+                },
+                {
+                  "name": "ENABLE_TRACING",
+                  "value": "0"
+                },
+                {
+                  "name": "COLLECTOR_SERVICE_ADDR",
+                  "value": "jaeger-collector:4317"
+                },
+                {
+                  "name": "OTEL_SERVICE_NAME",
+                  "value": "emailservice"
+                }
+              ],
+              "image": "gcr.m.daocloud.io/google-samples/microservices-demo/emailservice:v0.10.1",
+              "imagePullPolicy": "IfNotPresent",
+              "livenessProbe": {
+                "failureThreshold": 3,
+                "grpc": {
+                  "port": 8080,
+                  "service": ""
+                },
+                "periodSeconds": 5,
+                "successThreshold": 1,
+                "timeoutSeconds": 1
+              },
+              "name": "server",
+              "ports": [
+                {
+                  "containerPort": 8080,
+                  "protocol": "TCP"
+                }
+              ],
+              "readinessProbe": {
+                "failureThreshold": 3,
+                "grpc": {
+                  "port": 8080,
+                  "service": ""
+                },
+                "periodSeconds": 5,
+                "successThreshold": 1,
+                "timeoutSeconds": 1
+              },
+              "resources": {
+                "limits": {
+                  "cpu": "200m",
+                  "memory": "2000Mi"
+                },
+                "requests": {
+                  "cpu": "100m",
+                  "memory": "64Mi"
+                }
+              },
+              "terminationMessagePath": "/dev/termination-log",
+              "terminationMessagePolicy": "File",
+              "volumeMounts": [
+                {
+                  "mountPath": "/var/log/mysql",
+                  "name": "mysql-logs"
+                }
+              ]
+            },
+            {
+              "command": [
+                "sh",
+                "-c",
+                "sleep 2147483647"
+              ],
+              "image": "busybox:1.35",
+              "imagePullPolicy": "IfNotPresent",
+              "name": "sidecar-busybox",
+              "resources": {
+                "limits": {
+                  "cpu": "50m",
+                  "memory": "64Mi"
+                },
+                "requests": {
+                  "cpu": "50m",
+                  "memory": "64Mi"
+                }
+              },
+              "securityContext": {
+                "capabilities": {
+                  "add": [
+                    "NET_RAW"
+                  ]
+                }
+              },
+              "terminationMessagePath": "/dev/termination-log",
+              "terminationMessagePolicy": "File",
+              "volumeMounts": [
+                {
+                  "mountPath": "/var/log/mysql",
+                  "name": "mysql-logs"
+                }
+              ]
+            }
+          ],
+          "dnsPolicy": "ClusterFirst",
+          "enableServiceLinks": true,
+          "nodeName": "anonymous-k3s-node",
+          "preemptionPolicy": "PreemptLowerPriority",
+          "priority": 0,
+          "restartPolicy": "Always",
+          "schedulerName": "default-scheduler",
+          "securityContext": {},
+          "serviceAccount": "e2r-workload",
+          "serviceAccountName": "e2r-workload",
+          "terminationGracePeriodSeconds": 5,
+          "tolerations": [
+            {
+              "effect": "NoExecute",
+              "key": "node.kubernetes.io/not-ready",
+              "operator": "Exists",
+              "tolerationSeconds": 300
+            },
+            {
+              "effect": "NoExecute",
+              "key": "node.kubernetes.io/unreachable",
+              "operator": "Exists",
+              "tolerationSeconds": 300
+            }
+          ],
+          "volumes": [
+            {
+              "emptyDir": {},
+              "name": "mysql-logs"
+            }
+          ]
+        },
+        "status": {
+          "conditions": [
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-26T15:46:13Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "PodReadyToStartContainers"
+            },
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-26T15:46:11Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "Initialized"
+            },
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-26T15:46:19Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "Ready"
+            },
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-26T15:46:19Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "ContainersReady"
+            },
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-26T15:46:11Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "PodScheduled"
+            }
+          ],
+          "containerStatuses": [
+            {
+              "allocatedResources": {
+                "cpu": "100m",
+                "memory": "64Mi"
+              },
+              "containerID": "containerd://29f426d2d09e43021a3a7bd4949a17caa8dd1f46bddab3080bd600830465c9e2",
+              "image": "gcr.m.daocloud.io/google-samples/microservices-demo/emailservice:v0.10.1",
+              "imageID": "sha256:199491db274a79cd48a5499d68efb9fcd93f5051bda661042255910ad7a3f46a",
+              "lastState": {},
+              "name": "server",
+              "ready": true,
+              "resources": {
+                "limits": {
+                  "cpu": "200m",
+                  "memory": "2000Mi"
+                },
+                "requests": {
+                  "cpu": "100m",
+                  "memory": "64Mi"
+                }
+              },
+              "restartCount": 0,
+              "started": true,
+              "state": {
+                "running": {
+                  "startedAt": "2026-09-26T15:46:12Z"
+                }
+              },
+              "user": {
+                "linux": {
+                  "gid": 0,
+                  "supplementalGroups": [
+                    0
+                  ],
+                  "uid": 0
+                }
+              },
+              "volumeMounts": [
+                {
+                  "mountPath": "/var/log/mysql",
+                  "name": "mysql-logs"
+                }
+              ]
+            },
+            {
+              "allocatedResources": {
+                "cpu": "50m",
+                "memory": "64Mi"
+              },
+              "containerID": "containerd://f0bda6f909c8eae1cd5cb5a2737afdbfb0f0ffe5afa0fc253d90acc3914139c2",
+              "image": "docker.io/library/busybox:1.35",
+              "imageID": "docker.io/library/busybox@sha256:98ad9d1a2be345201bb0709b0d38655eb1b370145c7d94ca1fe9c421f76e245a",
+              "lastState": {},
+              "name": "sidecar-busybox",
+              "ready": true,
+              "resources": {
+                "limits": {
+                  "cpu": "50m",
+                  "memory": "64Mi"
+                },
+                "requests": {
+                  "cpu": "50m",
+                  "memory": "64Mi"
+                }
+              },
+              "restartCount": 0,
+              "started": true,
+              "state": {
+                "running": {
+                  "startedAt": "2026-09-26T15:46:12Z"
+                }
+              },
+              "user": {
+                "linux": {
+                  "gid": 0,
+                  "supplementalGroups": [
+                    0,
+                    10
+                  ],
+                  "uid": 0
+                }
+              },
+              "volumeMounts": [
+                {
+                  "mountPath": "/var/log/mysql",
+                  "name": "mysql-logs"
+                }
+              ]
+            }
+          ],
+          "hostIP": "10.2.14.115",
+          "hostIPs": [
+            {
+              "ip": "10.2.14.115"
+            }
+          ],
+          "observedGeneration": 1,
+          "phase": "Running",
+          "podIP": "10.42.0.97",
+          "podIPs": [
+            {
+              "ip": "10.42.0.97"
+            }
+          ],
+          "qosClass": "Burstable",
+          "startTime": "2026-09-26T15:46:11Z"
+        }
+      },
+      {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "metadata": {
+          "annotations": {
+            "sidecar.istio.io/rewriteAppHTTPProbers": "true"
+          },
+          "creationTimestamp": "2026-09-26T15:46:55Z",
+          "generateName": "frontend-575dcbd8d6-",
+          "generation": 1,
+          "labels": {
+            "app": "frontend",
+            "pod-template-hash": "575dcbd8d6"
+          },
+          "name": "frontend-575dcbd8d6-wcpbg",
+          "namespace": "e2r-supplement-20260925",
+          "ownerReferences": [
+            {
+              "apiVersion": "apps/v1",
+              "blockOwnerDeletion": true,
+              "controller": true,
+              "kind": "ReplicaSet",
+              "name": "frontend-575dcbd8d6",
+              "uid": "ffbfcf76-c5f2-424b-8bcf-a07969fbef73"
+            }
+          ],
+          "resourceVersion": "8500626",
+          "uid": "ca664d5b-d3a9-48c6-98f4-d33b5c363176"
+        },
+        "spec": {
+          "containers": [
+            {
+              "env": [
+                {
+                  "name": "PORT",
+                  "value": "8080"
+                },
+                {
+                  "name": "PRODUCT_CATALOG_SERVICE_ADDR",
+                  "value": "productcatalogservice:3550"
+                },
+                {
+                  "name": "CURRENCY_SERVICE_ADDR",
+                  "value": "currencyservice:7000"
+                },
+                {
+                  "name": "CART_SERVICE_ADDR",
+                  "value": "cartservice:7070"
+                },
+                {
+                  "name": "RECOMMENDATION_SERVICE_ADDR",
+                  "value": "recommendationservice:8080"
+                },
+                {
+                  "name": "SHIPPING_SERVICE_ADDR",
+                  "value": "shippingservice:50051"
+                },
+                {
+                  "name": "CHECKOUT_SERVICE_ADDR",
+                  "value": "checkoutservice:5050"
+                },
+                {
+                  "name": "AD_SERVICE_ADDR",
+                  "value": "adservice:9555"
+                },
+                {
+                  "name": "DISABLE_PROFILER",
+                  "value": "1"
+                },
+                {
+                  "name": "ENABLE_TRACING",
+                  "value": "0"
+                },
+                {
+                  "name": "COLLECTOR_SERVICE_ADDR",
+                  "value": "jaeger-collector:4317"
+                },
+                {
+                  "name": "SHOPPING_ASSISTANT_SERVICE_ADDR",
+                  "value": "shoppingassistantservice:80"
+                },
+                {
+                  "name": "OTEL_SERVICE_NAME",
+                  "value": "frontend"
+                }
+              ],
+              "image": "gcr.m.daocloud.io/google-samples/microservices-demo/frontend:v0.10.1",
+              "imagePullPolicy": "IfNotPresent",
+              "livenessProbe": {
+                "failureThreshold": 3,
+                "httpGet": {
+                  "httpHeaders": [
+                    {
+                      "name": "Cookie",
+                      "value": "shop_session-id=x-liveness-probe"
+                    }
+                  ],
+                  "path": "/_healthz",
+                  "port": 8080,
+                  "scheme": "HTTP"
+                },
+                "initialDelaySeconds": 10,
+                "periodSeconds": 10,
+                "successThreshold": 1,
+                "timeoutSeconds": 1
+              },
+              "name": "server",
+              "ports": [
+                {
+                  "containerPort": 8080,
+                  "protocol": "TCP"
+                }
+              ],
+              "readinessProbe": {
+                "failureThreshold": 3,
+                "httpGet": {
+                  "httpHeaders": [
+                    {
+                      "name": "Cookie",
+                      "value": "shop_session-id=x-readiness-probe"
+                    }
+                  ],
+                  "path": "/_healthz",
+                  "port": 8080,
+                  "scheme": "HTTP"
+                },
+                "initialDelaySeconds": 10,
+                "periodSeconds": 10,
+                "successThreshold": 1,
+                "timeoutSeconds": 1
+              },
+              "resources": {
+                "limits": {
+                  "cpu": "200m",
+                  "memory": "2000Mi"
+                },
+                "requests": {
+                  "cpu": "100m",
+                  "memory": "64Mi"
+                }
+              },
+              "terminationMessagePath": "/dev/termination-log",
+              "terminationMessagePolicy": "File",
+              "volumeMounts": [
+                {
+                  "mountPath": "/var/log/mysql",
+                  "name": "mysql-logs"
+                }
+              ]
+            },
+            {
+              "command": [
+                "sh",
+                "-c",
+                "sleep 2147483647"
+              ],
+              "image": "busybox:1.35",
+              "imagePullPolicy": "IfNotPresent",
+              "name": "sidecar-busybox",
+              "resources": {
+                "limits": {
+                  "cpu": "50m",
+                  "memory": "64Mi"
+                },
+                "requests": {
+                  "cpu": "50m",
+                  "memory": "64Mi"
+                }
+              },
+              "securityContext": {
+                "capabilities": {
+                  "add": [
+                    "NET_RAW"
+                  ]
+                }
+              },
+              "terminationMessagePath": "/dev/termination-log",
+              "terminationMessagePolicy": "File",
+              "volumeMounts": [
+                {
+                  "mountPath": "/var/log/mysql",
+                  "name": "mysql-logs"
+                }
+              ]
+            }
+          ],
+          "dnsPolicy": "ClusterFirst",
+          "enableServiceLinks": true,
+          "nodeName": "anonymous-k3s-node",
+          "preemptionPolicy": "PreemptLowerPriority",
+          "priority": 0,
+          "restartPolicy": "Always",
+          "schedulerName": "default-scheduler",
+          "securityContext": {},
+          "serviceAccount": "e2r-workload",
+          "serviceAccountName": "e2r-workload",
+          "terminationGracePeriodSeconds": 30,
+          "tolerations": [
+            {
+              "effect": "NoExecute",
+              "key": "node.kubernetes.io/not-ready",
+              "operator": "Exists",
+              "tolerationSeconds": 300
+            },
+            {
+              "effect": "NoExecute",
+              "key": "node.kubernetes.io/unreachable",
+              "operator": "Exists",
+              "tolerationSeconds": 300
+            }
+          ],
+          "volumes": [
+            {
+              "emptyDir": {},
+              "name": "mysql-logs"
+            }
+          ]
+        },
+        "status": {
+          "conditions": [
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-26T15:46:56Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "PodReadyToStartContainers"
+            },
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-26T15:46:55Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "Initialized"
+            },
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-26T15:47:07Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "Ready"
+            },
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-26T15:47:07Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "ContainersReady"
+            },
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-26T15:46:55Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "PodScheduled"
+            }
+          ],
+          "containerStatuses": [
+            {
+              "allocatedResources": {
+                "cpu": "100m",
+                "memory": "64Mi"
+              },
+              "containerID": "containerd://bad49691be782a73ae2f2976b7014986bb4c70b2420db7232e6300f9a1d21c30",
+              "image": "gcr.m.daocloud.io/google-samples/microservices-demo/frontend:v0.10.1",
+              "imageID": "sha256:c68fa7338008110b8255793a49b9fc945460e3dd43ca16d1eb63d46d6bed9994",
+              "lastState": {},
+              "name": "server",
+              "ready": true,
+              "resources": {
+                "limits": {
+                  "cpu": "200m",
+                  "memory": "2000Mi"
+                },
+                "requests": {
+                  "cpu": "100m",
+                  "memory": "64Mi"
+                }
+              },
+              "restartCount": 0,
+              "started": true,
+              "state": {
+                "running": {
+                  "startedAt": "2026-09-26T15:46:55Z"
+                }
+              },
+              "user": {
+                "linux": {
+                  "gid": 0,
+                  "supplementalGroups": [
+                    0
+                  ],
+                  "uid": 0
+                }
+              },
+              "volumeMounts": [
+                {
+                  "mountPath": "/var/log/mysql",
+                  "name": "mysql-logs"
+                }
+              ]
+            },
+            {
+              "allocatedResources": {
+                "cpu": "50m",
+                "memory": "64Mi"
+              },
+              "containerID": "containerd://7fe4bed01a86d021a643a7eaf0ba48390a0ff6835bfb20f32ae86df80cd7cce9",
+              "image": "docker.io/library/busybox:1.35",
+              "imageID": "docker.io/library/busybox@sha256:98ad9d1a2be345201bb0709b0d38655eb1b370145c7d94ca1fe9c421f76e245a",
+              "lastState": {},
+              "name": "sidecar-busybox",
+              "ready": true,
+              "resources": {
+                "limits": {
+                  "cpu": "50m",
+                  "memory": "64Mi"
+                },
+                "requests": {
+                  "cpu": "50m",
+                  "memory": "64Mi"
+                }
+              },
+              "restartCount": 0,
+              "started": true,
+              "state": {
+                "running": {
+                  "startedAt": "2026-09-26T15:46:56Z"
+                }
+              },
+              "user": {
+                "linux": {
+                  "gid": 0,
+                  "supplementalGroups": [
+                    0,
+                    10
+                  ],
+                  "uid": 0
+                }
+              },
+              "volumeMounts": [
+                {
+                  "mountPath": "/var/log/mysql",
+                  "name": "mysql-logs"
+                }
+              ]
+            }
+          ],
+          "hostIP": "10.2.14.115",
+          "hostIPs": [
+            {
+              "ip": "10.2.14.115"
+            }
+          ],
+          "observedGeneration": 1,
+          "phase": "Running",
+          "podIP": "10.42.0.101",
+          "podIPs": [
+            {
+              "ip": "10.42.0.101"
+            }
+          ],
+          "qosClass": "Burstable",
+          "startTime": "2026-09-26T15:46:55Z"
+        }
+      },
+      {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "metadata": {
+          "annotations": {
+            "sidecar.istio.io/rewriteAppHTTPProbers": "true"
+          },
+          "creationTimestamp": "2026-09-26T15:51:45Z",
+          "generateName": "loadgenerator-9dd77bb5c-",
+          "generation": 1,
+          "labels": {
+            "app": "loadgenerator",
+            "pod-template-hash": "9dd77bb5c"
+          },
+          "name": "loadgenerator-9dd77bb5c-mnhhd",
+          "namespace": "e2r-supplement-20260925",
+          "ownerReferences": [
+            {
+              "apiVersion": "apps/v1",
+              "blockOwnerDeletion": true,
+              "controller": true,
+              "kind": "ReplicaSet",
+              "name": "loadgenerator-9dd77bb5c",
+              "uid": "65ce2a98-4303-4731-b7d7-f34422dcda15"
+            }
+          ],
+          "resourceVersion": "8501287",
+          "uid": "81d34579-b1da-4832-9c08-450b030501a1"
+        },
+        "spec": {
+          "containers": [
+            {
+              "env": [
+                {
+                  "name": "FRONTEND_ADDR",
+                  "value": "frontend:80"
+                },
+                {
+                  "name": "USERS",
+                  "value": "10"
+                },
+                {
+                  "name": "ENABLE_TRACING",
+                  "value": "0"
+                },
+                {
+                  "name": "COLLECTOR_SERVICE_ADDR",
+                  "value": "jaeger-collector:4317"
+                }
+              ],
+              "image": "gcr.m.daocloud.io/google-samples/microservices-demo/loadgenerator:v0.10.1",
+              "imagePullPolicy": "IfNotPresent",
+              "name": "main",
+              "resources": {
+                "limits": {
+                  "cpu": "500m",
+                  "memory": "2000Mi"
+                },
+                "requests": {
+                  "cpu": "300m",
+                  "memory": "256Mi"
+                }
+              },
+              "terminationMessagePath": "/dev/termination-log",
+              "terminationMessagePolicy": "File",
+              "volumeMounts": [
+                {
+                  "mountPath": "/var/log/mysql",
+                  "name": "mysql-logs"
+                }
+              ]
+            },
+            {
+              "command": [
+                "sh",
+                "-c",
+                "sleep 2147483647"
+              ],
+              "image": "busybox:1.35",
+              "imagePullPolicy": "IfNotPresent",
+              "name": "sidecar-busybox",
+              "resources": {
+                "limits": {
+                  "cpu": "50m",
+                  "memory": "64Mi"
+                },
+                "requests": {
+                  "cpu": "50m",
+                  "memory": "64Mi"
+                }
+              },
+              "securityContext": {
+                "capabilities": {
+                  "add": [
+                    "NET_RAW"
+                  ]
+                }
+              },
+              "terminationMessagePath": "/dev/termination-log",
+              "terminationMessagePolicy": "File",
+              "volumeMounts": [
+                {
+                  "mountPath": "/var/log/mysql",
+                  "name": "mysql-logs"
+                }
+              ]
+            }
+          ],
+          "dnsPolicy": "ClusterFirst",
+          "enableServiceLinks": true,
+          "initContainers": [
+            {
+              "command": [
+                "/bin/sh",
+                "-exc",
+                "echo \"Init container pinging frontend: ${FRONTEND_ADDR}...\"\nSTATUSCODE=$(wget --server-response http://${FRONTEND_ADDR} 2>&1 | awk '/^  HTTP/{print $2}')\nif test $STATUSCODE -ne 200; then\n    echo \"Error: Could not reach frontend - Status code: ${STATUSCODE}\"\n    exit 1\nfi\n"
+              ],
+              "env": [
+                {
+                  "name": "FRONTEND_ADDR",
+                  "value": "frontend:80"
+                }
+              ],
+              "image": "busybox:latest",
+              "imagePullPolicy": "Always",
+              "name": "frontend-check",
+              "resources": {
+                "limits": {
+                  "cpu": "100m",
+                  "memory": "64Mi"
+                },
+                "requests": {
+                  "cpu": "25m",
+                  "memory": "16Mi"
+                }
+              },
+              "terminationMessagePath": "/dev/termination-log",
+              "terminationMessagePolicy": "File"
+            }
+          ],
+          "nodeName": "anonymous-k3s-node",
+          "preemptionPolicy": "PreemptLowerPriority",
+          "priority": 0,
+          "restartPolicy": "Always",
+          "schedulerName": "default-scheduler",
+          "securityContext": {},
+          "serviceAccount": "e2r-workload",
+          "serviceAccountName": "e2r-workload",
+          "terminationGracePeriodSeconds": 5,
+          "tolerations": [
+            {
+              "effect": "NoExecute",
+              "key": "node.kubernetes.io/not-ready",
+              "operator": "Exists",
+              "tolerationSeconds": 300
+            },
+            {
+              "effect": "NoExecute",
+              "key": "node.kubernetes.io/unreachable",
+              "operator": "Exists",
+              "tolerationSeconds": 300
+            }
+          ],
+          "volumes": [
+            {
+              "emptyDir": {},
+              "name": "mysql-logs"
+            }
+          ]
+        },
+        "status": {
+          "conditions": [
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-26T15:51:50Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "PodReadyToStartContainers"
+            },
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-26T15:51:51Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "Initialized"
+            },
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-26T15:51:52Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "Ready"
+            },
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-26T15:51:52Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "ContainersReady"
+            },
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-26T15:51:45Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "PodScheduled"
+            }
+          ],
+          "containerStatuses": [
+            {
+              "allocatedResources": {
+                "cpu": "300m",
+                "memory": "256Mi"
+              },
+              "containerID": "containerd://67205d3b0f9c14a6cd4a7c78325251d271fbca0c1bf010bacfee1e5441d0f45e",
+              "image": "gcr.m.daocloud.io/google-samples/microservices-demo/loadgenerator:v0.10.1",
+              "imageID": "sha256:15308409f7c5cad0281f750ab07b0251c4a7d4bf07501c73f44536ff04d05507",
+              "lastState": {},
+              "name": "main",
+              "ready": true,
+              "resources": {
+                "limits": {
+                  "cpu": "500m",
+                  "memory": "2000Mi"
+                },
+                "requests": {
+                  "cpu": "300m",
+                  "memory": "256Mi"
+                }
+              },
+              "restartCount": 0,
+              "started": true,
+              "state": {
+                "running": {
+                  "startedAt": "2026-09-26T15:51:51Z"
+                }
+              },
+              "user": {
+                "linux": {
+                  "gid": 0,
+                  "supplementalGroups": [
+                    0
+                  ],
+                  "uid": 0
+                }
+              },
+              "volumeMounts": [
+                {
+                  "mountPath": "/var/log/mysql",
+                  "name": "mysql-logs"
+                }
+              ]
+            },
+            {
+              "allocatedResources": {
+                "cpu": "50m",
+                "memory": "64Mi"
+              },
+              "containerID": "containerd://cce70887904da205b48ecda0f6179a6eacfce066356cc6c2c62d2eda1d43e54b",
+              "image": "docker.io/library/busybox:1.35",
+              "imageID": "docker.io/library/busybox@sha256:98ad9d1a2be345201bb0709b0d38655eb1b370145c7d94ca1fe9c421f76e245a",
+              "lastState": {},
+              "name": "sidecar-busybox",
+              "ready": true,
+              "resources": {
+                "limits": {
+                  "cpu": "50m",
+                  "memory": "64Mi"
+                },
+                "requests": {
+                  "cpu": "50m",
+                  "memory": "64Mi"
+                }
+              },
+              "restartCount": 0,
+              "started": true,
+              "state": {
+                "running": {
+                  "startedAt": "2026-09-26T15:51:51Z"
+                }
+              },
+              "user": {
+                "linux": {
+                  "gid": 0,
+                  "supplementalGroups": [
+                    0,
+                    10
+                  ],
+                  "uid": 0
+                }
+              },
+              "volumeMounts": [
+                {
+                  "mountPath": "/var/log/mysql",
+                  "name": "mysql-logs"
+                }
+              ]
+            }
+          ],
+          "hostIP": "10.2.14.115",
+          "hostIPs": [
+            {
+              "ip": "10.2.14.115"
+            }
+          ],
+          "initContainerStatuses": [
+            {
+              "allocatedResources": {
+                "cpu": "25m",
+                "memory": "16Mi"
+              },
+              "containerID": "containerd://7f5f3f371cc8a5c46d86b816252d88cb3fc827e6ae7a83ea0373a5c2194ca76a",
+              "image": "docker.io/library/busybox:latest",
+              "imageID": "docker.io/library/busybox@sha256:fd7dc98638c8e305f4dc34e979f1c0fdfdcaeb0fbf8fcff77ae834b6da3d7e6e",
+              "lastState": {},
+              "name": "frontend-check",
+              "ready": true,
+              "resources": {
+                "limits": {
+                  "cpu": "100m",
+                  "memory": "64Mi"
+                },
+                "requests": {
+                  "cpu": "25m",
+                  "memory": "16Mi"
+                }
+              },
+              "restartCount": 0,
+              "started": false,
+              "state": {
+                "terminated": {
+                  "containerID": "containerd://7f5f3f371cc8a5c46d86b816252d88cb3fc827e6ae7a83ea0373a5c2194ca76a",
+                  "exitCode": 0,
+                  "finishedAt": "2026-09-26T15:51:51Z",
+                  "reason": "Completed",
+                  "startedAt": "2026-09-26T15:51:49Z"
+                }
+              },
+              "user": {
+                "linux": {
+                  "gid": 0,
+                  "supplementalGroups": [
+                    0,
+                    10
+                  ],
+                  "uid": 0
+                }
+              }
+            }
+          ],
+          "observedGeneration": 1,
+          "phase": "Running",
+          "podIP": "10.42.0.108",
+          "podIPs": [
+            {
+              "ip": "10.42.0.108"
+            }
+          ],
+          "qosClass": "Burstable",
+          "startTime": "2026-09-26T15:51:45Z"
+        }
+      },
+      {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "metadata": {
+          "creationTimestamp": "2026-09-26T15:46:26Z",
+          "generateName": "paymentservice-74c69df798-",
+          "generation": 1,
+          "labels": {
+            "app": "paymentservice",
+            "pod-template-hash": "74c69df798"
+          },
+          "name": "paymentservice-74c69df798-swqwx",
+          "namespace": "e2r-supplement-20260925",
+          "ownerReferences": [
+            {
+              "apiVersion": "apps/v1",
+              "blockOwnerDeletion": true,
+              "controller": true,
+              "kind": "ReplicaSet",
+              "name": "paymentservice-74c69df798",
+              "uid": "10da417b-bfe2-4e76-a4a0-47bd134f8a3f"
+            }
+          ],
+          "resourceVersion": "8500436",
+          "uid": "413458b5-ce2d-4e62-b3c2-2db54905509a"
+        },
+        "spec": {
+          "containers": [
+            {
+              "env": [
+                {
+                  "name": "PORT",
+                  "value": "50051"
+                },
+                {
+                  "name": "DISABLE_PROFILER",
+                  "value": "1"
+                },
+                {
+                  "name": "DISABLE_DEBUGGER",
+                  "value": "1"
+                },
+                {
+                  "name": "ENABLE_TRACING",
+                  "value": "0"
+                },
+                {
+                  "name": "COLLECTOR_SERVICE_ADDR",
+                  "value": "jaeger-collector:4317"
+                },
+                {
+                  "name": "OTEL_SERVICE_NAME",
+                  "value": "paymentservice"
+                }
+              ],
+              "image": "gcr.m.daocloud.io/google-samples/microservices-demo/paymentservice:v0.10.1",
+              "imagePullPolicy": "IfNotPresent",
+              "livenessProbe": {
+                "failureThreshold": 3,
+                "grpc": {
+                  "port": 50051,
+                  "service": ""
+                },
+                "periodSeconds": 10,
+                "successThreshold": 1,
+                "timeoutSeconds": 1
+              },
+              "name": "server",
+              "ports": [
+                {
+                  "containerPort": 50051,
+                  "protocol": "TCP"
+                }
+              ],
+              "readinessProbe": {
+                "failureThreshold": 3,
+                "grpc": {
+                  "port": 50051,
+                  "service": ""
+                },
+                "periodSeconds": 10,
+                "successThreshold": 1,
+                "timeoutSeconds": 1
+              },
+              "resources": {
+                "limits": {
+                  "cpu": "200m",
+                  "memory": "2000Mi"
+                },
+                "requests": {
+                  "cpu": "100m",
+                  "memory": "64Mi"
+                }
+              },
+              "terminationMessagePath": "/dev/termination-log",
+              "terminationMessagePolicy": "File",
+              "volumeMounts": [
+                {
+                  "mountPath": "/var/log/mysql",
+                  "name": "mysql-logs"
+                }
+              ]
+            },
+            {
+              "command": [
+                "sh",
+                "-c",
+                "sleep 2147483647"
+              ],
+              "image": "busybox:1.35",
+              "imagePullPolicy": "IfNotPresent",
+              "name": "sidecar-busybox",
+              "resources": {
+                "limits": {
+                  "cpu": "50m",
+                  "memory": "64Mi"
+                },
+                "requests": {
+                  "cpu": "50m",
+                  "memory": "64Mi"
+                }
+              },
+              "securityContext": {
+                "capabilities": {
+                  "add": [
+                    "NET_RAW"
+                  ]
+                }
+              },
+              "terminationMessagePath": "/dev/termination-log",
+              "terminationMessagePolicy": "File",
+              "volumeMounts": [
+                {
+                  "mountPath": "/var/log/mysql",
+                  "name": "mysql-logs"
+                }
+              ]
+            }
+          ],
+          "dnsPolicy": "ClusterFirst",
+          "enableServiceLinks": true,
+          "nodeName": "anonymous-k3s-node",
+          "preemptionPolicy": "PreemptLowerPriority",
+          "priority": 0,
+          "restartPolicy": "Always",
+          "schedulerName": "default-scheduler",
+          "securityContext": {},
+          "serviceAccount": "e2r-workload",
+          "serviceAccountName": "e2r-workload",
+          "terminationGracePeriodSeconds": 5,
+          "tolerations": [
+            {
+              "effect": "NoExecute",
+              "key": "node.kubernetes.io/not-ready",
+              "operator": "Exists",
+              "tolerationSeconds": 300
+            },
+            {
+              "effect": "NoExecute",
+              "key": "node.kubernetes.io/unreachable",
+              "operator": "Exists",
+              "tolerationSeconds": 300
+            }
+          ],
+          "volumes": [
+            {
+              "emptyDir": {},
+              "name": "mysql-logs"
+            }
+          ]
+        },
+        "status": {
+          "conditions": [
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-26T15:46:27Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "PodReadyToStartContainers"
+            },
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-26T15:46:26Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "Initialized"
+            },
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-26T15:46:28Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "Ready"
+            },
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-26T15:46:28Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "ContainersReady"
+            },
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-26T15:46:26Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "PodScheduled"
+            }
+          ],
+          "containerStatuses": [
+            {
+              "allocatedResources": {
+                "cpu": "100m",
+                "memory": "64Mi"
+              },
+              "containerID": "containerd://8252fb10ec9da787aa5b4303eff6ee7b1862a0e02b8e7647ddcb06e18d893a79",
+              "image": "gcr.m.daocloud.io/google-samples/microservices-demo/paymentservice:v0.10.1",
+              "imageID": "sha256:af166ffbf95acdac3d742e8d88338aa557bcd376eb85900e344675586511ec57",
+              "lastState": {},
+              "name": "server",
+              "ready": true,
+              "resources": {
+                "limits": {
+                  "cpu": "200m",
+                  "memory": "2000Mi"
+                },
+                "requests": {
+                  "cpu": "100m",
+                  "memory": "64Mi"
+                }
+              },
+              "restartCount": 0,
+              "started": true,
+              "state": {
+                "running": {
+                  "startedAt": "2026-09-26T15:46:27Z"
+                }
+              },
+              "user": {
+                "linux": {
+                  "gid": 0,
+                  "supplementalGroups": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    6,
+                    10,
+                    11,
+                    20,
+                    26,
+                    27
+                  ],
+                  "uid": 0
+                }
+              },
+              "volumeMounts": [
+                {
+                  "mountPath": "/var/log/mysql",
+                  "name": "mysql-logs"
+                }
+              ]
+            },
+            {
+              "allocatedResources": {
+                "cpu": "50m",
+                "memory": "64Mi"
+              },
+              "containerID": "containerd://5a7bda8c7fc00e6f71a8eff0b6aaba1c8c99eda775848c76f7dbdf69ca9151fa",
+              "image": "docker.io/library/busybox:1.35",
+              "imageID": "docker.io/library/busybox@sha256:98ad9d1a2be345201bb0709b0d38655eb1b370145c7d94ca1fe9c421f76e245a",
+              "lastState": {},
+              "name": "sidecar-busybox",
+              "ready": true,
+              "resources": {
+                "limits": {
+                  "cpu": "50m",
+                  "memory": "64Mi"
+                },
+                "requests": {
+                  "cpu": "50m",
+                  "memory": "64Mi"
+                }
+              },
+              "restartCount": 0,
+              "started": true,
+              "state": {
+                "running": {
+                  "startedAt": "2026-09-26T15:46:27Z"
+                }
+              },
+              "user": {
+                "linux": {
+                  "gid": 0,
+                  "supplementalGroups": [
+                    0,
+                    10
+                  ],
+                  "uid": 0
+                }
+              },
+              "volumeMounts": [
+                {
+                  "mountPath": "/var/log/mysql",
+                  "name": "mysql-logs"
+                }
+              ]
+            }
+          ],
+          "hostIP": "10.2.14.115",
+          "hostIPs": [
+            {
+              "ip": "10.2.14.115"
+            }
+          ],
+          "observedGeneration": 1,
+          "phase": "Running",
+          "podIP": "10.42.0.99",
+          "podIPs": [
+            {
+              "ip": "10.42.0.99"
+            }
+          ],
+          "qosClass": "Burstable",
+          "startTime": "2026-09-26T15:46:26Z"
+        }
+      },
+      {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "metadata": {
+          "creationTimestamp": "2026-09-26T15:46:57Z",
+          "generateName": "productcatalogservice-74667c88f6-",
+          "generation": 1,
+          "labels": {
+            "app": "productcatalogservice",
+            "pod-template-hash": "74667c88f6"
+          },
+          "name": "productcatalogservice-74667c88f6-rjlrl",
+          "namespace": "e2r-supplement-20260925",
+          "ownerReferences": [
+            {
+              "apiVersion": "apps/v1",
+              "blockOwnerDeletion": true,
+              "controller": true,
+              "kind": "ReplicaSet",
+              "name": "productcatalogservice-74667c88f6",
+              "uid": "b3fc527d-8b96-43f7-8091-b56cd7254dc2"
+            }
+          ],
+          "resourceVersion": "8500594",
+          "uid": "3b33831b-857c-4086-95e7-00e729fa91fe"
+        },
+        "spec": {
+          "containers": [
+            {
+              "env": [
+                {
+                  "name": "PORT",
+                  "value": "3550"
+                },
+                {
+                  "name": "DISABLE_PROFILER",
+                  "value": "1"
+                },
+                {
+                  "name": "ENABLE_TRACING",
+                  "value": "0"
+                },
+                {
+                  "name": "COLLECTOR_SERVICE_ADDR",
+                  "value": "jaeger-collector:4317"
+                },
+                {
+                  "name": "OTEL_SERVICE_NAME",
+                  "value": "productcatalogservice"
+                }
+              ],
+              "image": "gcr.m.daocloud.io/google-samples/microservices-demo/productcatalogservice:v0.10.1",
+              "imagePullPolicy": "IfNotPresent",
+              "livenessProbe": {
+                "failureThreshold": 3,
+                "grpc": {
+                  "port": 3550,
+                  "service": ""
+                },
+                "periodSeconds": 10,
+                "successThreshold": 1,
+                "timeoutSeconds": 1
+              },
+              "name": "server",
+              "ports": [
+                {
+                  "containerPort": 3550,
+                  "protocol": "TCP"
+                }
+              ],
+              "readinessProbe": {
+                "failureThreshold": 3,
+                "grpc": {
+                  "port": 3550,
+                  "service": ""
+                },
+                "periodSeconds": 10,
+                "successThreshold": 1,
+                "timeoutSeconds": 1
+              },
+              "resources": {
+                "limits": {
+                  "cpu": "200m",
+                  "memory": "2000Mi"
+                },
+                "requests": {
+                  "cpu": "100m",
+                  "memory": "64Mi"
+                }
+              },
+              "terminationMessagePath": "/dev/termination-log",
+              "terminationMessagePolicy": "File",
+              "volumeMounts": [
+                {
+                  "mountPath": "/var/log/mysql",
+                  "name": "mysql-logs"
+                }
+              ]
+            },
+            {
+              "command": [
+                "sh",
+                "-c",
+                "sleep 2147483647"
+              ],
+              "image": "busybox:1.35",
+              "imagePullPolicy": "IfNotPresent",
+              "name": "sidecar-busybox",
+              "resources": {
+                "limits": {
+                  "cpu": "50m",
+                  "memory": "64Mi"
+                },
+                "requests": {
+                  "cpu": "50m",
+                  "memory": "64Mi"
+                }
+              },
+              "securityContext": {
+                "capabilities": {
+                  "add": [
+                    "NET_RAW"
+                  ]
+                }
+              },
+              "terminationMessagePath": "/dev/termination-log",
+              "terminationMessagePolicy": "File",
+              "volumeMounts": [
+                {
+                  "mountPath": "/var/log/mysql",
+                  "name": "mysql-logs"
+                }
+              ]
+            }
+          ],
+          "dnsPolicy": "ClusterFirst",
+          "enableServiceLinks": true,
+          "nodeName": "anonymous-k3s-node",
+          "preemptionPolicy": "PreemptLowerPriority",
+          "priority": 0,
+          "restartPolicy": "Always",
+          "schedulerName": "default-scheduler",
+          "securityContext": {},
+          "serviceAccount": "e2r-workload",
+          "serviceAccountName": "e2r-workload",
+          "terminationGracePeriodSeconds": 5,
+          "tolerations": [
+            {
+              "effect": "NoExecute",
+              "key": "node.kubernetes.io/not-ready",
+              "operator": "Exists",
+              "tolerationSeconds": 300
+            },
+            {
+              "effect": "NoExecute",
+              "key": "node.kubernetes.io/unreachable",
+              "operator": "Exists",
+              "tolerationSeconds": 300
+            }
+          ],
+          "volumes": [
+            {
+              "emptyDir": {},
+              "name": "mysql-logs"
+            }
+          ]
+        },
+        "status": {
+          "conditions": [
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-26T15:46:58Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "PodReadyToStartContainers"
+            },
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-26T15:46:57Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "Initialized"
+            },
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-26T15:46:58Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "Ready"
+            },
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-26T15:46:58Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "ContainersReady"
+            },
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-26T15:46:57Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "PodScheduled"
+            }
+          ],
+          "containerStatuses": [
+            {
+              "allocatedResources": {
+                "cpu": "100m",
+                "memory": "64Mi"
+              },
+              "containerID": "containerd://c88b93d120917c7bf800baede1df7ad7d84349b69842d43807dc63fe5f553c25",
+              "image": "gcr.m.daocloud.io/google-samples/microservices-demo/productcatalogservice:v0.10.1",
+              "imageID": "sha256:5e068dd6e98199ce89407dbdba05cfd59e9f67737d740f6cf1c7165b15edfb80",
+              "lastState": {},
+              "name": "server",
+              "ready": true,
+              "resources": {
+                "limits": {
+                  "cpu": "200m",
+                  "memory": "2000Mi"
+                },
+                "requests": {
+                  "cpu": "100m",
+                  "memory": "64Mi"
+                }
+              },
+              "restartCount": 0,
+              "started": true,
+              "state": {
+                "running": {
+                  "startedAt": "2026-09-26T15:46:57Z"
+                }
+              },
+              "user": {
+                "linux": {
+                  "gid": 0,
+                  "supplementalGroups": [
+                    0
+                  ],
+                  "uid": 0
+                }
+              },
+              "volumeMounts": [
+                {
+                  "mountPath": "/var/log/mysql",
+                  "name": "mysql-logs"
+                }
+              ]
+            },
+            {
+              "allocatedResources": {
+                "cpu": "50m",
+                "memory": "64Mi"
+              },
+              "containerID": "containerd://c49429d7db813d123dd28a236e42d87578e542f689b7865d11d7064cb28457e4",
+              "image": "docker.io/library/busybox:1.35",
+              "imageID": "docker.io/library/busybox@sha256:98ad9d1a2be345201bb0709b0d38655eb1b370145c7d94ca1fe9c421f76e245a",
+              "lastState": {},
+              "name": "sidecar-busybox",
+              "ready": true,
+              "resources": {
+                "limits": {
+                  "cpu": "50m",
+                  "memory": "64Mi"
+                },
+                "requests": {
+                  "cpu": "50m",
+                  "memory": "64Mi"
+                }
+              },
+              "restartCount": 0,
+              "started": true,
+              "state": {
+                "running": {
+                  "startedAt": "2026-09-26T15:46:58Z"
+                }
+              },
+              "user": {
+                "linux": {
+                  "gid": 0,
+                  "supplementalGroups": [
+                    0,
+                    10
+                  ],
+                  "uid": 0
+                }
+              },
+              "volumeMounts": [
+                {
+                  "mountPath": "/var/log/mysql",
+                  "name": "mysql-logs"
+                }
+              ]
+            }
+          ],
+          "hostIP": "10.2.14.115",
+          "hostIPs": [
+            {
+              "ip": "10.2.14.115"
+            }
+          ],
+          "observedGeneration": 1,
+          "phase": "Running",
+          "podIP": "10.42.0.102",
+          "podIPs": [
+            {
+              "ip": "10.42.0.102"
+            }
+          ],
+          "qosClass": "Burstable",
+          "startTime": "2026-09-26T15:46:57Z"
+        }
+      },
+      {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "metadata": {
+          "creationTimestamp": "2026-09-26T15:46:34Z",
+          "generateName": "recommendationservice-f9fdcbff5-",
+          "generation": 1,
+          "labels": {
+            "app": "recommendationservice",
+            "pod-template-hash": "f9fdcbff5"
+          },
+          "name": "recommendationservice-f9fdcbff5-xr6fn",
+          "namespace": "e2r-supplement-20260925",
+          "ownerReferences": [
+            {
+              "apiVersion": "apps/v1",
+              "blockOwnerDeletion": true,
+              "controller": true,
+              "kind": "ReplicaSet",
+              "name": "recommendationservice-f9fdcbff5",
+              "uid": "97c23c55-c702-47a4-a9d3-935e08f0e8c4"
+            }
+          ],
+          "resourceVersion": "8500504",
+          "uid": "ea052333-47ae-4696-a2d7-cf367cc68123"
+        },
+        "spec": {
+          "containers": [
+            {
+              "env": [
+                {
+                  "name": "PORT",
+                  "value": "8080"
+                },
+                {
+                  "name": "PRODUCT_CATALOG_SERVICE_ADDR",
+                  "value": "productcatalogservice:3550"
+                },
+                {
+                  "name": "DISABLE_PROFILER",
+                  "value": "1"
+                },
+                {
+                  "name": "DISABLE_DEBUGGER",
+                  "value": "1"
+                },
+                {
+                  "name": "ENABLE_TRACING",
+                  "value": "0"
+                },
+                {
+                  "name": "COLLECTOR_SERVICE_ADDR",
+                  "value": "jaeger-collector:4317"
+                },
+                {
+                  "name": "OTEL_SERVICE_NAME",
+                  "value": "recommendationservice"
+                }
+              ],
+              "image": "gcr.m.daocloud.io/google-samples/microservices-demo/recommendationservice:v0.10.1",
+              "imagePullPolicy": "IfNotPresent",
+              "livenessProbe": {
+                "failureThreshold": 3,
+                "grpc": {
+                  "port": 8080,
+                  "service": ""
+                },
+                "periodSeconds": 5,
+                "successThreshold": 1,
+                "timeoutSeconds": 1
+              },
+              "name": "server",
+              "ports": [
+                {
+                  "containerPort": 8080,
+                  "protocol": "TCP"
+                }
+              ],
+              "readinessProbe": {
+                "failureThreshold": 3,
+                "grpc": {
+                  "port": 8080,
+                  "service": ""
+                },
+                "periodSeconds": 5,
+                "successThreshold": 1,
+                "timeoutSeconds": 1
+              },
+              "resources": {
+                "limits": {
+                  "cpu": "200m",
+                  "memory": "2000Mi"
+                },
+                "requests": {
+                  "cpu": "100m",
+                  "memory": "220Mi"
+                }
+              },
+              "terminationMessagePath": "/dev/termination-log",
+              "terminationMessagePolicy": "File",
+              "volumeMounts": [
+                {
+                  "mountPath": "/var/log/mysql",
+                  "name": "mysql-logs"
+                }
+              ]
+            },
+            {
+              "command": [
+                "sh",
+                "-c",
+                "sleep 2147483647"
+              ],
+              "image": "busybox:1.35",
+              "imagePullPolicy": "IfNotPresent",
+              "name": "sidecar-busybox",
+              "resources": {
+                "limits": {
+                  "cpu": "50m",
+                  "memory": "64Mi"
+                },
+                "requests": {
+                  "cpu": "50m",
+                  "memory": "64Mi"
+                }
+              },
+              "securityContext": {
+                "capabilities": {
+                  "add": [
+                    "NET_RAW"
+                  ]
+                }
+              },
+              "terminationMessagePath": "/dev/termination-log",
+              "terminationMessagePolicy": "File",
+              "volumeMounts": [
+                {
+                  "mountPath": "/var/log/mysql",
+                  "name": "mysql-logs"
+                }
+              ]
+            }
+          ],
+          "dnsPolicy": "ClusterFirst",
+          "enableServiceLinks": true,
+          "nodeName": "anonymous-k3s-node",
+          "preemptionPolicy": "PreemptLowerPriority",
+          "priority": 0,
+          "restartPolicy": "Always",
+          "schedulerName": "default-scheduler",
+          "securityContext": {},
+          "serviceAccount": "e2r-workload",
+          "serviceAccountName": "e2r-workload",
+          "terminationGracePeriodSeconds": 5,
+          "tolerations": [
+            {
+              "effect": "NoExecute",
+              "key": "node.kubernetes.io/not-ready",
+              "operator": "Exists",
+              "tolerationSeconds": 300
+            },
+            {
+              "effect": "NoExecute",
+              "key": "node.kubernetes.io/unreachable",
+              "operator": "Exists",
+              "tolerationSeconds": 300
+            }
+          ],
+          "volumes": [
+            {
+              "emptyDir": {},
+              "name": "mysql-logs"
+            }
+          ]
+        },
+        "status": {
+          "conditions": [
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-26T15:46:35Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "PodReadyToStartContainers"
+            },
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-26T15:46:34Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "Initialized"
+            },
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-26T15:46:41Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "Ready"
+            },
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-26T15:46:41Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "ContainersReady"
+            },
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-26T15:46:34Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "PodScheduled"
+            }
+          ],
+          "containerStatuses": [
+            {
+              "allocatedResources": {
+                "cpu": "100m",
+                "memory": "220Mi"
+              },
+              "containerID": "containerd://c867fe671bd025d993c99411ae459730004bf352871972d4eb810d41d0285e96",
+              "image": "gcr.m.daocloud.io/google-samples/microservices-demo/recommendationservice:v0.10.1",
+              "imageID": "sha256:0101fb442061e19dbca01468df53310e3eb8e75f7cd6f549bf4649a0c90c3365",
+              "lastState": {},
+              "name": "server",
+              "ready": true,
+              "resources": {
+                "limits": {
+                  "cpu": "200m",
+                  "memory": "2000Mi"
+                },
+                "requests": {
+                  "cpu": "100m",
+                  "memory": "220Mi"
+                }
+              },
+              "restartCount": 0,
+              "started": true,
+              "state": {
+                "running": {
+                  "startedAt": "2026-09-26T15:46:34Z"
+                }
+              },
+              "user": {
+                "linux": {
+                  "gid": 0,
+                  "supplementalGroups": [
+                    0
+                  ],
+                  "uid": 0
+                }
+              },
+              "volumeMounts": [
+                {
+                  "mountPath": "/var/log/mysql",
+                  "name": "mysql-logs"
+                }
+              ]
+            },
+            {
+              "allocatedResources": {
+                "cpu": "50m",
+                "memory": "64Mi"
+              },
+              "containerID": "containerd://1d58d4dc676739fe02ca357ce2fef94308ee0082b81e896d057d9caf9a913bc0",
+              "image": "docker.io/library/busybox:1.35",
+              "imageID": "docker.io/library/busybox@sha256:98ad9d1a2be345201bb0709b0d38655eb1b370145c7d94ca1fe9c421f76e245a",
+              "lastState": {},
+              "name": "sidecar-busybox",
+              "ready": true,
+              "resources": {
+                "limits": {
+                  "cpu": "50m",
+                  "memory": "64Mi"
+                },
+                "requests": {
+                  "cpu": "50m",
+                  "memory": "64Mi"
+                }
+              },
+              "restartCount": 0,
+              "started": true,
+              "state": {
+                "running": {
+                  "startedAt": "2026-09-26T15:46:35Z"
+                }
+              },
+              "user": {
+                "linux": {
+                  "gid": 0,
+                  "supplementalGroups": [
+                    0,
+                    10
+                  ],
+                  "uid": 0
+                }
+              },
+              "volumeMounts": [
+                {
+                  "mountPath": "/var/log/mysql",
+                  "name": "mysql-logs"
+                }
+              ]
+            }
+          ],
+          "hostIP": "10.2.14.115",
+          "hostIPs": [
+            {
+              "ip": "10.2.14.115"
+            }
+          ],
+          "observedGeneration": 1,
+          "phase": "Running",
+          "podIP": "10.42.0.100",
+          "podIPs": [
+            {
+              "ip": "10.42.0.100"
+            }
+          ],
+          "qosClass": "Burstable",
+          "startTime": "2026-09-26T15:46:34Z"
+        }
+      },
+      {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "metadata": {
+          "creationTimestamp": "2026-09-26T15:49:01Z",
+          "generateName": "redis-cart-6995d49-",
+          "generation": 1,
+          "labels": {
+            "app": "redis-cart",
+            "pod-template-hash": "6995d49"
+          },
+          "name": "redis-cart-6995d49-z7dzw",
+          "namespace": "e2r-supplement-20260925",
+          "ownerReferences": [
+            {
+              "apiVersion": "apps/v1",
+              "blockOwnerDeletion": true,
+              "controller": true,
+              "kind": "ReplicaSet",
+              "name": "redis-cart-6995d49",
+              "uid": "75638123-5e5f-49de-84ca-7d1d0cb53cd2"
+            }
+          ],
+          "resourceVersion": "8500906",
+          "uid": "7e898c0b-5717-4864-bfca-f9052100e6cd"
+        },
+        "spec": {
+          "containers": [
+            {
+              "image": "redis:alpine",
+              "imagePullPolicy": "IfNotPresent",
+              "livenessProbe": {
+                "failureThreshold": 3,
+                "periodSeconds": 5,
+                "successThreshold": 1,
+                "tcpSocket": {
+                  "port": 6379
+                },
+                "timeoutSeconds": 1
+              },
+              "name": "redis",
+              "ports": [
+                {
+                  "containerPort": 6379,
+                  "protocol": "TCP"
+                }
+              ],
+              "readinessProbe": {
+                "failureThreshold": 3,
+                "periodSeconds": 5,
+                "successThreshold": 1,
+                "tcpSocket": {
+                  "port": 6379
+                },
+                "timeoutSeconds": 1
+              },
+              "resources": {
+                "limits": {
+                  "cpu": "125m",
+                  "memory": "2000Mi"
+                },
+                "requests": {
+                  "cpu": "70m",
+                  "memory": "256Mi"
+                }
+              },
+              "terminationMessagePath": "/dev/termination-log",
+              "terminationMessagePolicy": "File",
+              "volumeMounts": [
+                {
+                  "mountPath": "/data",
+                  "name": "redis-data"
+                }
+              ]
+            },
+            {
+              "command": [
+                "sh",
+                "-c",
+                "sleep 2147483647"
+              ],
+              "image": "busybox:1.35",
+              "imagePullPolicy": "IfNotPresent",
+              "name": "sidecar-busybox",
+              "resources": {
+                "limits": {
+                  "cpu": "50m",
+                  "memory": "64Mi"
+                },
+                "requests": {
+                  "cpu": "50m",
+                  "memory": "64Mi"
+                }
+              },
+              "securityContext": {
+                "capabilities": {
+                  "add": [
+                    "NET_RAW"
+                  ]
+                }
+              },
+              "terminationMessagePath": "/dev/termination-log",
+              "terminationMessagePolicy": "File"
+            }
+          ],
+          "dnsPolicy": "ClusterFirst",
+          "enableServiceLinks": true,
+          "nodeName": "anonymous-k3s-node",
+          "preemptionPolicy": "PreemptLowerPriority",
+          "priority": 0,
+          "restartPolicy": "Always",
+          "schedulerName": "default-scheduler",
+          "securityContext": {},
+          "serviceAccount": "e2r-workload",
+          "serviceAccountName": "e2r-workload",
+          "terminationGracePeriodSeconds": 30,
+          "tolerations": [
+            {
+              "effect": "NoExecute",
+              "key": "node.kubernetes.io/not-ready",
+              "operator": "Exists",
+              "tolerationSeconds": 300
+            },
+            {
+              "effect": "NoExecute",
+              "key": "node.kubernetes.io/unreachable",
+              "operator": "Exists",
+              "tolerationSeconds": 300
+            }
+          ],
+          "volumes": [
+            {
+              "emptyDir": {},
+              "name": "redis-data"
+            }
+          ]
+        },
+        "status": {
+          "conditions": [
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-26T15:49:02Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "PodReadyToStartContainers"
+            },
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-26T15:49:01Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "Initialized"
+            },
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-26T15:49:03Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "Ready"
+            },
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-26T15:49:03Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "ContainersReady"
+            },
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-26T15:49:01Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "PodScheduled"
+            }
+          ],
+          "containerStatuses": [
+            {
+              "allocatedResources": {
+                "cpu": "70m",
+                "memory": "256Mi"
+              },
+              "containerID": "containerd://42077018ea3f307ab062573acf2c91fc92c65ac5530f45ba454d2dac6373b945",
+              "image": "docker.io/library/redis:alpine",
+              "imageID": "docker.io/library/redis@sha256:09160599abd229764c0fb44cb6be640294e1d360a54b19985ab4843dcf2d90f1",
+              "lastState": {},
+              "name": "redis",
+              "ready": true,
+              "resources": {
+                "limits": {
+                  "cpu": "125m",
+                  "memory": "2000Mi"
+                },
+                "requests": {
+                  "cpu": "70m",
+                  "memory": "256Mi"
+                }
+              },
+              "restartCount": 0,
+              "started": true,
+              "state": {
+                "running": {
+                  "startedAt": "2026-09-26T15:49:02Z"
+                }
+              },
+              "user": {
+                "linux": {
+                  "gid": 0,
+                  "supplementalGroups": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    6,
+                    10,
+                    11,
+                    20,
+                    26,
+                    27
+                  ],
+                  "uid": 0
+                }
+              },
+              "volumeMounts": [
+                {
+                  "mountPath": "/data",
+                  "name": "redis-data"
+                }
+              ]
+            },
+            {
+              "allocatedResources": {
+                "cpu": "50m",
+                "memory": "64Mi"
+              },
+              "containerID": "containerd://438bc45715b6d4720abdbafda944511b65e45ae56254b51d0c052ce703b4cd87",
+              "image": "docker.io/library/busybox:1.35",
+              "imageID": "docker.io/library/busybox@sha256:98ad9d1a2be345201bb0709b0d38655eb1b370145c7d94ca1fe9c421f76e245a",
+              "lastState": {},
+              "name": "sidecar-busybox",
+              "ready": true,
+              "resources": {
+                "limits": {
+                  "cpu": "50m",
+                  "memory": "64Mi"
+                },
+                "requests": {
+                  "cpu": "50m",
+                  "memory": "64Mi"
+                }
+              },
+              "restartCount": 0,
+              "started": true,
+              "state": {
+                "running": {
+                  "startedAt": "2026-09-26T15:49:02Z"
+                }
+              },
+              "user": {
+                "linux": {
+                  "gid": 0,
+                  "supplementalGroups": [
+                    0,
+                    10
+                  ],
+                  "uid": 0
+                }
+              }
+            }
+          ],
+          "hostIP": "10.2.14.115",
+          "hostIPs": [
+            {
+              "ip": "10.2.14.115"
+            }
+          ],
+          "observedGeneration": 1,
+          "phase": "Running",
+          "podIP": "10.42.0.105",
+          "podIPs": [
+            {
+              "ip": "10.42.0.105"
+            }
+          ],
+          "qosClass": "Burstable",
+          "startTime": "2026-09-26T15:49:01Z"
+        }
+      },
+      {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "metadata": {
+          "creationTimestamp": "2026-09-26T15:49:01Z",
+          "generateName": "shippingservice-87f84748b-",
+          "generation": 1,
+          "labels": {
+            "app": "shippingservice",
+            "pod-template-hash": "87f84748b"
+          },
+          "name": "shippingservice-87f84748b-5bqjf",
+          "namespace": "e2r-supplement-20260925",
+          "ownerReferences": [
+            {
+              "apiVersion": "apps/v1",
+              "blockOwnerDeletion": true,
+              "controller": true,
+              "kind": "ReplicaSet",
+              "name": "shippingservice-87f84748b",
+              "uid": "f86548a4-eeae-42da-af4f-cd297cd4dcb0"
+            }
+          ],
+          "resourceVersion": "8500887",
+          "uid": "443cee0a-2082-42a9-bbee-c82c9fe390a8"
+        },
+        "spec": {
+          "containers": [
+            {
+              "env": [
+                {
+                  "name": "PORT",
+                  "value": "50051"
+                },
+                {
+                  "name": "DISABLE_PROFILER",
+                  "value": "1"
+                },
+                {
+                  "name": "ENABLE_TRACING",
+                  "value": "0"
+                },
+                {
+                  "name": "COLLECTOR_SERVICE_ADDR",
+                  "value": "jaeger-collector:4317"
+                },
+                {
+                  "name": "OTEL_SERVICE_NAME",
+                  "value": "shippingservice"
+                }
+              ],
+              "image": "gcr.m.daocloud.io/google-samples/microservices-demo/shippingservice:v0.10.1",
+              "imagePullPolicy": "IfNotPresent",
+              "livenessProbe": {
+                "failureThreshold": 3,
+                "grpc": {
+                  "port": 50051,
+                  "service": ""
+                },
+                "periodSeconds": 10,
+                "successThreshold": 1,
+                "timeoutSeconds": 1
+              },
+              "name": "server",
+              "ports": [
+                {
+                  "containerPort": 50051,
+                  "protocol": "TCP"
+                }
+              ],
+              "readinessProbe": {
+                "failureThreshold": 3,
+                "grpc": {
+                  "port": 50051,
+                  "service": ""
+                },
+                "periodSeconds": 5,
+                "successThreshold": 1,
+                "timeoutSeconds": 1
+              },
+              "resources": {
+                "limits": {
+                  "cpu": "200m",
+                  "memory": "2000Mi"
+                },
+                "requests": {
+                  "cpu": "100m",
+                  "memory": "64Mi"
+                }
+              },
+              "terminationMessagePath": "/dev/termination-log",
+              "terminationMessagePolicy": "File",
+              "volumeMounts": [
+                {
+                  "mountPath": "/var/log/mysql",
+                  "name": "mysql-logs"
+                }
+              ]
+            },
+            {
+              "command": [
+                "sh",
+                "-c",
+                "sleep 2147483647"
+              ],
+              "image": "busybox:1.35",
+              "imagePullPolicy": "IfNotPresent",
+              "name": "sidecar-busybox",
+              "resources": {
+                "limits": {
+                  "cpu": "50m",
+                  "memory": "64Mi"
+                },
+                "requests": {
+                  "cpu": "50m",
+                  "memory": "64Mi"
+                }
+              },
+              "securityContext": {
+                "capabilities": {
+                  "add": [
+                    "NET_RAW"
+                  ]
+                }
+              },
+              "terminationMessagePath": "/dev/termination-log",
+              "terminationMessagePolicy": "File",
+              "volumeMounts": [
+                {
+                  "mountPath": "/var/log/mysql",
+                  "name": "mysql-logs"
+                }
+              ]
+            }
+          ],
+          "dnsPolicy": "ClusterFirst",
+          "enableServiceLinks": true,
+          "nodeName": "anonymous-k3s-node",
+          "preemptionPolicy": "PreemptLowerPriority",
+          "priority": 0,
+          "restartPolicy": "Always",
+          "schedulerName": "default-scheduler",
+          "securityContext": {},
+          "serviceAccount": "e2r-workload",
+          "serviceAccountName": "e2r-workload",
+          "terminationGracePeriodSeconds": 30,
+          "tolerations": [
+            {
+              "effect": "NoExecute",
+              "key": "node.kubernetes.io/not-ready",
+              "operator": "Exists",
+              "tolerationSeconds": 300
+            },
+            {
+              "effect": "NoExecute",
+              "key": "node.kubernetes.io/unreachable",
+              "operator": "Exists",
+              "tolerationSeconds": 300
+            }
+          ],
+          "volumes": [
+            {
+              "emptyDir": {},
+              "name": "mysql-logs"
+            }
+          ]
+        },
+        "status": {
+          "conditions": [
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-26T15:49:02Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "PodReadyToStartContainers"
+            },
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-26T15:49:01Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "Initialized"
+            },
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-26T15:49:02Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "Ready"
+            },
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-26T15:49:02Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "ContainersReady"
+            },
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-09-26T15:49:01Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "PodScheduled"
+            }
+          ],
+          "containerStatuses": [
+            {
+              "allocatedResources": {
+                "cpu": "100m",
+                "memory": "64Mi"
+              },
+              "containerID": "containerd://eb97911516a08feae034fb59c186177452fde5df738eed5c8205c810a275f687",
+              "image": "gcr.m.daocloud.io/google-samples/microservices-demo/shippingservice:v0.10.1",
+              "imageID": "gcr.m.daocloud.io/google-samples/microservices-demo/shippingservice@sha256:1c02a99f7181dfef0f80a2f03281e9efd38987ea79ae718c6bddd006016b239b",
+              "lastState": {},
+              "name": "server",
+              "ready": true,
+              "resources": {
+                "limits": {
+                  "cpu": "200m",
+                  "memory": "2000Mi"
+                },
+                "requests": {
+                  "cpu": "100m",
+                  "memory": "64Mi"
+                }
+              },
+              "restartCount": 0,
+              "started": true,
+              "state": {
+                "running": {
+                  "startedAt": "2026-09-26T15:49:02Z"
+                }
+              },
+              "user": {
+                "linux": {
+                  "gid": 0,
+                  "supplementalGroups": [
+                    0
+                  ],
+                  "uid": 0
+                }
+              },
+              "volumeMounts": [
+                {
+                  "mountPath": "/var/log/mysql",
+                  "name": "mysql-logs"
+                }
+              ]
+            },
+            {
+              "allocatedResources": {
+                "cpu": "50m",
+                "memory": "64Mi"
+              },
+              "containerID": "containerd://80807d8b9356512466a0453135d56c24187b965e46486516d0f673aa76d6254f",
+              "image": "docker.io/library/busybox:1.35",
+              "imageID": "docker.io/library/busybox@sha256:98ad9d1a2be345201bb0709b0d38655eb1b370145c7d94ca1fe9c421f76e245a",
+              "lastState": {},
+              "name": "sidecar-busybox",
+              "ready": true,
+              "resources": {
+                "limits": {
+                  "cpu": "50m",
+                  "memory": "64Mi"
+                },
+                "requests": {
+                  "cpu": "50m",
+                  "memory": "64Mi"
+                }
+              },
+              "restartCount": 0,
+              "started": true,
+              "state": {
+                "running": {
+                  "startedAt": "2026-09-26T15:49:02Z"
+                }
+              },
+              "user": {
+                "linux": {
+                  "gid": 0,
+                  "supplementalGroups": [
+                    0,
+                    10
+                  ],
+                  "uid": 0
+                }
+              },
+              "volumeMounts": [
+                {
+                  "mountPath": "/var/log/mysql",
+                  "name": "mysql-logs"
+                }
+              ]
+            }
+          ],
+          "hostIP": "10.2.14.115",
+          "hostIPs": [
+            {
+              "ip": "10.2.14.115"
+            }
+          ],
+          "observedGeneration": 1,
+          "phase": "Running",
+          "podIP": "10.42.0.106",
+          "podIPs": [
+            {
+              "ip": "10.42.0.106"
+            }
+          ],
+          "qosClass": "Burstable",
+          "startTime": "2026-09-26T15:49:01Z"
+        }
+      }
+    ],
+    "kind": "List",
+    "metadata": {
+      "resourceVersion": ""
+    }
+  },
+  "initial_runtime": {
+    "0a838b53-19c2-46d1-84ba-c5493c844049": {
+      "server": 0,
+      "sidecar-busybox": 0
+    },
+    "ea668207-2bc9-427e-81eb-65936ac18de1": {
+      "server": 0,
+      "sidecar-busybox": 0
+    },
+    "5f6095c7-c767-4ea2-be60-0654deb3fb4b": {
+      "server": 0,
+      "sidecar-busybox": 0
+    },
+    "6b24d2dc-9c05-4596-b0a7-d87cc9dbfcc1": {
+      "server": 0,
+      "sidecar-busybox": 0
+    },
+    "daa97f92-8676-479e-8bfa-b03220dab29f": {
+      "server": 0,
+      "sidecar-busybox": 0
+    },
+    "ca664d5b-d3a9-48c6-98f4-d33b5c363176": {
+      "server": 0,
+      "sidecar-busybox": 0
+    },
+    "81d34579-b1da-4832-9c08-450b030501a1": {
+      "main": 0,
+      "sidecar-busybox": 0
+    },
+    "413458b5-ce2d-4e62-b3c2-2db54905509a": {
+      "server": 0,
+      "sidecar-busybox": 0
+    },
+    "3b33831b-857c-4086-95e7-00e729fa91fe": {
+      "server": 0,
+      "sidecar-busybox": 0
+    },
+    "ea052333-47ae-4696-a2d7-cf367cc68123": {
+      "server": 0,
+      "sidecar-busybox": 0
+    },
+    "7e898c0b-5717-4864-bfca-f9052100e6cd": {
+      "redis": 0,
+      "sidecar-busybox": 0
+    },
+    "443cee0a-2082-42a9-bbee-c82c9fe390a8": {
+      "server": 0,
+      "sidecar-busybox": 0
+    }
+  },
+  "oracle_statuses": [
+    "FAIL"
+  ]
+}

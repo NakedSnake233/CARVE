@@ -1,0 +1,197 @@
+{
+  "catalog": [
+    {
+      "id": "op0000",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-order-service-5755fc9ccd-d4spg",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-order-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-order-service-5755fc9ccd-d4spg"
+        ]
+      },
+      "evidence_id": "during:pod:ts-order-service-5755fc9ccd-d4spg",
+      "requires": []
+    },
+    {
+      "id": "op0001",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-ticketinfo-service-854b89fccd-9rgwk",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-ticketinfo-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-ticketinfo-service-854b89fccd-9rgwk"
+        ]
+      },
+      "evidence_id": "during:pod:ts-ticketinfo-service-854b89fccd-9rgwk",
+      "requires": []
+    },
+    {
+      "id": "op0002",
+      "group": "edge_ops",
+      "operation": {
+        "op": "REMOVE_EDGE",
+        "source": "ts-ticketinfo-service",
+        "target": "pod:ts-ticketinfo-service-854b89fccd-7s96j",
+        "evidence": [
+          "topology_diff:ts-ticketinfo-service->pod:ts-ticketinfo-service-854b89fccd-7s96j"
+        ]
+      },
+      "evidence_id": "topology_diff:ts-ticketinfo-service->pod:ts-ticketinfo-service-854b89fccd-7s96j",
+      "requires": []
+    },
+    {
+      "id": "op0003",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_BLACKHOLE_NODE",
+        "service": "ts-ticketinfo-service",
+        "attrs": {
+          "type": "blackhole",
+          "service": "ts-ticketinfo-service"
+        },
+        "evidence": [
+          "empty_endpoint:ts-ticketinfo-service"
+        ]
+      },
+      "evidence_id": "empty_endpoint:ts-ticketinfo-service",
+      "requires": []
+    },
+    {
+      "id": "op0004",
+      "group": "node_ops",
+      "operation": {
+        "op": "ALIGN_NODE",
+        "old_node": "pod:ts-ticketinfo-service-854b89fccd-7s96j",
+        "new_node": "pod:ts-ticketinfo-service-854b89fccd-9rgwk",
+        "service": "ts-ticketinfo-service",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-ticketinfo-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "identity_change:ts-ticketinfo-service"
+        ]
+      },
+      "evidence_id": "identity_change:ts-ticketinfo-service",
+      "requires": []
+    }
+  ],
+  "plan": {
+    "experiment_id": "case00347",
+    "change_type": "observation_supported_updates",
+    "confidence": 0.0,
+    "causal_role": "not_inferred",
+    "node_ops": [
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-order-service-5755fc9ccd-d4spg",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-order-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-order-service-5755fc9ccd-d4spg"
+        ]
+      },
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-ticketinfo-service-854b89fccd-9rgwk",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-ticketinfo-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-ticketinfo-service-854b89fccd-9rgwk"
+        ]
+      },
+      {
+        "op": "ADD_BLACKHOLE_NODE",
+        "node_id": "",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "ts-ticketinfo-service",
+        "version": "",
+        "attrs": {
+          "type": "blackhole",
+          "service": "ts-ticketinfo-service"
+        },
+        "evidence": [
+          "empty_endpoint:ts-ticketinfo-service"
+        ]
+      },
+      {
+        "op": "ALIGN_NODE",
+        "node_id": "",
+        "old_node": "pod:ts-ticketinfo-service-854b89fccd-7s96j",
+        "new_node": "pod:ts-ticketinfo-service-854b89fccd-9rgwk",
+        "parent": "",
+        "children": [],
+        "service": "ts-ticketinfo-service",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-ticketinfo-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "identity_change:ts-ticketinfo-service"
+        ]
+      }
+    ],
+    "edge_ops": [
+      {
+        "op": "REMOVE_EDGE",
+        "source": "ts-ticketinfo-service",
+        "target": "pod:ts-ticketinfo-service-854b89fccd-7s96j",
+        "old_source": "ts-ticketinfo-service",
+        "old_target": "pod:ts-ticketinfo-service-854b89fccd-7s96j",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": null,
+        "attrs": {},
+        "evidence": [
+          "topology_diff:ts-ticketinfo-service->pod:ts-ticketinfo-service-854b89fccd-7s96j"
+        ]
+      }
+    ],
+    "weight_ops": [],
+    "state_transfer": {},
+    "evidence": [
+      "during:pod:ts-order-service-5755fc9ccd-d4spg",
+      "during:pod:ts-ticketinfo-service-854b89fccd-9rgwk",
+      "topology_diff:ts-ticketinfo-service->pod:ts-ticketinfo-service-854b89fccd-7s96j",
+      "empty_endpoint:ts-ticketinfo-service",
+      "identity_change:ts-ticketinfo-service"
+    ]
+  }
+}

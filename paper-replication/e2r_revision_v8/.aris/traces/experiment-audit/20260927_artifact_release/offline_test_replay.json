@@ -1,0 +1,73 @@
+{
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "scope": "Offline replay of the three files named in ASSURANCE.json; read-only package completeness and audited input hash checks",
+  "package_root": "artifacts/e2r_revision_v6",
+  "environment": {
+    "python_executable": ".venv-e2r/bin/python",
+    "python": "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:16:10) [GCC 11.2.0]",
+    "pytest": "8.4.2",
+    "numpy": "2.3.5",
+    "torch": "2.14.0+cpu",
+    "external_dyrca_root": "${DYRCA_ROOT}",
+    "clean_lock_install_tested": false,
+    "reason": "No installs or network operations authorized; used already available interpreter and external DY-RCA pure graph/model checkout. README specifies Python 3.10 and lock differs from tested environment."
+  },
+  "documented_command_source": "ASSURANCE.json:5; VALIDATION.json:298",
+  "documented_command": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=${ARTIFACT_ROOT} DYRCA_ROOT=${DYRCA_ROOT} python -m pytest tests/e2r/test_multi_root_proxy.py tests/e2r/test_m2_formal_pipeline.py tests/e2r/test_observation.py -q -p no:cacheprovider",
+  "runs": [
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=artifacts/e2r_revision_v6 DYRCA_ROOT=${DYRCA_ROOT} .venv-e2r/bin/python -m pytest tests/e2r/test_multi_root_proxy.py tests/e2r/test_m2_formal_pipeline.py tests/e2r/test_observation.py -q -p no:cacheprovider --basetemp=/tmp/e2r-release-offline-test-audit",
+      "cwd": "artifacts/e2r_revision_v6",
+      "exit_code": 0,
+      "stdout": "............                                                             [100%]\n",
+      "note": "Discovered parent pyproject.toml adds -q; repeated with config disabled to verify independence from parent configuration."
+    },
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=artifacts/e2r_revision_v6 DYRCA_ROOT=${DYRCA_ROOT} .venv-e2r/bin/python -m pytest tests/e2r/test_multi_root_proxy.py tests/e2r/test_m2_formal_pipeline.py tests/e2r/test_observation.py -q -p no:cacheprovider -c /dev/null --confcutdir=artifacts/e2r_revision_v6 --basetemp=/tmp/e2r-release-offline-test-audit-isolated",
+      "cwd": "artifacts/e2r_revision_v6",
+      "exit_code": 0,
+      "stdout": "............                                                             [100%]\n12 passed in 2.49s\n",
+      "tests_passed": 12,
+      "tests_failed": 0,
+      "tests_skipped": 0
+    }
+  ],
+  "package_completeness": {
+    "manifest_observation_references": 798,
+    "missing_observation_files": 0,
+    "bundled_wheel_count": 0,
+    "bundled_dyrca_source": false,
+    "missing_trace_directories": [
+      ".aris/traces/experiment-audit/20260926_b2_b3",
+      ".aris/traces/experiment-audit/20260927_m4_sanity",
+      ".aris/traces/experiment-audit/20260927_matched_interrupted"
+    ],
+    "notable_missing_audited_files": [
+      "experiments/e2r/runs/m2_qwen38_formal_analysis_v2/analysis.json",
+      "experiments/e2r/runs/m2_qwen38_formal_analysis_v2/REPORT.md",
+      ".aris/traces/experiment-audit/20260927_m4_sanity/historical_source/workload_oracle.py",
+      "scripts/remote/generalization_worker.py"
+    ],
+    "generalization_saved_run_files_present": "All six runs include split.json, predictions.jsonl, results.json and seed42/43/44 checkpoints. Original split-definition paths absent, but saved per-run split.json files available.",
+    "interrupted_recompute_scripts_present": true,
+    "interrupted_recompute_scripts_executed": false,
+    "interrupted_recompute_limitation": "recompute_typed_and_accounting.py:30 passes block['baseline_path'] directly to Path without expanding ${PROJECT_ROOT}; block.json:6 contains that literal. Lines 57-64 also compare transformed file bytes with retained original hashes. Both verifier scripts write inside the package by default and were not executed."
+  },
+  "audited_input_hash_comparison": {
+    "method": "Mapped ${PROJECT_ROOT} to staged package; classified ${DYRCA_ROOT} as external without checking external bytes. Compared SHA-256 of all remaining existing staged paths against audit receipts.",
+    "b2_b3_audit_v1": {"hash_match": 3855, "hash_diff": 19, "external_dyrca": 2085, "missing": 18},
+    "m4_sanity_audit_v1": {"hash_match": 11, "hash_diff": 12, "missing": 1},
+    "matched_interrupted_audit_v1": {"hash_match": 15, "hash_diff": 10, "missing": 2},
+    "interpretation": "Historical receipts cover original bytes and earlier mutable tracker/source versions. Anonymous transformations make several original-byte receipts unsuitable for direct validation of staged files. This alone is not evidence of research-data fabrication; a public staged-to-original transformation/provenance mapping is needed."
+  },
+  "boundaries": {
+    "network_api_ssh_cluster_live_experiment_calls": 0,
+    "source_or_package_edits": 0,
+    "package_recompute_outputs_overwritten": false,
+    "test_temporary_data": "/tmp/e2r-release-offline-test-audit and /tmp/e2r-release-offline-test-audit-isolated",
+    "bytecode": "Disabled with PYTHONDONTWRITEBYTECODE=1",
+    "pytest_cache": "Disabled with -p no:cacheprovider",
+    "trace_write": "This JSON only, requested by parent auditor outside package."
+  }
+}

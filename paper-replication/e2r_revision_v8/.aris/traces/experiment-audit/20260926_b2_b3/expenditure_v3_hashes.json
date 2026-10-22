@@ -1,0 +1,5 @@
+{
+  "experiments/e2r/runs/m2_expenditure_v3/expenditure.json": "f02e1af98bec6e93d93f3d1c882cfaaafc788315e2d761259da1b52ec4ed9052",
+  "experiments/e2r/runs/m2_expenditure_v3/REPORT.md": "633e89272c1561b5eb2f693268a75015903ae02c8332be5cae3cff6be92b88df",
+  "scripts/e2r/summarize_m2_expenditure.py": "c2bc109146aeaec0ce45b39b7f2ae0b1b9e1d106203fbd0daeb3b2a74654f04e"
+}

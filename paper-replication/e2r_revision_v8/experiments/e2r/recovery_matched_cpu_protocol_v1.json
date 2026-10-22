@@ -1,0 +1,59 @@
+{
+  "schema": "e2r_recovery_matched_v1",
+  "namespace": "e2r-supplement-20260925",
+  "service": "frontend",
+  "fault_category": "cpu-stress",
+  "arms_in_order": [
+    "no_action",
+    "typed_cleanup"
+  ],
+  "order_seed": 20260927,
+  "episodes_per_arm": 1,
+  "baseline_path": "experiments/e2r/runs/recovery_baseline_v2/baseline.json",
+  "baseline_sha256": "3957fa90acce446bd248c6e493c2374307454cc96d4644b99ec60fc04b84642d",
+  "manifest_path": "experiments/e2r/isolated_boutique.yaml",
+  "manifest_sha256": "9150029373d00e9882b83922071d69c12bcd36b04af5cab16ea90a2caa0882bb",
+  "workload": {
+    "offered_rps": 5,
+    "workers": 5,
+    "window_seconds": 30,
+    "requests_per_window": 150,
+    "state_canary_path": "/product/OLJCESPC7Z"
+  },
+  "fault": {
+    "kind": "StressChaos",
+    "workers": 10,
+    "load": 100,
+    "duration_seconds": 180,
+    "settle_seconds": 30
+  },
+  "timeline": {
+    "pre_windows": 1,
+    "fault_validation_windows": 1,
+    "evaluation_windows": 3,
+    "inter_window_seconds": 1,
+    "latest_repair_completion_seconds": 150,
+    "latest_final_observation_seconds": 165,
+    "latest_technical_observation_seconds": 170,
+    "technical_probe_timeout_seconds": 3,
+    "latest_cleanup_completion_seconds": 175,
+    "washout_seconds": 30
+  },
+  "thresholds": {
+    "error_margin": 0.01,
+    "p95_multiplier": 1.2,
+    "throughput_fraction": 0.8,
+    "required_consecutive_windows": 3,
+    "require_state_canary": true
+  },
+  "expected_oracle_status": {
+    "no_action": "FAIL",
+    "typed_cleanup": "PASS"
+  },
+  "interpretation": {
+    "no_action_joint_oracle": "FAIL is structurally required while the exact injected UID remains active; comparative business evidence is the raw workload-window trajectory",
+    "typed_cleanup_joint_oracle": "PASS requires exact fault absence plus resource, endpoint, workload, freshness and canary checks"
+  },
+  "retry_policy": "none; any gate failure stops the block and remains in the denominator",
+  "scope": "known-target isolated recovery attribution block; no diagnosis or production claim"
+}

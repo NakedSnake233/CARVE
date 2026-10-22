@@ -1,0 +1,163 @@
+{
+  "catalog": [
+    {
+      "id": "op0000",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-travel-service-v2-94846cfc8-5s8gx",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-travel-service",
+          "version": "v2.0.0"
+        },
+        "evidence": [
+          "during:pod:ts-travel-service-v2-94846cfc8-5s8gx"
+        ]
+      },
+      "evidence_id": "during:pod:ts-travel-service-v2-94846cfc8-5s8gx",
+      "requires": []
+    },
+    {
+      "id": "op0001",
+      "group": "edge_ops",
+      "operation": {
+        "op": "REMOVE_EDGE",
+        "source": "ts-travel-service",
+        "target": "pod:ts-travel-service-6f6dd9dc64-q4wj6",
+        "evidence": [
+          "topology_diff:ts-travel-service->pod:ts-travel-service-6f6dd9dc64-q4wj6"
+        ]
+      },
+      "evidence_id": "topology_diff:ts-travel-service->pod:ts-travel-service-6f6dd9dc64-q4wj6",
+      "requires": []
+    },
+    {
+      "id": "op0002",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "ts-travel-service",
+        "target": "pod:ts-travel-service-v2-94846cfc8-5s8gx",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "evidence": [
+          "during:ts-travel-service->pod:ts-travel-service-v2-94846cfc8-5s8gx"
+        ]
+      },
+      "evidence_id": "during:ts-travel-service->pod:ts-travel-service-v2-94846cfc8-5s8gx",
+      "requires": [
+        "op0000"
+      ]
+    },
+    {
+      "id": "op0003",
+      "group": "node_ops",
+      "operation": {
+        "op": "SPLIT_NODE",
+        "parent": "ts-travel-service",
+        "children": [
+          "ts-travel-service:unversioned",
+          "ts-travel-service:v2.0.0"
+        ],
+        "attrs": {
+          "type": "version",
+          "service": "ts-travel-service"
+        },
+        "evidence": [
+          "version_coexistence:ts-travel-service"
+        ]
+      },
+      "evidence_id": "version_coexistence:ts-travel-service",
+      "requires": []
+    }
+  ],
+  "plan": {
+    "experiment_id": "case00769",
+    "change_type": "observation_supported_updates",
+    "confidence": 0.0,
+    "causal_role": "not_inferred",
+    "node_ops": [
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-travel-service-v2-94846cfc8-5s8gx",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-travel-service",
+          "version": "v2.0.0"
+        },
+        "evidence": [
+          "during:pod:ts-travel-service-v2-94846cfc8-5s8gx"
+        ]
+      },
+      {
+        "op": "SPLIT_NODE",
+        "node_id": "",
+        "old_node": "",
+        "new_node": "",
+        "parent": "ts-travel-service",
+        "children": [
+          "ts-travel-service:unversioned",
+          "ts-travel-service:v2.0.0"
+        ],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "version",
+          "service": "ts-travel-service"
+        },
+        "evidence": [
+          "version_coexistence:ts-travel-service"
+        ]
+      }
+    ],
+    "edge_ops": [
+      {
+        "op": "REMOVE_EDGE",
+        "source": "ts-travel-service",
+        "target": "pod:ts-travel-service-6f6dd9dc64-q4wj6",
+        "old_source": "ts-travel-service",
+        "old_target": "pod:ts-travel-service-6f6dd9dc64-q4wj6",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": null,
+        "attrs": {},
+        "evidence": [
+          "topology_diff:ts-travel-service->pod:ts-travel-service-6f6dd9dc64-q4wj6"
+        ]
+      },
+      {
+        "op": "ADD_EDGE",
+        "source": "ts-travel-service",
+        "target": "pod:ts-travel-service-v2-94846cfc8-5s8gx",
+        "old_source": "ts-travel-service",
+        "old_target": "pod:ts-travel-service-v2-94846cfc8-5s8gx",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:ts-travel-service->pod:ts-travel-service-v2-94846cfc8-5s8gx"
+        ]
+      }
+    ],
+    "weight_ops": [],
+    "state_transfer": {},
+    "evidence": [
+      "during:pod:ts-travel-service-v2-94846cfc8-5s8gx",
+      "topology_diff:ts-travel-service->pod:ts-travel-service-6f6dd9dc64-q4wj6",
+      "during:ts-travel-service->pod:ts-travel-service-v2-94846cfc8-5s8gx",
+      "version_coexistence:ts-travel-service"
+    ]
+  }
+}

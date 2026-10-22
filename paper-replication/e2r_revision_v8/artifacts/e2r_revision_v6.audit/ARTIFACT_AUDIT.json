@@ -1,0 +1,138 @@
+{
+  "audit_skill": "experiment-audit",
+  "audit_type": "anonymous_artifact_release",
+  "verdict": "BLOCK",
+  "overall_verdict": "BLOCK",
+  "integrity_status": "warn",
+  "reason_code": "identity_leaks_in_validation_and_archive_metadata",
+  "summary": "Manifest/archive integrity and 12 narrow offline tests pass; anonymous distribution is blocked by validation-log and tar-owner identity disclosure. Forensic reproducibility has additional scope gaps.",
+  "generated_at": "2026-09-27T02:45:48.255858+00:00",
+  "date": "2026-09-27",
+  "agent_id": "/root/artifact_release_audit",
+  "verdict_id": "20260927_artifact_release_v6",
+  "reviewer_model": "inherited Codex model",
+  "reviewer_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "auxiliary_reviewer": "/root/artifact_release_audit/offline_test_audit",
+  "trace_path": ".aris/traces/experiment-audit/20260927_artifact_release",
+  "artifact_root": "artifacts/e2r_revision_v6",
+  "archive_sha256": "96b708c0526163ac0151af4aa2adca009f6c9e1f3d03c7d714161d3fe150fa8d",
+  "audited_input_hashes_file": ".aris/traces/experiment-audit/20260927_artifact_release/audited_input_hashes.json",
+  "findings": [
+    {
+      "id": "F001",
+      "status": "BLOCK",
+      "reason_code": "redaction_metadata_leaks_identity",
+      "fix": "Use safe marker categories, scan final metadata, correct R050."
+    },
+    {
+      "id": "F002",
+      "status": "BLOCK",
+      "reason_code": "tar_ownership_leaks_identity",
+      "fix": "Normalize archive owner/group identity and numeric ownership; reseal and rescan."
+    },
+    {
+      "id": "F003",
+      "status": "WARN",
+      "reason_code": "manifest_metadata_coverage_gap",
+      "fix": "Manifest the final validation report and define self-exclusion/count semantics."
+    },
+    {
+      "id": "F004",
+      "status": "WARN",
+      "reason_code": "offline_reproduction_has_external_dependencies",
+      "fix": "Document exact tested environment/command and pin the external graph source."
+    },
+    {
+      "id": "F005",
+      "status": "WARN",
+      "reason_code": "referenced_forensic_support_missing",
+      "fix": "Include corrected formal analysis and sanitized audit support, or explicitly narrow reproduction claims."
+    },
+    {
+      "id": "F006",
+      "status": "WARN",
+      "reason_code": "anonymization_changes_historical_receipt_bytes",
+      "fix": "Add safe original-to-staged digest mapping and a relocatable read-only release verifier."
+    }
+  ],
+  "checks": {
+    "manifest": {
+      "status": "PASS",
+      "entries_verified": 7205,
+      "unlisted": [
+        "MANIFEST.json",
+        "VALIDATION.json"
+      ]
+    },
+    "archive_equivalence": {
+      "status": "PASS",
+      "files": 7207,
+      "members": 7276
+    },
+    "archive_paths": {
+      "status": "PASS"
+    },
+    "archive_sha_sidecar": {
+      "status": "PASS"
+    },
+    "anonymous_payload": {
+      "status": "BLOCK",
+      "file": "VALIDATION.json",
+      "home_occurrences": 50,
+      "username_occurrences": 43
+    },
+    "anonymous_tar_metadata": {
+      "status": "BLOCK",
+      "identifying_owner_members": 7276
+    },
+    "credentials": {
+      "status": "PASS",
+      "scope": "bounded file/byte patterns; no private-key/kubeconfig/API-key matches"
+    },
+    "checkpoint_bytes": {
+      "status": "PASS",
+      "checkpoints": 30,
+      "zip_members": 480
+    },
+    "observation_resolution": {
+      "status": "PASS",
+      "cases": 798
+    },
+    "offline_tests": {
+      "status": "PASS",
+      "passed": 12,
+      "scope": "three claimed files; existing environment and external DY-RCA required",
+      "config_isolated_replay": true,
+      "seconds": 2.49,
+      "skipped": 0
+    },
+    "locked_environment_reproduction": {
+      "status": "NOT_RUN",
+      "reason": "No clean installation or network allowed"
+    },
+    "source_result_audit_completeness": {
+      "status": "WARN",
+      "latest_reports_present": true,
+      "missing_forensic_support": true
+    },
+    "interrupted_comparison_claims": {
+      "status": "PASS",
+      "valid_matched_comparison": false,
+      "complete_matched_pairs": 0,
+      "planned": 2,
+      "attempted": 2,
+      "injected": 2,
+      "repair_invocations": 1,
+      "repair_mutations": 1,
+      "oracle_statuses": [
+        "FAIL",
+        null
+      ]
+    }
+  },
+  "no_package_or_source_edits": true,
+  "no_network_or_live_operations": true,
+  "immutable_inputs_verified": true
+}

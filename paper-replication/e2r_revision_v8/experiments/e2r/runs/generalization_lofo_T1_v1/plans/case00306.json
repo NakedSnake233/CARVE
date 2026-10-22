@@ -1,0 +1,160 @@
+{
+  "catalog": [
+    {
+      "id": "op0000",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-seat-service-66f7fb5c9-pvpsx",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-seat-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-seat-service-66f7fb5c9-pvpsx"
+        ]
+      },
+      "evidence_id": "during:pod:ts-seat-service-66f7fb5c9-pvpsx",
+      "requires": []
+    },
+    {
+      "id": "op0001",
+      "group": "edge_ops",
+      "operation": {
+        "op": "REMOVE_EDGE",
+        "source": "ts-seat-service",
+        "target": "pod:ts-seat-service-66f7fb5c9-nlkb9",
+        "evidence": [
+          "topology_diff:ts-seat-service->pod:ts-seat-service-66f7fb5c9-nlkb9"
+        ]
+      },
+      "evidence_id": "topology_diff:ts-seat-service->pod:ts-seat-service-66f7fb5c9-nlkb9",
+      "requires": []
+    },
+    {
+      "id": "op0002",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_BLACKHOLE_NODE",
+        "service": "ts-seat-service",
+        "attrs": {
+          "type": "blackhole",
+          "service": "ts-seat-service"
+        },
+        "evidence": [
+          "empty_endpoint:ts-seat-service"
+        ]
+      },
+      "evidence_id": "empty_endpoint:ts-seat-service",
+      "requires": []
+    },
+    {
+      "id": "op0003",
+      "group": "node_ops",
+      "operation": {
+        "op": "ALIGN_NODE",
+        "old_node": "pod:ts-seat-service-66f7fb5c9-nlkb9",
+        "new_node": "pod:ts-seat-service-66f7fb5c9-pvpsx",
+        "service": "ts-seat-service",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-seat-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "identity_change:ts-seat-service"
+        ]
+      },
+      "evidence_id": "identity_change:ts-seat-service",
+      "requires": []
+    }
+  ],
+  "plan": {
+    "experiment_id": "case00306",
+    "change_type": "observation_supported_updates",
+    "confidence": 0.0,
+    "causal_role": "not_inferred",
+    "node_ops": [
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-seat-service-66f7fb5c9-pvpsx",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-seat-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-seat-service-66f7fb5c9-pvpsx"
+        ]
+      },
+      {
+        "op": "ADD_BLACKHOLE_NODE",
+        "node_id": "",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "ts-seat-service",
+        "version": "",
+        "attrs": {
+          "type": "blackhole",
+          "service": "ts-seat-service"
+        },
+        "evidence": [
+          "empty_endpoint:ts-seat-service"
+        ]
+      },
+      {
+        "op": "ALIGN_NODE",
+        "node_id": "",
+        "old_node": "pod:ts-seat-service-66f7fb5c9-nlkb9",
+        "new_node": "pod:ts-seat-service-66f7fb5c9-pvpsx",
+        "parent": "",
+        "children": [],
+        "service": "ts-seat-service",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-seat-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "identity_change:ts-seat-service"
+        ]
+      }
+    ],
+    "edge_ops": [
+      {
+        "op": "REMOVE_EDGE",
+        "source": "ts-seat-service",
+        "target": "pod:ts-seat-service-66f7fb5c9-nlkb9",
+        "old_source": "ts-seat-service",
+        "old_target": "pod:ts-seat-service-66f7fb5c9-nlkb9",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": null,
+        "attrs": {},
+        "evidence": [
+          "topology_diff:ts-seat-service->pod:ts-seat-service-66f7fb5c9-nlkb9"
+        ]
+      }
+    ],
+    "weight_ops": [],
+    "state_transfer": {},
+    "evidence": [
+      "during:pod:ts-seat-service-66f7fb5c9-pvpsx",
+      "topology_diff:ts-seat-service->pod:ts-seat-service-66f7fb5c9-nlkb9",
+      "empty_endpoint:ts-seat-service",
+      "identity_change:ts-seat-service"
+    ]
+  }
+}

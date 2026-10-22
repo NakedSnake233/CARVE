@@ -1,0 +1,1270 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: e2r-supplement-20260925
+  labels:
+    app.kubernetes.io/part-of: e2r-supplement
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: e2r-workload
+  namespace: e2r-supplement-20260925
+automountServiceAccountToken: false
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: e2r-executor
+  namespace: e2r-supplement-20260925
+automountServiceAccountToken: false
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: e2r-executor
+  namespace: e2r-supplement-20260925
+rules:
+- apiGroups: ['']
+  resources: [pods, services, endpoints, events]
+  verbs: [get, list, watch]
+- apiGroups: ['']
+  resources: [pods/log]
+  verbs: [get]
+- apiGroups: ['']
+  resources: [pods/exec]
+  verbs: [create]
+- apiGroups: ['']
+  resources: [pods/portforward]
+  verbs: [create]
+- apiGroups: [apps]
+  resources: [deployments]
+  verbs: [get, list, watch, patch, update]
+- apiGroups: [metrics.k8s.io]
+  resources: [pods]
+  verbs: [get, list]
+- apiGroups: [chaos-mesh.org]
+  resources: [stresschaos, networkchaos, podchaos, iochaos]
+  verbs: [get, list, watch, create, delete]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: e2r-executor
+  namespace: e2r-supplement-20260925
+subjects:
+- kind: ServiceAccount
+  name: e2r-executor
+  namespace: e2r-supplement-20260925
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: e2r-executor
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: default-deny
+  namespace: e2r-supplement-20260925
+spec:
+  podSelector: {}
+  policyTypes: [Ingress, Egress]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-same-namespace-and-dns
+  namespace: e2r-supplement-20260925
+spec:
+  podSelector: {}
+  policyTypes: [Ingress, Egress]
+  ingress:
+  - from:
+    - podSelector: {}
+  egress:
+  - to:
+    - podSelector: {}
+  - to:
+    - namespaceSelector:
+        matchLabels:
+          kubernetes.io/metadata.name: kube-system
+      podSelector:
+        matchLabels:
+          k8s-app: kube-dns
+    ports:
+    - protocol: UDP
+      port: 53
+    - protocol: TCP
+      port: 53
+---
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: e2r-quota
+  namespace: e2r-supplement-20260925
+spec:
+  hard:
+    requests.cpu: '8'
+    requests.memory: 8Gi
+    limits.cpu: '12'
+    limits.memory: 30Gi
+    pods: '45'
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: emailservice
+  namespace: e2r-supplement-20260925
+  labels:
+    app.kubernetes.io/part-of: e2r-supplement
+spec:
+  selector:
+    matchLabels:
+      app: emailservice
+  template:
+    metadata:
+      labels:
+        app: emailservice
+    spec:
+      volumes:
+      - name: mysql-logs
+        emptyDir: {}
+      serviceAccountName: e2r-workload
+      terminationGracePeriodSeconds: 5
+      containers:
+      - name: server
+        image: gcr.m.daocloud.io/google-samples/microservices-demo/emailservice:v0.10.1
+        ports:
+        - containerPort: 8080
+        env:
+        - name: PORT
+          value: '8080'
+        - name: DISABLE_PROFILER
+          value: '1'
+        - name: ENABLE_TRACING
+          value: '0'
+        - name: COLLECTOR_SERVICE_ADDR
+          value: jaeger-collector:4317
+        - name: OTEL_SERVICE_NAME
+          value: emailservice
+        readinessProbe:
+          periodSeconds: 5
+          grpc:
+            port: 8080
+        livenessProbe:
+          periodSeconds: 5
+          grpc:
+            port: 8080
+        volumeMounts:
+        - name: mysql-logs
+          mountPath: /var/log/mysql
+        resources:
+          requests:
+            cpu: 100m
+            memory: 64Mi
+          limits:
+            cpu: 200m
+            memory: 2000Mi
+        imagePullPolicy: IfNotPresent
+      - name: sidecar-busybox
+        image: busybox:1.35
+        imagePullPolicy: IfNotPresent
+        command:
+        - sh
+        - -c
+        - sleep 2147483647
+        securityContext:
+          capabilities:
+            add:
+            - NET_RAW
+        volumeMounts:
+        - name: mysql-logs
+          mountPath: /var/log/mysql
+        resources:
+          requests:
+            cpu: 50m
+            memory: 64Mi
+          limits:
+            cpu: 50m
+            memory: 64Mi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: emailservice
+  namespace: e2r-supplement-20260925
+  labels:
+    app.kubernetes.io/part-of: e2r-supplement
+spec:
+  type: ClusterIP
+  selector:
+    app: emailservice
+  ports:
+  - name: grpc
+    port: 5000
+    targetPort: 8080
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: checkoutservice
+  namespace: e2r-supplement-20260925
+  labels:
+    app.kubernetes.io/part-of: e2r-supplement
+spec:
+  selector:
+    matchLabels:
+      app: checkoutservice
+  template:
+    metadata:
+      labels:
+        app: checkoutservice
+    spec:
+      volumes:
+      - name: mysql-logs
+        emptyDir: {}
+      serviceAccountName: e2r-workload
+      containers:
+      - name: server
+        image: gcr.m.daocloud.io/google-samples/microservices-demo/checkoutservice:v0.10.1
+        ports:
+        - containerPort: 5050
+        readinessProbe:
+          grpc:
+            port: 5050
+        livenessProbe:
+          grpc:
+            port: 5050
+        env:
+        - name: PORT
+          value: '5050'
+        - name: PRODUCT_CATALOG_SERVICE_ADDR
+          value: productcatalogservice:3550
+        - name: SHIPPING_SERVICE_ADDR
+          value: shippingservice:50051
+        - name: PAYMENT_SERVICE_ADDR
+          value: paymentservice:50051
+        - name: EMAIL_SERVICE_ADDR
+          value: emailservice:5000
+        - name: CURRENCY_SERVICE_ADDR
+          value: currencyservice:7000
+        - name: CART_SERVICE_ADDR
+          value: cartservice:7070
+        - name: DISABLE_PROFILER
+          value: '1'
+        - name: ENABLE_TRACING
+          value: '0'
+        - name: COLLECTOR_SERVICE_ADDR
+          value: jaeger-collector:4317
+        - name: OTEL_SERVICE_NAME
+          value: checkoutservice
+        volumeMounts:
+        - name: mysql-logs
+          mountPath: /var/log/mysql
+        resources:
+          requests:
+            cpu: 100m
+            memory: 64Mi
+          limits:
+            cpu: 200m
+            memory: 2000Mi
+        imagePullPolicy: IfNotPresent
+      - name: sidecar-busybox
+        image: busybox:1.35
+        imagePullPolicy: IfNotPresent
+        command:
+        - sh
+        - -c
+        - sleep 2147483647
+        securityContext:
+          capabilities:
+            add:
+            - NET_RAW
+        volumeMounts:
+        - name: mysql-logs
+          mountPath: /var/log/mysql
+        resources:
+          requests:
+            cpu: 50m
+            memory: 64Mi
+          limits:
+            cpu: 50m
+            memory: 64Mi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: checkoutservice
+  namespace: e2r-supplement-20260925
+  labels:
+    app.kubernetes.io/part-of: e2r-supplement
+spec:
+  type: ClusterIP
+  selector:
+    app: checkoutservice
+  ports:
+  - name: grpc
+    port: 5050
+    targetPort: 5050
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: recommendationservice
+  namespace: e2r-supplement-20260925
+  labels:
+    app.kubernetes.io/part-of: e2r-supplement
+spec:
+  selector:
+    matchLabels:
+      app: recommendationservice
+  template:
+    metadata:
+      labels:
+        app: recommendationservice
+    spec:
+      volumes:
+      - name: mysql-logs
+        emptyDir: {}
+      serviceAccountName: e2r-workload
+      terminationGracePeriodSeconds: 5
+      containers:
+      - name: server
+        image: gcr.m.daocloud.io/google-samples/microservices-demo/recommendationservice:v0.10.1
+        ports:
+        - containerPort: 8080
+        readinessProbe:
+          periodSeconds: 5
+          grpc:
+            port: 8080
+        livenessProbe:
+          periodSeconds: 5
+          grpc:
+            port: 8080
+        env:
+        - name: PORT
+          value: '8080'
+        - name: PRODUCT_CATALOG_SERVICE_ADDR
+          value: productcatalogservice:3550
+        - name: DISABLE_PROFILER
+          value: '1'
+        - name: DISABLE_DEBUGGER
+          value: '1'
+        - name: ENABLE_TRACING
+          value: '0'
+        - name: COLLECTOR_SERVICE_ADDR
+          value: jaeger-collector:4317
+        - name: OTEL_SERVICE_NAME
+          value: recommendationservice
+        volumeMounts:
+        - name: mysql-logs
+          mountPath: /var/log/mysql
+        resources:
+          requests:
+            cpu: 100m
+            memory: 220Mi
+          limits:
+            cpu: 200m
+            memory: 2000Mi
+        imagePullPolicy: IfNotPresent
+      - name: sidecar-busybox
+        image: busybox:1.35
+        imagePullPolicy: IfNotPresent
+        command:
+        - sh
+        - -c
+        - sleep 2147483647
+        securityContext:
+          capabilities:
+            add:
+            - NET_RAW
+        volumeMounts:
+        - name: mysql-logs
+          mountPath: /var/log/mysql
+        resources:
+          requests:
+            cpu: 50m
+            memory: 64Mi
+          limits:
+            cpu: 50m
+            memory: 64Mi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: recommendationservice
+  namespace: e2r-supplement-20260925
+  labels:
+    app.kubernetes.io/part-of: e2r-supplement
+spec:
+  type: ClusterIP
+  selector:
+    app: recommendationservice
+  ports:
+  - name: grpc
+    port: 8080
+    targetPort: 8080
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+  namespace: e2r-supplement-20260925
+  labels:
+    app.kubernetes.io/part-of: e2r-supplement
+spec:
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+      annotations:
+        sidecar.istio.io/rewriteAppHTTPProbers: 'true'
+    spec:
+      volumes:
+      - name: mysql-logs
+        emptyDir: {}
+      serviceAccountName: e2r-workload
+      containers:
+      - name: server
+        image: gcr.m.daocloud.io/google-samples/microservices-demo/frontend:v0.10.1
+        ports:
+        - containerPort: 8080
+        readinessProbe:
+          initialDelaySeconds: 10
+          httpGet:
+            path: /_healthz
+            port: 8080
+            httpHeaders:
+            - name: Cookie
+              value: shop_session-id=x-readiness-probe
+        livenessProbe:
+          initialDelaySeconds: 10
+          httpGet:
+            path: /_healthz
+            port: 8080
+            httpHeaders:
+            - name: Cookie
+              value: shop_session-id=x-liveness-probe
+        env:
+        - name: PORT
+          value: '8080'
+        - name: PRODUCT_CATALOG_SERVICE_ADDR
+          value: productcatalogservice:3550
+        - name: CURRENCY_SERVICE_ADDR
+          value: currencyservice:7000
+        - name: CART_SERVICE_ADDR
+          value: cartservice:7070
+        - name: RECOMMENDATION_SERVICE_ADDR
+          value: recommendationservice:8080
+        - name: SHIPPING_SERVICE_ADDR
+          value: shippingservice:50051
+        - name: CHECKOUT_SERVICE_ADDR
+          value: checkoutservice:5050
+        - name: AD_SERVICE_ADDR
+          value: adservice:9555
+        - name: DISABLE_PROFILER
+          value: '1'
+        - name: ENABLE_TRACING
+          value: '0'
+        - name: COLLECTOR_SERVICE_ADDR
+          value: jaeger-collector:4317
+        - name: SHOPPING_ASSISTANT_SERVICE_ADDR
+          value: shoppingassistantservice:80
+        - name: OTEL_SERVICE_NAME
+          value: frontend
+        volumeMounts:
+        - name: mysql-logs
+          mountPath: /var/log/mysql
+        resources:
+          requests:
+            cpu: 100m
+            memory: 64Mi
+          limits:
+            cpu: 200m
+            memory: 2000Mi
+        imagePullPolicy: IfNotPresent
+      - name: sidecar-busybox
+        image: busybox:1.35
+        imagePullPolicy: IfNotPresent
+        command:
+        - sh
+        - -c
+        - sleep 2147483647
+        securityContext:
+          capabilities:
+            add:
+            - NET_RAW
+        volumeMounts:
+        - name: mysql-logs
+          mountPath: /var/log/mysql
+        resources:
+          requests:
+            cpu: 50m
+            memory: 64Mi
+          limits:
+            cpu: 50m
+            memory: 64Mi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend
+  namespace: e2r-supplement-20260925
+  labels:
+    app.kubernetes.io/part-of: e2r-supplement
+spec:
+  type: ClusterIP
+  selector:
+    app: frontend
+  ports:
+  - name: http
+    port: 80
+    targetPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend-external
+  namespace: e2r-supplement-20260925
+  labels:
+    app.kubernetes.io/part-of: e2r-supplement
+spec:
+  type: ClusterIP
+  selector:
+    app: frontend
+  ports:
+  - name: http
+    port: 80
+    targetPort: 8080
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: paymentservice
+  namespace: e2r-supplement-20260925
+  labels:
+    app.kubernetes.io/part-of: e2r-supplement
+spec:
+  selector:
+    matchLabels:
+      app: paymentservice
+  template:
+    metadata:
+      labels:
+        app: paymentservice
+    spec:
+      volumes:
+      - name: mysql-logs
+        emptyDir: {}
+      serviceAccountName: e2r-workload
+      terminationGracePeriodSeconds: 5
+      containers:
+      - name: server
+        image: gcr.m.daocloud.io/google-samples/microservices-demo/paymentservice:v0.10.1
+        ports:
+        - containerPort: 50051
+        env:
+        - name: PORT
+          value: '50051'
+        - name: DISABLE_PROFILER
+          value: '1'
+        - name: DISABLE_DEBUGGER
+          value: '1'
+        - name: ENABLE_TRACING
+          value: '0'
+        - name: COLLECTOR_SERVICE_ADDR
+          value: jaeger-collector:4317
+        - name: OTEL_SERVICE_NAME
+          value: paymentservice
+        readinessProbe:
+          grpc:
+            port: 50051
+        livenessProbe:
+          grpc:
+            port: 50051
+        volumeMounts:
+        - name: mysql-logs
+          mountPath: /var/log/mysql
+        resources:
+          requests:
+            cpu: 100m
+            memory: 64Mi
+          limits:
+            cpu: 200m
+            memory: 2000Mi
+        imagePullPolicy: IfNotPresent
+      - name: sidecar-busybox
+        image: busybox:1.35
+        imagePullPolicy: IfNotPresent
+        command:
+        - sh
+        - -c
+        - sleep 2147483647
+        securityContext:
+          capabilities:
+            add:
+            - NET_RAW
+        volumeMounts:
+        - name: mysql-logs
+          mountPath: /var/log/mysql
+        resources:
+          requests:
+            cpu: 50m
+            memory: 64Mi
+          limits:
+            cpu: 50m
+            memory: 64Mi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: paymentservice
+  namespace: e2r-supplement-20260925
+  labels:
+    app.kubernetes.io/part-of: e2r-supplement
+spec:
+  type: ClusterIP
+  selector:
+    app: paymentservice
+  ports:
+  - name: grpc
+    port: 50051
+    targetPort: 50051
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: productcatalogservice
+  namespace: e2r-supplement-20260925
+  labels:
+    app.kubernetes.io/part-of: e2r-supplement
+spec:
+  selector:
+    matchLabels:
+      app: productcatalogservice
+  template:
+    metadata:
+      labels:
+        app: productcatalogservice
+    spec:
+      volumes:
+      - name: mysql-logs
+        emptyDir: {}
+      serviceAccountName: e2r-workload
+      terminationGracePeriodSeconds: 5
+      containers:
+      - name: server
+        image: gcr.m.daocloud.io/google-samples/microservices-demo/productcatalogservice:v0.10.1
+        ports:
+        - containerPort: 3550
+        env:
+        - name: PORT
+          value: '3550'
+        - name: DISABLE_PROFILER
+          value: '1'
+        - name: ENABLE_TRACING
+          value: '0'
+        - name: COLLECTOR_SERVICE_ADDR
+          value: jaeger-collector:4317
+        - name: OTEL_SERVICE_NAME
+          value: productcatalogservice
+        readinessProbe:
+          grpc:
+            port: 3550
+        livenessProbe:
+          grpc:
+            port: 3550
+        volumeMounts:
+        - name: mysql-logs
+          mountPath: /var/log/mysql
+        resources:
+          requests:
+            cpu: 100m
+            memory: 64Mi
+          limits:
+            cpu: 200m
+            memory: 2000Mi
+        imagePullPolicy: IfNotPresent
+      - name: sidecar-busybox
+        image: busybox:1.35
+        imagePullPolicy: IfNotPresent
+        command:
+        - sh
+        - -c
+        - sleep 2147483647
+        securityContext:
+          capabilities:
+            add:
+            - NET_RAW
+        volumeMounts:
+        - name: mysql-logs
+          mountPath: /var/log/mysql
+        resources:
+          requests:
+            cpu: 50m
+            memory: 64Mi
+          limits:
+            cpu: 50m
+            memory: 64Mi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: productcatalogservice
+  namespace: e2r-supplement-20260925
+  labels:
+    app.kubernetes.io/part-of: e2r-supplement
+spec:
+  type: ClusterIP
+  selector:
+    app: productcatalogservice
+  ports:
+  - name: grpc
+    port: 3550
+    targetPort: 3550
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cartservice
+  namespace: e2r-supplement-20260925
+  labels:
+    app.kubernetes.io/part-of: e2r-supplement
+spec:
+  selector:
+    matchLabels:
+      app: cartservice
+  template:
+    metadata:
+      labels:
+        app: cartservice
+    spec:
+      volumes:
+      - name: mysql-logs
+        emptyDir: {}
+      serviceAccountName: e2r-workload
+      terminationGracePeriodSeconds: 5
+      containers:
+      - name: server
+        image: gcr.m.daocloud.io/google-samples/microservices-demo/cartservice:v0.10.1
+        ports:
+        - containerPort: 7070
+        env:
+        - name: REDIS_ADDR
+          value: redis-cart:6379
+        - name: ENABLE_TRACING
+          value: '0'
+        - name: COLLECTOR_SERVICE_ADDR
+          value: jaeger-collector:4317
+        - name: OTEL_SERVICE_NAME
+          value: cartservice
+        volumeMounts:
+        - name: mysql-logs
+          mountPath: /var/log/mysql
+        resources:
+          requests:
+            cpu: 200m
+            memory: 64Mi
+          limits:
+            cpu: 300m
+            memory: 2000Mi
+        readinessProbe:
+          initialDelaySeconds: 15
+          grpc:
+            port: 7070
+        livenessProbe:
+          initialDelaySeconds: 15
+          periodSeconds: 10
+          grpc:
+            port: 7070
+        imagePullPolicy: IfNotPresent
+      - name: sidecar-busybox
+        image: busybox:1.35
+        imagePullPolicy: IfNotPresent
+        command:
+        - sh
+        - -c
+        - sleep 2147483647
+        securityContext:
+          capabilities:
+            add:
+            - NET_RAW
+        volumeMounts:
+        - name: mysql-logs
+          mountPath: /var/log/mysql
+        resources:
+          requests:
+            cpu: 50m
+            memory: 64Mi
+          limits:
+            cpu: 50m
+            memory: 64Mi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: cartservice
+  namespace: e2r-supplement-20260925
+  labels:
+    app.kubernetes.io/part-of: e2r-supplement
+spec:
+  type: ClusterIP
+  selector:
+    app: cartservice
+  ports:
+  - name: grpc
+    port: 7070
+    targetPort: 7070
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: loadgenerator
+  namespace: e2r-supplement-20260925
+  labels:
+    app.kubernetes.io/part-of: e2r-supplement
+spec:
+  selector:
+    matchLabels:
+      app: loadgenerator
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: loadgenerator
+      annotations:
+        sidecar.istio.io/rewriteAppHTTPProbers: 'true'
+    spec:
+      volumes:
+      - name: mysql-logs
+        emptyDir: {}
+      serviceAccountName: e2r-workload
+      terminationGracePeriodSeconds: 5
+      restartPolicy: Always
+      initContainers:
+      - command:
+        - /bin/sh
+        - -exc
+        - "echo \"Init container pinging frontend: ${FRONTEND_ADDR}...\"\nSTATUSCODE=$(wget\
+          \ --server-response http://${FRONTEND_ADDR} 2>&1 | awk '/^  HTTP/{print\
+          \ $2}')\nif test $STATUSCODE -ne 200; then\n    echo \"Error: Could not\
+          \ reach frontend - Status code: ${STATUSCODE}\"\n    exit 1\nfi\n"
+        name: frontend-check
+        image: busybox:latest
+        env:
+        - name: FRONTEND_ADDR
+          value: frontend:80
+        resources:
+          requests:
+            cpu: 25m
+            memory: 16Mi
+          limits:
+            cpu: 100m
+            memory: 64Mi
+      containers:
+      - name: main
+        image: gcr.m.daocloud.io/google-samples/microservices-demo/loadgenerator:v0.10.1
+        env:
+        - name: FRONTEND_ADDR
+          value: frontend:80
+        - name: USERS
+          value: '10'
+        - name: ENABLE_TRACING
+          value: '0'
+        - name: COLLECTOR_SERVICE_ADDR
+          value: jaeger-collector:4317
+        volumeMounts:
+        - name: mysql-logs
+          mountPath: /var/log/mysql
+        resources:
+          requests:
+            cpu: 300m
+            memory: 256Mi
+          limits:
+            cpu: 500m
+            memory: 2000Mi
+        imagePullPolicy: IfNotPresent
+      - name: sidecar-busybox
+        image: busybox:1.35
+        imagePullPolicy: IfNotPresent
+        command:
+        - sh
+        - -c
+        - sleep 2147483647
+        securityContext:
+          capabilities:
+            add:
+            - NET_RAW
+        volumeMounts:
+        - name: mysql-logs
+          mountPath: /var/log/mysql
+        resources:
+          requests:
+            cpu: 50m
+            memory: 64Mi
+          limits:
+            cpu: 50m
+            memory: 64Mi
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: currencyservice
+  namespace: e2r-supplement-20260925
+  labels:
+    app.kubernetes.io/part-of: e2r-supplement
+spec:
+  selector:
+    matchLabels:
+      app: currencyservice
+  template:
+    metadata:
+      labels:
+        app: currencyservice
+    spec:
+      volumes:
+      - name: mysql-logs
+        emptyDir: {}
+      serviceAccountName: e2r-workload
+      terminationGracePeriodSeconds: 5
+      containers:
+      - name: server
+        image: gcr.m.daocloud.io/google-samples/microservices-demo/currencyservice:v0.10.1
+        ports:
+        - name: grpc
+          containerPort: 7000
+        env:
+        - name: PORT
+          value: '7000'
+        - name: DISABLE_PROFILER
+          value: '1'
+        - name: DISABLE_DEBUGGER
+          value: '1'
+        - name: ENABLE_TRACING
+          value: '0'
+        - name: COLLECTOR_SERVICE_ADDR
+          value: jaeger-collector:4317
+        - name: OTEL_SERVICE_NAME
+          value: currencyservice
+        readinessProbe:
+          grpc:
+            port: 7000
+        livenessProbe:
+          grpc:
+            port: 7000
+        volumeMounts:
+        - name: mysql-logs
+          mountPath: /var/log/mysql
+        resources:
+          requests:
+            cpu: 100m
+            memory: 64Mi
+          limits:
+            cpu: 200m
+            memory: 2000Mi
+        imagePullPolicy: IfNotPresent
+      - name: sidecar-busybox
+        image: busybox:1.35
+        imagePullPolicy: IfNotPresent
+        command:
+        - sh
+        - -c
+        - sleep 2147483647
+        securityContext:
+          capabilities:
+            add:
+            - NET_RAW
+        volumeMounts:
+        - name: mysql-logs
+          mountPath: /var/log/mysql
+        resources:
+          requests:
+            cpu: 50m
+            memory: 64Mi
+          limits:
+            cpu: 50m
+            memory: 64Mi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: currencyservice
+  namespace: e2r-supplement-20260925
+  labels:
+    app.kubernetes.io/part-of: e2r-supplement
+spec:
+  type: ClusterIP
+  selector:
+    app: currencyservice
+  ports:
+  - name: grpc
+    port: 7000
+    targetPort: 7000
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shippingservice
+  namespace: e2r-supplement-20260925
+  labels:
+    app.kubernetes.io/part-of: e2r-supplement
+spec:
+  selector:
+    matchLabels:
+      app: shippingservice
+  template:
+    metadata:
+      labels:
+        app: shippingservice
+    spec:
+      volumes:
+      - name: mysql-logs
+        emptyDir: {}
+      serviceAccountName: e2r-workload
+      containers:
+      - name: server
+        image: gcr.m.daocloud.io/google-samples/microservices-demo/shippingservice:v0.10.1
+        ports:
+        - containerPort: 50051
+        env:
+        - name: PORT
+          value: '50051'
+        - name: DISABLE_PROFILER
+          value: '1'
+        - name: ENABLE_TRACING
+          value: '0'
+        - name: COLLECTOR_SERVICE_ADDR
+          value: jaeger-collector:4317
+        - name: OTEL_SERVICE_NAME
+          value: shippingservice
+        readinessProbe:
+          periodSeconds: 5
+          grpc:
+            port: 50051
+        livenessProbe:
+          grpc:
+            port: 50051
+        volumeMounts:
+        - name: mysql-logs
+          mountPath: /var/log/mysql
+        resources:
+          requests:
+            cpu: 100m
+            memory: 64Mi
+          limits:
+            cpu: 200m
+            memory: 2000Mi
+        imagePullPolicy: IfNotPresent
+      - name: sidecar-busybox
+        image: busybox:1.35
+        imagePullPolicy: IfNotPresent
+        command:
+        - sh
+        - -c
+        - sleep 2147483647
+        securityContext:
+          capabilities:
+            add:
+            - NET_RAW
+        volumeMounts:
+        - name: mysql-logs
+          mountPath: /var/log/mysql
+        resources:
+          requests:
+            cpu: 50m
+            memory: 64Mi
+          limits:
+            cpu: 50m
+            memory: 64Mi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: shippingservice
+  namespace: e2r-supplement-20260925
+  labels:
+    app.kubernetes.io/part-of: e2r-supplement
+spec:
+  type: ClusterIP
+  selector:
+    app: shippingservice
+  ports:
+  - name: grpc
+    port: 50051
+    targetPort: 50051
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: redis-cart
+  namespace: e2r-supplement-20260925
+  labels:
+    app.kubernetes.io/part-of: e2r-supplement
+spec:
+  selector:
+    matchLabels:
+      app: redis-cart
+  template:
+    metadata:
+      labels:
+        app: redis-cart
+    spec:
+      serviceAccountName: e2r-workload
+      containers:
+      - name: redis
+        image: redis:alpine
+        ports:
+        - containerPort: 6379
+        readinessProbe:
+          periodSeconds: 5
+          tcpSocket:
+            port: 6379
+        livenessProbe:
+          periodSeconds: 5
+          tcpSocket:
+            port: 6379
+        volumeMounts:
+        - mountPath: /data
+          name: redis-data
+        resources:
+          limits:
+            memory: 2000Mi
+            cpu: 125m
+          requests:
+            cpu: 70m
+            memory: 256Mi
+        imagePullPolicy: IfNotPresent
+      - name: sidecar-busybox
+        image: busybox:1.35
+        imagePullPolicy: IfNotPresent
+        command:
+        - sh
+        - -c
+        - sleep 2147483647
+        securityContext:
+          capabilities:
+            add:
+            - NET_RAW
+        resources:
+          requests:
+            cpu: 50m
+            memory: 64Mi
+          limits:
+            cpu: 50m
+            memory: 64Mi
+      volumes:
+      - name: redis-data
+        emptyDir: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: redis-cart
+  namespace: e2r-supplement-20260925
+  labels:
+    app.kubernetes.io/part-of: e2r-supplement
+spec:
+  type: ClusterIP
+  selector:
+    app: redis-cart
+  ports:
+  - name: redis
+    port: 6379
+    targetPort: 6379
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: adservice
+  namespace: e2r-supplement-20260925
+  labels:
+    app.kubernetes.io/part-of: e2r-supplement
+spec:
+  selector:
+    matchLabels:
+      app: adservice
+  template:
+    metadata:
+      labels:
+        app: adservice
+    spec:
+      volumes:
+      - name: mysql-logs
+        emptyDir: {}
+      serviceAccountName: e2r-workload
+      terminationGracePeriodSeconds: 5
+      containers:
+      - name: server
+        image: gcr.m.daocloud.io/google-samples/microservices-demo/adservice:v0.10.1
+        ports:
+        - containerPort: 9555
+        env:
+        - name: PORT
+          value: '9555'
+        - name: ENABLE_TRACING
+          value: '0'
+        - name: COLLECTOR_SERVICE_ADDR
+          value: jaeger-collector:4317
+        - name: OTEL_SERVICE_NAME
+          value: adservice
+        resources:
+          requests:
+            cpu: 200m
+            memory: 180Mi
+          limits:
+            cpu: 300m
+            memory: 2000Mi
+        readinessProbe:
+          initialDelaySeconds: 20
+          periodSeconds: 15
+          grpc:
+            port: 9555
+        volumeMounts:
+        - name: mysql-logs
+          mountPath: /var/log/mysql
+        livenessProbe:
+          initialDelaySeconds: 20
+          periodSeconds: 15
+          grpc:
+            port: 9555
+        imagePullPolicy: IfNotPresent
+      - name: sidecar-busybox
+        image: busybox:1.35
+        imagePullPolicy: IfNotPresent
+        command:
+        - sh
+        - -c
+        - sleep 2147483647
+        securityContext:
+          capabilities:
+            add:
+            - NET_RAW
+        volumeMounts:
+        - name: mysql-logs
+          mountPath: /var/log/mysql
+        resources:
+          requests:
+            cpu: 50m
+            memory: 64Mi
+          limits:
+            cpu: 50m
+            memory: 64Mi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: adservice
+  namespace: e2r-supplement-20260925
+  labels:
+    app.kubernetes.io/part-of: e2r-supplement
+spec:
+  type: ClusterIP
+  selector:
+    app: adservice
+  ports:
+  - name: grpc
+    port: 9555
+    targetPort: 9555

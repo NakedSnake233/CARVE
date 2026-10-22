@@ -1,0 +1,132 @@
+{
+  "catalog": [
+    {
+      "id": "op0000",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-food-service-v2-76d8645f86-wzf8z",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-food-service",
+          "version": "v2.0.0"
+        },
+        "evidence": [
+          "during:pod:ts-food-service-v2-76d8645f86-wzf8z"
+        ]
+      },
+      "evidence_id": "during:pod:ts-food-service-v2-76d8645f86-wzf8z",
+      "requires": []
+    },
+    {
+      "id": "op0001",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "ts-food-service",
+        "target": "pod:ts-food-service-v2-76d8645f86-wzf8z",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "evidence": [
+          "during:ts-food-service->pod:ts-food-service-v2-76d8645f86-wzf8z"
+        ]
+      },
+      "evidence_id": "during:ts-food-service->pod:ts-food-service-v2-76d8645f86-wzf8z",
+      "requires": [
+        "op0000"
+      ]
+    },
+    {
+      "id": "op0002",
+      "group": "node_ops",
+      "operation": {
+        "op": "SPLIT_NODE",
+        "parent": "ts-food-service",
+        "children": [
+          "ts-food-service:unversioned",
+          "ts-food-service:v2.0.0"
+        ],
+        "attrs": {
+          "type": "version",
+          "service": "ts-food-service"
+        },
+        "evidence": [
+          "version_coexistence:ts-food-service"
+        ]
+      },
+      "evidence_id": "version_coexistence:ts-food-service",
+      "requires": []
+    }
+  ],
+  "plan": {
+    "experiment_id": "case00681",
+    "change_type": "observation_supported_updates",
+    "confidence": 0.0,
+    "causal_role": "not_inferred",
+    "node_ops": [
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-food-service-v2-76d8645f86-wzf8z",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-food-service",
+          "version": "v2.0.0"
+        },
+        "evidence": [
+          "during:pod:ts-food-service-v2-76d8645f86-wzf8z"
+        ]
+      },
+      {
+        "op": "SPLIT_NODE",
+        "node_id": "",
+        "old_node": "",
+        "new_node": "",
+        "parent": "ts-food-service",
+        "children": [
+          "ts-food-service:unversioned",
+          "ts-food-service:v2.0.0"
+        ],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "version",
+          "service": "ts-food-service"
+        },
+        "evidence": [
+          "version_coexistence:ts-food-service"
+        ]
+      }
+    ],
+    "edge_ops": [
+      {
+        "op": "ADD_EDGE",
+        "source": "ts-food-service",
+        "target": "pod:ts-food-service-v2-76d8645f86-wzf8z",
+        "old_source": "ts-food-service",
+        "old_target": "pod:ts-food-service-v2-76d8645f86-wzf8z",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:ts-food-service->pod:ts-food-service-v2-76d8645f86-wzf8z"
+        ]
+      }
+    ],
+    "weight_ops": [],
+    "state_transfer": {},
+    "evidence": [
+      "during:pod:ts-food-service-v2-76d8645f86-wzf8z",
+      "during:ts-food-service->pod:ts-food-service-v2-76d8645f86-wzf8z",
+      "version_coexistence:ts-food-service"
+    ]
+  }
+}

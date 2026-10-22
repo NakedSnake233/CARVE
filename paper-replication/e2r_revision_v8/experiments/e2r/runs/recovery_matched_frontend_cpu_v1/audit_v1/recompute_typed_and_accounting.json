@@ -1,0 +1,923 @@
+{
+  "deterministic_verification": "PASS",
+  "check_count": 116,
+  "failed_checks": [],
+  "checks": [
+    {
+      "check": "source hash block.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source hash 00_no_action.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source hash 01_typed_cleanup.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "typed sidecar source hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "block binding protocol",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "block binding baseline",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "block binding manifest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "protocol binding baseline",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "protocol binding manifest",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "review fingerprint methods/PlanRCAThinkRemed/schemas.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "review fingerprint methods/PlanRCAThinkRemed/repair_planner_agent.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "review fingerprint rca_bench/recovery_oracle.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "review fingerprint methods/PlanRCAThinkRemed/playbook_generator_agent.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "review fingerprint methods/PlanRCAThinkRemed/safety_guard.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "review fingerprint methods/PlanRCAThinkRemed/playbook_generator_agent.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "review fingerprint methods/PlanRCAThinkRemed/safety_guard.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "review fingerprint rca_bench/recovery_oracle.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "review fingerprint methods/PlanRCAThinkRemed/playbook_generator_agent.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "review fingerprint methods/PlanRCAThinkRemed/safety_guard.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "review fingerprint experiments/e2r/isolated_boutique.yaml",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "review fingerprint experiments/e2r/runs/recovery_baseline_v2/baseline.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "review fingerprint experiments/e2r/isolated_boutique.yaml",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "review fingerprint scripts/e2r/run_recovery_baseline.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "review fingerprint experiments/e2r/runs/recovery_baseline_v2/baseline.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "review fingerprint experiments/e2r/isolated_boutique.yaml",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "review fingerprint scripts/e2r/run_recovery_sanity.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "review fingerprint rca_bench/recovery_oracle.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "review fingerprint experiments/e2r/recovery_matched_cpu_protocol_v1.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "review fingerprint scripts/e2r/run_recovery_matched_block.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "review fingerprint rca_bench/workload_oracle.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "review fingerprint tests/e2r/test_recovery_matched_block.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "review fingerprint tests/test_workload_oracle.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "review fingerprint scripts/e2r/run_recovery_sanity.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "review fingerprint rca_bench/recovery_oracle.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "review fingerprint experiments/e2r/runs/recovery_matched_frontend_cpu_v1/block.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "review fingerprint experiments/e2r/runs/recovery_matched_frontend_cpu_v1/episodes/00_no_action.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "review fingerprint experiments/e2r/runs/recovery_matched_frontend_cpu_v1/episodes/01_typed_cleanup.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "review fingerprint scripts/e2r/finalize_interrupted_matched_block.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "seeded frozen order",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "exact original episode membership",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "retry policy no replacement",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "pre all latency values valid retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "pre denominator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "pre successes all attempts",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "pre saved p95",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "pre saved throughput",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "pre saved error",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "pre matching window identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "pre declared workload",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "pre wall interval consistent with monotonic elapsed",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fault all latency values valid retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fault denominator",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fault successes all attempts",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fault saved p95",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fault saved throughput",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fault saved error",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fault matching window identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fault declared workload",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fault wall interval consistent with monotonic elapsed",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "typed pre-health gate",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "typed fault measurable",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "typed fault degradation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "typed pre precedes injection",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "typed fault settle at least 30s",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "no_action pure safety replay exact",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "no_action precondition replay exact",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "no_action initial object context/rc",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "no_action exact identity initial",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "no_action active exact fault initial",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "no_action exact fault profile initial",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "no_action exact identity precondition",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "no_action active exact fault precondition",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "no_action exact fault profile precondition",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "no_action pinned UID",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "no_action initial raw evidence matches plan",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "typed_cleanup pure safety replay exact",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "typed_cleanup precondition replay exact",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "typed_cleanup initial object context/rc",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "typed_cleanup exact identity initial",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "typed_cleanup active exact fault initial",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "typed_cleanup exact fault profile initial",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "typed_cleanup exact identity precondition",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "typed_cleanup active exact fault precondition",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "typed_cleanup exact fault profile precondition",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "typed_cleanup pinned UID",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "typed_cleanup initial raw evidence matches plan",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "bounded typed Ansible timeout",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "typed explicit successful delete",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "reviewed venv executor",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "typed completion deadline",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "typed duration consistent with age progression",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "typed no completed evaluation raw/windows",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "typed missing outcome and cleanup fields",
+      "pass": true,
+      "detail": [
+        "technical",
+        "oracle",
+        "cleanup",
+        "cleanup_absence_probe",
+        "cleanup_verified_absent",
+        "completed_at",
+        "post_cleanup_pods",
+        "post_cleanup_runtime",
+        "runtime_identity_unchanged"
+      ]
+    },
+    {
+      "check": "typed null oracle and unknown in-flight preserved",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sidecar count planned_episode_count",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sidecar count episode_attempts_started",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sidecar count injection_attempts",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sidecar count confirmed_fault_injections",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sidecar count injection_unknown_outcomes",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sidecar count repair_process_invocations",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sidecar count repair_process_unknown_outcomes",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sidecar count confirmed_repair_mutations",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sidecar count oracle_statuses",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sidecar count complete_matched_pairs",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "invalid comparison terminal status",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "late exact NotFound e2r-matched-cpu-noaction",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "late exact NotFound e2r-matched-cpu-typed",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sidecar late absence agrees",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "late runtime unavailable not empty healthy population",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "reconstructed repair wall timestamp",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "late delay and timestamp",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "30 second washout",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "analysis accounting",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "analysis preserves null and invalidity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "analysis typed window typed_cleanup-pre",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "analysis typed window typed_cleanup-fault-validation",
+      "pass": true,
+      "detail": null
+    }
+  ],
+  "typed_windows": [
+    {
+      "window_id": "typed_cleanup-pre",
+      "samples": 150,
+      "successes": 150,
+      "mean_latency_ms_audit_derived": 20.247440716872614,
+      "p95_ms": 19.501911010593176,
+      "min_latency_ms": 12.255670968443155,
+      "max_latency_ms": 190.40724774822593,
+      "throughput_rps": 4.997199076242644,
+      "error_rate": 0.0,
+      "elapsed_seconds": 30.016814962029457,
+      "wall_interval_seconds": 30.01681351661682,
+      "start_time": 1790441421.8242657,
+      "end_time": 1790441451.8410792,
+      "business_criteria": {
+        "latency": true,
+        "throughput": true,
+        "error": true,
+        "canary": true
+      }
+    },
+    {
+      "window_id": "typed_cleanup-fault-validation",
+      "samples": 150,
+      "successes": 150,
+      "mean_latency_ms_audit_derived": 962.8159837704152,
+      "p95_ms": 1399.2593279108405,
+      "min_latency_ms": 437.2609262354672,
+      "max_latency_ms": 1633.6670983582735,
+      "throughput_rps": 4.726677502356213,
+      "error_rate": 0.0,
+      "elapsed_seconds": 31.73476504907012,
+      "wall_interval_seconds": 31.734763860702515,
+      "start_time": 1790441482.0889091,
+      "end_time": 1790441513.823673,
+      "business_criteria": {
+        "latency": false,
+        "throughput": true,
+        "error": true,
+        "canary": true
+      }
+    }
+  ],
+  "thresholds": {
+    "error_rate_max": 0.01,
+    "p95_ms_max": 21.91571295261383,
+    "throughput_rps_min": 3.9977311681200334
+  },
+  "precondition_replays": [
+    {
+      "arm": "no_action",
+      "uid": "7d2f31e8-4d0f-4632-9ff8-f1e2d66c6045",
+      "preconditions_match": true,
+      "safety": {
+        "plan_ok": true,
+        "yaml_ok": true,
+        "reasons": []
+      },
+      "observed_object_sha256": "983a5055e9d812c33923686f6e3c91ca70c040d9d30ce07f27c5ca7138e9c278"
+    },
+    {
+      "arm": "typed_cleanup",
+      "uid": "88da17d7-c111-413a-889a-c22ce607c108",
+      "preconditions_match": true,
+      "safety": {
+        "plan_ok": true,
+        "yaml_ok": true,
+        "reasons": []
+      },
+      "observed_object_sha256": "409ae985653a15737f0a9d59c3766eabf18ba016b88121148700cab1d282038b"
+    }
+  ],
+  "execution": {
+    "returncode": 0,
+    "stdout": "\nPLAY [PlanRCAThinkRemed remediation] *******************************************\n\nTASK [RemoveInjectedStress on StressChaos/e2r-matched-cpu-typed] ***************\nchanged: [localhost]\n\nTASK [report RemoveInjectedStress on StressChaos/e2r-matched-cpu-typed] ********\nok: [localhost] => {\n    \"planrca_step_0.stdout_lines\": [\n        \"stresschaos.chaos-mesh.org \\\"e2r-matched-cpu-typed\\\" deleted from e2r-supplement-20260925 namespace\"\n    ]\n}\n\nPLAY RECAP *********************************************************************\nlocalhost                  : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   \n\n",
+    "stderr": "[WARNING]: Host 'localhost' is using the discovered Python interpreter at '${LOCAL_HOME}/anaconda3/bin/python3.13', but future installation of another Python interpreter could cause a different interpreter to be discovered. See https://docs.ansible.com/ansible-core/2.21/reference_appendices/interpreter_discovery.html for more information.\n",
+    "seconds": 1.2116025038994849,
+    "executable": ".venv-e2r/bin/ansible-playbook",
+    "timeout_seconds": 30,
+    "repair_completion_fault_age_seconds": 63.82447475893423,
+    "completed_before_deadline": true
+  },
+  "typed_missing_fields": [
+    "technical",
+    "oracle",
+    "cleanup",
+    "cleanup_absence_probe",
+    "cleanup_verified_absent",
+    "completed_at",
+    "post_cleanup_pods",
+    "post_cleanup_runtime",
+    "runtime_identity_unchanged"
+  ],
+  "accounting": {
+    "planned_episode_count": 2,
+    "episode_attempts_started": 2,
+    "injection_attempts": 2,
+    "confirmed_fault_injections": 2,
+    "injection_unknown_outcomes": 0,
+    "repair_process_invocations": 1,
+    "repair_process_unknown_outcomes": 0,
+    "confirmed_repair_mutations": 1,
+    "oracle_statuses": [
+      "FAIL",
+      null
+    ],
+    "complete_matched_pairs": 0
+  },
+  "saved_observations": {
+    "control": 750,
+    "typed": 300,
+    "total": 1050,
+    "interpretation": "Retained latency observations with aggregate success counts; issued total including in-flight requests unknown."
+  },
+  "repair_completion_reconstructed_wall": 1790441515.6804256,
+  "late_delay_seconds": 34223.32558345795,
+  "review_fingerprints": [
+    {
+      "path": "methods/PlanRCAThinkRemed/schemas.py",
+      "expected": "6b3db2fe8664b50e84f66b0aadc5aa8758b6a6d316e689a5611d3f868dd7e721",
+      "actual": "6b3db2fe8664b50e84f66b0aadc5aa8758b6a6d316e689a5611d3f868dd7e721",
+      "matches": true
+    },
+    {
+      "path": "methods/PlanRCAThinkRemed/repair_planner_agent.py",
+      "expected": "892fc9f94cc068079b3df75168e8ed4508e0d67b960e941e7adae82062c61fc3",
+      "actual": "892fc9f94cc068079b3df75168e8ed4508e0d67b960e941e7adae82062c61fc3",
+      "matches": true
+    },
+    {
+      "path": "rca_bench/recovery_oracle.py",
+      "expected": "6e2ac9775e726c5a36adc225cf8a6f11ec2efecd0363095ce476fffd512e9dc4",
+      "actual": "6e2ac9775e726c5a36adc225cf8a6f11ec2efecd0363095ce476fffd512e9dc4",
+      "matches": true
+    },
+    {
+      "path": "methods/PlanRCAThinkRemed/playbook_generator_agent.py",
+      "expected": "a025ddec725a19c1f958d41f26f537857ac17d0cb1bb7ff1ae1be63705bf4b38",
+      "actual": "a025ddec725a19c1f958d41f26f537857ac17d0cb1bb7ff1ae1be63705bf4b38",
+      "matches": true
+    },
+    {
+      "path": "methods/PlanRCAThinkRemed/safety_guard.py",
+      "expected": "d0ac1b465cd3d1d2eff9ecd33936246e5bfc2647199d5ff201d0292cb640233f",
+      "actual": "d0ac1b465cd3d1d2eff9ecd33936246e5bfc2647199d5ff201d0292cb640233f",
+      "matches": true
+    },
+    {
+      "path": "methods/PlanRCAThinkRemed/playbook_generator_agent.py",
+      "expected": "a025ddec725a19c1f958d41f26f537857ac17d0cb1bb7ff1ae1be63705bf4b38",
+      "actual": "a025ddec725a19c1f958d41f26f537857ac17d0cb1bb7ff1ae1be63705bf4b38",
+      "matches": true
+    },
+    {
+      "path": "methods/PlanRCAThinkRemed/safety_guard.py",
+      "expected": "d0ac1b465cd3d1d2eff9ecd33936246e5bfc2647199d5ff201d0292cb640233f",
+      "actual": "d0ac1b465cd3d1d2eff9ecd33936246e5bfc2647199d5ff201d0292cb640233f",
+      "matches": true
+    },
+    {
+      "path": "rca_bench/recovery_oracle.py",
+      "expected": "6e2ac9775e726c5a36adc225cf8a6f11ec2efecd0363095ce476fffd512e9dc4",
+      "actual": "6e2ac9775e726c5a36adc225cf8a6f11ec2efecd0363095ce476fffd512e9dc4",
+      "matches": true
+    },
+    {
+      "path": "methods/PlanRCAThinkRemed/playbook_generator_agent.py",
+      "expected": "a025ddec725a19c1f958d41f26f537857ac17d0cb1bb7ff1ae1be63705bf4b38",
+      "actual": "a025ddec725a19c1f958d41f26f537857ac17d0cb1bb7ff1ae1be63705bf4b38",
+      "matches": true
+    },
+    {
+      "path": "methods/PlanRCAThinkRemed/safety_guard.py",
+      "expected": "d0ac1b465cd3d1d2eff9ecd33936246e5bfc2647199d5ff201d0292cb640233f",
+      "actual": "d0ac1b465cd3d1d2eff9ecd33936246e5bfc2647199d5ff201d0292cb640233f",
+      "matches": true
+    },
+    {
+      "path": "experiments/e2r/isolated_boutique.yaml",
+      "expected": "9150029373d00e9882b83922071d69c12bcd36b04af5cab16ea90a2caa0882bb",
+      "actual": "9150029373d00e9882b83922071d69c12bcd36b04af5cab16ea90a2caa0882bb",
+      "matches": true
+    },
+    {
+      "path": "experiments/e2r/runs/recovery_baseline_v2/baseline.json",
+      "expected": "3957fa90acce446bd248c6e493c2374307454cc96d4644b99ec60fc04b84642d",
+      "actual": "3957fa90acce446bd248c6e493c2374307454cc96d4644b99ec60fc04b84642d",
+      "matches": true
+    },
+    {
+      "path": "experiments/e2r/isolated_boutique.yaml",
+      "expected": "9150029373d00e9882b83922071d69c12bcd36b04af5cab16ea90a2caa0882bb",
+      "actual": "9150029373d00e9882b83922071d69c12bcd36b04af5cab16ea90a2caa0882bb",
+      "matches": true
+    },
+    {
+      "path": "scripts/e2r/run_recovery_baseline.py",
+      "expected": "080ec0a903b3dffc3f5378c23aed469f78c43f2166acb0c0393088ebe7c1c296",
+      "actual": "080ec0a903b3dffc3f5378c23aed469f78c43f2166acb0c0393088ebe7c1c296",
+      "matches": true
+    },
+    {
+      "path": "experiments/e2r/runs/recovery_baseline_v2/baseline.json",
+      "expected": "3957fa90acce446bd248c6e493c2374307454cc96d4644b99ec60fc04b84642d",
+      "actual": "3957fa90acce446bd248c6e493c2374307454cc96d4644b99ec60fc04b84642d",
+      "matches": true
+    },
+    {
+      "path": "experiments/e2r/isolated_boutique.yaml",
+      "expected": "9150029373d00e9882b83922071d69c12bcd36b04af5cab16ea90a2caa0882bb",
+      "actual": "9150029373d00e9882b83922071d69c12bcd36b04af5cab16ea90a2caa0882bb",
+      "matches": true
+    },
+    {
+      "path": "scripts/e2r/run_recovery_sanity.py",
+      "expected": "c49e45199958c65284de9e62a4c2bac2a227659d0a46a1ec5f6b73ff0c47a42b",
+      "actual": "c49e45199958c65284de9e62a4c2bac2a227659d0a46a1ec5f6b73ff0c47a42b",
+      "matches": true
+    },
+    {
+      "path": "rca_bench/recovery_oracle.py",
+      "expected": "6e2ac9775e726c5a36adc225cf8a6f11ec2efecd0363095ce476fffd512e9dc4",
+      "actual": "6e2ac9775e726c5a36adc225cf8a6f11ec2efecd0363095ce476fffd512e9dc4",
+      "matches": true
+    },
+    {
+      "path": "experiments/e2r/recovery_matched_cpu_protocol_v1.json",
+      "expected": "b01798e4174651abf550bfe4f5f7f8d84c48c414e904ad5e26a5f2e8c8e7032d",
+      "actual": "b01798e4174651abf550bfe4f5f7f8d84c48c414e904ad5e26a5f2e8c8e7032d",
+      "matches": true
+    },
+    {
+      "path": "scripts/e2r/run_recovery_matched_block.py",
+      "expected": "0a059ef91220358b4442215dd21b5488b91615a69dfd8338f64b47434d1c06ca",
+      "actual": "0a059ef91220358b4442215dd21b5488b91615a69dfd8338f64b47434d1c06ca",
+      "matches": true
+    },
+    {
+      "path": "rca_bench/workload_oracle.py",
+      "expected": "a206c8eb750975c33b977c93a7c0eaae0d30340ccf27e3ca34a05d177ce3d7e3",
+      "actual": "a206c8eb750975c33b977c93a7c0eaae0d30340ccf27e3ca34a05d177ce3d7e3",
+      "matches": true
+    },
+    {
+      "path": "tests/e2r/test_recovery_matched_block.py",
+      "expected": "29b831cec5934806f47df12472bc88e3faf553c312dcb9ebeff3210a29d6f8e6",
+      "actual": "29b831cec5934806f47df12472bc88e3faf553c312dcb9ebeff3210a29d6f8e6",
+      "matches": true
+    },
+    {
+      "path": "tests/test_workload_oracle.py",
+      "expected": "a5978e5f70da148d39e62ef3b2070f79e3db92ff5b432ce772fec317e778881c",
+      "actual": "a5978e5f70da148d39e62ef3b2070f79e3db92ff5b432ce772fec317e778881c",
+      "matches": true
+    },
+    {
+      "path": "scripts/e2r/run_recovery_sanity.py",
+      "expected": "c49e45199958c65284de9e62a4c2bac2a227659d0a46a1ec5f6b73ff0c47a42b",
+      "actual": "c49e45199958c65284de9e62a4c2bac2a227659d0a46a1ec5f6b73ff0c47a42b",
+      "matches": true
+    },
+    {
+      "path": "rca_bench/recovery_oracle.py",
+      "expected": "6e2ac9775e726c5a36adc225cf8a6f11ec2efecd0363095ce476fffd512e9dc4",
+      "actual": "6e2ac9775e726c5a36adc225cf8a6f11ec2efecd0363095ce476fffd512e9dc4",
+      "matches": true
+    },
+    {
+      "path": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/block.json",
+      "expected": "59f875fffb5ffdbc55f823e617ffa18963323d02aa4e0605f27dcf8b72c5d925",
+      "actual": "59f875fffb5ffdbc55f823e617ffa18963323d02aa4e0605f27dcf8b72c5d925",
+      "matches": true
+    },
+    {
+      "path": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/episodes/00_no_action.json",
+      "expected": "ab2ddd9dac089013b11b5e5b97e8a062bb6006985230b1469649113f7c714a0e",
+      "actual": "ab2ddd9dac089013b11b5e5b97e8a062bb6006985230b1469649113f7c714a0e",
+      "matches": true
+    },
+    {
+      "path": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/episodes/01_typed_cleanup.json",
+      "expected": "bb7f73d828bd44eb5fd90e68ded1796d7bffcb46c79c910473de779b0092f00d",
+      "actual": "bb7f73d828bd44eb5fd90e68ded1796d7bffcb46c79c910473de779b0092f00d",
+      "matches": true
+    },
+    {
+      "path": "scripts/e2r/finalize_interrupted_matched_block.py",
+      "expected": "f45bbb9266c70185fa829a169140945bf03230274b844216ace2b394c9ab5268",
+      "actual": "f45bbb9266c70185fa829a169140945bf03230274b844216ace2b394c9ab5268",
+      "matches": true
+    }
+  ],
+  "audited_input_hashes": {
+    "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/block.json": "59f875fffb5ffdbc55f823e617ffa18963323d02aa4e0605f27dcf8b72c5d925",
+    "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/episodes/00_no_action.json": "ab2ddd9dac089013b11b5e5b97e8a062bb6006985230b1469649113f7c714a0e",
+    "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/episodes/01_typed_cleanup.json": "bb7f73d828bd44eb5fd90e68ded1796d7bffcb46c79c910473de779b0092f00d",
+    "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/block.interruption.json": "100b1f4d1e28a06e67a7b0eff0e15b0f45c6c1ad8925a998e7181bb07a64daf4",
+    "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/episodes/01_typed_cleanup.interruption.json": "5f0e12cb8aad3b33dabf5c4ad0c3dd22a36c2fe3bdd469dfe80f80cb4f0f7006",
+    "experiments/e2r/recovery_matched_cpu_protocol_v1.json": "b01798e4174651abf550bfe4f5f7f8d84c48c414e904ad5e26a5f2e8c8e7032d",
+    "experiments/e2r/runs/recovery_baseline_v2/baseline.json": "3957fa90acce446bd248c6e493c2374307454cc96d4644b99ec60fc04b84642d",
+    "experiments/e2r/isolated_boutique.yaml": "9150029373d00e9882b83922071d69c12bcd36b04af5cab16ea90a2caa0882bb",
+    "scripts/e2r/run_recovery_matched_block.py": "0a059ef91220358b4442215dd21b5488b91615a69dfd8338f64b47434d1c06ca",
+    "scripts/e2r/run_recovery_sanity.py": "c49e45199958c65284de9e62a4c2bac2a227659d0a46a1ec5f6b73ff0c47a42b",
+    "scripts/e2r/finalize_interrupted_matched_block.py": "f45bbb9266c70185fa829a169140945bf03230274b844216ace2b394c9ab5268",
+    "scripts/e2r/run_recovery_baseline.py": "080ec0a903b3dffc3f5378c23aed469f78c43f2166acb0c0393088ebe7c1c296",
+    "rca_bench/workload_oracle.py": "a206c8eb750975c33b977c93a7c0eaae0d30340ccf27e3ca34a05d177ce3d7e3",
+    "rca_bench/recovery_oracle.py": "6e2ac9775e726c5a36adc225cf8a6f11ec2efecd0363095ce476fffd512e9dc4",
+    "methods/PlanRCAThinkRemed/safety_guard.py": "d0ac1b465cd3d1d2eff9ecd33936246e5bfc2647199d5ff201d0292cb640233f",
+    "methods/PlanRCAThinkRemed/schemas.py": "6b3db2fe8664b50e84f66b0aadc5aa8758b6a6d316e689a5611d3f868dd7e721",
+    "methods/PlanRCAThinkRemed/playbook_generator_agent.py": "a025ddec725a19c1f958d41f26f537857ac17d0cb1bb7ff1ae1be63705bf4b38",
+    "methods/PlanRCAThinkRemed/repair_planner_agent.py": "892fc9f94cc068079b3df75168e8ed4508e0d67b960e941e7adae82062c61fc3",
+    "tests/e2r/test_recovery_matched_block.py": "29b831cec5934806f47df12472bc88e3faf553c312dcb9ebeff3210a29d6f8e6",
+    "tests/test_workload_oracle.py": "a5978e5f70da148d39e62ef3b2070f79e3db92ff5b432ce772fec317e778881c",
+    "refine-logs/FULL_EXPERIMENT_CODE_REVIEW.md": "5511d98d0e587034ca95bb27d39b6313dc237aa1fe356a34148f2b727275132d",
+    "refine-logs/EXPERIMENT_TRACKER.md": "65e2d192875920628146bc94a03c568937aa4cf0e9514fa9ac447e6cc7372c69",
+    "refine-logs/EXPERIMENT_PLAN.md": "5dfd5aaddc52ffe490220a6b24fabf4263590cedd3c9512c1d638ae5328a01f0",
+    "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/analysis_v1/analysis.json": "dd725f727b7b243ec88160b38a691bb7fd63e6866451ca391409d5c39f40794b",
+    "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/analysis_v1/REPORT.md": "950592e1607a5f89ae71ad7732d059a061b4673fd2847096ef6bf68d25c8be59"
+  },
+  "limits": [
+    "All replay uses stored raw data; no fresh external observations.",
+    "Saved elapsed/clock values and canary booleans cannot be independently measured from absent per-request timestamps/responses.",
+    "Unauthorized proves late scoped read failure; expired token is the executor-reported cause, not derivable solely from stderr.",
+    "No hidden episode/retry exists in audited directory or runner control flow; absence elsewhere is not proven."
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "status": "completed_m2_formal_scoring",
+  "evaluation_type": "real_gt",
+  "campaign": "experiments/e2r/runs/m2_qwen38_formal_v1",
+  "manifest": "experiments/e2r/runs/full_data_v2/manifest.json",
+  "checkpoints": "experiments/e2r/runs/gpu_full_4090d",
+  "checkpoint_sha256": {
+    "model_seed42.pt": "c4895cf287eb11dae65267fdf0e6c53d7053680ec651e3a7066e75baf58889f5",
+    "model_seed43.pt": "5b1486bf9bd8e33d8569170ecc9d79344409e0647062fc6c801ad5661c36b467",
+    "model_seed44.pt": "ce72f2987e5e9514eea28f56c76d2c50e67445dc8746b79006071fa95ecbfb80"
+  },
+  "cases": 108,
+  "generations": 2,
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "prediction_rows": 2916,
+  "row_status": {
+    "ranked": 2666,
+    "failed": 250
+  },
+  "runtime": {
+    "device": "cuda:0",
+    "torch": "2.11.0+cu130",
+    "cuda_runtime": "13.0",
+    "gpu_name": "NVIDIA GeForce RTX 4090 D",
+    "peak_allocated_bytes": 10596352
+  },
+  "limits": [
+    "Frozen patch-trained M1 scorers.",
+    "No recovery action or external baseline is evaluated."
+  ]
+}

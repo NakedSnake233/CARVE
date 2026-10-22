@@ -1,0 +1,160 @@
+{
+  "catalog": [
+    {
+      "id": "op0000",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-station-service-ff96f8f6b-m7brx",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-station-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-station-service-ff96f8f6b-m7brx"
+        ]
+      },
+      "evidence_id": "during:pod:ts-station-service-ff96f8f6b-m7brx",
+      "requires": []
+    },
+    {
+      "id": "op0001",
+      "group": "edge_ops",
+      "operation": {
+        "op": "REMOVE_EDGE",
+        "source": "ts-station-service",
+        "target": "pod:ts-station-service-ff96f8f6b-pt6rh",
+        "evidence": [
+          "topology_diff:ts-station-service->pod:ts-station-service-ff96f8f6b-pt6rh"
+        ]
+      },
+      "evidence_id": "topology_diff:ts-station-service->pod:ts-station-service-ff96f8f6b-pt6rh",
+      "requires": []
+    },
+    {
+      "id": "op0002",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_BLACKHOLE_NODE",
+        "service": "ts-station-service",
+        "attrs": {
+          "type": "blackhole",
+          "service": "ts-station-service"
+        },
+        "evidence": [
+          "empty_endpoint:ts-station-service"
+        ]
+      },
+      "evidence_id": "empty_endpoint:ts-station-service",
+      "requires": []
+    },
+    {
+      "id": "op0003",
+      "group": "node_ops",
+      "operation": {
+        "op": "ALIGN_NODE",
+        "old_node": "pod:ts-station-service-ff96f8f6b-pt6rh",
+        "new_node": "pod:ts-station-service-ff96f8f6b-m7brx",
+        "service": "ts-station-service",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-station-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "identity_change:ts-station-service"
+        ]
+      },
+      "evidence_id": "identity_change:ts-station-service",
+      "requires": []
+    }
+  ],
+  "plan": {
+    "experiment_id": "case00324",
+    "change_type": "observation_supported_updates",
+    "confidence": 0.0,
+    "causal_role": "not_inferred",
+    "node_ops": [
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-station-service-ff96f8f6b-m7brx",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-station-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-station-service-ff96f8f6b-m7brx"
+        ]
+      },
+      {
+        "op": "ADD_BLACKHOLE_NODE",
+        "node_id": "",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "ts-station-service",
+        "version": "",
+        "attrs": {
+          "type": "blackhole",
+          "service": "ts-station-service"
+        },
+        "evidence": [
+          "empty_endpoint:ts-station-service"
+        ]
+      },
+      {
+        "op": "ALIGN_NODE",
+        "node_id": "",
+        "old_node": "pod:ts-station-service-ff96f8f6b-pt6rh",
+        "new_node": "pod:ts-station-service-ff96f8f6b-m7brx",
+        "parent": "",
+        "children": [],
+        "service": "ts-station-service",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-station-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "identity_change:ts-station-service"
+        ]
+      }
+    ],
+    "edge_ops": [
+      {
+        "op": "REMOVE_EDGE",
+        "source": "ts-station-service",
+        "target": "pod:ts-station-service-ff96f8f6b-pt6rh",
+        "old_source": "ts-station-service",
+        "old_target": "pod:ts-station-service-ff96f8f6b-pt6rh",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": null,
+        "attrs": {},
+        "evidence": [
+          "topology_diff:ts-station-service->pod:ts-station-service-ff96f8f6b-pt6rh"
+        ]
+      }
+    ],
+    "weight_ops": [],
+    "state_transfer": {},
+    "evidence": [
+      "during:pod:ts-station-service-ff96f8f6b-m7brx",
+      "topology_diff:ts-station-service->pod:ts-station-service-ff96f8f6b-pt6rh",
+      "empty_endpoint:ts-station-service",
+      "identity_change:ts-station-service"
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "skill": "experiment-audit",
+  "run_id": "20260926_b2_b3",
+  "executor": "codex",
+  "executor_model": "gpt-6-astra",
+  "executor_family": "openai",
+  "reviewer_model": "gpt-6-astra",
+  "reviewer_family": "openai",
+  "reviewer_reasoning": "ultra",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "project_dir": "${PROJECT_ROOT}",
+  "trace_saved_at": "2026-09-26T14:20:59.627560+00:00",
+  "start_timestamp_unavailable": true,
+  "metadata_note": "Parent confirmed reviewer spawn model=gpt-6-astra, reasoning_effort=ultra, fork_turns=none. Exact spawn timestamp/duration unavailable to reviewer.",
+  "call_number": 1,
+  "purpose": "b2-b3-integrity-review",
+  "agent_id": "/root/b2_b3_result_audit",
+  "status": "ok"
+}

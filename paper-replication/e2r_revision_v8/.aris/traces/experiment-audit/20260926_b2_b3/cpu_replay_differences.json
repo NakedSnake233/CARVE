@@ -1,0 +1,6812 @@
+[
+  {
+    "component": "formal",
+    "case_id": "case00115",
+    "seed": 42,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00115",
+    "seed": 43,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00115",
+    "seed": 44,
+    "arm": "reference",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00115",
+    "seed": 42,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00115",
+    "seed": 43,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00115",
+    "seed": 44,
+    "arm": "runtime",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00115",
+    "seed": 42,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00115",
+    "seed": 43,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00115",
+    "seed": 44,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00115",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00115",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00115",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00115",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00115",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00115",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00533",
+    "seed": 42,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 54,
+    "cpu_rank": 55,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00533",
+    "seed": 43,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 54,
+    "cpu_rank": 55,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00533",
+    "seed": 44,
+    "arm": "reference",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 54,
+    "cpu_rank": 55,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00533",
+    "seed": 42,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 54,
+    "cpu_rank": 55,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00533",
+    "seed": 43,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 54,
+    "cpu_rank": 55,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00533",
+    "seed": 44,
+    "arm": "runtime",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 54,
+    "cpu_rank": 55,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00533",
+    "seed": 42,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 54,
+    "cpu_rank": 55,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00533",
+    "seed": 43,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 54,
+    "cpu_rank": 55,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00533",
+    "seed": 44,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 54,
+    "cpu_rank": 55,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00533",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 54,
+    "cpu_rank": 55,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00533",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 54,
+    "cpu_rank": 55,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00533",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 54,
+    "cpu_rank": 55,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00533",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 54,
+    "cpu_rank": 55,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00533",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 54,
+    "cpu_rank": 55,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00533",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 54,
+    "cpu_rank": 55,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00321",
+    "seed": 42,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00321",
+    "seed": 43,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00321",
+    "seed": 44,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00321",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00321",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 3,
+    "cpu_rank": 3,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00321",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00321",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00321",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 3,
+    "cpu_rank": 3,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00321",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00790",
+    "seed": 42,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00790",
+    "seed": 43,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00790",
+    "seed": 44,
+    "arm": "reference",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00790",
+    "seed": 42,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00790",
+    "seed": 43,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00790",
+    "seed": 44,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00790",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00790",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00790",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00275",
+    "seed": 42,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00275",
+    "seed": 43,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00275",
+    "seed": 44,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00275",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00275",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 3,
+    "cpu_rank": 3,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00275",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00275",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00275",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00275",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00199",
+    "seed": 42,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00199",
+    "seed": 43,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00199",
+    "seed": 44,
+    "arm": "reference",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00199",
+    "seed": 42,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00199",
+    "seed": 43,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00199",
+    "seed": 44,
+    "arm": "runtime",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00472",
+    "seed": 42,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 36,
+    "cpu_rank": 38,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00472",
+    "seed": 43,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 36,
+    "cpu_rank": 38,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00472",
+    "seed": 44,
+    "arm": "reference",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 36,
+    "cpu_rank": 38,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00472",
+    "seed": 42,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 36,
+    "cpu_rank": 37,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00472",
+    "seed": 43,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 36,
+    "cpu_rank": 37,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00472",
+    "seed": 44,
+    "arm": "runtime",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 36,
+    "cpu_rank": 37,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00472",
+    "seed": 42,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 36,
+    "cpu_rank": 37,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00472",
+    "seed": 43,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 36,
+    "cpu_rank": 37,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00472",
+    "seed": 44,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 36,
+    "cpu_rank": 37,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00472",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 36,
+    "cpu_rank": 37,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00472",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 36,
+    "cpu_rank": 37,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00472",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 36,
+    "cpu_rank": 37,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00472",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 36,
+    "cpu_rank": 37,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00472",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 36,
+    "cpu_rank": 37,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00472",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 36,
+    "cpu_rank": 37,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00758",
+    "seed": 42,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00758",
+    "seed": 43,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00758",
+    "seed": 44,
+    "arm": "reference",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00758",
+    "seed": 42,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00758",
+    "seed": 43,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00758",
+    "seed": 44,
+    "arm": "runtime",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00758",
+    "seed": 42,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00758",
+    "seed": 43,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00758",
+    "seed": 44,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00758",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00758",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00758",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00758",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00758",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00758",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00120",
+    "seed": 42,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00120",
+    "seed": 43,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00120",
+    "seed": 44,
+    "arm": "reference",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00120",
+    "seed": 42,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00120",
+    "seed": 43,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00120",
+    "seed": 44,
+    "arm": "runtime",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00120",
+    "seed": 42,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00120",
+    "seed": 43,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00120",
+    "seed": 44,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00120",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00120",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00120",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00120",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00120",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00120",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00539",
+    "seed": 42,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 54,
+    "cpu_rank": 56,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00539",
+    "seed": 43,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 54,
+    "cpu_rank": 56,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00539",
+    "seed": 44,
+    "arm": "reference",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 54,
+    "cpu_rank": 56,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00539",
+    "seed": 42,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 54,
+    "cpu_rank": 56,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00539",
+    "seed": 43,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 54,
+    "cpu_rank": 56,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00539",
+    "seed": 44,
+    "arm": "runtime",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 54,
+    "cpu_rank": 56,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00539",
+    "seed": 42,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00539",
+    "seed": 43,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00539",
+    "seed": 44,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00539",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00539",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00539",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00539",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00539",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00539",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00728",
+    "seed": 42,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 65,
+    "cpu_rank": 65,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00728",
+    "seed": 43,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 5,
+    "cpu_rank": 5,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00728",
+    "seed": 44,
+    "arm": "reference",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 65,
+    "cpu_rank": 65,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00728",
+    "seed": 42,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 65,
+    "cpu_rank": 65,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00728",
+    "seed": 43,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 5,
+    "cpu_rank": 5,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00728",
+    "seed": 44,
+    "arm": "runtime",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 65,
+    "cpu_rank": 65,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00728",
+    "seed": 42,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00728",
+    "seed": 43,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00728",
+    "seed": 44,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00728",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00728",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00728",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00728",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00728",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00728",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00283",
+    "seed": 42,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00283",
+    "seed": 43,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00283",
+    "seed": 44,
+    "arm": "reference",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00283",
+    "seed": 42,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00283",
+    "seed": 43,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00283",
+    "seed": 44,
+    "arm": "runtime",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00283",
+    "seed": 42,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00283",
+    "seed": 43,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00283",
+    "seed": 44,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00283",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00283",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00283",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00283",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00283",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00283",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00110",
+    "seed": 42,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00110",
+    "seed": 43,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00110",
+    "seed": 44,
+    "arm": "reference",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00110",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00110",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00110",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00513",
+    "seed": 42,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 51,
+    "cpu_rank": 52,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00513",
+    "seed": 43,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 51,
+    "cpu_rank": 52,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00513",
+    "seed": 44,
+    "arm": "reference",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 51,
+    "cpu_rank": 52,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00513",
+    "seed": 42,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 51,
+    "cpu_rank": 52,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00513",
+    "seed": 43,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 51,
+    "cpu_rank": 52,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00513",
+    "seed": 44,
+    "arm": "runtime",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 51,
+    "cpu_rank": 52,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00513",
+    "seed": 42,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 51,
+    "cpu_rank": 52,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00513",
+    "seed": 43,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 51,
+    "cpu_rank": 52,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00513",
+    "seed": 44,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 51,
+    "cpu_rank": 52,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00513",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 51,
+    "cpu_rank": 52,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00513",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 51,
+    "cpu_rank": 52,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00513",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 51,
+    "cpu_rank": 52,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00513",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 51,
+    "cpu_rank": 52,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00513",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 51,
+    "cpu_rank": 52,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00513",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 51,
+    "cpu_rank": 52,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00724",
+    "seed": 42,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 3,
+    "cpu_rank": 3,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00724",
+    "seed": 43,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 3,
+    "cpu_rank": 3,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00724",
+    "seed": 44,
+    "arm": "runtime",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 3,
+    "cpu_rank": 3,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00724",
+    "seed": 42,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00724",
+    "seed": 43,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00724",
+    "seed": 44,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00724",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 3,
+    "cpu_rank": 3,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00724",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 3,
+    "cpu_rank": 3,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00724",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 3,
+    "cpu_rank": 3,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00724",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 3,
+    "cpu_rank": 3,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00724",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 3,
+    "cpu_rank": 3,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00724",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 3,
+    "cpu_rank": 3,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00330",
+    "seed": 42,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00330",
+    "seed": 43,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00330",
+    "seed": 44,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00330",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00330",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00330",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00330",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00330",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00330",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00300",
+    "seed": 42,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00300",
+    "seed": 43,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00300",
+    "seed": 44,
+    "arm": "reference",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00300",
+    "seed": 42,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00300",
+    "seed": 43,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00300",
+    "seed": 44,
+    "arm": "runtime",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00300",
+    "seed": 42,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00300",
+    "seed": 43,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00300",
+    "seed": 44,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00300",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00300",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00300",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00300",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00300",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00300",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00756",
+    "seed": 42,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 3,
+    "cpu_rank": 3,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00756",
+    "seed": 43,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 3,
+    "cpu_rank": 3,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00756",
+    "seed": 44,
+    "arm": "reference",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 3,
+    "cpu_rank": 3,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00756",
+    "seed": 42,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00756",
+    "seed": 43,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00756",
+    "seed": 44,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00756",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00756",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00756",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00756",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00756",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00756",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00504",
+    "seed": 42,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 45,
+    "cpu_rank": 46,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00504",
+    "seed": 43,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 45,
+    "cpu_rank": 46,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00504",
+    "seed": 44,
+    "arm": "reference",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 45,
+    "cpu_rank": 46,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00504",
+    "seed": 42,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 45,
+    "cpu_rank": 46,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00504",
+    "seed": 43,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 45,
+    "cpu_rank": 46,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00504",
+    "seed": 44,
+    "arm": "runtime",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 45,
+    "cpu_rank": 46,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00504",
+    "seed": 42,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00504",
+    "seed": 43,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00504",
+    "seed": 44,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00504",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00504",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00504",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00504",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00504",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00504",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00155",
+    "seed": 42,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00155",
+    "seed": 43,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00155",
+    "seed": 44,
+    "arm": "runtime",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00155",
+    "seed": 42,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00155",
+    "seed": 43,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00155",
+    "seed": 44,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00155",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00155",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00155",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00155",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00155",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00155",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00697",
+    "seed": 42,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 65,
+    "cpu_rank": 65,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00697",
+    "seed": 43,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 5,
+    "cpu_rank": 5,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00697",
+    "seed": 44,
+    "arm": "reference",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 65,
+    "cpu_rank": 65,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00697",
+    "seed": 42,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 65,
+    "cpu_rank": 65,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00697",
+    "seed": 43,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 5,
+    "cpu_rank": 5,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00697",
+    "seed": 44,
+    "arm": "runtime",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 65,
+    "cpu_rank": 65,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00697",
+    "seed": 42,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00697",
+    "seed": 43,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00697",
+    "seed": 44,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00697",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 65,
+    "cpu_rank": 65,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00697",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 5,
+    "cpu_rank": 5,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00697",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 65,
+    "cpu_rank": 65,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00697",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 65,
+    "cpu_rank": 65,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00697",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 5,
+    "cpu_rank": 5,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00697",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 65,
+    "cpu_rank": 65,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00341",
+    "seed": 42,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00341",
+    "seed": 43,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00341",
+    "seed": 44,
+    "arm": "reference",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00341",
+    "seed": 42,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00341",
+    "seed": 43,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00341",
+    "seed": 44,
+    "arm": "runtime",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00341",
+    "seed": 42,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00341",
+    "seed": 43,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00341",
+    "seed": 44,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00102",
+    "seed": 42,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00102",
+    "seed": 43,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00102",
+    "seed": 44,
+    "arm": "runtime",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00102",
+    "seed": 42,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00102",
+    "seed": 43,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00102",
+    "seed": 44,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00501",
+    "seed": 42,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 47,
+    "cpu_rank": 49,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00501",
+    "seed": 43,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 47,
+    "cpu_rank": 49,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00501",
+    "seed": 44,
+    "arm": "reference",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 47,
+    "cpu_rank": 49,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00501",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00501",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00501",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00315",
+    "seed": 42,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00315",
+    "seed": 43,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 3,
+    "cpu_rank": 3,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00315",
+    "seed": 44,
+    "arm": "reference",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00315",
+    "seed": 42,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00315",
+    "seed": 43,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 3,
+    "cpu_rank": 3,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00315",
+    "seed": 44,
+    "arm": "runtime",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00450",
+    "seed": 42,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 12,
+    "cpu_rank": 13,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00450",
+    "seed": 43,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 12,
+    "cpu_rank": 13,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00450",
+    "seed": 44,
+    "arm": "reference",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 12,
+    "cpu_rank": 13,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00450",
+    "seed": 42,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 12,
+    "cpu_rank": 13,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00450",
+    "seed": 43,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 12,
+    "cpu_rank": 13,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00450",
+    "seed": 44,
+    "arm": "runtime",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 12,
+    "cpu_rank": 13,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00450",
+    "seed": 42,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 12,
+    "cpu_rank": 13,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00450",
+    "seed": 43,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 12,
+    "cpu_rank": 13,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00450",
+    "seed": 44,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 12,
+    "cpu_rank": 13,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00450",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 12,
+    "cpu_rank": 13,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00450",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 12,
+    "cpu_rank": 13,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00450",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 12,
+    "cpu_rank": 13,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00450",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 12,
+    "cpu_rank": 13,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00450",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 12,
+    "cpu_rank": 13,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00450",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 12,
+    "cpu_rank": 13,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00148",
+    "seed": 42,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00148",
+    "seed": 43,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00148",
+    "seed": 44,
+    "arm": "reference",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00148",
+    "seed": 42,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00148",
+    "seed": 43,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00148",
+    "seed": 44,
+    "arm": "runtime",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00148",
+    "seed": 42,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00148",
+    "seed": 43,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00148",
+    "seed": 44,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00148",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00148",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00148",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00148",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00148",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00148",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00753",
+    "seed": 42,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00753",
+    "seed": 43,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00753",
+    "seed": 44,
+    "arm": "reference",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00753",
+    "seed": 42,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00753",
+    "seed": 43,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00753",
+    "seed": 44,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00746",
+    "seed": 42,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 65,
+    "cpu_rank": 65,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00746",
+    "seed": 43,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 5,
+    "cpu_rank": 5,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00746",
+    "seed": 44,
+    "arm": "reference",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 65,
+    "cpu_rank": 65,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00746",
+    "seed": 42,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 65,
+    "cpu_rank": 65,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00746",
+    "seed": 43,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 5,
+    "cpu_rank": 5,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00746",
+    "seed": 44,
+    "arm": "runtime",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 65,
+    "cpu_rank": 65,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00746",
+    "seed": 42,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00746",
+    "seed": 43,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00746",
+    "seed": 44,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00746",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00746",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00746",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00746",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00746",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00746",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00171",
+    "seed": 42,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00171",
+    "seed": 43,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00171",
+    "seed": 44,
+    "arm": "reference",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00171",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00171",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00171",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00171",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00171",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00171",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00317",
+    "seed": 42,
+    "arm": "reference",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00317",
+    "seed": 43,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 4,
+    "cpu_rank": 4,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00317",
+    "seed": 44,
+    "arm": "reference",
+    "max_saved_order_inversion": 3.5762786865234375e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00317",
+    "seed": 42,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00317",
+    "seed": 43,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 4,
+    "cpu_rank": 4,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00317",
+    "seed": 44,
+    "arm": "runtime",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00317",
+    "seed": 42,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00317",
+    "seed": 43,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00317",
+    "seed": 44,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00317",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00317",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00317",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 3.5762786865234375e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00317",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00317",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00317",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 3.5762786865234375e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00541",
+    "seed": 42,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 54,
+    "cpu_rank": 55,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00541",
+    "seed": 43,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 54,
+    "cpu_rank": 55,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00541",
+    "seed": 44,
+    "arm": "runtime",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 54,
+    "cpu_rank": 55,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00541",
+    "seed": 42,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00541",
+    "seed": 43,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00541",
+    "seed": 44,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00541",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00541",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00541",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00541",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 54,
+    "cpu_rank": 55,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00541",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 54,
+    "cpu_rank": 55,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00541",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 54,
+    "cpu_rank": 55,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00189",
+    "seed": 42,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00189",
+    "seed": 43,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00189",
+    "seed": 44,
+    "arm": "reference",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00189",
+    "seed": 42,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00189",
+    "seed": 43,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00189",
+    "seed": 44,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00189",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00189",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00189",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00189",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00189",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00189",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00313",
+    "seed": 42,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00313",
+    "seed": 43,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00313",
+    "seed": 44,
+    "arm": "reference",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00313",
+    "seed": 42,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00313",
+    "seed": 43,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00313",
+    "seed": 44,
+    "arm": "runtime",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00733",
+    "seed": 42,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 65,
+    "cpu_rank": 65,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00733",
+    "seed": 43,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 5,
+    "cpu_rank": 5,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00733",
+    "seed": 44,
+    "arm": "reference",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 65,
+    "cpu_rank": 65,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00733",
+    "seed": 42,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00733",
+    "seed": 43,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00733",
+    "seed": 44,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00733",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00733",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00733",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00175",
+    "seed": 42,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00175",
+    "seed": 43,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00175",
+    "seed": 44,
+    "arm": "reference",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00175",
+    "seed": 42,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00175",
+    "seed": 43,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00175",
+    "seed": 44,
+    "arm": "runtime",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00175",
+    "seed": 42,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00175",
+    "seed": 43,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00175",
+    "seed": 44,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00175",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00175",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00175",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00175",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00175",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00175",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00468",
+    "seed": 42,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00468",
+    "seed": 43,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00468",
+    "seed": 44,
+    "arm": "runtime",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 3,
+    "cpu_rank": 3,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00468",
+    "seed": 42,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00468",
+    "seed": 43,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00468",
+    "seed": 44,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00343",
+    "seed": 42,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 3,
+    "cpu_rank": 3,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00343",
+    "seed": 43,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 5,
+    "cpu_rank": 5,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00343",
+    "seed": 44,
+    "arm": "reference",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00343",
+    "seed": 42,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 3,
+    "cpu_rank": 3,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00343",
+    "seed": 43,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 5,
+    "cpu_rank": 5,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00343",
+    "seed": 44,
+    "arm": "runtime",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00343",
+    "seed": 42,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00343",
+    "seed": 43,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00343",
+    "seed": 44,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00343",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00343",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00343",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00343",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00343",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00343",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00677",
+    "seed": 42,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 65,
+    "cpu_rank": 65,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00677",
+    "seed": 43,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00677",
+    "seed": 44,
+    "arm": "reference",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 65,
+    "cpu_rank": 65,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00677",
+    "seed": 42,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00677",
+    "seed": 43,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00677",
+    "seed": 44,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00677",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00677",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00677",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00677",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00677",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00677",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00691",
+    "seed": 42,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 65,
+    "cpu_rank": 65,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00691",
+    "seed": 43,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 4,
+    "cpu_rank": 4,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00691",
+    "seed": 44,
+    "arm": "runtime",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 65,
+    "cpu_rank": 65,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00691",
+    "seed": 42,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00691",
+    "seed": 43,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00691",
+    "seed": 44,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00691",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00691",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00691",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00691",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 65,
+    "cpu_rank": 65,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00691",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 4,
+    "cpu_rank": 4,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00691",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 65,
+    "cpu_rank": 65,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00478",
+    "seed": 42,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 4,
+    "cpu_rank": 4,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00478",
+    "seed": 43,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 4,
+    "cpu_rank": 4,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00478",
+    "seed": 44,
+    "arm": "reference",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 4,
+    "cpu_rank": 4,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00478",
+    "seed": 42,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 5,
+    "cpu_rank": 5,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00478",
+    "seed": 43,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 5,
+    "cpu_rank": 5,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00478",
+    "seed": 44,
+    "arm": "runtime",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 4,
+    "cpu_rank": 4,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00478",
+    "seed": 42,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00478",
+    "seed": 43,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00478",
+    "seed": 44,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00478",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00478",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00478",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00478",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00478",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00478",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00170",
+    "seed": 42,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00170",
+    "seed": 43,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00170",
+    "seed": 44,
+    "arm": "reference",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00170",
+    "seed": 42,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00170",
+    "seed": 43,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00170",
+    "seed": 44,
+    "arm": "runtime",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00170",
+    "seed": 42,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00170",
+    "seed": 43,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00170",
+    "seed": 44,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00170",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00170",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00170",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00170",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00170",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00170",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00684",
+    "seed": 42,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 65,
+    "cpu_rank": 65,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00684",
+    "seed": 43,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 4,
+    "cpu_rank": 4,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00684",
+    "seed": 44,
+    "arm": "reference",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 65,
+    "cpu_rank": 65,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00684",
+    "seed": 42,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 65,
+    "cpu_rank": 65,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00684",
+    "seed": 43,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 4,
+    "cpu_rank": 4,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00684",
+    "seed": 44,
+    "arm": "runtime",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 65,
+    "cpu_rank": 65,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00481",
+    "seed": 42,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00481",
+    "seed": 43,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00481",
+    "seed": 44,
+    "arm": "reference",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00481",
+    "seed": 42,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00481",
+    "seed": 43,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00481",
+    "seed": 44,
+    "arm": "runtime",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00481",
+    "seed": 42,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00481",
+    "seed": 43,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00481",
+    "seed": 44,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00481",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00481",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00481",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00481",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00481",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00481",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00191",
+    "seed": 42,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00191",
+    "seed": 43,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00191",
+    "seed": 44,
+    "arm": "reference",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00191",
+    "seed": 42,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00191",
+    "seed": 43,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00191",
+    "seed": 44,
+    "arm": "runtime",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00191",
+    "seed": 42,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00191",
+    "seed": 43,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00191",
+    "seed": 44,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00191",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00191",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00191",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00191",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00191",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00191",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00749",
+    "seed": 42,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 65,
+    "cpu_rank": 65,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00749",
+    "seed": 43,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00749",
+    "seed": 44,
+    "arm": "reference",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 65,
+    "cpu_rank": 65,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00749",
+    "seed": 42,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 65,
+    "cpu_rank": 65,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00749",
+    "seed": 43,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00749",
+    "seed": 44,
+    "arm": "runtime",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 65,
+    "cpu_rank": 65,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00749",
+    "seed": 42,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00749",
+    "seed": 43,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00749",
+    "seed": 44,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00749",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 65,
+    "cpu_rank": 65,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00749",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00749",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 65,
+    "cpu_rank": 65,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00749",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00749",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00749",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00538",
+    "seed": 42,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 54,
+    "cpu_rank": 55,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00538",
+    "seed": 43,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 54,
+    "cpu_rank": 55,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00538",
+    "seed": 44,
+    "arm": "reference",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 54,
+    "cpu_rank": 55,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00538",
+    "seed": 42,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 54,
+    "cpu_rank": 55,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00538",
+    "seed": 43,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 54,
+    "cpu_rank": 55,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00538",
+    "seed": 44,
+    "arm": "runtime",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 54,
+    "cpu_rank": 55,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00538",
+    "seed": 42,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00538",
+    "seed": 43,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00538",
+    "seed": 44,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00538",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 54,
+    "cpu_rank": 55,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00538",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 54,
+    "cpu_rank": 55,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00538",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 54,
+    "cpu_rank": 55,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00538",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00538",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00538",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00172",
+    "seed": 42,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00172",
+    "seed": 43,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00172",
+    "seed": 44,
+    "arm": "reference",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00172",
+    "seed": 42,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00172",
+    "seed": 43,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00172",
+    "seed": 44,
+    "arm": "runtime",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00172",
+    "seed": 42,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00172",
+    "seed": 43,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00172",
+    "seed": 44,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00172",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00172",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00172",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00172",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00172",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00172",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00680",
+    "seed": 42,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 65,
+    "cpu_rank": 65,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00680",
+    "seed": 43,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 5,
+    "cpu_rank": 5,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00680",
+    "seed": 44,
+    "arm": "reference",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 65,
+    "cpu_rank": 65,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00680",
+    "seed": 42,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 65,
+    "cpu_rank": 65,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00680",
+    "seed": 43,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 5,
+    "cpu_rank": 5,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00680",
+    "seed": 44,
+    "arm": "runtime",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 65,
+    "cpu_rank": 65,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00680",
+    "seed": 42,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00680",
+    "seed": 43,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00680",
+    "seed": 44,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00680",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 65,
+    "cpu_rank": 65,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00680",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 5,
+    "cpu_rank": 5,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00680",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 65,
+    "cpu_rank": 65,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00680",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 65,
+    "cpu_rank": 65,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00680",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 5,
+    "cpu_rank": 5,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00680",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 65,
+    "cpu_rank": 65,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00784",
+    "seed": 42,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00784",
+    "seed": 43,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00784",
+    "seed": 44,
+    "arm": "reference",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00784",
+    "seed": 42,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00784",
+    "seed": 43,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00784",
+    "seed": 44,
+    "arm": "runtime",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00784",
+    "seed": 42,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00784",
+    "seed": 43,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00784",
+    "seed": 44,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00784",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00784",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00784",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00784",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00784",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00784",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00796",
+    "seed": 42,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 4,
+    "cpu_rank": 4,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00796",
+    "seed": 43,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 4,
+    "cpu_rank": 4,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00796",
+    "seed": 44,
+    "arm": "reference",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 4,
+    "cpu_rank": 4,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00796",
+    "seed": 42,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00796",
+    "seed": 43,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00796",
+    "seed": 44,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00796",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00796",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00796",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00707",
+    "seed": 42,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 3,
+    "cpu_rank": 3,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00707",
+    "seed": 43,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 3,
+    "cpu_rank": 3,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00707",
+    "seed": 44,
+    "arm": "reference",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 3,
+    "cpu_rank": 3,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00707",
+    "seed": 42,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 3,
+    "cpu_rank": 3,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00707",
+    "seed": 43,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 3,
+    "cpu_rank": 3,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00707",
+    "seed": 44,
+    "arm": "runtime",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 3,
+    "cpu_rank": 3,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00707",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 3,
+    "cpu_rank": 3,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00707",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 3,
+    "cpu_rank": 3,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00707",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 3,
+    "cpu_rank": 3,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00707",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 3,
+    "cpu_rank": 3,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00707",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 3,
+    "cpu_rank": 3,
+    "ac_changed": false
+  },
+  {
+    "component": "formal",
+    "case_id": "case00707",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 3,
+    "cpu_rank": 3,
+    "ac_changed": false
+  },
+  {
+    "component": "pilot",
+    "case_id": "case00290",
+    "seed": 42,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "pilot",
+    "case_id": "case00290",
+    "seed": 43,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 3,
+    "cpu_rank": 3,
+    "ac_changed": false
+  },
+  {
+    "component": "pilot",
+    "case_id": "case00290",
+    "seed": 44,
+    "arm": "reference",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "pilot",
+    "case_id": "case00290",
+    "seed": 42,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "pilot",
+    "case_id": "case00290",
+    "seed": 43,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 3,
+    "cpu_rank": 3,
+    "ac_changed": false
+  },
+  {
+    "component": "pilot",
+    "case_id": "case00290",
+    "seed": 44,
+    "arm": "runtime",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "pilot",
+    "case_id": "case00290",
+    "seed": 42,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "pilot",
+    "case_id": "case00290",
+    "seed": 43,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 3,
+    "cpu_rank": 3,
+    "ac_changed": false
+  },
+  {
+    "component": "pilot",
+    "case_id": "case00290",
+    "seed": 44,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "pilot",
+    "case_id": "case00290",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "pilot",
+    "case_id": "case00290",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 3,
+    "cpu_rank": 3,
+    "ac_changed": false
+  },
+  {
+    "component": "pilot",
+    "case_id": "case00290",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "pilot",
+    "case_id": "case00290",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "pilot",
+    "case_id": "case00290",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 3,
+    "cpu_rank": 3,
+    "ac_changed": false
+  },
+  {
+    "component": "pilot",
+    "case_id": "case00290",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 2,
+    "cpu_rank": 2,
+    "ac_changed": false
+  },
+  {
+    "component": "pilot",
+    "case_id": "case00499",
+    "seed": 42,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 47,
+    "cpu_rank": 49,
+    "ac_changed": false
+  },
+  {
+    "component": "pilot",
+    "case_id": "case00499",
+    "seed": 43,
+    "arm": "reference",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 47,
+    "cpu_rank": 49,
+    "ac_changed": false
+  },
+  {
+    "component": "pilot",
+    "case_id": "case00499",
+    "seed": 44,
+    "arm": "reference",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 47,
+    "cpu_rank": 49,
+    "ac_changed": false
+  },
+  {
+    "component": "pilot",
+    "case_id": "case00499",
+    "seed": 42,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 47,
+    "cpu_rank": 49,
+    "ac_changed": false
+  },
+  {
+    "component": "pilot",
+    "case_id": "case00499",
+    "seed": 43,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 47,
+    "cpu_rank": 49,
+    "ac_changed": false
+  },
+  {
+    "component": "pilot",
+    "case_id": "case00499",
+    "seed": 44,
+    "arm": "runtime",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 47,
+    "cpu_rank": 49,
+    "ac_changed": false
+  },
+  {
+    "component": "pilot",
+    "case_id": "case00499",
+    "seed": 42,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "pilot",
+    "case_id": "case00499",
+    "seed": 43,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "pilot",
+    "case_id": "case00499",
+    "seed": 44,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "pilot",
+    "case_id": "case00499",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 47,
+    "cpu_rank": 49,
+    "ac_changed": false
+  },
+  {
+    "component": "pilot",
+    "case_id": "case00499",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 47,
+    "cpu_rank": 49,
+    "ac_changed": false
+  },
+  {
+    "component": "pilot",
+    "case_id": "case00499",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 47,
+    "cpu_rank": 49,
+    "ac_changed": false
+  },
+  {
+    "component": "pilot",
+    "case_id": "case00499",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 47,
+    "cpu_rank": 49,
+    "ac_changed": false
+  },
+  {
+    "component": "pilot",
+    "case_id": "case00499",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 47,
+    "cpu_rank": 49,
+    "ac_changed": false
+  },
+  {
+    "component": "pilot",
+    "case_id": "case00499",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 47,
+    "cpu_rank": 49,
+    "ac_changed": false
+  },
+  {
+    "component": "pilot",
+    "case_id": "case00105",
+    "seed": 42,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "pilot",
+    "case_id": "case00105",
+    "seed": 43,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "pilot",
+    "case_id": "case00105",
+    "seed": 44,
+    "arm": "runtime",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "pilot",
+    "case_id": "case00105",
+    "seed": 42,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "pilot",
+    "case_id": "case00105",
+    "seed": 43,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "pilot",
+    "case_id": "case00105",
+    "seed": 44,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "pilot",
+    "case_id": "case00105",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "pilot",
+    "case_id": "case00105",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "pilot",
+    "case_id": "case00105",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "pilot",
+    "case_id": "case00105",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "pilot",
+    "case_id": "case00105",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "pilot",
+    "case_id": "case00105",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "pilot",
+    "case_id": "case00742",
+    "seed": 42,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 65,
+    "cpu_rank": 65,
+    "ac_changed": false
+  },
+  {
+    "component": "pilot",
+    "case_id": "case00742",
+    "seed": 43,
+    "arm": "runtime",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 4,
+    "cpu_rank": 4,
+    "ac_changed": false
+  },
+  {
+    "component": "pilot",
+    "case_id": "case00742",
+    "seed": 44,
+    "arm": "runtime",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 65,
+    "cpu_rank": 65,
+    "ac_changed": false
+  },
+  {
+    "component": "pilot",
+    "case_id": "case00742",
+    "seed": 42,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "pilot",
+    "case_id": "case00742",
+    "seed": 43,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "pilot",
+    "case_id": "case00742",
+    "seed": 44,
+    "arm": "rule_patch",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "pilot",
+    "case_id": "case00742",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 65,
+    "cpu_rank": 65,
+    "ac_changed": false
+  },
+  {
+    "component": "pilot",
+    "case_id": "case00742",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.043081283569336e-07,
+    "saved_rank": 4,
+    "cpu_rank": 4,
+    "ac_changed": false
+  },
+  {
+    "component": "pilot",
+    "case_id": "case00742",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 65,
+    "cpu_rank": 65,
+    "ac_changed": false
+  },
+  {
+    "component": "pilot",
+    "case_id": "case00742",
+    "seed": 42,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "pilot",
+    "case_id": "case00742",
+    "seed": 43,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 1.1920928955078125e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  },
+  {
+    "component": "pilot",
+    "case_id": "case00742",
+    "seed": 44,
+    "arm": "llm_patch_with_fallback",
+    "max_saved_order_inversion": 2.384185791015625e-07,
+    "saved_rank": 1,
+    "cpu_rank": 1,
+    "ac_changed": false
+  }
+]

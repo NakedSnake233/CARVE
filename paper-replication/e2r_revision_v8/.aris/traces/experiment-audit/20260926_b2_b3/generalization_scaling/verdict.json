@@ -1,0 +1,31 @@
+{
+  "reviewer_independence": "same-family/provisional; primary artifacts directly inspected",
+  "generalization": {
+    "verdict": "WARN",
+    "arithmetic_identity_status": "PASS",
+    "actual_leakage_findings": [],
+    "caveats": [
+      "Historical remote bytes not bound by per-run hashes",
+      "Near-tie CPU/GPU ranking differences: 499 full rankings, 70 true ranks overall; six patch true ranks, all patch AC@k unchanged",
+      "LOFO original fixed-test subsets and controlled templates only; two cross-app directions confound telemetry availability"
+    ],
+    "warranted_claim": "Three-seed patch-trained localization scores on scenario/application restrictions of one controlled recorded dataset; no broad robustness, LLM or recovery claim"
+  },
+  "scaling": {
+    "verdict": "WARN",
+    "arithmetic_fixture_status": "PASS",
+    "caveats": [
+      "CPU/GPU environments differ and scaling hardware/thread identity is not persisted",
+      "p95 is lower order statistic ninth of ten",
+      "Timing pipeline is a sum of five code segments and repeats catalog construction",
+      "Disconnected copies of one graph; extra telemetry is ignored by extractor; no accuracy/recovery test"
+    ],
+    "warranted_claim": "Observed implementation overhead in two saved environments over 20 replicated-graph fixtures \u00d7 ten repetitions each"
+  },
+  "forensic_checks_failed": [],
+  "report": "REVIEW.md",
+  "script": "forensic_audit.py",
+  "output": "forensic_output.json",
+  "hash_inventory": "sha256_inventory.json",
+  "input_fingerprints": "input_fingerprints.json"
+}

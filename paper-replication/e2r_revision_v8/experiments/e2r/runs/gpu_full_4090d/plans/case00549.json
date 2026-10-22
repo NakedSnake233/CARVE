@@ -1,0 +1,96 @@
+{
+  "catalog": [
+    {
+      "id": "op0000",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:checkoutservice-v2-c6cd7497c-tc8nj",
+        "attrs": {
+          "type": "pod",
+          "service": "checkoutservice",
+          "version": "v2.0.0"
+        },
+        "evidence": [
+          "during:pod:checkoutservice-v2-c6cd7497c-tc8nj"
+        ]
+      },
+      "evidence_id": "during:pod:checkoutservice-v2-c6cd7497c-tc8nj",
+      "requires": []
+    },
+    {
+      "id": "op0001",
+      "group": "node_ops",
+      "operation": {
+        "op": "SPLIT_NODE",
+        "parent": "checkoutservice",
+        "children": [
+          "checkoutservice:unversioned",
+          "checkoutservice:v2.0.0"
+        ],
+        "attrs": {
+          "type": "version",
+          "service": "checkoutservice"
+        },
+        "evidence": [
+          "version_coexistence:checkoutservice"
+        ]
+      },
+      "evidence_id": "version_coexistence:checkoutservice",
+      "requires": []
+    }
+  ],
+  "plan": {
+    "experiment_id": "case00549",
+    "change_type": "observation_supported_updates",
+    "confidence": 0.0,
+    "causal_role": "not_inferred",
+    "node_ops": [
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:checkoutservice-v2-c6cd7497c-tc8nj",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "checkoutservice",
+          "version": "v2.0.0"
+        },
+        "evidence": [
+          "during:pod:checkoutservice-v2-c6cd7497c-tc8nj"
+        ]
+      },
+      {
+        "op": "SPLIT_NODE",
+        "node_id": "",
+        "old_node": "",
+        "new_node": "",
+        "parent": "checkoutservice",
+        "children": [
+          "checkoutservice:unversioned",
+          "checkoutservice:v2.0.0"
+        ],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "version",
+          "service": "checkoutservice"
+        },
+        "evidence": [
+          "version_coexistence:checkoutservice"
+        ]
+      }
+    ],
+    "edge_ops": [],
+    "weight_ops": [],
+    "state_transfer": {},
+    "evidence": [
+      "during:pod:checkoutservice-v2-c6cd7497c-tc8nj",
+      "version_coexistence:checkoutservice"
+    ]
+  }
+}

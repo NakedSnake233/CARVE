@@ -11,7 +11,7 @@ This package provides an anonymous snapshot of the current implementation, selec
 | `tests/intervention/` | Curated offline tests; in-memory clients and temporary files |
 | `scripts/reproduce_context.py` | Recompute a frozen context predictor's reported metrics from exported feature tables |
 | `data/context_repair/` | Frozen model, 72 feature/label rows, 32 online outcomes, expected metrics |
-| `paper-replication/` | Separate, unchanged v8 archive cited by the supplied manuscript |
+| `paper-replication/e2r_revision_v8/` | Uncompressed historical v8 source, observations, models, and analyses cited by the supplied manuscript |
 | `ENVIRONMENT.json`, `ASSURANCE.json` | Tested environment and the exact validation actually performed |
 | `MANIFEST.json` | File sizes and SHA-256 for this distribution |
 
@@ -44,19 +44,17 @@ Historical graph scoring additionally requires the separately obtained upstream 
 
 ## Historical manuscript package
 
-The original v8 archive is retained byte-for-byte:
+The historical v8 material is already expanded into regular files. No archive download or extraction is needed. All 7,321 member files retain their original bytes. Verify the historical manifest from this repository root:
 
 ```bash
-cd paper-replication
-sha256sum -c e2r_revision_v8.tar.gz.sha256
-mkdir unpacked
-python -m tarfile -e e2r_revision_v8.tar.gz unpacked
+python paper-replication/e2r_revision_v8/scripts/e2r/verify_anonymous_artifact.py \
+  --artifact-root paper-replication/e2r_revision_v8
 ```
 
-Read its own README and assurance before replaying historical analyses. Its target dependency lock and historical test assurance are separate from the current source snapshot. Its legacy paths use documented placeholders and may require configuration. No newer study inherits that archive's old audit status.
+Read its own README and assurance before replaying historical analyses. Its target dependency lock and historical test assurance are separate from the current source snapshot. Its legacy paths use documented placeholders and may require configuration. No newer study inherits the historical audit status. `paper-replication/SOURCE_PROVENANCE.json` records the original archive digest for provenance; that archive is not distributed in the current tree. Native `.pt` model files keep their original serialization.
 
 ## Anonymous review and licensing
 
-Submit the generated ZIP as an attachment, without `.git`. The hosting repository's owner/profile and repository URL are not anonymous and should not be used as the anonymous review link. `DATA_AVAILABILITY.txt` supplies an attachment-oriented statement.
+Files are published directly for browsing through an Anonymous GitHub mirror. Use the configured anonymous mirror URL as the review link and verify that it displays this README and the `paper-replication/e2r_revision_v8/` directory. The source hosting account and its Git history are not anonymous review material. `DATA_AVAILABILITY.txt` supplies a statement for the anonymous repository delivery.
 
 Original third-party source notices and dependency attribution are retained where present. This export does not assign a new open-source license to unlicensed first-party source or change upstream licenses; see `COPYRIGHT_NOTICE.md`.

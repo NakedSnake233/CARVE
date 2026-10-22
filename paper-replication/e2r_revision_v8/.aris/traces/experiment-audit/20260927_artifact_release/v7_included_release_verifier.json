@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "manifest_entries": 7312,
+  "observation_cases": 798,
+  "required_files": 16,
+  "validation_status": "PASS",
+  "errors": [],
+  "note": "Historical source hashes are checked through ANONYMIZATION_MAP; private bytes are not bundled."
+}

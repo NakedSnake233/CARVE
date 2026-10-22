@@ -2,7 +2,7 @@
 
 ## Manuscript-linked historical evidence
 
-`paper-replication/e2r_revision_v8.tar.gz` is the unchanged archive cited in the supplied manuscript. Its SHA-256 is `76d5ce9f035a0b42a27fc8e6c82c58e0d663a65d06212b4c39016a4247c60c4b`. It includes the original snapshot, observations, models, analyses, and qualified audit records. Read its own scope limitations, including interrupted or invalid comparisons. Its source and numerical claims are not silently replaced by newer code.
+`paper-replication/e2r_revision_v8/` contains all 7,321 uncompressed member files from the archive cited in the supplied manuscript, with every file's bytes unchanged. The source archive SHA-256 was `76d5ce9f035a0b42a27fc8e6c82c58e0d663a65d06212b4c39016a4247c60c4b`; this is a historical provenance identifier, not the checksum of the directory or a current download. The directory includes the original snapshot, observations, models, analyses, and qualified audit records. Read its own scope limitations, including interrupted or invalid comparisons. Its source and numerical claims are not silently replaced by newer code. Its internal `MANIFEST.json` verifies the expanded files.
 
 ## Additional current-code example
 

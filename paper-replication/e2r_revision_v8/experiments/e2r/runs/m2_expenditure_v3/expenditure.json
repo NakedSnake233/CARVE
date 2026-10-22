@@ -1,0 +1,141 @@
+{
+  "status": "completed_m2_expenditure_accounting",
+  "runs": [
+    {
+      "run": "m2_qwen38_pilot_formal_v1",
+      "model_alias": "qwen3.8-flash",
+      "request_model": "qwen3.8-flash",
+      "attempts": 3,
+      "transport_successes": 3,
+      "strict_accepted": 0,
+      "usage_reported_attempts": 3,
+      "usage": {
+        "prompt_tokens": 14456,
+        "completion_tokens": 6000,
+        "total_tokens": 20456
+      },
+      "raw_usage_fields": {
+        "input_tokens": 14456,
+        "output_tokens": 6000,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 22528
+      },
+      "cache_inclusive_token_volume": 42984,
+      "provider_cost_reported_attempts": 0,
+      "provider_cost_total": null,
+      "request_seconds_total": 119.12890993244946,
+      "request_seconds_mean": 39.70963664414982
+    },
+    {
+      "run": "m2_qwen38_pilot_formal_v2",
+      "model_alias": "qwen3.8-flash",
+      "request_model": "qwen3.8-flash",
+      "attempts": 48,
+      "transport_successes": 48,
+      "strict_accepted": 35,
+      "usage_reported_attempts": 48,
+      "usage": {
+        "prompt_tokens": 141146,
+        "completion_tokens": 17789,
+        "total_tokens": 158935
+      },
+      "raw_usage_fields": {
+        "input_tokens": 141146,
+        "output_tokens": 17789,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 551424
+      },
+      "cache_inclusive_token_volume": 710359,
+      "provider_cost_reported_attempts": 0,
+      "provider_cost_total": null,
+      "request_seconds_total": 337.47190772695467,
+      "request_seconds_mean": 7.030664744311555
+    },
+    {
+      "run": "m2_qwen38_formal_v1",
+      "model_alias": "qwen3.8-flash",
+      "request_model": "qwen3.8-flash",
+      "attempts": 648,
+      "transport_successes": 648,
+      "strict_accepted": 476,
+      "usage_reported_attempts": 648,
+      "usage": {
+        "prompt_tokens": 1863990,
+        "completion_tokens": 242302,
+        "total_tokens": 2106292
+      },
+      "raw_usage_fields": {
+        "input_tokens": 1863990,
+        "output_tokens": 242302,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 7461888
+      },
+      "cache_inclusive_token_volume": 9568180,
+      "provider_cost_reported_attempts": 0,
+      "provider_cost_total": null,
+      "request_seconds_total": 4509.649215512443,
+      "request_seconds_mean": 6.959335209124141
+    },
+    {
+      "run": "m2_deepseek41_compat_v1",
+      "model_alias": "deepseek-v4.1-flash",
+      "request_model": "deepseek-v4.1-flash",
+      "attempts": 3,
+      "transport_successes": 0,
+      "strict_accepted": 0,
+      "usage_reported_attempts": 0,
+      "usage": {},
+      "raw_usage_fields": {},
+      "cache_inclusive_token_volume": null,
+      "provider_cost_reported_attempts": 0,
+      "provider_cost_total": null,
+      "request_seconds_total": 2.1495791748166084,
+      "request_seconds_mean": 0.7165263916055361
+    },
+    {
+      "run": "m2_gpt56luna_compat_v1",
+      "model_alias": "gpt-5.6-luna",
+      "request_model": "gpt-5.6-luna",
+      "attempts": 3,
+      "transport_successes": 3,
+      "strict_accepted": 3,
+      "usage_reported_attempts": 3,
+      "usage": {
+        "prompt_tokens": 27858,
+        "completion_tokens": 1700,
+        "total_tokens": 29558
+      },
+      "raw_usage_fields": {
+        "input_tokens": 27858,
+        "output_tokens": 1700
+      },
+      "cache_inclusive_token_volume": 29558,
+      "provider_cost_reported_attempts": 0,
+      "provider_cost_total": null,
+      "request_seconds_total": 19.905495167244226,
+      "request_seconds_mean": 6.635165055748075
+    }
+  ],
+  "totals": {
+    "attempts": 705,
+    "transport_successes": 702,
+    "strict_accepted": 514,
+    "usage_reported_attempts": 702,
+    "prompt_tokens": 2047450,
+    "completion_tokens": 267791,
+    "total_tokens": 2315241,
+    "raw_input_tokens": 2047450,
+    "raw_output_tokens": 267791,
+    "raw_cache_creation_input_tokens": 0,
+    "raw_cache_read_input_tokens": 8035840,
+    "cache_inclusive_reported_volume": 10351081,
+    "provider_cost_reported_attempts": 0,
+    "provider_cost_total": null
+  },
+  "limits": [
+    "Provider cost is null when the gateway did not report a cost; no alias-based price is fabricated.",
+    "Cache-inclusive token volume adds cache creation/read fields to normalized total_tokens and is not a monetary bill.",
+    "A failed attempt with missing usage is unknown usage, not zero; aggregate token volumes sum reported rows only.",
+    "Failed transports and the stopped Qwen v1 compatibility pilot remain in attempt totals."
+  ]
+}

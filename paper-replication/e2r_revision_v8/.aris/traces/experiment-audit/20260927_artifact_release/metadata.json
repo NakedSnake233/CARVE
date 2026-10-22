@@ -1,0 +1,12 @@
+{
+  "reviewer": "/root/artifact_release_audit",
+  "auxiliary_reviewer": "/root/artifact_release_audit/offline_test_audit",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "status": "complete",
+  "verdict": "BLOCK",
+  "date": "2026-09-27",
+  "audited_archive_sha256": "96b708c0526163ac0151af4aa2adca009f6c9e1f3d03c7d714161d3fe150fa8d",
+  "report_sha256": "b941d156c2dcc027fcc4775c4c28d6864a9241137b0862a0c09e6767a8bd2425",
+  "immutable_inputs_verified": true
+}
