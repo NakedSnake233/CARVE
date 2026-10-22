@@ -1,0 +1,160 @@
+{
+  "catalog": [
+    {
+      "id": "op0000",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:currencyservice-84754ffd69-4jc2m",
+        "attrs": {
+          "type": "pod",
+          "service": "currencyservice",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:currencyservice-84754ffd69-4jc2m"
+        ]
+      },
+      "evidence_id": "during:pod:currencyservice-84754ffd69-4jc2m",
+      "requires": []
+    },
+    {
+      "id": "op0001",
+      "group": "edge_ops",
+      "operation": {
+        "op": "REMOVE_EDGE",
+        "source": "currencyservice",
+        "target": "pod:currencyservice-84754ffd69-nkchx",
+        "evidence": [
+          "topology_diff:currencyservice->pod:currencyservice-84754ffd69-nkchx"
+        ]
+      },
+      "evidence_id": "topology_diff:currencyservice->pod:currencyservice-84754ffd69-nkchx",
+      "requires": []
+    },
+    {
+      "id": "op0002",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "currencyservice",
+        "target": "pod:currencyservice-84754ffd69-4jc2m",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "evidence": [
+          "during:currencyservice->pod:currencyservice-84754ffd69-4jc2m"
+        ]
+      },
+      "evidence_id": "during:currencyservice->pod:currencyservice-84754ffd69-4jc2m",
+      "requires": [
+        "op0000"
+      ]
+    },
+    {
+      "id": "op0003",
+      "group": "node_ops",
+      "operation": {
+        "op": "ALIGN_NODE",
+        "old_node": "pod:currencyservice-84754ffd69-nkchx",
+        "new_node": "pod:currencyservice-84754ffd69-4jc2m",
+        "service": "currencyservice",
+        "attrs": {
+          "type": "pod",
+          "service": "currencyservice",
+          "version": "unknown"
+        },
+        "evidence": [
+          "identity_change:currencyservice"
+        ]
+      },
+      "evidence_id": "identity_change:currencyservice",
+      "requires": []
+    }
+  ],
+  "plan": {
+    "experiment_id": "case00228",
+    "change_type": "observation_supported_updates",
+    "confidence": 0.0,
+    "causal_role": "not_inferred",
+    "node_ops": [
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:currencyservice-84754ffd69-4jc2m",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "currencyservice",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:currencyservice-84754ffd69-4jc2m"
+        ]
+      },
+      {
+        "op": "ALIGN_NODE",
+        "node_id": "",
+        "old_node": "pod:currencyservice-84754ffd69-nkchx",
+        "new_node": "pod:currencyservice-84754ffd69-4jc2m",
+        "parent": "",
+        "children": [],
+        "service": "currencyservice",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "currencyservice",
+          "version": "unknown"
+        },
+        "evidence": [
+          "identity_change:currencyservice"
+        ]
+      }
+    ],
+    "edge_ops": [
+      {
+        "op": "REMOVE_EDGE",
+        "source": "currencyservice",
+        "target": "pod:currencyservice-84754ffd69-nkchx",
+        "old_source": "currencyservice",
+        "old_target": "pod:currencyservice-84754ffd69-nkchx",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": null,
+        "attrs": {},
+        "evidence": [
+          "topology_diff:currencyservice->pod:currencyservice-84754ffd69-nkchx"
+        ]
+      },
+      {
+        "op": "ADD_EDGE",
+        "source": "currencyservice",
+        "target": "pod:currencyservice-84754ffd69-4jc2m",
+        "old_source": "currencyservice",
+        "old_target": "pod:currencyservice-84754ffd69-4jc2m",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:currencyservice->pod:currencyservice-84754ffd69-4jc2m"
+        ]
+      }
+    ],
+    "weight_ops": [],
+    "state_transfer": {},
+    "evidence": [
+      "during:pod:currencyservice-84754ffd69-4jc2m",
+      "topology_diff:currencyservice->pod:currencyservice-84754ffd69-nkchx",
+      "during:currencyservice->pod:currencyservice-84754ffd69-4jc2m",
+      "identity_change:currencyservice"
+    ]
+  }
+}

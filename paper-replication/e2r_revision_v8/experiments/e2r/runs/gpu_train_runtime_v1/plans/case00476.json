@@ -1,0 +1,88 @@
+{
+  "catalog": [
+    {
+      "id": "op0000",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-travel-service-6f6dd9dc64-4d2s8",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-travel-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-travel-service-6f6dd9dc64-4d2s8"
+        ]
+      },
+      "evidence_id": "during:pod:ts-travel-service-6f6dd9dc64-4d2s8",
+      "requires": []
+    },
+    {
+      "id": "op0001",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "ts-travel-service",
+        "target": "pod:ts-travel-service-6f6dd9dc64-rpbf5",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "evidence": [
+          "during:ts-travel-service->pod:ts-travel-service-6f6dd9dc64-rpbf5"
+        ]
+      },
+      "evidence_id": "during:ts-travel-service->pod:ts-travel-service-6f6dd9dc64-rpbf5",
+      "requires": []
+    }
+  ],
+  "plan": {
+    "experiment_id": "case00476",
+    "change_type": "observation_supported_updates",
+    "confidence": 0.0,
+    "causal_role": "not_inferred",
+    "node_ops": [
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-travel-service-6f6dd9dc64-4d2s8",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-travel-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-travel-service-6f6dd9dc64-4d2s8"
+        ]
+      }
+    ],
+    "edge_ops": [
+      {
+        "op": "ADD_EDGE",
+        "source": "ts-travel-service",
+        "target": "pod:ts-travel-service-6f6dd9dc64-rpbf5",
+        "old_source": "ts-travel-service",
+        "old_target": "pod:ts-travel-service-6f6dd9dc64-rpbf5",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:ts-travel-service->pod:ts-travel-service-6f6dd9dc64-rpbf5"
+        ]
+      }
+    ],
+    "weight_ops": [],
+    "state_transfer": {},
+    "evidence": [
+      "during:pod:ts-travel-service-6f6dd9dc64-4d2s8",
+      "during:ts-travel-service->pod:ts-travel-service-6f6dd9dc64-rpbf5"
+    ]
+  }
+}

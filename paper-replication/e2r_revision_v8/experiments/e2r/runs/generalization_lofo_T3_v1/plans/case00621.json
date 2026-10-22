@@ -1,0 +1,132 @@
+{
+  "catalog": [
+    {
+      "id": "op0000",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:productcatalogservice-v2-8f4bc5894-5kmqw",
+        "attrs": {
+          "type": "pod",
+          "service": "productcatalogservice",
+          "version": "v2.0.0"
+        },
+        "evidence": [
+          "during:pod:productcatalogservice-v2-8f4bc5894-5kmqw"
+        ]
+      },
+      "evidence_id": "during:pod:productcatalogservice-v2-8f4bc5894-5kmqw",
+      "requires": []
+    },
+    {
+      "id": "op0001",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "productcatalogservice",
+        "target": "pod:productcatalogservice-v2-8f4bc5894-5kmqw",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "evidence": [
+          "during:productcatalogservice->pod:productcatalogservice-v2-8f4bc5894-5kmqw"
+        ]
+      },
+      "evidence_id": "during:productcatalogservice->pod:productcatalogservice-v2-8f4bc5894-5kmqw",
+      "requires": [
+        "op0000"
+      ]
+    },
+    {
+      "id": "op0002",
+      "group": "node_ops",
+      "operation": {
+        "op": "SPLIT_NODE",
+        "parent": "productcatalogservice",
+        "children": [
+          "productcatalogservice:unversioned",
+          "productcatalogservice:v2.0.0"
+        ],
+        "attrs": {
+          "type": "version",
+          "service": "productcatalogservice"
+        },
+        "evidence": [
+          "version_coexistence:productcatalogservice"
+        ]
+      },
+      "evidence_id": "version_coexistence:productcatalogservice",
+      "requires": []
+    }
+  ],
+  "plan": {
+    "experiment_id": "case00621",
+    "change_type": "observation_supported_updates",
+    "confidence": 0.0,
+    "causal_role": "not_inferred",
+    "node_ops": [
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:productcatalogservice-v2-8f4bc5894-5kmqw",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "productcatalogservice",
+          "version": "v2.0.0"
+        },
+        "evidence": [
+          "during:pod:productcatalogservice-v2-8f4bc5894-5kmqw"
+        ]
+      },
+      {
+        "op": "SPLIT_NODE",
+        "node_id": "",
+        "old_node": "",
+        "new_node": "",
+        "parent": "productcatalogservice",
+        "children": [
+          "productcatalogservice:unversioned",
+          "productcatalogservice:v2.0.0"
+        ],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "version",
+          "service": "productcatalogservice"
+        },
+        "evidence": [
+          "version_coexistence:productcatalogservice"
+        ]
+      }
+    ],
+    "edge_ops": [
+      {
+        "op": "ADD_EDGE",
+        "source": "productcatalogservice",
+        "target": "pod:productcatalogservice-v2-8f4bc5894-5kmqw",
+        "old_source": "productcatalogservice",
+        "old_target": "pod:productcatalogservice-v2-8f4bc5894-5kmqw",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:productcatalogservice->pod:productcatalogservice-v2-8f4bc5894-5kmqw"
+        ]
+      }
+    ],
+    "weight_ops": [],
+    "state_transfer": {},
+    "evidence": [
+      "during:pod:productcatalogservice-v2-8f4bc5894-5kmqw",
+      "during:productcatalogservice->pod:productcatalogservice-v2-8f4bc5894-5kmqw",
+      "version_coexistence:productcatalogservice"
+    ]
+  }
+}

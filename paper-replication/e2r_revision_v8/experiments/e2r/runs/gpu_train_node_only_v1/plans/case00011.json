@@ -1,0 +1,189 @@
+{
+  "catalog": [
+    {
+      "id": "op0000",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:cartservice-5967c9cd9b-dmlr6",
+        "attrs": {
+          "type": "pod",
+          "service": "cartservice",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:cartservice-5967c9cd9b-dmlr6"
+        ]
+      },
+      "evidence_id": "during:pod:cartservice-5967c9cd9b-dmlr6",
+      "requires": []
+    },
+    {
+      "id": "op0001",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:cartservice-5967c9cd9b-nvvj9",
+        "attrs": {
+          "type": "pod",
+          "service": "cartservice",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:cartservice-5967c9cd9b-nvvj9"
+        ]
+      },
+      "evidence_id": "during:pod:cartservice-5967c9cd9b-nvvj9",
+      "requires": []
+    },
+    {
+      "id": "op0002",
+      "group": "edge_ops",
+      "operation": {
+        "op": "REMOVE_EDGE",
+        "source": "currencyservice",
+        "target": "pod:currencyservice-84754ffd69-ds48s",
+        "evidence": [
+          "topology_diff:currencyservice->pod:currencyservice-84754ffd69-ds48s"
+        ]
+      },
+      "evidence_id": "topology_diff:currencyservice->pod:currencyservice-84754ffd69-ds48s",
+      "requires": []
+    },
+    {
+      "id": "op0003",
+      "group": "edge_ops",
+      "operation": {
+        "op": "REMOVE_EDGE",
+        "source": "currencyservice",
+        "target": "pod:currencyservice-84754ffd69-k56fn",
+        "evidence": [
+          "topology_diff:currencyservice->pod:currencyservice-84754ffd69-k56fn"
+        ]
+      },
+      "evidence_id": "topology_diff:currencyservice->pod:currencyservice-84754ffd69-k56fn",
+      "requires": []
+    },
+    {
+      "id": "op0004",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "cartservice",
+        "target": "pod:cartservice-5967c9cd9b-nvvj9",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "evidence": [
+          "during:cartservice->pod:cartservice-5967c9cd9b-nvvj9"
+        ]
+      },
+      "evidence_id": "during:cartservice->pod:cartservice-5967c9cd9b-nvvj9",
+      "requires": [
+        "op0001"
+      ]
+    }
+  ],
+  "plan": {
+    "experiment_id": "case00011",
+    "change_type": "observation_supported_updates",
+    "confidence": 0.0,
+    "causal_role": "not_inferred",
+    "node_ops": [
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:cartservice-5967c9cd9b-dmlr6",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "cartservice",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:cartservice-5967c9cd9b-dmlr6"
+        ]
+      },
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:cartservice-5967c9cd9b-nvvj9",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "cartservice",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:cartservice-5967c9cd9b-nvvj9"
+        ]
+      }
+    ],
+    "edge_ops": [
+      {
+        "op": "REMOVE_EDGE",
+        "source": "currencyservice",
+        "target": "pod:currencyservice-84754ffd69-ds48s",
+        "old_source": "currencyservice",
+        "old_target": "pod:currencyservice-84754ffd69-ds48s",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": null,
+        "attrs": {},
+        "evidence": [
+          "topology_diff:currencyservice->pod:currencyservice-84754ffd69-ds48s"
+        ]
+      },
+      {
+        "op": "REMOVE_EDGE",
+        "source": "currencyservice",
+        "target": "pod:currencyservice-84754ffd69-k56fn",
+        "old_source": "currencyservice",
+        "old_target": "pod:currencyservice-84754ffd69-k56fn",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": null,
+        "attrs": {},
+        "evidence": [
+          "topology_diff:currencyservice->pod:currencyservice-84754ffd69-k56fn"
+        ]
+      },
+      {
+        "op": "ADD_EDGE",
+        "source": "cartservice",
+        "target": "pod:cartservice-5967c9cd9b-nvvj9",
+        "old_source": "cartservice",
+        "old_target": "pod:cartservice-5967c9cd9b-nvvj9",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:cartservice->pod:cartservice-5967c9cd9b-nvvj9"
+        ]
+      }
+    ],
+    "weight_ops": [],
+    "state_transfer": {},
+    "evidence": [
+      "during:pod:cartservice-5967c9cd9b-dmlr6",
+      "during:pod:cartservice-5967c9cd9b-nvvj9",
+      "topology_diff:currencyservice->pod:currencyservice-84754ffd69-ds48s",
+      "topology_diff:currencyservice->pod:currencyservice-84754ffd69-k56fn",
+      "during:cartservice->pod:cartservice-5967c9cd9b-nvvj9"
+    ]
+  }
+}

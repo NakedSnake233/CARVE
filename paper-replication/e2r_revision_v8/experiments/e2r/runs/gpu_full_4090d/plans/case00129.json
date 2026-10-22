@@ -1,0 +1,50 @@
+{
+  "catalog": [
+    {
+      "id": "op0000",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "ts-order-service",
+        "target": "pod:ts-order-service-5755fc9ccd-gw828",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "evidence": [
+          "during:ts-order-service->pod:ts-order-service-5755fc9ccd-gw828"
+        ]
+      },
+      "evidence_id": "during:ts-order-service->pod:ts-order-service-5755fc9ccd-gw828",
+      "requires": []
+    }
+  ],
+  "plan": {
+    "experiment_id": "case00129",
+    "change_type": "observation_supported_updates",
+    "confidence": 0.0,
+    "causal_role": "not_inferred",
+    "node_ops": [],
+    "edge_ops": [
+      {
+        "op": "ADD_EDGE",
+        "source": "ts-order-service",
+        "target": "pod:ts-order-service-5755fc9ccd-gw828",
+        "old_source": "ts-order-service",
+        "old_target": "pod:ts-order-service-5755fc9ccd-gw828",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:ts-order-service->pod:ts-order-service-5755fc9ccd-gw828"
+        ]
+      }
+    ],
+    "weight_ops": [],
+    "state_transfer": {},
+    "evidence": [
+      "during:ts-order-service->pod:ts-order-service-5755fc9ccd-gw828"
+    ]
+  }
+}

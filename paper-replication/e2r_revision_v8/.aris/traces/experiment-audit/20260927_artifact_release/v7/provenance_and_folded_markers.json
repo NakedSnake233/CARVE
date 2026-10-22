@@ -1,0 +1,619 @@
+{
+  "transformed_files": 96,
+  "unique_map_paths": 96,
+  "map_staged_mismatches": [],
+  "map_source_mismatches": [
+    {
+      "path": "scripts/e2r/verify_anonymous_artifact.py",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": false
+    }
+  ],
+  "map_checks": [
+    {
+      "path": "rca_bench/README.md",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": "rca_bench/cli.py",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": "scripts/e2r/create_scoped_kubeconfig.py",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": "scripts/e2r/run_recovery_sanity.py",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": "scripts/e2r/verify_anonymous_artifact.py",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": false
+    },
+    {
+      "path": "tests/test_safety_guard.py",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": "refine-logs/FULL_EXPERIMENT_CODE_REVIEW.md",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": "findings.md",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": "experiments/e2r/isolated_environment.json",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260926_b2_b3/001-b2-b3.meta.json",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260926_b2_b3/001-b2-b3.request.json",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260926_b2_b3/001-b2-b3.response.md",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260926_b2_b3/002-generalization-scaling.meta.json",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260926_b2_b3/002-generalization-scaling.request.json",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260926_b2_b3/002-generalization-scaling.response.md",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260926_b2_b3/accounting_v2_hashes.json",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260926_b2_b3/audited_input_hashes.json",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260926_b2_b3/expenditure_v3_hashes.json",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260926_b2_b3/finalize_audit.py",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260926_b2_b3/generalization_scaling/REVIEW.md",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260926_b2_b3/generalization_scaling/forensic_audit.py",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260926_b2_b3/generalization_scaling/sha256_inventory.json",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260926_b2_b3/qwen_proxy_hashes.json",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260926_b2_b3/qwen_supplement_hashes.json",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260926_b2_b3/run.meta.json",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260926_b2_b3/save_review_trace.py",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260926_b2_b3/verify_accounting_v2.py",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260926_b2_b3/verify_expenditure_v3.py",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260926_b2_b3/verify_qwen_proxy.py",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260926_b2_b3/verify_qwen_supplement.py",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260927_m4_sanity/001-m4-sanity-audit.request.json",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260927_m4_sanity/001-m4-sanity-audit.response.md",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260927_m4_sanity/002-baseline-runtime-sub-audit.request.json",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260927_m4_sanity/audited_source_snapshots/findings.md",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260927_m4_sanity/audited_source_snapshots/refine-logs/FULL_EXPERIMENT_CODE_REVIEW.md",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260927_m4_sanity/audited_source_snapshots/scripts/e2r/run_recovery_sanity.py",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260927_m4_sanity/recompute.py",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260927_m4_sanity/run.meta.json",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260927_m4_sanity/save_trace_metadata.py",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260927_m4_sanity/write_report.py",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260927_matched_interrupted/001-interruption-audit.request.json",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260927_matched_interrupted/001-interruption-audit.response.md",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260927_matched_interrupted/002-supporting-facts.request.json",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260927_matched_interrupted/002-supporting-facts.response.md",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260927_matched_interrupted/EXPERIMENT_AUDIT.json",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260927_matched_interrupted/recompute_noaction.json",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260927_matched_interrupted/recompute_noaction.py",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260927_matched_interrupted/recompute_typed_and_accounting.json",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260927_matched_interrupted/recompute_typed_and_accounting.py",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260927_matched_interrupted/run.meta.json",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260927_artifact_release/offline_test_replay.json",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": ".aris/traces/experiment-audit/20260927_artifact_release/verify_release.py",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": ".aris/traces/research-review/20260926_e2r_design/run.meta.json",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": "experiments/e2r/runs/full_data_v2/manifest.json",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": "experiments/e2r/runs/gpu_full_4090d/results.json",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": "experiments/e2r/runs/gpu_train_reference_v1/results.json",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": "experiments/e2r/runs/gpu_train_runtime_v1/results.json",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": "experiments/e2r/runs/gpu_train_node_only_v1/results.json",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": "experiments/e2r/runs/m1_matrix_v3/EXPERIMENT_AUDIT.json",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": "experiments/e2r/runs/m1_matrix_v3/EXPERIMENT_AUDIT.md",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": "experiments/e2r/runs/m2_qwen38_pilot_formal_v1/campaign.json",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": "experiments/e2r/runs/m2_qwen38_pilot_formal_v2/campaign.json",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": "experiments/e2r/runs/m2_qwen38_formal_v1/campaign.json",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": "experiments/e2r/runs/m2_qwen38_combined_campaign_v1/campaign.json",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": "experiments/e2r/runs/m2_qwen38_pilot_scores_v2/results.json",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": "experiments/e2r/runs/m2_qwen38_formal_scores_v1/results.json",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": "experiments/e2r/runs/m2_qwen38_combined_scores_v1/results.json",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": "experiments/e2r/runs/m2_deepseek41_compat_v1/campaign.json",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": "experiments/e2r/runs/m2_gpt56luna_compat_v1/campaign.json",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": "experiments/e2r/runs/generalization_lofo_T1_v1/results.json",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": "experiments/e2r/runs/generalization_lofo_T2_v1/results.json",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": "experiments/e2r/runs/generalization_lofo_T3_v1/results.json",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": "experiments/e2r/runs/generalization_lofo_T4_v1/results.json",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": "experiments/e2r/runs/generalization_boutique_to_trainticket_v1/results.json",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": "experiments/e2r/runs/generalization_trainticket_to_boutique_v1/results.json",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": "experiments/e2r/runs/b2_b3_audit_v1/EXPERIMENT_AUDIT.json",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": "experiments/e2r/runs/b2_b3_audit_v1/EXPERIMENT_AUDIT.md",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": "experiments/e2r/runs/recovery_baseline_v1/baseline.json",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": "experiments/e2r/runs/recovery_baseline_v2/baseline.json",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": "experiments/e2r/runs/recovery_baseline_comparison_v1/analysis.json",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": "experiments/e2r/runs/recovery_sanity_frontend_cpu_v1/trace.json",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": "experiments/e2r/runs/recovery_sanity_frontend_cpu_v2/trace.json",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": "experiments/e2r/runs/recovery_sanity_frontend_cpu_v3/trace.json",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": "experiments/e2r/runs/m4_sanity_audit_v1/EXPERIMENT_AUDIT.md",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/analysis_v1/analysis.json",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/audit_v1/EXPERIMENT_AUDIT.json",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/audit_v1/EXPERIMENT_AUDIT.md",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/audit_v1/recompute_noaction.json",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/audit_v1/recompute_noaction.py",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/audit_v1/recompute_typed_and_accounting.json",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/audit_v1/recompute_typed_and_accounting.py",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/block.interruption.json",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/block.json",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/episodes/00_no_action.json",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/episodes/01_typed_cleanup.interruption.json",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    },
+    {
+      "path": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/episodes/01_typed_cleanup.json",
+      "staged_matches": true,
+      "private_source_exists": true,
+      "private_source_matches": true
+    }
+  ],
+  "python_files_parsed": 119,
+  "folded_sensitive_markers": [
+    {
+      "path": "scripts/e2r/verify_anonymous_artifact.py",
+      "line": 56,
+      "categories": [
+        "gpu_host"
+      ],
+      "mechanism": "literal constant concatenation"
+    },
+    {
+      "path": "scripts/e2r/verify_anonymous_artifact.py",
+      "line": 57,
+      "categories": [
+        "password"
+      ],
+      "mechanism": "literal constant concatenation"
+    },
+    {
+      "path": "scripts/e2r/verify_anonymous_artifact.py",
+      "line": 57,
+      "categories": [
+        "local_username"
+      ],
+      "mechanism": "literal constant concatenation"
+    }
+  ],
+  "json_with_unrelocated_project_root": []
+}

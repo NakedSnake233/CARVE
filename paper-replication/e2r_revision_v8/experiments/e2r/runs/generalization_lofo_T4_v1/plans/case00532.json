@@ -1,0 +1,50 @@
+{
+  "catalog": [
+    {
+      "id": "op0000",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "ts-travel-service",
+        "target": "pod:ts-travel-service-6f6dd9dc64-vz9jd",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "evidence": [
+          "during:ts-travel-service->pod:ts-travel-service-6f6dd9dc64-vz9jd"
+        ]
+      },
+      "evidence_id": "during:ts-travel-service->pod:ts-travel-service-6f6dd9dc64-vz9jd",
+      "requires": []
+    }
+  ],
+  "plan": {
+    "experiment_id": "case00532",
+    "change_type": "observation_supported_updates",
+    "confidence": 0.0,
+    "causal_role": "not_inferred",
+    "node_ops": [],
+    "edge_ops": [
+      {
+        "op": "ADD_EDGE",
+        "source": "ts-travel-service",
+        "target": "pod:ts-travel-service-6f6dd9dc64-vz9jd",
+        "old_source": "ts-travel-service",
+        "old_target": "pod:ts-travel-service-6f6dd9dc64-vz9jd",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:ts-travel-service->pod:ts-travel-service-6f6dd9dc64-vz9jd"
+        ]
+      }
+    ],
+    "weight_ops": [],
+    "state_transfer": {},
+    "evidence": [
+      "during:ts-travel-service->pod:ts-travel-service-6f6dd9dc64-vz9jd"
+    ]
+  }
+}

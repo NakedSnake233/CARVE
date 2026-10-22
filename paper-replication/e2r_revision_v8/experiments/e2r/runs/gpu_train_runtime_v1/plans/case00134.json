@@ -1,0 +1,239 @@
+{
+  "catalog": [
+    {
+      "id": "op0000",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-order-service-5755fc9ccd-4f8rl",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-order-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-order-service-5755fc9ccd-4f8rl"
+        ]
+      },
+      "evidence_id": "during:pod:ts-order-service-5755fc9ccd-4f8rl",
+      "requires": []
+    },
+    {
+      "id": "op0001",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-order-service-5755fc9ccd-4vt68",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-order-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-order-service-5755fc9ccd-4vt68"
+        ]
+      },
+      "evidence_id": "during:pod:ts-order-service-5755fc9ccd-4vt68",
+      "requires": []
+    },
+    {
+      "id": "op0002",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-order-service-5755fc9ccd-gtjg2",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-order-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-order-service-5755fc9ccd-gtjg2"
+        ]
+      },
+      "evidence_id": "during:pod:ts-order-service-5755fc9ccd-gtjg2",
+      "requires": []
+    },
+    {
+      "id": "op0003",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-order-service-5755fc9ccd-pktgl",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-order-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-order-service-5755fc9ccd-pktgl"
+        ]
+      },
+      "evidence_id": "during:pod:ts-order-service-5755fc9ccd-pktgl",
+      "requires": []
+    },
+    {
+      "id": "op0004",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-order-service-5755fc9ccd-stkpk",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-order-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-order-service-5755fc9ccd-stkpk"
+        ]
+      },
+      "evidence_id": "during:pod:ts-order-service-5755fc9ccd-stkpk",
+      "requires": []
+    },
+    {
+      "id": "op0005",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-order-service-5755fc9ccd-ww52j",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-order-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-order-service-5755fc9ccd-ww52j"
+        ]
+      },
+      "evidence_id": "during:pod:ts-order-service-5755fc9ccd-ww52j",
+      "requires": []
+    }
+  ],
+  "plan": {
+    "experiment_id": "case00134",
+    "change_type": "observation_supported_updates",
+    "confidence": 0.0,
+    "causal_role": "not_inferred",
+    "node_ops": [
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-order-service-5755fc9ccd-4f8rl",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-order-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-order-service-5755fc9ccd-4f8rl"
+        ]
+      },
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-order-service-5755fc9ccd-4vt68",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-order-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-order-service-5755fc9ccd-4vt68"
+        ]
+      },
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-order-service-5755fc9ccd-gtjg2",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-order-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-order-service-5755fc9ccd-gtjg2"
+        ]
+      },
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-order-service-5755fc9ccd-pktgl",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-order-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-order-service-5755fc9ccd-pktgl"
+        ]
+      },
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-order-service-5755fc9ccd-stkpk",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-order-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-order-service-5755fc9ccd-stkpk"
+        ]
+      },
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-order-service-5755fc9ccd-ww52j",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-order-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-order-service-5755fc9ccd-ww52j"
+        ]
+      }
+    ],
+    "edge_ops": [],
+    "weight_ops": [],
+    "state_transfer": {},
+    "evidence": [
+      "during:pod:ts-order-service-5755fc9ccd-4f8rl",
+      "during:pod:ts-order-service-5755fc9ccd-4vt68",
+      "during:pod:ts-order-service-5755fc9ccd-gtjg2",
+      "during:pod:ts-order-service-5755fc9ccd-pktgl",
+      "during:pod:ts-order-service-5755fc9ccd-stkpk",
+      "during:pod:ts-order-service-5755fc9ccd-ww52j"
+    ]
+  }
+}

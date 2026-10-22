@@ -1,0 +1,229 @@
+{
+  "catalog": [
+    {
+      "id": "op0000",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:recommendationservice-v2-56445745ff-57blf",
+        "attrs": {
+          "type": "pod",
+          "service": "recommendationservice",
+          "version": "v2.0.0"
+        },
+        "evidence": [
+          "during:pod:recommendationservice-v2-56445745ff-57blf"
+        ]
+      },
+      "evidence_id": "during:pod:recommendationservice-v2-56445745ff-57blf",
+      "requires": []
+    },
+    {
+      "id": "op0001",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "checkoutservice",
+        "target": "cartservice",
+        "edge_type": "dependency",
+        "weight": 1.0,
+        "evidence": [
+          "during:checkoutservice->cartservice"
+        ]
+      },
+      "evidence_id": "during:checkoutservice->cartservice",
+      "requires": []
+    },
+    {
+      "id": "op0002",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "checkoutservice",
+        "target": "currencyservice",
+        "edge_type": "dependency",
+        "weight": 1.0,
+        "evidence": [
+          "during:checkoutservice->currencyservice"
+        ]
+      },
+      "evidence_id": "during:checkoutservice->currencyservice",
+      "requires": []
+    },
+    {
+      "id": "op0003",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "checkoutservice",
+        "target": "productcatalogservice",
+        "edge_type": "dependency",
+        "weight": 1.0,
+        "evidence": [
+          "during:checkoutservice->productcatalogservice"
+        ]
+      },
+      "evidence_id": "during:checkoutservice->productcatalogservice",
+      "requires": []
+    },
+    {
+      "id": "op0004",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "frontend",
+        "target": "checkoutservice",
+        "edge_type": "dependency",
+        "weight": 1.0,
+        "evidence": [
+          "during:frontend->checkoutservice"
+        ]
+      },
+      "evidence_id": "during:frontend->checkoutservice",
+      "requires": []
+    },
+    {
+      "id": "op0005",
+      "group": "node_ops",
+      "operation": {
+        "op": "SPLIT_NODE",
+        "parent": "recommendationservice",
+        "children": [
+          "recommendationservice:unversioned",
+          "recommendationservice:v2.0.0"
+        ],
+        "attrs": {
+          "type": "version",
+          "service": "recommendationservice"
+        },
+        "evidence": [
+          "version_coexistence:recommendationservice"
+        ]
+      },
+      "evidence_id": "version_coexistence:recommendationservice",
+      "requires": []
+    }
+  ],
+  "plan": {
+    "experiment_id": "case00642",
+    "change_type": "observation_supported_updates",
+    "confidence": 0.0,
+    "causal_role": "not_inferred",
+    "node_ops": [
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:recommendationservice-v2-56445745ff-57blf",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "recommendationservice",
+          "version": "v2.0.0"
+        },
+        "evidence": [
+          "during:pod:recommendationservice-v2-56445745ff-57blf"
+        ]
+      },
+      {
+        "op": "SPLIT_NODE",
+        "node_id": "",
+        "old_node": "",
+        "new_node": "",
+        "parent": "recommendationservice",
+        "children": [
+          "recommendationservice:unversioned",
+          "recommendationservice:v2.0.0"
+        ],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "version",
+          "service": "recommendationservice"
+        },
+        "evidence": [
+          "version_coexistence:recommendationservice"
+        ]
+      }
+    ],
+    "edge_ops": [
+      {
+        "op": "ADD_EDGE",
+        "source": "checkoutservice",
+        "target": "cartservice",
+        "old_source": "checkoutservice",
+        "old_target": "cartservice",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:checkoutservice->cartservice"
+        ]
+      },
+      {
+        "op": "ADD_EDGE",
+        "source": "checkoutservice",
+        "target": "currencyservice",
+        "old_source": "checkoutservice",
+        "old_target": "currencyservice",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:checkoutservice->currencyservice"
+        ]
+      },
+      {
+        "op": "ADD_EDGE",
+        "source": "checkoutservice",
+        "target": "productcatalogservice",
+        "old_source": "checkoutservice",
+        "old_target": "productcatalogservice",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:checkoutservice->productcatalogservice"
+        ]
+      },
+      {
+        "op": "ADD_EDGE",
+        "source": "frontend",
+        "target": "checkoutservice",
+        "old_source": "frontend",
+        "old_target": "checkoutservice",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:frontend->checkoutservice"
+        ]
+      }
+    ],
+    "weight_ops": [],
+    "state_transfer": {},
+    "evidence": [
+      "during:pod:recommendationservice-v2-56445745ff-57blf",
+      "during:checkoutservice->cartservice",
+      "during:checkoutservice->currencyservice",
+      "during:checkoutservice->productcatalogservice",
+      "during:frontend->checkoutservice",
+      "version_coexistence:recommendationservice"
+    ]
+  }
+}

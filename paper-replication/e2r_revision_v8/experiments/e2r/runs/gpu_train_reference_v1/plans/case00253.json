@@ -1,0 +1,160 @@
+{
+  "catalog": [
+    {
+      "id": "op0000",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:recommendationservice-5dc8b478f6-dnfh6",
+        "attrs": {
+          "type": "pod",
+          "service": "recommendationservice",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:recommendationservice-5dc8b478f6-dnfh6"
+        ]
+      },
+      "evidence_id": "during:pod:recommendationservice-5dc8b478f6-dnfh6",
+      "requires": []
+    },
+    {
+      "id": "op0001",
+      "group": "edge_ops",
+      "operation": {
+        "op": "REMOVE_EDGE",
+        "source": "recommendationservice",
+        "target": "pod:recommendationservice-5dc8b478f6-tvdcz",
+        "evidence": [
+          "topology_diff:recommendationservice->pod:recommendationservice-5dc8b478f6-tvdcz"
+        ]
+      },
+      "evidence_id": "topology_diff:recommendationservice->pod:recommendationservice-5dc8b478f6-tvdcz",
+      "requires": []
+    },
+    {
+      "id": "op0002",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "recommendationservice",
+        "target": "pod:recommendationservice-5dc8b478f6-dnfh6",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "evidence": [
+          "during:recommendationservice->pod:recommendationservice-5dc8b478f6-dnfh6"
+        ]
+      },
+      "evidence_id": "during:recommendationservice->pod:recommendationservice-5dc8b478f6-dnfh6",
+      "requires": [
+        "op0000"
+      ]
+    },
+    {
+      "id": "op0003",
+      "group": "node_ops",
+      "operation": {
+        "op": "ALIGN_NODE",
+        "old_node": "pod:recommendationservice-5dc8b478f6-tvdcz",
+        "new_node": "pod:recommendationservice-5dc8b478f6-dnfh6",
+        "service": "recommendationservice",
+        "attrs": {
+          "type": "pod",
+          "service": "recommendationservice",
+          "version": "unknown"
+        },
+        "evidence": [
+          "identity_change:recommendationservice"
+        ]
+      },
+      "evidence_id": "identity_change:recommendationservice",
+      "requires": []
+    }
+  ],
+  "plan": {
+    "experiment_id": "case00253",
+    "change_type": "observation_supported_updates",
+    "confidence": 0.0,
+    "causal_role": "not_inferred",
+    "node_ops": [
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:recommendationservice-5dc8b478f6-dnfh6",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "recommendationservice",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:recommendationservice-5dc8b478f6-dnfh6"
+        ]
+      },
+      {
+        "op": "ALIGN_NODE",
+        "node_id": "",
+        "old_node": "pod:recommendationservice-5dc8b478f6-tvdcz",
+        "new_node": "pod:recommendationservice-5dc8b478f6-dnfh6",
+        "parent": "",
+        "children": [],
+        "service": "recommendationservice",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "recommendationservice",
+          "version": "unknown"
+        },
+        "evidence": [
+          "identity_change:recommendationservice"
+        ]
+      }
+    ],
+    "edge_ops": [
+      {
+        "op": "REMOVE_EDGE",
+        "source": "recommendationservice",
+        "target": "pod:recommendationservice-5dc8b478f6-tvdcz",
+        "old_source": "recommendationservice",
+        "old_target": "pod:recommendationservice-5dc8b478f6-tvdcz",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": null,
+        "attrs": {},
+        "evidence": [
+          "topology_diff:recommendationservice->pod:recommendationservice-5dc8b478f6-tvdcz"
+        ]
+      },
+      {
+        "op": "ADD_EDGE",
+        "source": "recommendationservice",
+        "target": "pod:recommendationservice-5dc8b478f6-dnfh6",
+        "old_source": "recommendationservice",
+        "old_target": "pod:recommendationservice-5dc8b478f6-dnfh6",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:recommendationservice->pod:recommendationservice-5dc8b478f6-dnfh6"
+        ]
+      }
+    ],
+    "weight_ops": [],
+    "state_transfer": {},
+    "evidence": [
+      "during:pod:recommendationservice-5dc8b478f6-dnfh6",
+      "topology_diff:recommendationservice->pod:recommendationservice-5dc8b478f6-tvdcz",
+      "during:recommendationservice->pod:recommendationservice-5dc8b478f6-dnfh6",
+      "identity_change:recommendationservice"
+    ]
+  }
+}

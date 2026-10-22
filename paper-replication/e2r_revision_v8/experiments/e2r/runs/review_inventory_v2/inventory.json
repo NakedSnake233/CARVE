@@ -1,0 +1,295 @@
+{
+  "schema": "e2r_review_inventory_v1",
+  "cases": 798,
+  "counts": {
+    "app": {
+      "boutique": 400,
+      "trainticket": 398
+    },
+    "scenario": {
+      "T1": 199,
+      "T2": 150,
+      "T3": 199,
+      "T4": 250
+    },
+    "category": {
+      "canary_version_fault": 250,
+      "cpu_stress_induced_hpa_scale": 199,
+      "pod_kill_reschedule": 150,
+      "selector_emptied_no_endpoints": 50,
+      "selector_redirected_to_cartservice": 25,
+      "selector_redirected_to_checkoutservice": 25,
+      "selector_redirected_to_emailservice": 25,
+      "selector_redirected_to_ts-basic-service": 25,
+      "selector_redirected_to_ts-order-service": 24,
+      "selector_redirected_to_ts-station-service": 25
+    },
+    "service": {
+      "cartservice": 20,
+      "checkoutservice": 80,
+      "currencyservice": 80,
+      "productcatalogservice": 80,
+      "recommendationservice": 80,
+      "shippingservice": 60,
+      "ts-basic-service": 35,
+      "ts-food-service": 25,
+      "ts-order-other-service": 20,
+      "ts-order-service": 80,
+      "ts-preserve-service": 44,
+      "ts-seat-service": 34,
+      "ts-station-service": 35,
+      "ts-ticketinfo-service": 35,
+      "ts-travel-service": 45,
+      "ts-travel2-service": 45
+    },
+    "app_scenario": {
+      "boutique:T1": 100,
+      "boutique:T2": 75,
+      "boutique:T3": 100,
+      "boutique:T4": 125,
+      "trainticket:T1": 99,
+      "trainticket:T2": 75,
+      "trainticket:T3": 99,
+      "trainticket:T4": 125
+    },
+    "app_category": {
+      "boutique:canary_version_fault": 125,
+      "boutique:cpu_stress_induced_hpa_scale": 100,
+      "boutique:pod_kill_reschedule": 75,
+      "boutique:selector_emptied_no_endpoints": 25,
+      "boutique:selector_redirected_to_cartservice": 25,
+      "boutique:selector_redirected_to_checkoutservice": 25,
+      "boutique:selector_redirected_to_emailservice": 25,
+      "trainticket:canary_version_fault": 125,
+      "trainticket:cpu_stress_induced_hpa_scale": 99,
+      "trainticket:pod_kill_reschedule": 75,
+      "trainticket:selector_emptied_no_endpoints": 25,
+      "trainticket:selector_redirected_to_ts-basic-service": 25,
+      "trainticket:selector_redirected_to_ts-order-service": 24,
+      "trainticket:selector_redirected_to_ts-station-service": 25
+    }
+  },
+  "candidate_count": {
+    "min": 13,
+    "median": 13.0,
+    "max": 65,
+    "mean": 38.93483709273183
+  },
+  "accepted_telemetry_records": {
+    "min": 0,
+    "median": 3375.0,
+    "max": 15695,
+    "mean": 4198.256892230576
+  },
+  "topology_only_cases": 398,
+  "graph_size": {
+    "boutique": {
+      "reference_nodes": {
+        "min": 24,
+        "median": 24.0,
+        "max": 33,
+        "mean": 24.6025
+      },
+      "reference_directed_edges": {
+        "min": 36,
+        "median": 50.0,
+        "max": 68,
+        "mean": 50.61
+      },
+      "runtime_nodes": {
+        "min": 24,
+        "median": 25.0,
+        "max": 36,
+        "mean": 25.3925
+      },
+      "runtime_directed_edges": {
+        "min": 36,
+        "median": 52.0,
+        "max": 74,
+        "mean": 52.485
+      },
+      "patch_nodes": {
+        "min": 24,
+        "median": 27.0,
+        "max": 36,
+        "mean": 26.2525
+      },
+      "patch_directed_edges": {
+        "min": 38,
+        "median": 54.0,
+        "max": 74,
+        "mean": 54.45
+      }
+    },
+    "trainticket": {
+      "reference_nodes": {
+        "min": 130,
+        "median": 148.0,
+        "max": 165,
+        "mean": 147.73869346733667
+      },
+      "reference_directed_edges": {
+        "min": 128,
+        "median": 162.0,
+        "max": 194,
+        "mean": 160.3718592964824
+      },
+      "runtime_nodes": {
+        "min": 130,
+        "median": 150.0,
+        "max": 165,
+        "mean": 148.9070351758794
+      },
+      "runtime_directed_edges": {
+        "min": 128,
+        "median": 162.0,
+        "max": 206,
+        "mean": 160.8140703517588
+      },
+      "patch_nodes": {
+        "min": 130,
+        "median": 151.0,
+        "max": 166,
+        "mean": 150.2462311557789
+      },
+      "patch_directed_edges": {
+        "min": 130,
+        "median": 164.0,
+        "max": 208,
+        "mean": 163.0854271356784
+      }
+    }
+  },
+  "fault_parameters": {
+    "boutique:T1:cpu_load": {
+      "60": 25,
+      "70": 25,
+      "80": 25,
+      "90": 25
+    },
+    "boutique:T1:cpu_workers": {
+      "2": 25,
+      "3": 25,
+      "4": 25,
+      "6": 25
+    },
+    "boutique:T4:v1_weight": {
+      "90": 25,
+      "80": 25,
+      "70": 25,
+      "60": 25,
+      "50": 25
+    },
+    "boutique:T4:v2_abort_pct": {
+      "50": 25,
+      "10": 25,
+      "20": 25,
+      "25": 25,
+      "30": 25
+    },
+    "boutique:T4:v2_delay_ms": {
+      "1000": 25,
+      "100": 25,
+      "200": 25,
+      "300": 25,
+      "500": 25
+    },
+    "boutique:T4:v2_weight": {
+      "10": 25,
+      "20": 25,
+      "30": 25,
+      "40": 25,
+      "50": 25
+    },
+    "trainticket:T1:cpu_load": {
+      "60": 25,
+      "70": 25,
+      "80": 25,
+      "90": 24
+    },
+    "trainticket:T1:cpu_workers": {
+      "2": 25,
+      "3": 25,
+      "4": 25,
+      "6": 24
+    },
+    "trainticket:T4:v1_weight": {
+      "90": 25,
+      "80": 25,
+      "70": 25,
+      "60": 25,
+      "50": 25
+    },
+    "trainticket:T4:v2_abort_pct": {
+      "50": 25,
+      "10": 25,
+      "20": 25,
+      "25": 25,
+      "30": 25
+    },
+    "trainticket:T4:v2_delay_ms": {
+      "1000": 25,
+      "100": 25,
+      "200": 25,
+      "300": 25,
+      "500": 25
+    },
+    "trainticket:T4:v2_weight": {
+      "10": 25,
+      "20": 25,
+      "30": 25,
+      "40": 25,
+      "50": 25
+    }
+  },
+  "workload": {
+    "recorded_798_campaign": {
+      "boutique": "not encoded in incident metadata",
+      "trainticket": "not encoded in incident metadata"
+    },
+    "planned_isolated_live_boutique": {
+      "loadgenerator_users": 10,
+      "image_tag": "v0.10.1",
+      "source": "experiments/e2r/isolated_boutique.yaml"
+    },
+    "interpretation": "Unknown historical workload is reported as unknown; it is not inferred from telemetry."
+  },
+  "fairness_contract": {
+    "shared_across_graph_arms": [
+      "diagnostic cutoff",
+      "observation snapshot",
+      "candidate services",
+      "base feature function",
+      "edge weight=1",
+      "split",
+      "per-seed frozen scorer"
+    ],
+    "intentional_differences": {
+      "reference": "pre-event graph",
+      "runtime": "diagnosis-time observed graph",
+      "rule_patch": "validated supported operations applied to reference"
+    },
+    "ground_truth_use": [
+      "pre-inference candidate-presence eligibility check",
+      "recorded fault_end_time cutoff validity check",
+      "split",
+      "supervised loss",
+      "evaluation"
+    ],
+    "forbidden_model_inputs": [
+      "target/scenario/fault params",
+      "original incident name",
+      "ground truth",
+      "post-recovery state",
+      "old cached plan"
+    ],
+    "external_baseline_adapter_requirements": [
+      "same snapshot facts",
+      "same candidate list",
+      "same held-out IDs",
+      "same LLM alias/temperature/request budget when applicable",
+      "same failure denominator",
+      "same mutation namespace and safety policy for recovery"
+    ]
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "catalog": [
+    {
+      "id": "op0000",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-travel-service-6f6dd9dc64-8x2fb",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-travel-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-travel-service-6f6dd9dc64-8x2fb"
+        ]
+      },
+      "evidence_id": "during:pod:ts-travel-service-6f6dd9dc64-8x2fb",
+      "requires": []
+    },
+    {
+      "id": "op0001",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-travel-service-6f6dd9dc64-m5zjn",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-travel-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-travel-service-6f6dd9dc64-m5zjn"
+        ]
+      },
+      "evidence_id": "during:pod:ts-travel-service-6f6dd9dc64-m5zjn",
+      "requires": []
+    }
+  ],
+  "plan": {
+    "experiment_id": "case00164",
+    "change_type": "observation_supported_updates",
+    "confidence": 0.0,
+    "causal_role": "not_inferred",
+    "node_ops": [
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-travel-service-6f6dd9dc64-8x2fb",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-travel-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-travel-service-6f6dd9dc64-8x2fb"
+        ]
+      },
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-travel-service-6f6dd9dc64-m5zjn",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-travel-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-travel-service-6f6dd9dc64-m5zjn"
+        ]
+      }
+    ],
+    "edge_ops": [],
+    "weight_ops": [],
+    "state_transfer": {},
+    "evidence": [
+      "during:pod:ts-travel-service-6f6dd9dc64-8x2fb",
+      "during:pod:ts-travel-service-6f6dd9dc64-m5zjn"
+    ]
+  }
+}

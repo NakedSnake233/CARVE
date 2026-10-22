@@ -1,0 +1,378 @@
+{
+  "catalog": [
+    {
+      "id": "op0000",
+      "group": "edge_ops",
+      "operation": {
+        "op": "REMOVE_EDGE",
+        "source": "currencyservice",
+        "target": "pod:currencyservice-84754ffd69-f4zc2",
+        "evidence": [
+          "topology_diff:currencyservice->pod:currencyservice-84754ffd69-f4zc2"
+        ]
+      },
+      "evidence_id": "topology_diff:currencyservice->pod:currencyservice-84754ffd69-f4zc2",
+      "requires": []
+    },
+    {
+      "id": "op0001",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "cartservice",
+        "target": "currencyservice",
+        "edge_type": "dependency",
+        "weight": 1.0,
+        "evidence": [
+          "during:cartservice->currencyservice"
+        ]
+      },
+      "evidence_id": "during:cartservice->currencyservice",
+      "requires": []
+    },
+    {
+      "id": "op0002",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "checkoutservice",
+        "target": "cartservice",
+        "edge_type": "dependency",
+        "weight": 1.0,
+        "evidence": [
+          "during:checkoutservice->cartservice"
+        ]
+      },
+      "evidence_id": "during:checkoutservice->cartservice",
+      "requires": []
+    },
+    {
+      "id": "op0003",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "checkoutservice",
+        "target": "currencyservice",
+        "edge_type": "dependency",
+        "weight": 1.0,
+        "evidence": [
+          "during:checkoutservice->currencyservice"
+        ]
+      },
+      "evidence_id": "during:checkoutservice->currencyservice",
+      "requires": []
+    },
+    {
+      "id": "op0004",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "checkoutservice",
+        "target": "emailservice",
+        "edge_type": "dependency",
+        "weight": 1.0,
+        "evidence": [
+          "during:checkoutservice->emailservice"
+        ]
+      },
+      "evidence_id": "during:checkoutservice->emailservice",
+      "requires": []
+    },
+    {
+      "id": "op0005",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "checkoutservice",
+        "target": "paymentservice",
+        "edge_type": "dependency",
+        "weight": 1.0,
+        "evidence": [
+          "during:checkoutservice->paymentservice"
+        ]
+      },
+      "evidence_id": "during:checkoutservice->paymentservice",
+      "requires": []
+    },
+    {
+      "id": "op0006",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "checkoutservice",
+        "target": "productcatalogservice",
+        "edge_type": "dependency",
+        "weight": 1.0,
+        "evidence": [
+          "during:checkoutservice->productcatalogservice"
+        ]
+      },
+      "evidence_id": "during:checkoutservice->productcatalogservice",
+      "requires": []
+    },
+    {
+      "id": "op0007",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "checkoutservice",
+        "target": "shippingservice",
+        "edge_type": "dependency",
+        "weight": 1.0,
+        "evidence": [
+          "during:checkoutservice->shippingservice"
+        ]
+      },
+      "evidence_id": "during:checkoutservice->shippingservice",
+      "requires": []
+    },
+    {
+      "id": "op0008",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "currencyservice",
+        "target": "pod:cartservice-5967c9cd9b-2czh7",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "evidence": [
+          "during:currencyservice->pod:cartservice-5967c9cd9b-2czh7"
+        ]
+      },
+      "evidence_id": "during:currencyservice->pod:cartservice-5967c9cd9b-2czh7",
+      "requires": []
+    },
+    {
+      "id": "op0009",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "frontend",
+        "target": "checkoutservice",
+        "edge_type": "dependency",
+        "weight": 1.0,
+        "evidence": [
+          "during:frontend->checkoutservice"
+        ]
+      },
+      "evidence_id": "during:frontend->checkoutservice",
+      "requires": []
+    },
+    {
+      "id": "op0010",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_TRACE_MISMATCH_EDGE",
+        "source": "currencyservice",
+        "target": "cartservice",
+        "edge_type": "endpoint_mismatch",
+        "weight": 1.0,
+        "evidence": [
+          "endpoint_owner:currencyservice:10.244.2.45"
+        ]
+      },
+      "evidence_id": "endpoint_owner:currencyservice:10.244.2.45",
+      "requires": []
+    }
+  ],
+  "plan": {
+    "experiment_id": "case00380",
+    "change_type": "observation_supported_updates",
+    "confidence": 0.0,
+    "causal_role": "not_inferred",
+    "node_ops": [],
+    "edge_ops": [
+      {
+        "op": "REMOVE_EDGE",
+        "source": "currencyservice",
+        "target": "pod:currencyservice-84754ffd69-f4zc2",
+        "old_source": "currencyservice",
+        "old_target": "pod:currencyservice-84754ffd69-f4zc2",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": null,
+        "attrs": {},
+        "evidence": [
+          "topology_diff:currencyservice->pod:currencyservice-84754ffd69-f4zc2"
+        ]
+      },
+      {
+        "op": "ADD_EDGE",
+        "source": "cartservice",
+        "target": "currencyservice",
+        "old_source": "cartservice",
+        "old_target": "currencyservice",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:cartservice->currencyservice"
+        ]
+      },
+      {
+        "op": "ADD_EDGE",
+        "source": "checkoutservice",
+        "target": "cartservice",
+        "old_source": "checkoutservice",
+        "old_target": "cartservice",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:checkoutservice->cartservice"
+        ]
+      },
+      {
+        "op": "ADD_EDGE",
+        "source": "checkoutservice",
+        "target": "currencyservice",
+        "old_source": "checkoutservice",
+        "old_target": "currencyservice",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:checkoutservice->currencyservice"
+        ]
+      },
+      {
+        "op": "ADD_EDGE",
+        "source": "checkoutservice",
+        "target": "emailservice",
+        "old_source": "checkoutservice",
+        "old_target": "emailservice",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:checkoutservice->emailservice"
+        ]
+      },
+      {
+        "op": "ADD_EDGE",
+        "source": "checkoutservice",
+        "target": "paymentservice",
+        "old_source": "checkoutservice",
+        "old_target": "paymentservice",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:checkoutservice->paymentservice"
+        ]
+      },
+      {
+        "op": "ADD_EDGE",
+        "source": "checkoutservice",
+        "target": "productcatalogservice",
+        "old_source": "checkoutservice",
+        "old_target": "productcatalogservice",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:checkoutservice->productcatalogservice"
+        ]
+      },
+      {
+        "op": "ADD_EDGE",
+        "source": "checkoutservice",
+        "target": "shippingservice",
+        "old_source": "checkoutservice",
+        "old_target": "shippingservice",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:checkoutservice->shippingservice"
+        ]
+      },
+      {
+        "op": "ADD_EDGE",
+        "source": "currencyservice",
+        "target": "pod:cartservice-5967c9cd9b-2czh7",
+        "old_source": "currencyservice",
+        "old_target": "pod:cartservice-5967c9cd9b-2czh7",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:currencyservice->pod:cartservice-5967c9cd9b-2czh7"
+        ]
+      },
+      {
+        "op": "ADD_EDGE",
+        "source": "frontend",
+        "target": "checkoutservice",
+        "old_source": "frontend",
+        "old_target": "checkoutservice",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:frontend->checkoutservice"
+        ]
+      },
+      {
+        "op": "ADD_TRACE_MISMATCH_EDGE",
+        "source": "currencyservice",
+        "target": "cartservice",
+        "old_source": "currencyservice",
+        "old_target": "cartservice",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "endpoint_mismatch",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "endpoint_owner:currencyservice:10.244.2.45"
+        ]
+      }
+    ],
+    "weight_ops": [],
+    "state_transfer": {},
+    "evidence": [
+      "topology_diff:currencyservice->pod:currencyservice-84754ffd69-f4zc2",
+      "during:cartservice->currencyservice",
+      "during:checkoutservice->cartservice",
+      "during:checkoutservice->currencyservice",
+      "during:checkoutservice->emailservice",
+      "during:checkoutservice->paymentservice",
+      "during:checkoutservice->productcatalogservice",
+      "during:checkoutservice->shippingservice",
+      "during:currencyservice->pod:cartservice-5967c9cd9b-2czh7",
+      "during:frontend->checkoutservice",
+      "endpoint_owner:currencyservice:10.244.2.45"
+    ]
+  }
+}

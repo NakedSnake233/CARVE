@@ -1,0 +1,147 @@
+{
+  "catalog": [
+    {
+      "id": "op0000",
+      "group": "edge_ops",
+      "operation": {
+        "op": "REMOVE_EDGE",
+        "source": "productcatalogservice",
+        "target": "pod:productcatalogservice-69c47d7f4d-zvh4t",
+        "evidence": [
+          "topology_diff:productcatalogservice->pod:productcatalogservice-69c47d7f4d-zvh4t"
+        ]
+      },
+      "evidence_id": "topology_diff:productcatalogservice->pod:productcatalogservice-69c47d7f4d-zvh4t",
+      "requires": []
+    },
+    {
+      "id": "op0001",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "productcatalogservice",
+        "target": "pod:checkoutservice-78cf67b9fc-vzslh",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "evidence": [
+          "during:productcatalogservice->pod:checkoutservice-78cf67b9fc-vzslh"
+        ]
+      },
+      "evidence_id": "during:productcatalogservice->pod:checkoutservice-78cf67b9fc-vzslh",
+      "requires": []
+    },
+    {
+      "id": "op0002",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "recommendationservice",
+        "target": "checkoutservice",
+        "edge_type": "dependency",
+        "weight": 1.0,
+        "evidence": [
+          "during:recommendationservice->checkoutservice"
+        ]
+      },
+      "evidence_id": "during:recommendationservice->checkoutservice",
+      "requires": []
+    },
+    {
+      "id": "op0003",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_TRACE_MISMATCH_EDGE",
+        "source": "productcatalogservice",
+        "target": "checkoutservice",
+        "edge_type": "endpoint_mismatch",
+        "weight": 1.0,
+        "evidence": [
+          "endpoint_owner:productcatalogservice:10.244.1.103"
+        ]
+      },
+      "evidence_id": "endpoint_owner:productcatalogservice:10.244.1.103",
+      "requires": []
+    }
+  ],
+  "plan": {
+    "experiment_id": "case00404",
+    "change_type": "observation_supported_updates",
+    "confidence": 0.0,
+    "causal_role": "not_inferred",
+    "node_ops": [],
+    "edge_ops": [
+      {
+        "op": "REMOVE_EDGE",
+        "source": "productcatalogservice",
+        "target": "pod:productcatalogservice-69c47d7f4d-zvh4t",
+        "old_source": "productcatalogservice",
+        "old_target": "pod:productcatalogservice-69c47d7f4d-zvh4t",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": null,
+        "attrs": {},
+        "evidence": [
+          "topology_diff:productcatalogservice->pod:productcatalogservice-69c47d7f4d-zvh4t"
+        ]
+      },
+      {
+        "op": "ADD_EDGE",
+        "source": "productcatalogservice",
+        "target": "pod:checkoutservice-78cf67b9fc-vzslh",
+        "old_source": "productcatalogservice",
+        "old_target": "pod:checkoutservice-78cf67b9fc-vzslh",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:productcatalogservice->pod:checkoutservice-78cf67b9fc-vzslh"
+        ]
+      },
+      {
+        "op": "ADD_EDGE",
+        "source": "recommendationservice",
+        "target": "checkoutservice",
+        "old_source": "recommendationservice",
+        "old_target": "checkoutservice",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:recommendationservice->checkoutservice"
+        ]
+      },
+      {
+        "op": "ADD_TRACE_MISMATCH_EDGE",
+        "source": "productcatalogservice",
+        "target": "checkoutservice",
+        "old_source": "productcatalogservice",
+        "old_target": "checkoutservice",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "endpoint_mismatch",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "endpoint_owner:productcatalogservice:10.244.1.103"
+        ]
+      }
+    ],
+    "weight_ops": [],
+    "state_transfer": {},
+    "evidence": [
+      "topology_diff:productcatalogservice->pod:productcatalogservice-69c47d7f4d-zvh4t",
+      "during:productcatalogservice->pod:checkoutservice-78cf67b9fc-vzslh",
+      "during:recommendationservice->checkoutservice",
+      "endpoint_owner:productcatalogservice:10.244.1.103"
+    ]
+  }
+}

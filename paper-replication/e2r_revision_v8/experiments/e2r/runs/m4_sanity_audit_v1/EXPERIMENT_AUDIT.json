@@ -1,0 +1,198 @@
+{
+  "audit_skill": "experiment-audit",
+  "verdict": "WARN",
+  "reason_code": "known_target_scope_and_retained_probe_runtime_evidence_gaps",
+  "summary": "In the single known-target frontend CPU-stress v3 sanity, scoped typed deletion completed 63.9 seconds after injection and was followed by three workload windows meeting the predeclared thresholds before the 180-second fault expiry; the trace records oracle PASS and independently recorded cleanup absence, while raw technical-probe and contemporaneous pod-runtime evidence are incomplete.",
+  "audited_input_hashes": {
+    "experiments/e2r/isolated_boutique.yaml": "sha256:9150029373d00e9882b83922071d69c12bcd36b04af5cab16ea90a2caa0882bb",
+    "experiments/e2r/isolated_environment.json": "sha256:e609874865aac726703127483c822450071e6e04979676fecb09908fd84122f6",
+    "experiments/e2r/runs/recovery_baseline_comparison_v1/REPORT.md": "sha256:1d511833034efdc50869f4e92f39fae40b779c6005671b614ce7be97ee811a94",
+    "experiments/e2r/runs/recovery_baseline_comparison_v1/analysis.json": "sha256:7fe9e8a658f46c0de04e043ac714216817b9ab6245bab103fdcbd45c24a51a3c",
+    "experiments/e2r/runs/recovery_baseline_v1/baseline.json": "sha256:b9c4c39b77b6640390746b77167ab5f69f2dca72598b59399b150d4dc9c563bf",
+    "experiments/e2r/runs/recovery_baseline_v2/baseline.json": "sha256:3957fa90acce446bd248c6e493c2374307454cc96d4644b99ec60fc04b84642d",
+    "experiments/e2r/runs/recovery_sanity_frontend_cpu_v1/trace.json": "sha256:346a326e1c0cd88dea291932d521415ec182bcc46d54b53a3abff627a4fd1991",
+    "experiments/e2r/runs/recovery_sanity_frontend_cpu_v2/trace.json": "sha256:47122d445bcde4e11899fa02161ca0cf48f7d8e77c4bb582f3218f9568a28f23",
+    "experiments/e2r/runs/recovery_sanity_frontend_cpu_v3/trace.json": "sha256:33cff9667822ef297d508809f57a758a9fb3dc975a757f46dd10ad47b4cad761",
+    "findings.md": "sha256:696ff7d45654b7c3e3185d55743b67e9882ed19162e2141a724ade07b0fb2a61",
+    "methods/PlanRCAThinkRemed/cluster_client.py": "sha256:a8004f9961c417ae9a2e4aa587f90aeb4f8c663c125db081d6bf9e31ae520fca",
+    "methods/PlanRCAThinkRemed/playbook_generator_agent.py": "sha256:a025ddec725a19c1f958d41f26f537857ac17d0cb1bb7ff1ae1be63705bf4b38",
+    "methods/PlanRCAThinkRemed/repair_planner_agent.py": "sha256:892fc9f94cc068079b3df75168e8ed4508e0d67b960e941e7adae82062c61fc3",
+    "methods/PlanRCAThinkRemed/safe_probe_agent.py": "sha256:fe1663114ce0f1ab1eaee20cb66bc410de60939862aa1318e88a513b99cc1874",
+    "methods/PlanRCAThinkRemed/safety_guard.py": "sha256:d0ac1b465cd3d1d2eff9ecd33936246e5bfc2647199d5ff201d0292cb640233f",
+    "methods/PlanRCAThinkRemed/schemas.py": "sha256:6b3db2fe8664b50e84f66b0aadc5aa8758b6a6d316e689a5611d3f868dd7e721",
+    "rca_bench/recovery_oracle.py": "sha256:6e2ac9775e726c5a36adc225cf8a6f11ec2efecd0363095ce476fffd512e9dc4",
+    "rca_bench/workload_oracle.py": "sha256:84a2229a1d5a8f344fbec3ba2ad696ee43ded3854054d2bbacdf5c4ef7e2d1a9",
+    "refine-logs/EXPERIMENT_TRACKER.md": "sha256:38fb90384aeb4e17b4a41c4ffe29e2e4a91d28fc66351cded973ecd8a20a068d",
+    "refine-logs/FULL_EXPERIMENT_CODE_REVIEW.md": "sha256:297593d8f41a51b5a6e8e03b49314e2fa0535601cb1b93e51c5b8e2a895c3173",
+    "scripts/e2r/analyze_recovery_baselines.py": "sha256:e85ff6fa606f7aa64c5cd60b52e9aac40b7c16d4c9418c04a7af86c3e7bf0028",
+    "scripts/e2r/run_recovery_baseline.py": "sha256:080ec0a903b3dffc3f5378c23aed469f78c43f2166acb0c0393088ebe7c1c296",
+    "scripts/e2r/run_recovery_sanity.py": "sha256:c49e45199958c65284de9e62a4c2bac2a227659d0a46a1ec5f6b73ff0c47a42b",
+    ".aris/traces/experiment-audit/20260927_m4_sanity/historical_source/workload_oracle.py": "sha256:12f788298199b4e3c95d47d13bd53fb1562d1547522be3522b3ffd13ad74c0e3"
+  },
+  "trace_path": ".aris/traces/experiment-audit/20260927_m4_sanity",
+  "agent_id": "/root/m4_sanity_audit",
+  "verdict_id": "/root/m4_sanity_audit:20260927_m4_sanity",
+  "executor_model": "codex-gpt-6-astra",
+  "executor_family": "openai",
+  "reviewer_model": "gpt-6-astra",
+  "reviewer_family": "openai",
+  "reviewer_reasoning": "ultra",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "generated_at": "2026-09-26T16:21:26.800537+00:00",
+  "date": "2026-09-27",
+  "auditor": "gpt-6-astra-ultra",
+  "overall_verdict": "warn",
+  "integrity_status": "warn",
+  "integrity_blockers": [],
+  "checks": {
+    "gt_provenance": {
+      "status": "warn",
+      "details": "The target service/fault and confidence 0.99 are supplied by the known injection contract; one live Chaos object is the evidence, not a learned RCA output. HTTP observations are measured; no fabricated model-derived reference was found. This supports a known-target contract sanity, not diagnosis accuracy.",
+      "evidence": [
+        "scripts/e2r/run_recovery_sanity.py:17",
+        "scripts/e2r/run_recovery_sanity.py:214",
+        "experiments/e2r/runs/recovery_sanity_frontend_cpu_v3/trace.json:408"
+      ]
+    },
+    "score_normalization": {
+      "status": "pass",
+      "details": "Every raw latency, nearest-rank p95, successes/elapsed throughput and error count agrees. The 1.2 latency and 0.8 throughput gates use separate no-fault calibration, not a prediction maximum. All 20 windows/3000 requests are retained.",
+      "evidence": [
+        "rca_bench/workload_oracle.py:155",
+        "scripts/e2r/run_recovery_baseline.py:118",
+        "rca_bench/recovery_oracle.py:89"
+      ]
+    },
+    "result_existence": {
+      "status": "warn",
+      "details": "All specified files and numbers exist and recompute; no phantom success found. Technical booleans and canaries cannot be independently reconstructed from raw response evidence because that evidence was not retained. V3 has no contemporaneous pre/post pod snapshots.",
+      "evidence": [
+        "experiments/e2r/runs/recovery_sanity_frontend_cpu_v3/trace.json:1079",
+        "experiments/e2r/runs/recovery_sanity_frontend_cpu_v3/trace.json:1189"
+      ]
+    },
+    "dead_code": {
+      "status": "pass",
+      "details": "The live sanity directly calls measure/collector, planner, YAML gate, preconditions, execution, technical collector and evaluate_recovery. Saved plan/YAML/preconditions and oracle replay exactly. The optional build_business_oracle callback is not this runner path and contributes no claimed result.",
+      "evidence": [
+        "scripts/e2r/run_recovery_sanity.py:161",
+        "scripts/e2r/run_recovery_sanity.py:220",
+        "scripts/e2r/run_recovery_sanity.py:260"
+      ]
+    },
+    "scope": {
+      "status": "warn",
+      "details": "Three attempts, two injected episodes, one completed typed mutation/oracle PASS; one namespace, frontend, CPU stress, no learned RCA/LLM, no randomized control or matched no-action episode. Preserve failures and changed environment versions; do not infer causal advantage, general safety, persistent-state integrity or a success rate.",
+      "evidence": [
+        "refine-logs/EXPERIMENT_TRACKER.md:25",
+        "refine-logs/FULL_EXPERIMENT_CODE_REVIEW.md:668",
+        "refine-logs/FULL_EXPERIMENT_CODE_REVIEW.md:732"
+      ]
+    },
+    "eval_type": "self_supervised_proxy",
+    "eval_type_detail": "Legacy taxonomy: no independently evaluated learned diagnosis ground truth; measured workload relative to a no-fault calibration. Precise subtype: controlled_live_known_target_contract. This is real isolated-cluster HTTP measurement, not simulation or model-generated synthetic data.",
+    "static_bindings": {
+      "status": "pass",
+      "details": "Baseline v1/v2 content digests and v3 approved manifest/path match; changed baseline bytes, manifest bytes and old baseline path reject in offline replay."
+    },
+    "timing_freshness": {
+      "status": "pass",
+      "details": "All windows are ordered; v3 completion at 63.9213 seconds precedes 150-second deadline; post-window end ages 93.9389,124.9662,155.9936 seconds and oracle evaluation all precede 180-second expiry. Freshness ages 62.4446,31.4174,0.3900 seconds are below 120 seconds."
+    },
+    "target_plan_execution": {
+      "status": "pass",
+      "details": "V1/v3 evidence and precondition JSON match exact kind/name/namespace/service and active injected controller status; plan/YAML/captured hashes reproduce. V1 Ansible import failure has no typed mutation; v3 deletion output/rc0 precede cleanup."
+    },
+    "technical_raw_evidence": {
+      "status": "warn",
+      "details": "Oracle replay trusts three saved Boolean technical predicates; raw technical probe rows absent. Later admin NotFound provides separate raw cleanup absence evidence but cannot reconstruct scoped technical read timing/response."
+    },
+    "cleanup": {
+      "status": "pass",
+      "details": "All three attempts retain cleanup rc0 and independent exact-target GET rc1/NotFound with no cleanup errors. V1 rollback apply says unchanged and is not a third injected episode."
+    },
+    "baseline_runtime_snapshots": {
+      "status": "pass",
+      "details": "V2 baseline has stable 12 pod UIDs/container IDs, 24 Ready containers and zero restart counts across embedded pre/post snapshots. Baseline v1 lacks a post-snapshot."
+    },
+    "sanity_runtime_snapshots": {
+      "status": "warn",
+      "details": "No contemporaneous pre/post v3 pod-runtime snapshots exist in audit artifacts. Executor-reported immediate post-run health was not persisted and is not promoted to verified evidence."
+    },
+    "natural_expiry": {
+      "status": "pass",
+      "details": "Actual v3 active precondition evidence, successful named deletion at 63.9 seconds, and all three post-windows before 180 seconds rule out declared automatic expiry as the observed PASS mechanism for this trace. No no-action control means no causal treatment-effect estimate."
+    }
+  },
+  "deterministic_verification": {
+    "status": "PASS",
+    "check_count": 247,
+    "failed_checks": [],
+    "window_count": 20,
+    "raw_requests": 3000,
+    "script": ".aris/traces/experiment-audit/20260927_m4_sanity/recompute.py",
+    "results": ".aris/traces/experiment-audit/20260927_m4_sanity/recomputed.json"
+  },
+  "denominators": {
+    "no_fault_calibrations": 2,
+    "sanity_attempts": 3,
+    "pre_health_rejections_before_injection": 1,
+    "injected_fault_episodes": 2,
+    "repair_process_invocations": 2,
+    "actual_typed_mutations_completed": 1,
+    "reported_oracle_passes": 1,
+    "reported_oracle_nonpasses": 0,
+    "injected_without_post_oracle_due_infrastructure_failure": 1,
+    "scope": "one namespace, one service, one fault profile; different setup/code versions; no success-rate estimate"
+  },
+  "attempt_classification": {
+    "v1": "infrastructure_failure_after_injection_no_typed_mutation_no_recovery_oracle",
+    "v2": "pre_health_rejection_before_injection_no_repair_no_oracle",
+    "v3": "single_known_target_typed_deletion_recorded_oracle_pass"
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "In the single known-target frontend CPU-stress v3 sanity, scoped typed deletion completed 63.9 seconds after injection and was followed by three workload windows meeting the predeclared thresholds before the 180-second fault expiry; the trace records oracle PASS and independently recorded cleanup absence, while raw technical-probe and contemporaneous pod-runtime evidence are incomplete.",
+      "impact": "supported_with_explicit_provenance_qualification"
+    },
+    {
+      "id": "C2",
+      "claim": "Measured learned diagnosis accuracy or graph-to-repair benefit",
+      "impact": "unsupported"
+    },
+    {
+      "id": "C3",
+      "claim": "Causal recovery improvement versus no action/direct repair",
+      "impact": "unsupported"
+    },
+    {
+      "id": "C4",
+      "claim": "Persistent-state preservation or universal runtime stability",
+      "impact": "unsupported"
+    }
+  ],
+  "warranted_statement": "In the single known-target frontend CPU-stress v3 sanity, scoped typed deletion completed 63.9 seconds after injection and was followed by three workload windows meeting the predeclared thresholds before the 180-second fault expiry; the trace records oracle PASS and independently recorded cleanup absence, while raw technical-probe and contemporaneous pod-runtime evidence are incomplete.",
+  "source_provenance": {
+    "historical_workload_oracle_sha256": "12f788298199b4e3c95d47d13bd53fb1562d1547522be3522b3ffd13ad74c0e3",
+    "historical_snapshot_origin": "Reconstructed post hoc by executor by reversing prospective raw-evidence patch; independently hash-verified against review-pinned digest.",
+    "current_workload_oracle_sha256": "sha256:84a2229a1d5a8f344fbec3ba2ad696ee43ded3854054d2bbacdf5c4ef7e2d1a9",
+    "current_workload_oracle_usage": "Post-v3 prospective raw-evidence patch; not execution-time provenance and does not retroactively supply missing probe records.",
+    "sanity_runner_sha256": "sha256:c49e45199958c65284de9e62a4c2bac2a227659d0a46a1ec5f6b73ff0c47a42b",
+    "limitation": "Trace pins baseline and manifest, not all executed source files. Current audit source snapshots are retained separately."
+  },
+  "limitations": [
+    "HTTP raw diagnostics retain sorted latencies and aggregate success counts, not per-request response/status/timestamps or raw canary response.",
+    "Baseline v1 has no post-runtime snapshot; v3 has no contemporaneous pre/post runtime snapshot.",
+    "Technical booleans are recorded without their source probe output.",
+    "Only one successful known-target episode; no no-action comparator or repeated matched trials.",
+    "Environment changed through sidecar stabilization between v2 attempt and v3; p95 comparison is not randomized."
+  ],
+  "action_items": [
+    "Keep all three attempts and both baseline versions in reporting with distinct attempt/injection/completion denominators.",
+    "Before prospective expansion, persist raw timestamped technical/RBAC/canary evidence and pre/post pod UID/container/restart/ready snapshots; do not backfill v3 with later state.",
+    "Freeze source/content identities at launch and retain them with future traces.",
+    "Use a predeclared matched no-action/direct-repair protocol with repetitions before causal or comparative recovery claims."
+  ]
+}

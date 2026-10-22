@@ -1,0 +1,160 @@
+{
+  "catalog": [
+    {
+      "id": "op0000",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-basic-service-b8f896f8b-lvxcl",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-basic-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-basic-service-b8f896f8b-lvxcl"
+        ]
+      },
+      "evidence_id": "during:pod:ts-basic-service-b8f896f8b-lvxcl",
+      "requires": []
+    },
+    {
+      "id": "op0001",
+      "group": "edge_ops",
+      "operation": {
+        "op": "REMOVE_EDGE",
+        "source": "ts-basic-service",
+        "target": "pod:ts-basic-service-b8f896f8b-6plfh",
+        "evidence": [
+          "topology_diff:ts-basic-service->pod:ts-basic-service-b8f896f8b-6plfh"
+        ]
+      },
+      "evidence_id": "topology_diff:ts-basic-service->pod:ts-basic-service-b8f896f8b-6plfh",
+      "requires": []
+    },
+    {
+      "id": "op0002",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_BLACKHOLE_NODE",
+        "service": "ts-basic-service",
+        "attrs": {
+          "type": "blackhole",
+          "service": "ts-basic-service"
+        },
+        "evidence": [
+          "empty_endpoint:ts-basic-service"
+        ]
+      },
+      "evidence_id": "empty_endpoint:ts-basic-service",
+      "requires": []
+    },
+    {
+      "id": "op0003",
+      "group": "node_ops",
+      "operation": {
+        "op": "ALIGN_NODE",
+        "old_node": "pod:ts-basic-service-b8f896f8b-6plfh",
+        "new_node": "pod:ts-basic-service-b8f896f8b-lvxcl",
+        "service": "ts-basic-service",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-basic-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "identity_change:ts-basic-service"
+        ]
+      },
+      "evidence_id": "identity_change:ts-basic-service",
+      "requires": []
+    }
+  ],
+  "plan": {
+    "experiment_id": "case00281",
+    "change_type": "observation_supported_updates",
+    "confidence": 0.0,
+    "causal_role": "not_inferred",
+    "node_ops": [
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-basic-service-b8f896f8b-lvxcl",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-basic-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-basic-service-b8f896f8b-lvxcl"
+        ]
+      },
+      {
+        "op": "ADD_BLACKHOLE_NODE",
+        "node_id": "",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "ts-basic-service",
+        "version": "",
+        "attrs": {
+          "type": "blackhole",
+          "service": "ts-basic-service"
+        },
+        "evidence": [
+          "empty_endpoint:ts-basic-service"
+        ]
+      },
+      {
+        "op": "ALIGN_NODE",
+        "node_id": "",
+        "old_node": "pod:ts-basic-service-b8f896f8b-6plfh",
+        "new_node": "pod:ts-basic-service-b8f896f8b-lvxcl",
+        "parent": "",
+        "children": [],
+        "service": "ts-basic-service",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-basic-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "identity_change:ts-basic-service"
+        ]
+      }
+    ],
+    "edge_ops": [
+      {
+        "op": "REMOVE_EDGE",
+        "source": "ts-basic-service",
+        "target": "pod:ts-basic-service-b8f896f8b-6plfh",
+        "old_source": "ts-basic-service",
+        "old_target": "pod:ts-basic-service-b8f896f8b-6plfh",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": null,
+        "attrs": {},
+        "evidence": [
+          "topology_diff:ts-basic-service->pod:ts-basic-service-b8f896f8b-6plfh"
+        ]
+      }
+    ],
+    "weight_ops": [],
+    "state_transfer": {},
+    "evidence": [
+      "during:pod:ts-basic-service-b8f896f8b-lvxcl",
+      "topology_diff:ts-basic-service->pod:ts-basic-service-b8f896f8b-6plfh",
+      "empty_endpoint:ts-basic-service",
+      "identity_change:ts-basic-service"
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "call_number": 1,
+  "purpose": "interrupted-matched-block-integrity-audit",
+  "timestamp": "2026-09-27T02:33:20.767570+00:00",
+  "agent_id": "/root/matched_interruption_audit",
+  "model": "gpt-6-astra",
+  "reasoning_effort": "ultra",
+  "reviewer_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "status": "ok",
+  "verdict": "WARN",
+  "complete_matched_pairs": 0,
+  "comparison_status": "invalid",
+  "response_artifact": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/audit_v1/EXPERIMENT_AUDIT.md"
+}

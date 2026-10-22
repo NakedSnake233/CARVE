@@ -1,0 +1,12 @@
+{
+  "python": "3.13.9",
+  "packages": {
+    "numpy": "2.3.5",
+    "torch": "2.14.0+cpu",
+    "pytest": "8.4.2",
+    "PyYAML": "6.0.3",
+    "grpcio": "1.84.0",
+    "protobuf": "5.29.3"
+  },
+  "scope": "Versions present during local offline validation; this is not a clean-install assurance or a required GPU environment."
+}

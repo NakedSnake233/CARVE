@@ -1,0 +1,56 @@
+{
+  "formal": {
+    "unchanged_prior_metrics_paired_scope_request_stats": true,
+    "raw_usage": {
+      "input_tokens": 1863990,
+      "output_tokens": 242302,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 7461888
+    },
+    "cache_inclusive": 9568180
+  },
+  "combined": {
+    "unchanged_prior_metrics_paired_scope_request_stats": true,
+    "raw_usage": {
+      "input_tokens": 2005136,
+      "output_tokens": 260091,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 8013312
+    },
+    "cache_inclusive": 10278539
+  },
+  "expenditure": {
+    "totals": {
+      "attempts": 705,
+      "transport_successes": 702,
+      "strict_accepted": 514,
+      "usage_reported_attempts": 702,
+      "prompt_tokens": 2047450,
+      "completion_tokens": 267791,
+      "total_tokens": 2315241,
+      "raw_input_tokens": 2047450,
+      "raw_output_tokens": 267791,
+      "raw_cache_creation_input_tokens": 0,
+      "raw_cache_read_input_tokens": 8035840,
+      "cache_inclusive_token_volume": 10351081,
+      "provider_cost_reported_attempts": 0,
+      "provider_cost_total": null
+    },
+    "usage_missing_attempts": [
+      {
+        "campaign": "m2_deepseek41_compat_v1",
+        "request_id": "case00418-g0-proposal"
+      },
+      {
+        "campaign": "m2_deepseek41_compat_v1",
+        "request_id": "case00418-g0-raw_direct"
+      },
+      {
+        "campaign": "m2_deepseek41_compat_v1",
+        "request_id": "case00418-g0-catalog_direct"
+      }
+    ],
+    "note": "Totals are reported provider usage, not proof of zero usage on three failed-transport attempts."
+  },
+  "checks": 830
+}

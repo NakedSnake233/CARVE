@@ -1,0 +1,14 @@
+{
+  "namespace": "e2r-supplement-20260925",
+  "application": "Online Boutique v0.10.1 from current MicroRemed source manifest",
+  "source": "${MICROREMED_ROOT}/envs/source-config/online-boutique-config.yaml",
+  "scope": "New independent namespace; existing online-boutique unchanged",
+  "changes": [
+    "Service external access made ClusterIP",
+    "IfNotPresent images",
+    "tracing disabled until dedicated namespace-local collector",
+    "namespace ResourceQuota"
+  ],
+  "workload": "manifest loadgenerator USERS=10",
+  "intended_use": "bounded fault/recovery attribution pilot after read-only health gate"
+}

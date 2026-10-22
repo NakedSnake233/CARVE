@@ -1,0 +1,83 @@
+{
+  "catalog": [
+    {
+      "id": "op0000",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "ts-order-other-service",
+        "target": "pod:ts-order-other-service-67cf586847-bt8rj",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "evidence": [
+          "during:ts-order-other-service->pod:ts-order-other-service-67cf586847-bt8rj"
+        ]
+      },
+      "evidence_id": "during:ts-order-other-service->pod:ts-order-other-service-67cf586847-bt8rj",
+      "requires": []
+    },
+    {
+      "id": "op0001",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "ts-order-other-service",
+        "target": "pod:ts-order-other-service-67cf586847-lt5lz",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "evidence": [
+          "during:ts-order-other-service->pod:ts-order-other-service-67cf586847-lt5lz"
+        ]
+      },
+      "evidence_id": "during:ts-order-other-service->pod:ts-order-other-service-67cf586847-lt5lz",
+      "requires": []
+    }
+  ],
+  "plan": {
+    "experiment_id": "case00471",
+    "change_type": "observation_supported_updates",
+    "confidence": 0.0,
+    "causal_role": "not_inferred",
+    "node_ops": [],
+    "edge_ops": [
+      {
+        "op": "ADD_EDGE",
+        "source": "ts-order-other-service",
+        "target": "pod:ts-order-other-service-67cf586847-bt8rj",
+        "old_source": "ts-order-other-service",
+        "old_target": "pod:ts-order-other-service-67cf586847-bt8rj",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:ts-order-other-service->pod:ts-order-other-service-67cf586847-bt8rj"
+        ]
+      },
+      {
+        "op": "ADD_EDGE",
+        "source": "ts-order-other-service",
+        "target": "pod:ts-order-other-service-67cf586847-lt5lz",
+        "old_source": "ts-order-other-service",
+        "old_target": "pod:ts-order-other-service-67cf586847-lt5lz",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:ts-order-other-service->pod:ts-order-other-service-67cf586847-lt5lz"
+        ]
+      }
+    ],
+    "weight_ops": [],
+    "state_transfer": {},
+    "evidence": [
+      "during:ts-order-other-service->pod:ts-order-other-service-67cf586847-bt8rj",
+      "during:ts-order-other-service->pod:ts-order-other-service-67cf586847-lt5lz"
+    ]
+  }
+}

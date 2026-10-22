@@ -1,0 +1,393 @@
+{
+  "catalog": [
+    {
+      "id": "op0000",
+      "group": "edge_ops",
+      "operation": {
+        "op": "REMOVE_EDGE",
+        "source": "ts-order-service",
+        "target": "pod:ts-order-service-5755fc9ccd-8s8jt",
+        "evidence": [
+          "topology_diff:ts-order-service->pod:ts-order-service-5755fc9ccd-8s8jt"
+        ]
+      },
+      "evidence_id": "topology_diff:ts-order-service->pod:ts-order-service-5755fc9ccd-8s8jt",
+      "requires": []
+    },
+    {
+      "id": "op0001",
+      "group": "edge_ops",
+      "operation": {
+        "op": "REMOVE_EDGE",
+        "source": "ts-order-service",
+        "target": "pod:ts-order-service-5755fc9ccd-f4k9f",
+        "evidence": [
+          "topology_diff:ts-order-service->pod:ts-order-service-5755fc9ccd-f4k9f"
+        ]
+      },
+      "evidence_id": "topology_diff:ts-order-service->pod:ts-order-service-5755fc9ccd-f4k9f",
+      "requires": []
+    },
+    {
+      "id": "op0002",
+      "group": "edge_ops",
+      "operation": {
+        "op": "REMOVE_EDGE",
+        "source": "ts-order-service",
+        "target": "pod:ts-order-service-5755fc9ccd-f5lvq",
+        "evidence": [
+          "topology_diff:ts-order-service->pod:ts-order-service-5755fc9ccd-f5lvq"
+        ]
+      },
+      "evidence_id": "topology_diff:ts-order-service->pod:ts-order-service-5755fc9ccd-f5lvq",
+      "requires": []
+    },
+    {
+      "id": "op0003",
+      "group": "edge_ops",
+      "operation": {
+        "op": "REMOVE_EDGE",
+        "source": "ts-order-service",
+        "target": "pod:ts-order-service-5755fc9ccd-gfl28",
+        "evidence": [
+          "topology_diff:ts-order-service->pod:ts-order-service-5755fc9ccd-gfl28"
+        ]
+      },
+      "evidence_id": "topology_diff:ts-order-service->pod:ts-order-service-5755fc9ccd-gfl28",
+      "requires": []
+    },
+    {
+      "id": "op0004",
+      "group": "edge_ops",
+      "operation": {
+        "op": "REMOVE_EDGE",
+        "source": "ts-order-service",
+        "target": "pod:ts-order-service-5755fc9ccd-h4xt7",
+        "evidence": [
+          "topology_diff:ts-order-service->pod:ts-order-service-5755fc9ccd-h4xt7"
+        ]
+      },
+      "evidence_id": "topology_diff:ts-order-service->pod:ts-order-service-5755fc9ccd-h4xt7",
+      "requires": []
+    },
+    {
+      "id": "op0005",
+      "group": "edge_ops",
+      "operation": {
+        "op": "REMOVE_EDGE",
+        "source": "ts-order-service",
+        "target": "pod:ts-order-service-5755fc9ccd-lbtvp",
+        "evidence": [
+          "topology_diff:ts-order-service->pod:ts-order-service-5755fc9ccd-lbtvp"
+        ]
+      },
+      "evidence_id": "topology_diff:ts-order-service->pod:ts-order-service-5755fc9ccd-lbtvp",
+      "requires": []
+    },
+    {
+      "id": "op0006",
+      "group": "edge_ops",
+      "operation": {
+        "op": "REMOVE_EDGE",
+        "source": "ts-order-service",
+        "target": "pod:ts-order-service-5755fc9ccd-m9b58",
+        "evidence": [
+          "topology_diff:ts-order-service->pod:ts-order-service-5755fc9ccd-m9b58"
+        ]
+      },
+      "evidence_id": "topology_diff:ts-order-service->pod:ts-order-service-5755fc9ccd-m9b58",
+      "requires": []
+    },
+    {
+      "id": "op0007",
+      "group": "edge_ops",
+      "operation": {
+        "op": "REMOVE_EDGE",
+        "source": "ts-order-service",
+        "target": "pod:ts-order-service-5755fc9ccd-rmbcb",
+        "evidence": [
+          "topology_diff:ts-order-service->pod:ts-order-service-5755fc9ccd-rmbcb"
+        ]
+      },
+      "evidence_id": "topology_diff:ts-order-service->pod:ts-order-service-5755fc9ccd-rmbcb",
+      "requires": []
+    },
+    {
+      "id": "op0008",
+      "group": "edge_ops",
+      "operation": {
+        "op": "REMOVE_EDGE",
+        "source": "ts-order-service",
+        "target": "pod:ts-order-service-5755fc9ccd-twz6t",
+        "evidence": [
+          "topology_diff:ts-order-service->pod:ts-order-service-5755fc9ccd-twz6t"
+        ]
+      },
+      "evidence_id": "topology_diff:ts-order-service->pod:ts-order-service-5755fc9ccd-twz6t",
+      "requires": []
+    },
+    {
+      "id": "op0009",
+      "group": "edge_ops",
+      "operation": {
+        "op": "REMOVE_EDGE",
+        "source": "ts-order-service",
+        "target": "pod:ts-order-service-5755fc9ccd-vz6m2",
+        "evidence": [
+          "topology_diff:ts-order-service->pod:ts-order-service-5755fc9ccd-vz6m2"
+        ]
+      },
+      "evidence_id": "topology_diff:ts-order-service->pod:ts-order-service-5755fc9ccd-vz6m2",
+      "requires": []
+    },
+    {
+      "id": "op0010",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "ts-order-service",
+        "target": "pod:ts-basic-service-b8f896f8b-mj9sp",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "evidence": [
+          "during:ts-order-service->pod:ts-basic-service-b8f896f8b-mj9sp"
+        ]
+      },
+      "evidence_id": "during:ts-order-service->pod:ts-basic-service-b8f896f8b-mj9sp",
+      "requires": []
+    },
+    {
+      "id": "op0011",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_TRACE_MISMATCH_EDGE",
+        "source": "ts-order-service",
+        "target": "ts-basic-service",
+        "edge_type": "endpoint_mismatch",
+        "weight": 1.0,
+        "evidence": [
+          "endpoint_owner:ts-order-service:10.244.2.160"
+        ]
+      },
+      "evidence_id": "endpoint_owner:ts-order-service:10.244.2.160",
+      "requires": []
+    }
+  ],
+  "plan": {
+    "experiment_id": "case00489",
+    "change_type": "observation_supported_updates",
+    "confidence": 0.0,
+    "causal_role": "not_inferred",
+    "node_ops": [],
+    "edge_ops": [
+      {
+        "op": "REMOVE_EDGE",
+        "source": "ts-order-service",
+        "target": "pod:ts-order-service-5755fc9ccd-8s8jt",
+        "old_source": "ts-order-service",
+        "old_target": "pod:ts-order-service-5755fc9ccd-8s8jt",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": null,
+        "attrs": {},
+        "evidence": [
+          "topology_diff:ts-order-service->pod:ts-order-service-5755fc9ccd-8s8jt"
+        ]
+      },
+      {
+        "op": "REMOVE_EDGE",
+        "source": "ts-order-service",
+        "target": "pod:ts-order-service-5755fc9ccd-f4k9f",
+        "old_source": "ts-order-service",
+        "old_target": "pod:ts-order-service-5755fc9ccd-f4k9f",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": null,
+        "attrs": {},
+        "evidence": [
+          "topology_diff:ts-order-service->pod:ts-order-service-5755fc9ccd-f4k9f"
+        ]
+      },
+      {
+        "op": "REMOVE_EDGE",
+        "source": "ts-order-service",
+        "target": "pod:ts-order-service-5755fc9ccd-f5lvq",
+        "old_source": "ts-order-service",
+        "old_target": "pod:ts-order-service-5755fc9ccd-f5lvq",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": null,
+        "attrs": {},
+        "evidence": [
+          "topology_diff:ts-order-service->pod:ts-order-service-5755fc9ccd-f5lvq"
+        ]
+      },
+      {
+        "op": "REMOVE_EDGE",
+        "source": "ts-order-service",
+        "target": "pod:ts-order-service-5755fc9ccd-gfl28",
+        "old_source": "ts-order-service",
+        "old_target": "pod:ts-order-service-5755fc9ccd-gfl28",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": null,
+        "attrs": {},
+        "evidence": [
+          "topology_diff:ts-order-service->pod:ts-order-service-5755fc9ccd-gfl28"
+        ]
+      },
+      {
+        "op": "REMOVE_EDGE",
+        "source": "ts-order-service",
+        "target": "pod:ts-order-service-5755fc9ccd-h4xt7",
+        "old_source": "ts-order-service",
+        "old_target": "pod:ts-order-service-5755fc9ccd-h4xt7",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": null,
+        "attrs": {},
+        "evidence": [
+          "topology_diff:ts-order-service->pod:ts-order-service-5755fc9ccd-h4xt7"
+        ]
+      },
+      {
+        "op": "REMOVE_EDGE",
+        "source": "ts-order-service",
+        "target": "pod:ts-order-service-5755fc9ccd-lbtvp",
+        "old_source": "ts-order-service",
+        "old_target": "pod:ts-order-service-5755fc9ccd-lbtvp",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": null,
+        "attrs": {},
+        "evidence": [
+          "topology_diff:ts-order-service->pod:ts-order-service-5755fc9ccd-lbtvp"
+        ]
+      },
+      {
+        "op": "REMOVE_EDGE",
+        "source": "ts-order-service",
+        "target": "pod:ts-order-service-5755fc9ccd-m9b58",
+        "old_source": "ts-order-service",
+        "old_target": "pod:ts-order-service-5755fc9ccd-m9b58",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": null,
+        "attrs": {},
+        "evidence": [
+          "topology_diff:ts-order-service->pod:ts-order-service-5755fc9ccd-m9b58"
+        ]
+      },
+      {
+        "op": "REMOVE_EDGE",
+        "source": "ts-order-service",
+        "target": "pod:ts-order-service-5755fc9ccd-rmbcb",
+        "old_source": "ts-order-service",
+        "old_target": "pod:ts-order-service-5755fc9ccd-rmbcb",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": null,
+        "attrs": {},
+        "evidence": [
+          "topology_diff:ts-order-service->pod:ts-order-service-5755fc9ccd-rmbcb"
+        ]
+      },
+      {
+        "op": "REMOVE_EDGE",
+        "source": "ts-order-service",
+        "target": "pod:ts-order-service-5755fc9ccd-twz6t",
+        "old_source": "ts-order-service",
+        "old_target": "pod:ts-order-service-5755fc9ccd-twz6t",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": null,
+        "attrs": {},
+        "evidence": [
+          "topology_diff:ts-order-service->pod:ts-order-service-5755fc9ccd-twz6t"
+        ]
+      },
+      {
+        "op": "REMOVE_EDGE",
+        "source": "ts-order-service",
+        "target": "pod:ts-order-service-5755fc9ccd-vz6m2",
+        "old_source": "ts-order-service",
+        "old_target": "pod:ts-order-service-5755fc9ccd-vz6m2",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": null,
+        "attrs": {},
+        "evidence": [
+          "topology_diff:ts-order-service->pod:ts-order-service-5755fc9ccd-vz6m2"
+        ]
+      },
+      {
+        "op": "ADD_EDGE",
+        "source": "ts-order-service",
+        "target": "pod:ts-basic-service-b8f896f8b-mj9sp",
+        "old_source": "ts-order-service",
+        "old_target": "pod:ts-basic-service-b8f896f8b-mj9sp",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:ts-order-service->pod:ts-basic-service-b8f896f8b-mj9sp"
+        ]
+      },
+      {
+        "op": "ADD_TRACE_MISMATCH_EDGE",
+        "source": "ts-order-service",
+        "target": "ts-basic-service",
+        "old_source": "ts-order-service",
+        "old_target": "ts-basic-service",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "endpoint_mismatch",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "endpoint_owner:ts-order-service:10.244.2.160"
+        ]
+      }
+    ],
+    "weight_ops": [],
+    "state_transfer": {},
+    "evidence": [
+      "topology_diff:ts-order-service->pod:ts-order-service-5755fc9ccd-8s8jt",
+      "topology_diff:ts-order-service->pod:ts-order-service-5755fc9ccd-f4k9f",
+      "topology_diff:ts-order-service->pod:ts-order-service-5755fc9ccd-f5lvq",
+      "topology_diff:ts-order-service->pod:ts-order-service-5755fc9ccd-gfl28",
+      "topology_diff:ts-order-service->pod:ts-order-service-5755fc9ccd-h4xt7",
+      "topology_diff:ts-order-service->pod:ts-order-service-5755fc9ccd-lbtvp",
+      "topology_diff:ts-order-service->pod:ts-order-service-5755fc9ccd-m9b58",
+      "topology_diff:ts-order-service->pod:ts-order-service-5755fc9ccd-rmbcb",
+      "topology_diff:ts-order-service->pod:ts-order-service-5755fc9ccd-twz6t",
+      "topology_diff:ts-order-service->pod:ts-order-service-5755fc9ccd-vz6m2",
+      "during:ts-order-service->pod:ts-basic-service-b8f896f8b-mj9sp",
+      "endpoint_owner:ts-order-service:10.244.2.160"
+    ]
+  }
+}

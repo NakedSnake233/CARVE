@@ -1,0 +1,22 @@
+{
+  "call_number": 2,
+  "purpose": "generalization-scaling-integrity-subreview",
+  "timestamp": "2026-09-26T14:20:59.627560+00:00",
+  "timestamp_kind": "trace_save_time",
+  "tool": "spawn_agent",
+  "model": "gpt-6-astra",
+  "reasoning_effort": "ultra",
+  "fork_turns": "none",
+  "prompt": "Independent forensic audit subtask, no network/API/SSH/GPU/Kubernetes, do not edit implementation/results. Cwd ${PROJECT_ROOT}. Audit six experiments/e2r/runs/generalization_*_v1 run dirs (exclude analysis as run) plus generalization_analysis_v1 and scaling_cpu_v1/scaling_gpu_v1/scaling_analysis_v1. Read scripts/e2r/make_generalization_splits.py, analyze_generalization.py, benchmark_scaling.py, analyze_scaling.py, scripts/remote/generalization_worker.py plus actual training/metric modules. Verify all split identities and no leakage; exact protocol; input/checkpoint/prediction hashes and metrics recomputation; timing arithmetic/hardware/synthetic-only scope. Save reviewer-authored subreport and forensic script/output to .aris/traces/experiment-audit/20260926_b2_b3/generalization_scaling/ (allowed new files only). Return PASS/WARN/BLOCK for generalization and scaling, exact file:line evidence, warranted narrow claim and findings. Same-family/provisional disclosure. Read shared experiment-integrity and reviewer-independence references if present. Do not delegate.",
+  "files_referenced": [
+    "scripts/e2r/make_generalization_splits.py",
+    "scripts/e2r/analyze_generalization.py",
+    "scripts/e2r/benchmark_scaling.py",
+    "scripts/e2r/analyze_scaling.py",
+    "scripts/remote/generalization_worker.py",
+    "experiments/e2r/runs/generalization_*_v1",
+    "experiments/e2r/runs/scaling_cpu_v1",
+    "experiments/e2r/runs/scaling_gpu_v1",
+    "experiments/e2r/runs/scaling_analysis_v1"
+  ]
+}

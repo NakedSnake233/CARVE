@@ -1,0 +1,234 @@
+{
+  "catalog": [
+    {
+      "id": "op0000",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:recommendationservice-5dc8b478f6-784dc",
+        "attrs": {
+          "type": "pod",
+          "service": "recommendationservice",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:recommendationservice-5dc8b478f6-784dc"
+        ]
+      },
+      "evidence_id": "during:pod:recommendationservice-5dc8b478f6-784dc",
+      "requires": []
+    },
+    {
+      "id": "op0001",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:recommendationservice-5dc8b478f6-dznqv",
+        "attrs": {
+          "type": "pod",
+          "service": "recommendationservice",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:recommendationservice-5dc8b478f6-dznqv"
+        ]
+      },
+      "evidence_id": "during:pod:recommendationservice-5dc8b478f6-dznqv",
+      "requires": []
+    },
+    {
+      "id": "op0002",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:recommendationservice-5dc8b478f6-zjwxb",
+        "attrs": {
+          "type": "pod",
+          "service": "recommendationservice",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:recommendationservice-5dc8b478f6-zjwxb"
+        ]
+      },
+      "evidence_id": "during:pod:recommendationservice-5dc8b478f6-zjwxb",
+      "requires": []
+    },
+    {
+      "id": "op0003",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "recommendationservice",
+        "target": "pod:recommendationservice-5dc8b478f6-784dc",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "evidence": [
+          "during:recommendationservice->pod:recommendationservice-5dc8b478f6-784dc"
+        ]
+      },
+      "evidence_id": "during:recommendationservice->pod:recommendationservice-5dc8b478f6-784dc",
+      "requires": [
+        "op0000"
+      ]
+    },
+    {
+      "id": "op0004",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "recommendationservice",
+        "target": "pod:recommendationservice-5dc8b478f6-dznqv",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "evidence": [
+          "during:recommendationservice->pod:recommendationservice-5dc8b478f6-dznqv"
+        ]
+      },
+      "evidence_id": "during:recommendationservice->pod:recommendationservice-5dc8b478f6-dznqv",
+      "requires": [
+        "op0001"
+      ]
+    },
+    {
+      "id": "op0005",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "recommendationservice",
+        "target": "pod:recommendationservice-5dc8b478f6-zjwxb",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "evidence": [
+          "during:recommendationservice->pod:recommendationservice-5dc8b478f6-zjwxb"
+        ]
+      },
+      "evidence_id": "during:recommendationservice->pod:recommendationservice-5dc8b478f6-zjwxb",
+      "requires": [
+        "op0002"
+      ]
+    }
+  ],
+  "plan": {
+    "experiment_id": "case00093",
+    "change_type": "observation_supported_updates",
+    "confidence": 0.0,
+    "causal_role": "not_inferred",
+    "node_ops": [
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:recommendationservice-5dc8b478f6-784dc",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "recommendationservice",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:recommendationservice-5dc8b478f6-784dc"
+        ]
+      },
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:recommendationservice-5dc8b478f6-dznqv",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "recommendationservice",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:recommendationservice-5dc8b478f6-dznqv"
+        ]
+      },
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:recommendationservice-5dc8b478f6-zjwxb",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "recommendationservice",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:recommendationservice-5dc8b478f6-zjwxb"
+        ]
+      }
+    ],
+    "edge_ops": [
+      {
+        "op": "ADD_EDGE",
+        "source": "recommendationservice",
+        "target": "pod:recommendationservice-5dc8b478f6-784dc",
+        "old_source": "recommendationservice",
+        "old_target": "pod:recommendationservice-5dc8b478f6-784dc",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:recommendationservice->pod:recommendationservice-5dc8b478f6-784dc"
+        ]
+      },
+      {
+        "op": "ADD_EDGE",
+        "source": "recommendationservice",
+        "target": "pod:recommendationservice-5dc8b478f6-dznqv",
+        "old_source": "recommendationservice",
+        "old_target": "pod:recommendationservice-5dc8b478f6-dznqv",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:recommendationservice->pod:recommendationservice-5dc8b478f6-dznqv"
+        ]
+      },
+      {
+        "op": "ADD_EDGE",
+        "source": "recommendationservice",
+        "target": "pod:recommendationservice-5dc8b478f6-zjwxb",
+        "old_source": "recommendationservice",
+        "old_target": "pod:recommendationservice-5dc8b478f6-zjwxb",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:recommendationservice->pod:recommendationservice-5dc8b478f6-zjwxb"
+        ]
+      }
+    ],
+    "weight_ops": [],
+    "state_transfer": {},
+    "evidence": [
+      "during:pod:recommendationservice-5dc8b478f6-784dc",
+      "during:pod:recommendationservice-5dc8b478f6-dznqv",
+      "during:pod:recommendationservice-5dc8b478f6-zjwxb",
+      "during:recommendationservice->pod:recommendationservice-5dc8b478f6-784dc",
+      "during:recommendationservice->pod:recommendationservice-5dc8b478f6-dznqv",
+      "during:recommendationservice->pod:recommendationservice-5dc8b478f6-zjwxb"
+    ]
+  }
+}

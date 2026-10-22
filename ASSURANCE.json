@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "scope": "Local offline tests and numerical replay from exported feature tables; not a clean install or full native environment reproduction.",
+  "offline_tests": {
+    "passed": 72,
+    "command_normalized": "PYTHONDONTWRITEBYTECODE=1 python -m pytest -q -p no:cacheprovider",
+    "source": "distributed current source tree"
+  },
+  "context_replay": {
+    "status": "PASS",
+    "command": "python scripts/reproduce_context.py",
+    "feature_rows": 72,
+    "online_outcome_rows": 32,
+    "checks": "same recovery/safety Brier and fixed-bin ECE; all missing-label and attempt-status denominators preserved"
+  },
+  "historical_archive": {
+    "status": "PASS",
+    "sha256": "76d5ce9f035a0b42a27fc8e6c82c58e0d663a65d06212b4c39016a4247c60c4b",
+    "manifest_entries": 7320,
+    "observation_cases": 798,
+    "changed": false,
+    "delivery": "All original regular-file bytes expanded under paper-replication/e2r_revision_v8; original archive is not distributed.",
+    "regular_files": 7321,
+    "uncompressed_bytes": 167137372,
+    "verification_command": "python paper-replication/e2r_revision_v8/scripts/e2r/verify_anonymous_artifact.py --artifact-root paper-replication/e2r_revision_v8"
+  },
+  "source_anonymity_scan": {
+    "status": "PASS",
+    "recursive_streams_checked_before_sealing": 8056,
+    "nested_tar_archives": 1,
+    "nested_zip_checkpoints": 30,
+    "identity_or_credential_marker_findings": 0,
+    "scope": "Checks on original sealed source and archive/checkpoint contents before byte-preserving expansion; no new empirical assurance from changing delivery format."
+  },
+  "environment": "ENVIRONMENT.json",
+  "clean_install_tested": false,
+  "native_cluster_recreated": false,
+  "review_status": "Same-family/provisional local checks; not conference artifact certification."
+}

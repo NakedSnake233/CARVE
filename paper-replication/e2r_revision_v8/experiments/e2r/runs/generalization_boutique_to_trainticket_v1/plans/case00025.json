@@ -1,0 +1,234 @@
+{
+  "catalog": [
+    {
+      "id": "op0000",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:checkoutservice-78cf67b9fc-4l7vt",
+        "attrs": {
+          "type": "pod",
+          "service": "checkoutservice",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:checkoutservice-78cf67b9fc-4l7vt"
+        ]
+      },
+      "evidence_id": "during:pod:checkoutservice-78cf67b9fc-4l7vt",
+      "requires": []
+    },
+    {
+      "id": "op0001",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:checkoutservice-78cf67b9fc-9h5sj",
+        "attrs": {
+          "type": "pod",
+          "service": "checkoutservice",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:checkoutservice-78cf67b9fc-9h5sj"
+        ]
+      },
+      "evidence_id": "during:pod:checkoutservice-78cf67b9fc-9h5sj",
+      "requires": []
+    },
+    {
+      "id": "op0002",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:checkoutservice-78cf67b9fc-s8z9p",
+        "attrs": {
+          "type": "pod",
+          "service": "checkoutservice",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:checkoutservice-78cf67b9fc-s8z9p"
+        ]
+      },
+      "evidence_id": "during:pod:checkoutservice-78cf67b9fc-s8z9p",
+      "requires": []
+    },
+    {
+      "id": "op0003",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "checkoutservice",
+        "target": "pod:checkoutservice-78cf67b9fc-4l7vt",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "evidence": [
+          "during:checkoutservice->pod:checkoutservice-78cf67b9fc-4l7vt"
+        ]
+      },
+      "evidence_id": "during:checkoutservice->pod:checkoutservice-78cf67b9fc-4l7vt",
+      "requires": [
+        "op0000"
+      ]
+    },
+    {
+      "id": "op0004",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "checkoutservice",
+        "target": "pod:checkoutservice-78cf67b9fc-9h5sj",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "evidence": [
+          "during:checkoutservice->pod:checkoutservice-78cf67b9fc-9h5sj"
+        ]
+      },
+      "evidence_id": "during:checkoutservice->pod:checkoutservice-78cf67b9fc-9h5sj",
+      "requires": [
+        "op0001"
+      ]
+    },
+    {
+      "id": "op0005",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "checkoutservice",
+        "target": "pod:checkoutservice-78cf67b9fc-s8z9p",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "evidence": [
+          "during:checkoutservice->pod:checkoutservice-78cf67b9fc-s8z9p"
+        ]
+      },
+      "evidence_id": "during:checkoutservice->pod:checkoutservice-78cf67b9fc-s8z9p",
+      "requires": [
+        "op0002"
+      ]
+    }
+  ],
+  "plan": {
+    "experiment_id": "case00025",
+    "change_type": "observation_supported_updates",
+    "confidence": 0.0,
+    "causal_role": "not_inferred",
+    "node_ops": [
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:checkoutservice-78cf67b9fc-4l7vt",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "checkoutservice",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:checkoutservice-78cf67b9fc-4l7vt"
+        ]
+      },
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:checkoutservice-78cf67b9fc-9h5sj",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "checkoutservice",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:checkoutservice-78cf67b9fc-9h5sj"
+        ]
+      },
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:checkoutservice-78cf67b9fc-s8z9p",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "checkoutservice",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:checkoutservice-78cf67b9fc-s8z9p"
+        ]
+      }
+    ],
+    "edge_ops": [
+      {
+        "op": "ADD_EDGE",
+        "source": "checkoutservice",
+        "target": "pod:checkoutservice-78cf67b9fc-4l7vt",
+        "old_source": "checkoutservice",
+        "old_target": "pod:checkoutservice-78cf67b9fc-4l7vt",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:checkoutservice->pod:checkoutservice-78cf67b9fc-4l7vt"
+        ]
+      },
+      {
+        "op": "ADD_EDGE",
+        "source": "checkoutservice",
+        "target": "pod:checkoutservice-78cf67b9fc-9h5sj",
+        "old_source": "checkoutservice",
+        "old_target": "pod:checkoutservice-78cf67b9fc-9h5sj",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:checkoutservice->pod:checkoutservice-78cf67b9fc-9h5sj"
+        ]
+      },
+      {
+        "op": "ADD_EDGE",
+        "source": "checkoutservice",
+        "target": "pod:checkoutservice-78cf67b9fc-s8z9p",
+        "old_source": "checkoutservice",
+        "old_target": "pod:checkoutservice-78cf67b9fc-s8z9p",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:checkoutservice->pod:checkoutservice-78cf67b9fc-s8z9p"
+        ]
+      }
+    ],
+    "weight_ops": [],
+    "state_transfer": {},
+    "evidence": [
+      "during:pod:checkoutservice-78cf67b9fc-4l7vt",
+      "during:pod:checkoutservice-78cf67b9fc-9h5sj",
+      "during:pod:checkoutservice-78cf67b9fc-s8z9p",
+      "during:checkoutservice->pod:checkoutservice-78cf67b9fc-4l7vt",
+      "during:checkoutservice->pod:checkoutservice-78cf67b9fc-9h5sj",
+      "during:checkoutservice->pod:checkoutservice-78cf67b9fc-s8z9p"
+    ]
+  }
+}

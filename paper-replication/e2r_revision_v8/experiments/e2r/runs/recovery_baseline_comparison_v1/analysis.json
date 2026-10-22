@@ -1,0 +1,34 @@
+{
+  "status": "completed_no_fault_baseline_comparison",
+  "baselines": [
+    {
+      "path": "experiments/e2r/runs/recovery_baseline_v1/baseline.json",
+      "window_id": "baseline-calibration-v1",
+      "samples": 900,
+      "throughput_rps": 4.9972357143968615,
+      "error_rate": 0.0,
+      "p95_ms": 17.33604120090604,
+      "state_canary_ok": true,
+      "runtime_identity_stable": null
+    },
+    {
+      "path": "experiments/e2r/runs/recovery_baseline_v2/baseline.json",
+      "window_id": "baseline-calibration-v2",
+      "samples": 900,
+      "throughput_rps": 4.997163960150042,
+      "error_rate": 0.0,
+      "p95_ms": 18.263094127178192,
+      "state_canary_ok": true,
+      "runtime_identity_stable": true
+    }
+  ],
+  "comparison": {
+    "throughput_ratio_v2_over_v1": 0.999985641212278,
+    "p95_ratio_v2_over_v1": 1.0534754685645131,
+    "error_rate_delta": 0.0
+  },
+  "limits": [
+    "The two calibrations occurred at different wall-clock times and are not randomized treatments.",
+    "V2 adds pre/post pod-identity and restart stability checks."
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "catalog": [
+    {
+      "id": "op0000",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:checkoutservice-78cf67b9fc-tfn7f",
+        "attrs": {
+          "type": "pod",
+          "service": "checkoutservice",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:checkoutservice-78cf67b9fc-tfn7f"
+        ]
+      },
+      "evidence_id": "during:pod:checkoutservice-78cf67b9fc-tfn7f",
+      "requires": []
+    },
+    {
+      "id": "op0001",
+      "group": "edge_ops",
+      "operation": {
+        "op": "REMOVE_EDGE",
+        "source": "checkoutservice",
+        "target": "pod:checkoutservice-78cf67b9fc-c92xk",
+        "evidence": [
+          "topology_diff:checkoutservice->pod:checkoutservice-78cf67b9fc-c92xk"
+        ]
+      },
+      "evidence_id": "topology_diff:checkoutservice->pod:checkoutservice-78cf67b9fc-c92xk",
+      "requires": []
+    },
+    {
+      "id": "op0002",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "checkoutservice",
+        "target": "pod:checkoutservice-78cf67b9fc-tfn7f",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "evidence": [
+          "during:checkoutservice->pod:checkoutservice-78cf67b9fc-tfn7f"
+        ]
+      },
+      "evidence_id": "during:checkoutservice->pod:checkoutservice-78cf67b9fc-tfn7f",
+      "requires": [
+        "op0000"
+      ]
+    },
+    {
+      "id": "op0003",
+      "group": "node_ops",
+      "operation": {
+        "op": "ALIGN_NODE",
+        "old_node": "pod:checkoutservice-78cf67b9fc-c92xk",
+        "new_node": "pod:checkoutservice-78cf67b9fc-tfn7f",
+        "service": "checkoutservice",
+        "attrs": {
+          "type": "pod",
+          "service": "checkoutservice",
+          "version": "unknown"
+        },
+        "evidence": [
+          "identity_change:checkoutservice"
+        ]
+      },
+      "evidence_id": "identity_change:checkoutservice",
+      "requires": []
+    }
+  ],
+  "plan": {
+    "experiment_id": "case00209",
+    "change_type": "observation_supported_updates",
+    "confidence": 0.0,
+    "causal_role": "not_inferred",
+    "node_ops": [
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:checkoutservice-78cf67b9fc-tfn7f",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "checkoutservice",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:checkoutservice-78cf67b9fc-tfn7f"
+        ]
+      },
+      {
+        "op": "ALIGN_NODE",
+        "node_id": "",
+        "old_node": "pod:checkoutservice-78cf67b9fc-c92xk",
+        "new_node": "pod:checkoutservice-78cf67b9fc-tfn7f",
+        "parent": "",
+        "children": [],
+        "service": "checkoutservice",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "checkoutservice",
+          "version": "unknown"
+        },
+        "evidence": [
+          "identity_change:checkoutservice"
+        ]
+      }
+    ],
+    "edge_ops": [
+      {
+        "op": "REMOVE_EDGE",
+        "source": "checkoutservice",
+        "target": "pod:checkoutservice-78cf67b9fc-c92xk",
+        "old_source": "checkoutservice",
+        "old_target": "pod:checkoutservice-78cf67b9fc-c92xk",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": null,
+        "attrs": {},
+        "evidence": [
+          "topology_diff:checkoutservice->pod:checkoutservice-78cf67b9fc-c92xk"
+        ]
+      },
+      {
+        "op": "ADD_EDGE",
+        "source": "checkoutservice",
+        "target": "pod:checkoutservice-78cf67b9fc-tfn7f",
+        "old_source": "checkoutservice",
+        "old_target": "pod:checkoutservice-78cf67b9fc-tfn7f",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:checkoutservice->pod:checkoutservice-78cf67b9fc-tfn7f"
+        ]
+      }
+    ],
+    "weight_ops": [],
+    "state_transfer": {},
+    "evidence": [
+      "during:pod:checkoutservice-78cf67b9fc-tfn7f",
+      "topology_diff:checkoutservice->pod:checkoutservice-78cf67b9fc-c92xk",
+      "during:checkoutservice->pod:checkoutservice-78cf67b9fc-tfn7f",
+      "identity_change:checkoutservice"
+    ]
+  }
+}

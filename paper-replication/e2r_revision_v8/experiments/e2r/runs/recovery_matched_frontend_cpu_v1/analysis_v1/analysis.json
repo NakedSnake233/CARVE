@@ -1,0 +1,188 @@
+{
+  "status": "completed_interrupted_block_analysis",
+  "evaluation_type": "live_isolated_partial",
+  "valid_matched_comparison": false,
+  "complete_matched_pairs": 0,
+  "accounting": {
+    "planned_episode_count": 2,
+    "episode_attempts_started": 2,
+    "injection_attempts": 2,
+    "confirmed_fault_injections": 2,
+    "injection_unknown_outcomes": 0,
+    "repair_process_invocations": 1,
+    "repair_process_unknown_outcomes": 0,
+    "confirmed_repair_mutations": 1,
+    "oracle_statuses": [
+      "FAIL",
+      null
+    ]
+  },
+  "no_action": {
+    "status": "complete_expected",
+    "windows": [
+      {
+        "window_id": "no_action-pre",
+        "samples": 150,
+        "successes": 150,
+        "throughput_rps": 4.99743826517097,
+        "error_rate": 0.0,
+        "p95_ms": 16.786579973995686,
+        "state_canary_ok": true,
+        "start_time": 1790441202.4787774,
+        "end_time": 1790441232.4941542
+      },
+      {
+        "window_id": "no_action-fault-validation",
+        "samples": 150,
+        "successes": 150,
+        "throughput_rps": 4.876480284977113,
+        "error_rate": 0.0,
+        "p95_ms": 1359.6097487024963,
+        "state_canary_ok": true,
+        "start_time": 1790441262.7643569,
+        "end_time": 1790441293.5242474
+      },
+      {
+        "window_id": "no_action-evaluation-0",
+        "samples": 150,
+        "successes": 150,
+        "throughput_rps": 4.83986119409073,
+        "error_rate": 0.0,
+        "p95_ms": 1500.6846310570836,
+        "state_canary_ok": true,
+        "start_time": 1790441294.130983,
+        "end_time": 1790441325.123606
+      },
+      {
+        "window_id": "no_action-evaluation-1",
+        "samples": 150,
+        "successes": 150,
+        "throughput_rps": 4.875425808027974,
+        "error_rate": 0.0,
+        "p95_ms": 1501.2616850435734,
+        "state_canary_ok": true,
+        "start_time": 1790441326.4587448,
+        "end_time": 1790441357.2252874
+      },
+      {
+        "window_id": "no_action-evaluation-2",
+        "samples": 150,
+        "successes": 150,
+        "throughput_rps": 4.781646495579526,
+        "error_rate": 0.0,
+        "p95_ms": 1399.6652089990675,
+        "state_canary_ok": true,
+        "start_time": 1790441358.4562464,
+        "end_time": 1790441389.826193
+      }
+    ],
+    "technical_checks": {
+      "fault_absent": false,
+      "resource_restored": true,
+      "ready_endpoints": true
+    },
+    "oracle_status": "FAIL",
+    "final_observation_fault_age_seconds": 158.11700530489907,
+    "cleanup_completion_fault_age_seconds": 158.68644268298522,
+    "cleanup_verified_absent": true
+  },
+  "typed_partial": {
+    "status": "interrupted_after_typed_repair_before_recorded_evaluation_completion",
+    "windows": [
+      {
+        "window_id": "typed_cleanup-pre",
+        "samples": 150,
+        "successes": 150,
+        "throughput_rps": 4.997199076242644,
+        "error_rate": 0.0,
+        "p95_ms": 19.501911010593176,
+        "state_canary_ok": true,
+        "start_time": 1790441421.8242657,
+        "end_time": 1790441451.8410792
+      },
+      {
+        "window_id": "typed_cleanup-fault-validation",
+        "samples": 150,
+        "successes": 150,
+        "throughput_rps": 4.726677502356213,
+        "error_rate": 0.0,
+        "p95_ms": 1399.2593279108405,
+        "state_canary_ok": true,
+        "start_time": 1790441482.0889091,
+        "end_time": 1790441513.823673
+      }
+    ],
+    "repair_executed": true,
+    "execution": {
+      "returncode": 0,
+      "stdout": "\nPLAY [PlanRCAThinkRemed remediation] *******************************************\n\nTASK [RemoveInjectedStress on StressChaos/e2r-matched-cpu-typed] ***************\nchanged: [localhost]\n\nTASK [report RemoveInjectedStress on StressChaos/e2r-matched-cpu-typed] ********\nok: [localhost] => {\n    \"planrca_step_0.stdout_lines\": [\n        \"stresschaos.chaos-mesh.org \\\"e2r-matched-cpu-typed\\\" deleted from e2r-supplement-20260925 namespace\"\n    ]\n}\n\nPLAY RECAP *********************************************************************\nlocalhost                  : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   \n\n",
+      "stderr": "[WARNING]: Host 'localhost' is using the discovered Python interpreter at '${LOCAL_HOME}/anaconda3/bin/python3.13', but future installation of another Python interpreter could cause a different interpreter to be discovered. See https://docs.ansible.com/ansible-core/2.21/reference_appendices/interpreter_discovery.html for more information.\n",
+      "seconds": 1.2116025038994849,
+      "executable": ".venv-e2r/bin/ansible-playbook",
+      "timeout_seconds": 30,
+      "repair_completion_fault_age_seconds": 63.82447475893423,
+      "completed_before_deadline": true
+    },
+    "saved_evaluation_window_count": 0,
+    "in_flight_evaluation_requests_unknown": true,
+    "oracle_status": null,
+    "late_fault_absence": {
+      "e2r-matched-cpu-noaction": {
+        "probe": {
+          "argv": [
+            "kubectl",
+            "get",
+            "stresschaos",
+            "e2r-matched-cpu-noaction",
+            "-n",
+            "e2r-supplement-20260925",
+            "-o",
+            "json"
+          ],
+          "returncode": 1,
+          "stdout": "",
+          "stderr": "Error from server (NotFound): stresschaos.chaos-mesh.org \"e2r-matched-cpu-noaction\" not found",
+          "client_context": {
+            "kubeconfig": "/etc/rancher/k3s/k3s.yaml"
+          }
+        },
+        "absent": true
+      },
+      "e2r-matched-cpu-typed": {
+        "probe": {
+          "argv": [
+            "kubectl",
+            "get",
+            "stresschaos",
+            "e2r-matched-cpu-typed",
+            "-n",
+            "e2r-supplement-20260925",
+            "-o",
+            "json"
+          ],
+          "returncode": 1,
+          "stdout": "",
+          "stderr": "Error from server (NotFound): stresschaos.chaos-mesh.org \"e2r-matched-cpu-typed\" not found",
+          "client_context": {
+            "kubeconfig": "/etc/rancher/k3s/k3s.yaml"
+          }
+        },
+        "absent": true
+      }
+    },
+    "late_runtime_matches_block_start": null
+  },
+  "source_sha256": {
+    "block": "59f875fffb5ffdbc55f823e617ffa18963323d02aa4e0605f27dcf8b72c5d925",
+    "no_action": "ab2ddd9dac089013b11b5e5b97e8a062bb6006985230b1469649113f7c714a0e",
+    "typed": "bb7f73d828bd44eb5fd90e68ded1796d7bffcb46c79c910473de779b0092f00d",
+    "final": "100b1f4d1e28a06e67a7b0eff0e15b0f45c6c1ad8925a998e7181bb07a64daf4",
+    "typed_sidecar": "5f0e12cb8aad3b33dabf5c4ad0c3dd22a36c2fe3bdd469dfe80f80cb4f0f7006"
+  },
+  "limits": [
+    "The typed episode was interrupted before a complete evaluation window was saved.",
+    "No typed/no-action business delta, effect size, recovery rate or causal comparison is defined.",
+    "Late absence checks cannot replace contemporaneous typed technical/oracle/cleanup evidence.",
+    "The complete no-action trajectory remains a valid standalone persistent-fault observation."
+  ]
+}

@@ -1,0 +1,2033 @@
+{
+  "audit_skill": "experiment-audit",
+  "audit_slice": "m4_baseline_runtime_checks",
+  "generated_at": "2026-09-26T16:19:07.171218+00:00",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "deterministic_consistency_status": "PASS",
+  "overall_verdict": "WARN",
+  "reason": "No deterministic mismatch found. Scope/provenance qualifications remain; v1 lacks a post-calibration runtime snapshot and operational intent is outside the assigned artifacts.",
+  "audited_input_hashes": {
+    "experiments/e2r/isolated_boutique.yaml": "sha256:9150029373d00e9882b83922071d69c12bcd36b04af5cab16ea90a2caa0882bb",
+    "experiments/e2r/isolated_environment.json": "sha256:e609874865aac726703127483c822450071e6e04979676fecb09908fd84122f6",
+    "experiments/e2r/runs/recovery_baseline_v1/baseline.json": "sha256:b9c4c39b77b6640390746b77167ab5f69f2dca72598b59399b150d4dc9c563bf",
+    "experiments/e2r/runs/recovery_baseline_v2/baseline.json": "sha256:3957fa90acce446bd248c6e493c2374307454cc96d4644b99ec60fc04b84642d",
+    "scripts/e2r/run_recovery_baseline.py": "sha256:080ec0a903b3dffc3f5378c23aed469f78c43f2166acb0c0393088ebe7c1c296",
+    "refine-logs/FULL_EXPERIMENT_CODE_REVIEW.md": "sha256:297593d8f41a51b5a6e8e03b49314e2fa0535601cb1b93e51c5b8e2a895c3173"
+  },
+  "checks": [
+    {
+      "id": "all_raw_latency_metrics",
+      "status": "PASS",
+      "details": "Every window and pooled baseline count, nearest-rank p95, error rate, and median-window baseline throughput reproduced exactly, without invoking project metric functions.",
+      "formula_reference": [
+        "scripts/e2r/run_recovery_baseline.py:118",
+        "scripts/e2r/run_recovery_baseline.py:123"
+      ]
+    },
+    {
+      "id": "v2_runtime_stability",
+      "status": "PASS",
+      "details": "12 pod names/UIDs and 24 regular-container identities unchanged. All pods Running and Ready; all regular containers ready, running, restartCount=0. Entire saved pre/post pod objects equal.",
+      "recorded_flag_evidence": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:14732"
+    },
+    {
+      "id": "deployment_service_identity",
+      "status": "PASS",
+      "details": "All 12 deployment UIDs and 12 service UIDs retained v1\u2192v2; 12 service specs and ClusterIPs identical; v2 pre/post full deployment and service objects identical."
+    },
+    {
+      "id": "manifest_last_applied",
+      "status": "PASS",
+      "details": "All 12 v2 deployment specs, including full pod templates, and all 12 v2 service specs decoded from last-applied annotations exactly equal current YAML spec objects. Kubernetes-defaulted runtime specs are not asserted byte-identical to YAML."
+    },
+    {
+      "id": "sidecar_only_template_change",
+      "status": "PASS",
+      "details": "Every v1\u2192v2 deployment spec has exactly one changed scalar: sidecar-busybox command element 2, sleep 3600 \u2192 sleep 2147483647. No application image, env, resources, selector or service change in saved specs."
+    },
+    {
+      "id": "runtime_reset",
+      "status": "PASS",
+      "details": "All 12 pod UIDs and 24 regular-container IDs change between v1/v2, with identical corresponding imageIDs. New pods were created between v1 completion and v2 measurement; all deployment generations/revisions advance 1\u21922. This establishes a rollout-compatible runtime reset. Intent itself requires operational records beyond these inputs."
+    },
+    {
+      "id": "no_fault_flags_and_scope",
+      "status": "PASS",
+      "details": "Both artifacts explicitly label themselves complete live_no_fault_baseline_only and record fault_injected=false, repair_executed=false, with root/product-check-only limitations. These flags and snapshots do not independently prove absence of unrecorded actions."
+    },
+    {
+      "id": "declared_intent_and_state_reset",
+      "status": "PASS",
+      "details": "Supplementary review record explicitly calls the sidecar change an intentional benchmark setup rollout, requires new identities and pre/post calibration checks, and says to treat application/Redis emptyDir restart as an environment reset. Saved baseline objects match that declared reset pattern. This is documentary corroboration, not an external execution attestation.",
+      "evidence": [
+        "refine-logs/FULL_EXPERIMENT_CODE_REVIEW.md:686",
+        "refine-logs/FULL_EXPERIMENT_CODE_REVIEW.md:687",
+        "refine-logs/FULL_EXPERIMENT_CODE_REVIEW.md:688",
+        "refine-logs/FULL_EXPERIMENT_CODE_REVIEW.md:691",
+        "experiments/e2r/isolated_boutique.yaml:1158"
+      ]
+    }
+  ],
+  "metrics": [
+    {
+      "version": "v1",
+      "windows": [
+        {
+          "window_id": "baseline-0",
+          "recomputed": {
+            "samples": 150,
+            "throughput_rps": 4.997328442080016,
+            "error_rate": 0.0,
+            "p95_ms": 17.989250365644693
+          },
+          "exact_match": {
+            "samples": true,
+            "throughput_rps": true,
+            "error_rate": true,
+            "p95_ms": true
+          },
+          "valid_latency_count": 150,
+          "successes": 150,
+          "elapsed_seconds": 30.016037916764617,
+          "raw_is_sorted": true,
+          "state_canary_ok_recorded": true,
+          "evidence": {
+            "window": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:34",
+            "raw": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:102",
+            "latencies": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:107"
+          }
+        },
+        {
+          "window_id": "baseline-1",
+          "recomputed": {
+            "samples": 150,
+            "throughput_rps": 4.997065630290144,
+            "error_rate": 0.0,
+            "p95_ms": 16.90029911696911
+          },
+          "exact_match": {
+            "samples": true,
+            "throughput_rps": true,
+            "error_rate": true,
+            "p95_ms": true
+          },
+          "valid_latency_count": 150,
+          "successes": 150,
+          "elapsed_seconds": 30.017616556957364,
+          "raw_is_sorted": true,
+          "state_canary_ok_recorded": true,
+          "evidence": {
+            "window": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:45",
+            "raw": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:263",
+            "latencies": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:268"
+          }
+        },
+        {
+          "window_id": "baseline-2",
+          "recomputed": {
+            "samples": 150,
+            "throughput_rps": 4.997205189581473,
+            "error_rate": 0.0,
+            "p95_ms": 17.157181166112423
+          },
+          "exact_match": {
+            "samples": true,
+            "throughput_rps": true,
+            "error_rate": true,
+            "p95_ms": true
+          },
+          "valid_latency_count": 150,
+          "successes": 150,
+          "elapsed_seconds": 30.016778240911663,
+          "raw_is_sorted": true,
+          "state_canary_ok_recorded": true,
+          "evidence": {
+            "window": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:56",
+            "raw": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:424",
+            "latencies": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:429"
+          }
+        },
+        {
+          "window_id": "baseline-3",
+          "recomputed": {
+            "samples": 150,
+            "throughput_rps": 4.997266239212251,
+            "error_rate": 0.0,
+            "p95_ms": 16.98792725801468
+          },
+          "exact_match": {
+            "samples": true,
+            "throughput_rps": true,
+            "error_rate": true,
+            "p95_ms": true
+          },
+          "valid_latency_count": 150,
+          "successes": 150,
+          "elapsed_seconds": 30.016411537770182,
+          "raw_is_sorted": true,
+          "state_canary_ok_recorded": true,
+          "evidence": {
+            "window": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:67",
+            "raw": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:585",
+            "latencies": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:590"
+          }
+        },
+        {
+          "window_id": "baseline-4",
+          "recomputed": {
+            "samples": 150,
+            "throughput_rps": 4.997304665267785,
+            "error_rate": 0.0,
+            "p95_ms": 16.992858611047268
+          },
+          "exact_match": {
+            "samples": true,
+            "throughput_rps": true,
+            "error_rate": true,
+            "p95_ms": true
+          },
+          "valid_latency_count": 150,
+          "successes": 150,
+          "elapsed_seconds": 30.016180730890483,
+          "raw_is_sorted": true,
+          "state_canary_ok_recorded": true,
+          "evidence": {
+            "window": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:78",
+            "raw": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:746",
+            "latencies": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:751"
+          }
+        },
+        {
+          "window_id": "baseline-5",
+          "recomputed": {
+            "samples": 150,
+            "throughput_rps": 4.997146873924545,
+            "error_rate": 0.0,
+            "p95_ms": 17.747113946825266
+          },
+          "exact_match": {
+            "samples": true,
+            "throughput_rps": true,
+            "error_rate": true,
+            "p95_ms": true
+          },
+          "valid_latency_count": 150,
+          "successes": 150,
+          "elapsed_seconds": 30.01712853042409,
+          "raw_is_sorted": true,
+          "state_canary_ok_recorded": true,
+          "evidence": {
+            "window": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:89",
+            "raw": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:907",
+            "latencies": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:912"
+          }
+        }
+      ],
+      "baseline_recomputed": {
+        "samples": 900,
+        "throughput_rps": 4.9972357143968615,
+        "error_rate": 0.0,
+        "p95_ms": 17.33604120090604
+      },
+      "baseline_exact_match": {
+        "samples": true,
+        "throughput_rps": true,
+        "error_rate": true,
+        "p95_ms": true
+      },
+      "pooled_active_window_rps_for_comparison": 4.997219505043043,
+      "wall_span_rps_including_interwindow_gaps_for_comparison": 4.860745511076114,
+      "baseline_evidence": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:22",
+      "all_recorded_canaries_true": true,
+      "start_utc": "2026-09-26T14:04:29.672179+00:00",
+      "end_utc": "2026-09-26T14:07:34.828962+00:00"
+    },
+    {
+      "version": "v2",
+      "windows": [
+        {
+          "window_id": "baseline-0",
+          "recomputed": {
+            "samples": 150,
+            "throughput_rps": 4.99706365363021,
+            "error_rate": 0.0,
+            "p95_ms": 18.263094127178192
+          },
+          "exact_match": {
+            "samples": true,
+            "throughput_rps": true,
+            "error_rate": true,
+            "p95_ms": true
+          },
+          "valid_latency_count": 150,
+          "successes": 150,
+          "elapsed_seconds": 30.01762843085453,
+          "raw_is_sorted": true,
+          "state_canary_ok_recorded": true,
+          "evidence": {
+            "window": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:34",
+            "raw": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:102",
+            "latencies": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:107"
+          }
+        },
+        {
+          "window_id": "baseline-1",
+          "recomputed": {
+            "samples": 150,
+            "throughput_rps": 4.9971268654298076,
+            "error_rate": 0.0,
+            "p95_ms": 18.072161823511124
+          },
+          "exact_match": {
+            "samples": true,
+            "throughput_rps": true,
+            "error_rate": true,
+            "p95_ms": true
+          },
+          "valid_latency_count": 150,
+          "successes": 150,
+          "elapsed_seconds": 30.017248718999326,
+          "raw_is_sorted": true,
+          "state_canary_ok_recorded": true,
+          "evidence": {
+            "window": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:45",
+            "raw": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:263",
+            "latencies": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:268"
+          }
+        },
+        {
+          "window_id": "baseline-2",
+          "recomputed": {
+            "samples": 150,
+            "throughput_rps": 4.997210703599868,
+            "error_rate": 0.0,
+            "p95_ms": 18.60261708498001
+          },
+          "exact_match": {
+            "samples": true,
+            "throughput_rps": true,
+            "error_rate": true,
+            "p95_ms": true
+          },
+          "valid_latency_count": 150,
+          "successes": 150,
+          "elapsed_seconds": 30.01674511982128,
+          "raw_is_sorted": true,
+          "state_canary_ok_recorded": true,
+          "evidence": {
+            "window": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:56",
+            "raw": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:424",
+            "latencies": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:429"
+          }
+        },
+        {
+          "window_id": "baseline-3",
+          "recomputed": {
+            "samples": 150,
+            "throughput_rps": 4.997201054870277,
+            "error_rate": 0.0,
+            "p95_ms": 18.55033403262496
+          },
+          "exact_match": {
+            "samples": true,
+            "throughput_rps": true,
+            "error_rate": true,
+            "p95_ms": true
+          },
+          "valid_latency_count": 150,
+          "successes": 150,
+          "elapsed_seconds": 30.01680307695642,
+          "raw_is_sorted": true,
+          "state_canary_ok_recorded": true,
+          "evidence": {
+            "window": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:67",
+            "raw": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:585",
+            "latencies": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:590"
+          }
+        },
+        {
+          "window_id": "baseline-4",
+          "recomputed": {
+            "samples": 150,
+            "throughput_rps": 4.997016130464398,
+            "error_rate": 0.0,
+            "p95_ms": 18.489612266421318
+          },
+          "exact_match": {
+            "samples": true,
+            "throughput_rps": true,
+            "error_rate": true,
+            "p95_ms": true
+          },
+          "valid_latency_count": 150,
+          "successes": 150,
+          "elapsed_seconds": 30.017913907766342,
+          "raw_is_sorted": true,
+          "state_canary_ok_recorded": true,
+          "evidence": {
+            "window": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:78",
+            "raw": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:746",
+            "latencies": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:751"
+          }
+        },
+        {
+          "window_id": "baseline-5",
+          "recomputed": {
+            "samples": 150,
+            "throughput_rps": 4.9976956179622,
+            "error_rate": 0.0,
+            "p95_ms": 17.430427949875593
+          },
+          "exact_match": {
+            "samples": true,
+            "throughput_rps": true,
+            "error_rate": true,
+            "p95_ms": true
+          },
+          "valid_latency_count": 150,
+          "successes": 150,
+          "elapsed_seconds": 30.013832667376846,
+          "raw_is_sorted": true,
+          "state_canary_ok_recorded": true,
+          "evidence": {
+            "window": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:89",
+            "raw": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:907",
+            "latencies": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:912"
+          }
+        }
+      ],
+      "baseline_recomputed": {
+        "samples": 900,
+        "throughput_rps": 4.997163960150042,
+        "error_rate": 0.0,
+        "p95_ms": 18.263094127178192
+      },
+      "baseline_exact_match": {
+        "samples": true,
+        "throughput_rps": true,
+        "error_rate": true,
+        "p95_ms": true
+      },
+      "pooled_active_window_rps_for_comparison": 4.997218994276745,
+      "wall_span_rps_including_interwindow_gaps_for_comparison": 4.860767192269043,
+      "baseline_evidence": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:22",
+      "all_recorded_canaries_true": true,
+      "start_utc": "2026-09-26T15:55:16.889436+00:00",
+      "end_utc": "2026-09-26T15:58:22.045393+00:00"
+    }
+  ],
+  "v2_runtime": [
+    {
+      "app": "adservice",
+      "name": "adservice-75fbc5fb79-9ht96",
+      "uid": "0a838b53-19c2-46d1-84ba-c5493c844049",
+      "phase": "Running",
+      "created_at": "2026-09-26T15:51:45Z",
+      "all_fields_equal_pre_post": true,
+      "containers": [
+        {
+          "name": "server",
+          "containerID": "containerd://ea5003e12c13cbda8ee1760454dee305096161acb0aa82b805790e8106bdd105",
+          "image": "gcr.m.daocloud.io/google-samples/microservices-demo/adservice:v0.10.1",
+          "imageID": "sha256:ba213faab1a2553dbfcabe313a3a92d17eb86893741b759de5fd4cd139b6e6e7",
+          "ready": true,
+          "restartCount": 0,
+          "evidence": {
+            "cluster_snapshot": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:3654",
+            "cluster_snapshot_after": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:10484"
+          }
+        },
+        {
+          "name": "sidecar-busybox",
+          "containerID": "containerd://7f87a7524406ec90742b6d5ce14505626dbdec2f41a0b83764372094258e6429",
+          "image": "docker.io/library/busybox:1.35",
+          "imageID": "docker.io/library/busybox@sha256:98ad9d1a2be345201bb0709b0d38655eb1b370145c7d94ca1fe9c421f76e245a",
+          "ready": true,
+          "restartCount": 0,
+          "evidence": {
+            "cluster_snapshot": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:3708",
+            "cluster_snapshot_after": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:10538"
+          }
+        }
+      ],
+      "evidence": {
+        "cluster_snapshot": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:3474",
+        "cluster_snapshot_after": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:10304"
+      }
+    },
+    {
+      "app": "cartservice",
+      "name": "cartservice-57f75ddddc-hdgzg",
+      "uid": "ea668207-2bc9-427e-81eb-65936ac18de1",
+      "phase": "Running",
+      "created_at": "2026-09-26T15:47:39Z",
+      "all_fields_equal_pre_post": true,
+      "containers": [
+        {
+          "name": "server",
+          "containerID": "containerd://a49aee6b56b3024ea453a1ab2531b6232d9e6cbc41ecd145ace3d6242806eb4b",
+          "image": "gcr.m.daocloud.io/google-samples/microservices-demo/cartservice:v0.10.1",
+          "imageID": "sha256:320f489912a65cee07773a33ab012aba04e61a913db2a5f08a01d52de798a159",
+          "ready": true,
+          "restartCount": 0,
+          "evidence": {
+            "cluster_snapshot": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:3976",
+            "cluster_snapshot_after": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:10806"
+          }
+        },
+        {
+          "name": "sidecar-busybox",
+          "containerID": "containerd://95a30bf30cfa2a2e2495918cf50b52db107f636be0619eba7cffad0c946faec9",
+          "image": "docker.io/library/busybox:1.35",
+          "imageID": "docker.io/library/busybox@sha256:98ad9d1a2be345201bb0709b0d38655eb1b370145c7d94ca1fe9c421f76e245a",
+          "ready": true,
+          "restartCount": 0,
+          "evidence": {
+            "cluster_snapshot": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:4020",
+            "cluster_snapshot_after": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:10850"
+          }
+        }
+      ],
+      "evidence": {
+        "cluster_snapshot": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:3796",
+        "cluster_snapshot_after": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:10626"
+      }
+    },
+    {
+      "app": "checkoutservice",
+      "name": "checkoutservice-55db6cfd66-jfk7q",
+      "uid": "5f6095c7-c767-4ea2-be60-0654deb3fb4b",
+      "phase": "Running",
+      "created_at": "2026-09-26T15:46:11Z",
+      "all_fields_equal_pre_post": true,
+      "containers": [
+        {
+          "name": "server",
+          "containerID": "containerd://f4782ed57761fd691389537ed74cbc441a1c6c7b1e88a0b4beb9d9d9c898d1a5",
+          "image": "gcr.m.daocloud.io/google-samples/microservices-demo/checkoutservice:v0.10.1",
+          "imageID": "sha256:3ec48884a578c7cdadad9fc3a2fb3c916aeceaee9c7b5b6ab9fea7837cfdf8c6",
+          "ready": true,
+          "restartCount": 0,
+          "evidence": {
+            "cluster_snapshot": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:4314",
+            "cluster_snapshot_after": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:11144"
+          }
+        },
+        {
+          "name": "sidecar-busybox",
+          "containerID": "containerd://53c4854c3e4427b34280dcbdc4c3465e3818be3accabe3530e48f20dd2933d70",
+          "image": "docker.io/library/busybox:1.35",
+          "imageID": "docker.io/library/busybox@sha256:98ad9d1a2be345201bb0709b0d38655eb1b370145c7d94ca1fe9c421f76e245a",
+          "ready": true,
+          "restartCount": 0,
+          "evidence": {
+            "cluster_snapshot": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:4358",
+            "cluster_snapshot_after": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:11188"
+          }
+        }
+      ],
+      "evidence": {
+        "cluster_snapshot": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:4108",
+        "cluster_snapshot_after": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:10938"
+      }
+    },
+    {
+      "app": "currencyservice",
+      "name": "currencyservice-5957d6db75-vp9hb",
+      "uid": "6b24d2dc-9c05-4596-b0a7-d87cc9dbfcc1",
+      "phase": "Running",
+      "created_at": "2026-09-26T15:47:39Z",
+      "all_fields_equal_pre_post": true,
+      "containers": [
+        {
+          "name": "server",
+          "containerID": "containerd://c1508fed98ee8a166740c1870e254b3708aabe6cf1b2566d79b3ed74f8c9e18e",
+          "image": "gcr.m.daocloud.io/google-samples/microservices-demo/currencyservice:v0.10.1",
+          "imageID": "sha256:fea8f3a94aa4222d2a12ce6492af546b963a8791c4f2e8a6b3328330211c6084",
+          "ready": true,
+          "restartCount": 0,
+          "evidence": {
+            "cluster_snapshot": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:4633",
+            "cluster_snapshot_after": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:11463"
+          }
+        },
+        {
+          "name": "sidecar-busybox",
+          "containerID": "containerd://e5dbfb81bc3cd70b1a7da6d6359700518f3556fe67e8aaa8e4885be9971281ea",
+          "image": "docker.io/library/busybox:1.35",
+          "imageID": "docker.io/library/busybox@sha256:98ad9d1a2be345201bb0709b0d38655eb1b370145c7d94ca1fe9c421f76e245a",
+          "ready": true,
+          "restartCount": 0,
+          "evidence": {
+            "cluster_snapshot": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:4687",
+            "cluster_snapshot_after": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:11517"
+          }
+        }
+      ],
+      "evidence": {
+        "cluster_snapshot": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:4446",
+        "cluster_snapshot_after": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:11276"
+      }
+    },
+    {
+      "app": "emailservice",
+      "name": "emailservice-6d86bdfd4-lgf57",
+      "uid": "daa97f92-8676-479e-8bfa-b03220dab29f",
+      "phase": "Running",
+      "created_at": "2026-09-26T15:46:11Z",
+      "all_fields_equal_pre_post": true,
+      "containers": [
+        {
+          "name": "server",
+          "containerID": "containerd://29f426d2d09e43021a3a7bd4949a17caa8dd1f46bddab3080bd600830465c9e2",
+          "image": "gcr.m.daocloud.io/google-samples/microservices-demo/emailservice:v0.10.1",
+          "imageID": "sha256:199491db274a79cd48a5499d68efb9fcd93f5051bda661042255910ad7a3f46a",
+          "ready": true,
+          "restartCount": 0,
+          "evidence": {
+            "cluster_snapshot": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:4957",
+            "cluster_snapshot_after": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:11787"
+          }
+        },
+        {
+          "name": "sidecar-busybox",
+          "containerID": "containerd://f0bda6f909c8eae1cd5cb5a2737afdbfb0f0ffe5afa0fc253d90acc3914139c2",
+          "image": "docker.io/library/busybox:1.35",
+          "imageID": "docker.io/library/busybox@sha256:98ad9d1a2be345201bb0709b0d38655eb1b370145c7d94ca1fe9c421f76e245a",
+          "ready": true,
+          "restartCount": 0,
+          "evidence": {
+            "cluster_snapshot": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:5001",
+            "cluster_snapshot_after": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:11831"
+          }
+        }
+      ],
+      "evidence": {
+        "cluster_snapshot": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:4775",
+        "cluster_snapshot_after": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:11605"
+      }
+    },
+    {
+      "app": "frontend",
+      "name": "frontend-575dcbd8d6-wcpbg",
+      "uid": "ca664d5b-d3a9-48c6-98f4-d33b5c363176",
+      "phase": "Running",
+      "created_at": "2026-09-26T15:46:55Z",
+      "all_fields_equal_pre_post": true,
+      "containers": [
+        {
+          "name": "server",
+          "containerID": "containerd://bad49691be782a73ae2f2976b7014986bb4c70b2420db7232e6300f9a1d21c30",
+          "image": "gcr.m.daocloud.io/google-samples/microservices-demo/frontend:v0.10.1",
+          "imageID": "sha256:c68fa7338008110b8255793a49b9fc945460e3dd43ca16d1eb63d46d6bed9994",
+          "ready": true,
+          "restartCount": 0,
+          "evidence": {
+            "cluster_snapshot": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:5322",
+            "cluster_snapshot_after": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:12152"
+          }
+        },
+        {
+          "name": "sidecar-busybox",
+          "containerID": "containerd://7fe4bed01a86d021a643a7eaf0ba48390a0ff6835bfb20f32ae86df80cd7cce9",
+          "image": "docker.io/library/busybox:1.35",
+          "imageID": "docker.io/library/busybox@sha256:98ad9d1a2be345201bb0709b0d38655eb1b370145c7d94ca1fe9c421f76e245a",
+          "ready": true,
+          "restartCount": 0,
+          "evidence": {
+            "cluster_snapshot": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:5366",
+            "cluster_snapshot_after": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:12196"
+          }
+        }
+      ],
+      "evidence": {
+        "cluster_snapshot": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:5092",
+        "cluster_snapshot_after": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:11922"
+      }
+    },
+    {
+      "app": "loadgenerator",
+      "name": "loadgenerator-9dd77bb5c-mnhhd",
+      "uid": "81d34579-b1da-4832-9c08-450b030501a1",
+      "phase": "Running",
+      "created_at": "2026-09-26T15:51:45Z",
+      "all_fields_equal_pre_post": true,
+      "containers": [
+        {
+          "name": "main",
+          "containerID": "containerd://67205d3b0f9c14a6cd4a7c78325251d271fbca0c1bf010bacfee1e5441d0f45e",
+          "image": "gcr.m.daocloud.io/google-samples/microservices-demo/loadgenerator:v0.10.1",
+          "imageID": "sha256:15308409f7c5cad0281f750ab07b0251c4a7d4bf07501c73f44536ff04d05507",
+          "ready": true,
+          "restartCount": 0,
+          "evidence": {
+            "cluster_snapshot": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:5639",
+            "cluster_snapshot_after": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:12469"
+          }
+        },
+        {
+          "name": "sidecar-busybox",
+          "containerID": "containerd://cce70887904da205b48ecda0f6179a6eacfce066356cc6c2c62d2eda1d43e54b",
+          "image": "docker.io/library/busybox:1.35",
+          "imageID": "docker.io/library/busybox@sha256:98ad9d1a2be345201bb0709b0d38655eb1b370145c7d94ca1fe9c421f76e245a",
+          "ready": true,
+          "restartCount": 0,
+          "evidence": {
+            "cluster_snapshot": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:5683",
+            "cluster_snapshot_after": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:12513"
+          }
+        }
+      ],
+      "evidence": {
+        "cluster_snapshot": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:5457",
+        "cluster_snapshot_after": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:12287"
+      }
+    },
+    {
+      "app": "paymentservice",
+      "name": "paymentservice-74c69df798-swqwx",
+      "uid": "413458b5-ce2d-4e62-b3c2-2db54905509a",
+      "phase": "Running",
+      "created_at": "2026-09-26T15:46:26Z",
+      "all_fields_equal_pre_post": true,
+      "containers": [
+        {
+          "name": "server",
+          "containerID": "containerd://8252fb10ec9da787aa5b4303eff6ee7b1862a0e02b8e7647ddcb06e18d893a79",
+          "image": "gcr.m.daocloud.io/google-samples/microservices-demo/paymentservice:v0.10.1",
+          "imageID": "sha256:af166ffbf95acdac3d742e8d88338aa557bcd376eb85900e344675586511ec57",
+          "ready": true,
+          "restartCount": 0,
+          "evidence": {
+            "cluster_snapshot": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:6002",
+            "cluster_snapshot_after": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:12832"
+          }
+        },
+        {
+          "name": "sidecar-busybox",
+          "containerID": "containerd://5a7bda8c7fc00e6f71a8eff0b6aaba1c8c99eda775848c76f7dbdf69ca9151fa",
+          "image": "docker.io/library/busybox:1.35",
+          "imageID": "docker.io/library/busybox@sha256:98ad9d1a2be345201bb0709b0d38655eb1b370145c7d94ca1fe9c421f76e245a",
+          "ready": true,
+          "restartCount": 0,
+          "evidence": {
+            "cluster_snapshot": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:6056",
+            "cluster_snapshot_after": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:12886"
+          }
+        }
+      ],
+      "evidence": {
+        "cluster_snapshot": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:5816",
+        "cluster_snapshot_after": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:12646"
+      }
+    },
+    {
+      "app": "productcatalogservice",
+      "name": "productcatalogservice-74667c88f6-rjlrl",
+      "uid": "3b33831b-857c-4086-95e7-00e729fa91fe",
+      "phase": "Running",
+      "created_at": "2026-09-26T15:46:57Z",
+      "all_fields_equal_pre_post": true,
+      "containers": [
+        {
+          "name": "server",
+          "containerID": "containerd://c88b93d120917c7bf800baede1df7ad7d84349b69842d43807dc63fe5f553c25",
+          "image": "gcr.m.daocloud.io/google-samples/microservices-demo/productcatalogservice:v0.10.1",
+          "imageID": "sha256:5e068dd6e98199ce89407dbdba05cfd59e9f67737d740f6cf1c7165b15edfb80",
+          "ready": true,
+          "restartCount": 0,
+          "evidence": {
+            "cluster_snapshot": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:6326",
+            "cluster_snapshot_after": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:13156"
+          }
+        },
+        {
+          "name": "sidecar-busybox",
+          "containerID": "containerd://c49429d7db813d123dd28a236e42d87578e542f689b7865d11d7064cb28457e4",
+          "image": "docker.io/library/busybox:1.35",
+          "imageID": "docker.io/library/busybox@sha256:98ad9d1a2be345201bb0709b0d38655eb1b370145c7d94ca1fe9c421f76e245a",
+          "ready": true,
+          "restartCount": 0,
+          "evidence": {
+            "cluster_snapshot": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:6370",
+            "cluster_snapshot_after": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:13200"
+          }
+        }
+      ],
+      "evidence": {
+        "cluster_snapshot": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:6144",
+        "cluster_snapshot_after": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:12974"
+      }
+    },
+    {
+      "app": "recommendationservice",
+      "name": "recommendationservice-f9fdcbff5-xr6fn",
+      "uid": "ea052333-47ae-4696-a2d7-cf367cc68123",
+      "phase": "Running",
+      "created_at": "2026-09-26T15:46:34Z",
+      "all_fields_equal_pre_post": true,
+      "containers": [
+        {
+          "name": "server",
+          "containerID": "containerd://c867fe671bd025d993c99411ae459730004bf352871972d4eb810d41d0285e96",
+          "image": "gcr.m.daocloud.io/google-samples/microservices-demo/recommendationservice:v0.10.1",
+          "imageID": "sha256:0101fb442061e19dbca01468df53310e3eb8e75f7cd6f549bf4649a0c90c3365",
+          "ready": true,
+          "restartCount": 0,
+          "evidence": {
+            "cluster_snapshot": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:6648",
+            "cluster_snapshot_after": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:13478"
+          }
+        },
+        {
+          "name": "sidecar-busybox",
+          "containerID": "containerd://1d58d4dc676739fe02ca357ce2fef94308ee0082b81e896d057d9caf9a913bc0",
+          "image": "docker.io/library/busybox:1.35",
+          "imageID": "docker.io/library/busybox@sha256:98ad9d1a2be345201bb0709b0d38655eb1b370145c7d94ca1fe9c421f76e245a",
+          "ready": true,
+          "restartCount": 0,
+          "evidence": {
+            "cluster_snapshot": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:6692",
+            "cluster_snapshot_after": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:13522"
+          }
+        }
+      ],
+      "evidence": {
+        "cluster_snapshot": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:6458",
+        "cluster_snapshot_after": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:13288"
+      }
+    },
+    {
+      "app": "redis-cart",
+      "name": "redis-cart-6995d49-z7dzw",
+      "uid": "7e898c0b-5717-4864-bfca-f9052100e6cd",
+      "phase": "Running",
+      "created_at": "2026-09-26T15:49:01Z",
+      "all_fields_equal_pre_post": true,
+      "containers": [
+        {
+          "name": "redis",
+          "containerID": "containerd://42077018ea3f307ab062573acf2c91fc92c65ac5530f45ba454d2dac6373b945",
+          "image": "docker.io/library/redis:alpine",
+          "imageID": "docker.io/library/redis@sha256:09160599abd229764c0fb44cb6be640294e1d360a54b19985ab4843dcf2d90f1",
+          "ready": true,
+          "restartCount": 0,
+          "evidence": {
+            "cluster_snapshot": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:6932",
+            "cluster_snapshot_after": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:13762"
+          }
+        },
+        {
+          "name": "sidecar-busybox",
+          "containerID": "containerd://438bc45715b6d4720abdbafda944511b65e45ae56254b51d0c052ce703b4cd87",
+          "image": "docker.io/library/busybox:1.35",
+          "imageID": "docker.io/library/busybox@sha256:98ad9d1a2be345201bb0709b0d38655eb1b370145c7d94ca1fe9c421f76e245a",
+          "ready": true,
+          "restartCount": 0,
+          "evidence": {
+            "cluster_snapshot": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:6986",
+            "cluster_snapshot_after": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:13816"
+          }
+        }
+      ],
+      "evidence": {
+        "cluster_snapshot": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:6780",
+        "cluster_snapshot_after": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:13610"
+      }
+    },
+    {
+      "app": "shippingservice",
+      "name": "shippingservice-87f84748b-5bqjf",
+      "uid": "443cee0a-2082-42a9-bbee-c82c9fe390a8",
+      "phase": "Running",
+      "created_at": "2026-09-26T15:49:01Z",
+      "all_fields_equal_pre_post": true,
+      "containers": [
+        {
+          "name": "server",
+          "containerID": "containerd://eb97911516a08feae034fb59c186177452fde5df738eed5c8205c810a275f687",
+          "image": "gcr.m.daocloud.io/google-samples/microservices-demo/shippingservice:v0.10.1",
+          "imageID": "gcr.m.daocloud.io/google-samples/microservices-demo/shippingservice@sha256:1c02a99f7181dfef0f80a2f03281e9efd38987ea79ae718c6bddd006016b239b",
+          "ready": true,
+          "restartCount": 0,
+          "evidence": {
+            "cluster_snapshot": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:7250",
+            "cluster_snapshot_after": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:14080"
+          }
+        },
+        {
+          "name": "sidecar-busybox",
+          "containerID": "containerd://80807d8b9356512466a0453135d56c24187b965e46486516d0f673aa76d6254f",
+          "image": "docker.io/library/busybox:1.35",
+          "imageID": "docker.io/library/busybox@sha256:98ad9d1a2be345201bb0709b0d38655eb1b370145c7d94ca1fe9c421f76e245a",
+          "ready": true,
+          "restartCount": 0,
+          "evidence": {
+            "cluster_snapshot": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:7294",
+            "cluster_snapshot_after": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:14124"
+          }
+        }
+      ],
+      "evidence": {
+        "cluster_snapshot": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:7068",
+        "cluster_snapshot_after": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:13898"
+      }
+    }
+  ],
+  "deployments": [
+    {
+      "name": "adservice",
+      "uid": "0d17aa04-b6d9-44ec-9e68-0fc73cd65dfd",
+      "uid_unchanged_v1_v2": true,
+      "all_fields_equal_v2_pre_post": true,
+      "v2_last_applied_spec_exactly_matches_manifest": true,
+      "v1_v2_spec_differences": [
+        {
+          "path": [
+            "template",
+            "spec",
+            "containers",
+            1,
+            "command",
+            2
+          ],
+          "before": "sleep 3600",
+          "after": "sleep 2147483647"
+        }
+      ],
+      "v1_v2_last_applied_spec_differences": [
+        {
+          "path": [
+            "template",
+            "spec",
+            "containers",
+            1,
+            "command",
+            2
+          ],
+          "before": "sleep 3600",
+          "after": "sleep 2147483647"
+        }
+      ],
+      "evidence": {
+        "v1_uid": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:1092",
+        "v2_uid": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:1092",
+        "v2_after_uid": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:7922",
+        "v2_last_applied": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:1082",
+        "manifest_spec": "experiments/e2r/isolated_boutique.yaml:1186",
+        "v1_sidecar_command": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:1191",
+        "v2_sidecar_command": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:1191",
+        "manifest_sidecar_command": "experiments/e2r/isolated_boutique.yaml:1240"
+      },
+      "generation_v1_v2": [
+        1,
+        2
+      ],
+      "replicas_ready_available_updated": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "cartservice",
+      "uid": "6db8b0aa-6b8c-4fca-8e3a-f492b5827e0d",
+      "uid_unchanged_v1_v2": true,
+      "all_fields_equal_v2_pre_post": true,
+      "v2_last_applied_spec_exactly_matches_manifest": true,
+      "v1_v2_spec_differences": [
+        {
+          "path": [
+            "template",
+            "spec",
+            "containers",
+            1,
+            "command",
+            2
+          ],
+          "before": "sleep 3600",
+          "after": "sleep 2147483647"
+        }
+      ],
+      "v1_v2_last_applied_spec_differences": [
+        {
+          "path": [
+            "template",
+            "spec",
+            "containers",
+            1,
+            "command",
+            2
+          ],
+          "before": "sleep 3600",
+          "after": "sleep 2147483647"
+        }
+      ],
+      "evidence": {
+        "v1_uid": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:1282",
+        "v2_uid": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:1282",
+        "v2_after_uid": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:8112",
+        "v2_last_applied": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:1272",
+        "manifest_spec": "experiments/e2r/isolated_boutique.yaml:737",
+        "v1_sidecar_command": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:1381",
+        "v2_sidecar_command": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:1381",
+        "manifest_sidecar_command": "experiments/e2r/isolated_boutique.yaml:790"
+      },
+      "generation_v1_v2": [
+        1,
+        2
+      ],
+      "replicas_ready_available_updated": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "checkoutservice",
+      "uid": "ecca8692-d9e2-4121-97bb-57058bfabb79",
+      "uid_unchanged_v1_v2": true,
+      "all_fields_equal_v2_pre_post": true,
+      "v2_last_applied_spec_exactly_matches_manifest": true,
+      "v1_v2_spec_differences": [
+        {
+          "path": [
+            "template",
+            "spec",
+            "containers",
+            1,
+            "command",
+            2
+          ],
+          "before": "sleep 3600",
+          "after": "sleep 2147483647"
+        }
+      ],
+      "v1_v2_last_applied_spec_differences": [
+        {
+          "path": [
+            "template",
+            "spec",
+            "containers",
+            1,
+            "command",
+            2
+          ],
+          "before": "sleep 3600",
+          "after": "sleep 2147483647"
+        }
+      ],
+      "evidence": {
+        "v1_uid": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:1472",
+        "v2_uid": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:1472",
+        "v2_after_uid": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:8302",
+        "v2_last_applied": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:1462",
+        "manifest_spec": "experiments/e2r/isolated_boutique.yaml:215",
+        "v1_sidecar_command": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:1597",
+        "v2_sidecar_command": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:1597",
+        "manifest_sidecar_command": "experiments/e2r/isolated_boutique.yaml:278"
+      },
+      "generation_v1_v2": [
+        1,
+        2
+      ],
+      "replicas_ready_available_updated": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "currencyservice",
+      "uid": "ade217fb-a679-4983-a58c-b5d15e64e965",
+      "uid_unchanged_v1_v2": true,
+      "all_fields_equal_v2_pre_post": true,
+      "v2_last_applied_spec_exactly_matches_manifest": true,
+      "v1_v2_spec_differences": [
+        {
+          "path": [
+            "template",
+            "spec",
+            "containers",
+            1,
+            "command",
+            2
+          ],
+          "before": "sleep 3600",
+          "after": "sleep 2147483647"
+        }
+      ],
+      "v1_v2_last_applied_spec_differences": [
+        {
+          "path": [
+            "template",
+            "spec",
+            "containers",
+            1,
+            "command",
+            2
+          ],
+          "before": "sleep 3600",
+          "after": "sleep 2147483647"
+        }
+      ],
+      "evidence": {
+        "v1_uid": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:1688",
+        "v2_uid": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:1688",
+        "v2_after_uid": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:8518",
+        "v2_last_applied": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:1678",
+        "manifest_spec": "experiments/e2r/isolated_boutique.yaml:920",
+        "v1_sidecar_command": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:1794",
+        "v2_sidecar_command": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:1794",
+        "manifest_sidecar_command": "experiments/e2r/isolated_boutique.yaml:975"
+      },
+      "generation_v1_v2": [
+        1,
+        2
+      ],
+      "replicas_ready_available_updated": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "emailservice",
+      "uid": "3b714945-33a3-4fb6-9976-9a32ef1bea06",
+      "uid_unchanged_v1_v2": true,
+      "all_fields_equal_v2_pre_post": true,
+      "v2_last_applied_spec_exactly_matches_manifest": true,
+      "v1_v2_spec_differences": [
+        {
+          "path": [
+            "template",
+            "spec",
+            "containers",
+            1,
+            "command",
+            2
+          ],
+          "before": "sleep 3600",
+          "after": "sleep 2147483647"
+        }
+      ],
+      "v1_v2_last_applied_spec_differences": [
+        {
+          "path": [
+            "template",
+            "spec",
+            "containers",
+            1,
+            "command",
+            2
+          ],
+          "before": "sleep 3600",
+          "after": "sleep 2147483647"
+        }
+      ],
+      "evidence": {
+        "v1_uid": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:1885",
+        "v2_uid": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:1885",
+        "v2_after_uid": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:8715",
+        "v2_last_applied": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:1875",
+        "manifest_spec": "experiments/e2r/isolated_boutique.yaml:121",
+        "v1_sidecar_command": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:1986",
+        "v2_sidecar_command": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:1986",
+        "manifest_sidecar_command": "experiments/e2r/isolated_boutique.yaml:175"
+      },
+      "generation_v1_v2": [
+        1,
+        2
+      ],
+      "replicas_ready_available_updated": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "frontend",
+      "uid": "ae3349bc-302d-4a0f-9eb2-8ff8772eed1b",
+      "uid_unchanged_v1_v2": true,
+      "all_fields_equal_v2_pre_post": true,
+      "v2_last_applied_spec_exactly_matches_manifest": true,
+      "v1_v2_spec_differences": [
+        {
+          "path": [
+            "template",
+            "spec",
+            "containers",
+            1,
+            "command",
+            2
+          ],
+          "before": "sleep 3600",
+          "after": "sleep 2147483647"
+        }
+      ],
+      "v1_v2_last_applied_spec_differences": [
+        {
+          "path": [
+            "template",
+            "spec",
+            "containers",
+            1,
+            "command",
+            2
+          ],
+          "before": "sleep 3600",
+          "after": "sleep 2147483647"
+        }
+      ],
+      "evidence": {
+        "v1_uid": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:2077",
+        "v2_uid": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:2077",
+        "v2_after_uid": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:8907",
+        "v2_last_applied": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:2067",
+        "manifest_spec": "experiments/e2r/isolated_boutique.yaml:416",
+        "v1_sidecar_command": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:2229",
+        "v2_sidecar_command": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:2229",
+        "manifest_sidecar_command": "experiments/e2r/isolated_boutique.yaml:495"
+      },
+      "generation_v1_v2": [
+        1,
+        2
+      ],
+      "replicas_ready_available_updated": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "loadgenerator",
+      "uid": "84cde8cd-6626-47f4-8dac-9b8d9ea0ccc5",
+      "uid_unchanged_v1_v2": true,
+      "all_fields_equal_v2_pre_post": true,
+      "v2_last_applied_spec_exactly_matches_manifest": true,
+      "v1_v2_spec_differences": [
+        {
+          "path": [
+            "template",
+            "spec",
+            "containers",
+            1,
+            "command",
+            2
+          ],
+          "before": "sleep 3600",
+          "after": "sleep 2147483647"
+        }
+      ],
+      "v1_v2_last_applied_spec_differences": [
+        {
+          "path": [
+            "template",
+            "spec",
+            "containers",
+            1,
+            "command",
+            2
+          ],
+          "before": "sleep 3600",
+          "after": "sleep 2147483647"
+        }
+      ],
+      "evidence": {
+        "v1_uid": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:2320",
+        "v2_uid": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:2320",
+        "v2_after_uid": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:9150",
+        "v2_last_applied": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:2310",
+        "manifest_spec": "experiments/e2r/isolated_boutique.yaml:830",
+        "v1_sidecar_command": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:2394",
+        "v2_sidecar_command": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:2394",
+        "manifest_sidecar_command": "experiments/e2r/isolated_boutique.yaml:896"
+      },
+      "generation_v1_v2": [
+        1,
+        2
+      ],
+      "replicas_ready_available_updated": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "paymentservice",
+      "uid": "e4a67b8d-d62d-4cd7-9698-33e1743e1065",
+      "uid_unchanged_v1_v2": true,
+      "all_fields_equal_v2_pre_post": true,
+      "v2_last_applied_spec_exactly_matches_manifest": true,
+      "v1_v2_spec_differences": [
+        {
+          "path": [
+            "template",
+            "spec",
+            "containers",
+            1,
+            "command",
+            2
+          ],
+          "before": "sleep 3600",
+          "after": "sleep 2147483647"
+        }
+      ],
+      "v1_v2_last_applied_spec_differences": [
+        {
+          "path": [
+            "template",
+            "spec",
+            "containers",
+            1,
+            "command",
+            2
+          ],
+          "before": "sleep 3600",
+          "after": "sleep 2147483647"
+        }
+      ],
+      "evidence": {
+        "v1_uid": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:2515",
+        "v2_uid": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:2515",
+        "v2_after_uid": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:9345",
+        "v2_last_applied": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:2505",
+        "manifest_spec": "experiments/e2r/isolated_boutique.yaml:551",
+        "v1_sidecar_command": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:2620",
+        "v2_sidecar_command": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:2620",
+        "manifest_sidecar_command": "experiments/e2r/isolated_boutique.yaml:605"
+      },
+      "generation_v1_v2": [
+        1,
+        2
+      ],
+      "replicas_ready_available_updated": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "productcatalogservice",
+      "uid": "f9bda270-3ee8-485e-8874-cb38834d74a7",
+      "uid_unchanged_v1_v2": true,
+      "all_fields_equal_v2_pre_post": true,
+      "v2_last_applied_spec_exactly_matches_manifest": true,
+      "v1_v2_spec_differences": [
+        {
+          "path": [
+            "template",
+            "spec",
+            "containers",
+            1,
+            "command",
+            2
+          ],
+          "before": "sleep 3600",
+          "after": "sleep 2147483647"
+        }
+      ],
+      "v1_v2_last_applied_spec_differences": [
+        {
+          "path": [
+            "template",
+            "spec",
+            "containers",
+            1,
+            "command",
+            2
+          ],
+          "before": "sleep 3600",
+          "after": "sleep 2147483647"
+        }
+      ],
+      "evidence": {
+        "v1_uid": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:2711",
+        "v2_uid": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:2711",
+        "v2_after_uid": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:9541",
+        "v2_last_applied": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:2701",
+        "manifest_spec": "experiments/e2r/isolated_boutique.yaml:645",
+        "v1_sidecar_command": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:2812",
+        "v2_sidecar_command": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:2812",
+        "manifest_sidecar_command": "experiments/e2r/isolated_boutique.yaml:697"
+      },
+      "generation_v1_v2": [
+        1,
+        2
+      ],
+      "replicas_ready_available_updated": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "recommendationservice",
+      "uid": "ca37fc68-18e2-4603-bbaf-dbef18e2bd2f",
+      "uid_unchanged_v1_v2": true,
+      "all_fields_equal_v2_pre_post": true,
+      "v2_last_applied_spec_exactly_matches_manifest": true,
+      "v1_v2_spec_differences": [
+        {
+          "path": [
+            "template",
+            "spec",
+            "containers",
+            1,
+            "command",
+            2
+          ],
+          "before": "sleep 3600",
+          "after": "sleep 2147483647"
+        }
+      ],
+      "v1_v2_last_applied_spec_differences": [
+        {
+          "path": [
+            "template",
+            "spec",
+            "containers",
+            1,
+            "command",
+            2
+          ],
+          "before": "sleep 3600",
+          "after": "sleep 2147483647"
+        }
+      ],
+      "evidence": {
+        "v1_uid": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:2903",
+        "v2_uid": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:2903",
+        "v2_after_uid": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:9733",
+        "v2_last_applied": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:2893",
+        "manifest_spec": "experiments/e2r/isolated_boutique.yaml:318",
+        "v1_sidecar_command": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:3012",
+        "v2_sidecar_command": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:3012",
+        "manifest_sidecar_command": "experiments/e2r/isolated_boutique.yaml:376"
+      },
+      "generation_v1_v2": [
+        1,
+        2
+      ],
+      "replicas_ready_available_updated": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "redis-cart",
+      "uid": "0e05b052-ea62-4f4a-8d03-c9c92975b49d",
+      "uid_unchanged_v1_v2": true,
+      "all_fields_equal_v2_pre_post": true,
+      "v2_last_applied_spec_exactly_matches_manifest": true,
+      "v1_v2_spec_differences": [
+        {
+          "path": [
+            "template",
+            "spec",
+            "containers",
+            1,
+            "command",
+            2
+          ],
+          "before": "sleep 3600",
+          "after": "sleep 2147483647"
+        }
+      ],
+      "v1_v2_last_applied_spec_differences": [
+        {
+          "path": [
+            "template",
+            "spec",
+            "containers",
+            1,
+            "command",
+            2
+          ],
+          "before": "sleep 3600",
+          "after": "sleep 2147483647"
+        }
+      ],
+      "evidence": {
+        "v1_uid": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:3103",
+        "v2_uid": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:3103",
+        "v2_after_uid": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:9933",
+        "v2_last_applied": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:3093",
+        "manifest_spec": "experiments/e2r/isolated_boutique.yaml:1107",
+        "v1_sidecar_command": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:3180",
+        "v2_sidecar_command": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:3180",
+        "manifest_sidecar_command": "experiments/e2r/isolated_boutique.yaml:1146"
+      },
+      "generation_v1_v2": [
+        1,
+        2
+      ],
+      "replicas_ready_available_updated": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "shippingservice",
+      "uid": "37fa0243-255a-40ec-8d51-64203021d30e",
+      "uid_unchanged_v1_v2": true,
+      "all_fields_equal_v2_pre_post": true,
+      "v2_last_applied_spec_exactly_matches_manifest": true,
+      "v1_v2_spec_differences": [
+        {
+          "path": [
+            "template",
+            "spec",
+            "containers",
+            1,
+            "command",
+            2
+          ],
+          "before": "sleep 3600",
+          "after": "sleep 2147483647"
+        }
+      ],
+      "v1_v2_last_applied_spec_differences": [
+        {
+          "path": [
+            "template",
+            "spec",
+            "containers",
+            1,
+            "command",
+            2
+          ],
+          "before": "sleep 3600",
+          "after": "sleep 2147483647"
+        }
+      ],
+      "evidence": {
+        "v1_uid": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:3265",
+        "v2_uid": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:3265",
+        "v2_after_uid": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:10095",
+        "v2_last_applied": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:3255",
+        "manifest_spec": "experiments/e2r/isolated_boutique.yaml:1015",
+        "v1_sidecar_command": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:3366",
+        "v2_sidecar_command": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:3366",
+        "manifest_sidecar_command": "experiments/e2r/isolated_boutique.yaml:1067"
+      },
+      "generation_v1_v2": [
+        1,
+        2
+      ],
+      "replicas_ready_available_updated": [
+        1,
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "services": [
+    {
+      "name": "adservice",
+      "uid": "cbad35e2-f34a-4bd3-8812-f4e8f8f36254",
+      "uid_unchanged_v1_v2": true,
+      "all_fields_equal_v2_pre_post": true,
+      "v2_last_applied_spec_exactly_matches_manifest": true,
+      "v1_v2_spec_differences": [],
+      "v1_v2_last_applied_spec_differences": [],
+      "evidence": {
+        "v1_uid": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:7381",
+        "v2_uid": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:7381",
+        "v2_after_uid": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:14211",
+        "v2_last_applied": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:7372",
+        "manifest_spec": "experiments/e2r/isolated_boutique.yaml:1264"
+      },
+      "cluster_ip": "10.43.189.104",
+      "type": "ClusterIP"
+    },
+    {
+      "name": "cartservice",
+      "uid": "6749c8f2-eb2b-438c-ae5c-15eb34da55ee",
+      "uid_unchanged_v1_v2": true,
+      "all_fields_equal_v2_pre_post": true,
+      "v2_last_applied_spec_exactly_matches_manifest": true,
+      "v1_v2_spec_differences": [],
+      "v1_v2_last_applied_spec_differences": [],
+      "evidence": {
+        "v1_uid": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:7425",
+        "v2_uid": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:7425",
+        "v2_after_uid": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:14255",
+        "v2_last_applied": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:7416",
+        "manifest_spec": "experiments/e2r/isolated_boutique.yaml:814"
+      },
+      "cluster_ip": "10.43.146.220",
+      "type": "ClusterIP"
+    },
+    {
+      "name": "checkoutservice",
+      "uid": "c640aa0e-42b0-4071-898d-bac1054c19f5",
+      "uid_unchanged_v1_v2": true,
+      "all_fields_equal_v2_pre_post": true,
+      "v2_last_applied_spec_exactly_matches_manifest": true,
+      "v1_v2_spec_differences": [],
+      "v1_v2_last_applied_spec_differences": [],
+      "evidence": {
+        "v1_uid": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:7469",
+        "v2_uid": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:7469",
+        "v2_after_uid": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:14299",
+        "v2_last_applied": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:7460",
+        "manifest_spec": "experiments/e2r/isolated_boutique.yaml:302"
+      },
+      "cluster_ip": "10.43.72.86",
+      "type": "ClusterIP"
+    },
+    {
+      "name": "currencyservice",
+      "uid": "30c1196d-2f1a-489a-b625-1d6723209325",
+      "uid_unchanged_v1_v2": true,
+      "all_fields_equal_v2_pre_post": true,
+      "v2_last_applied_spec_exactly_matches_manifest": true,
+      "v1_v2_spec_differences": [],
+      "v1_v2_last_applied_spec_differences": [],
+      "evidence": {
+        "v1_uid": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:7513",
+        "v2_uid": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:7513",
+        "v2_after_uid": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:14343",
+        "v2_last_applied": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:7504",
+        "manifest_spec": "experiments/e2r/isolated_boutique.yaml:999"
+      },
+      "cluster_ip": "10.43.22.75",
+      "type": "ClusterIP"
+    },
+    {
+      "name": "emailservice",
+      "uid": "1afa9798-e72b-462f-aafa-dbfb0f7b923e",
+      "uid_unchanged_v1_v2": true,
+      "all_fields_equal_v2_pre_post": true,
+      "v2_last_applied_spec_exactly_matches_manifest": true,
+      "v1_v2_spec_differences": [],
+      "v1_v2_last_applied_spec_differences": [],
+      "evidence": {
+        "v1_uid": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:7557",
+        "v2_uid": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:7557",
+        "v2_after_uid": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:14387",
+        "v2_last_applied": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:7548",
+        "manifest_spec": "experiments/e2r/isolated_boutique.yaml:199"
+      },
+      "cluster_ip": "10.43.215.182",
+      "type": "ClusterIP"
+    },
+    {
+      "name": "frontend",
+      "uid": "12828550-de89-472e-b5ef-e0569666c922",
+      "uid_unchanged_v1_v2": true,
+      "all_fields_equal_v2_pre_post": true,
+      "v2_last_applied_spec_exactly_matches_manifest": true,
+      "v1_v2_spec_differences": [],
+      "v1_v2_last_applied_spec_differences": [],
+      "evidence": {
+        "v1_uid": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:7601",
+        "v2_uid": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:7601",
+        "v2_after_uid": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:14431",
+        "v2_last_applied": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:7592",
+        "manifest_spec": "experiments/e2r/isolated_boutique.yaml:519"
+      },
+      "cluster_ip": "10.43.250.110",
+      "type": "ClusterIP"
+    },
+    {
+      "name": "frontend-external",
+      "uid": "e835774f-1000-4f5f-9395-0a59f23fa883",
+      "uid_unchanged_v1_v2": true,
+      "all_fields_equal_v2_pre_post": true,
+      "v2_last_applied_spec_exactly_matches_manifest": true,
+      "v1_v2_spec_differences": [],
+      "v1_v2_last_applied_spec_differences": [],
+      "evidence": {
+        "v1_uid": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:7645",
+        "v2_uid": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:7645",
+        "v2_after_uid": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:14475",
+        "v2_last_applied": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:7636",
+        "manifest_spec": "experiments/e2r/isolated_boutique.yaml:535"
+      },
+      "cluster_ip": "10.43.55.35",
+      "type": "ClusterIP"
+    },
+    {
+      "name": "paymentservice",
+      "uid": "e1808252-e43c-4183-9005-13bdac173715",
+      "uid_unchanged_v1_v2": true,
+      "all_fields_equal_v2_pre_post": true,
+      "v2_last_applied_spec_exactly_matches_manifest": true,
+      "v1_v2_spec_differences": [],
+      "v1_v2_last_applied_spec_differences": [],
+      "evidence": {
+        "v1_uid": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:7689",
+        "v2_uid": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:7689",
+        "v2_after_uid": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:14519",
+        "v2_last_applied": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:7680",
+        "manifest_spec": "experiments/e2r/isolated_boutique.yaml:629"
+      },
+      "cluster_ip": "10.43.239.240",
+      "type": "ClusterIP"
+    },
+    {
+      "name": "productcatalogservice",
+      "uid": "da228bd9-5100-4cda-8486-8b47abdd98ec",
+      "uid_unchanged_v1_v2": true,
+      "all_fields_equal_v2_pre_post": true,
+      "v2_last_applied_spec_exactly_matches_manifest": true,
+      "v1_v2_spec_differences": [],
+      "v1_v2_last_applied_spec_differences": [],
+      "evidence": {
+        "v1_uid": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:7733",
+        "v2_uid": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:7733",
+        "v2_after_uid": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:14563",
+        "v2_last_applied": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:7724",
+        "manifest_spec": "experiments/e2r/isolated_boutique.yaml:721"
+      },
+      "cluster_ip": "10.43.112.119",
+      "type": "ClusterIP"
+    },
+    {
+      "name": "recommendationservice",
+      "uid": "f439d1a7-a127-4cb4-b8d8-5be9f025cbd7",
+      "uid_unchanged_v1_v2": true,
+      "all_fields_equal_v2_pre_post": true,
+      "v2_last_applied_spec_exactly_matches_manifest": true,
+      "v1_v2_spec_differences": [],
+      "v1_v2_last_applied_spec_differences": [],
+      "evidence": {
+        "v1_uid": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:7777",
+        "v2_uid": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:7777",
+        "v2_after_uid": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:14607",
+        "v2_last_applied": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:7768",
+        "manifest_spec": "experiments/e2r/isolated_boutique.yaml:400"
+      },
+      "cluster_ip": "10.43.85.92",
+      "type": "ClusterIP"
+    },
+    {
+      "name": "redis-cart",
+      "uid": "d5337c86-2e43-4a54-93c6-4c6b99019e9b",
+      "uid_unchanged_v1_v2": true,
+      "all_fields_equal_v2_pre_post": true,
+      "v2_last_applied_spec_exactly_matches_manifest": true,
+      "v1_v2_spec_differences": [],
+      "v1_v2_last_applied_spec_differences": [],
+      "evidence": {
+        "v1_uid": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:7821",
+        "v2_uid": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:7821",
+        "v2_after_uid": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:14651",
+        "v2_last_applied": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:7812",
+        "manifest_spec": "experiments/e2r/isolated_boutique.yaml:1170"
+      },
+      "cluster_ip": "10.43.249.156",
+      "type": "ClusterIP"
+    },
+    {
+      "name": "shippingservice",
+      "uid": "1c50ea79-da3d-4dfa-bfbf-53e381f53f20",
+      "uid_unchanged_v1_v2": true,
+      "all_fields_equal_v2_pre_post": true,
+      "v2_last_applied_spec_exactly_matches_manifest": true,
+      "v1_v2_spec_differences": [],
+      "v1_v2_last_applied_spec_differences": [],
+      "evidence": {
+        "v1_uid": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:7865",
+        "v2_uid": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:7865",
+        "v2_after_uid": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:14695",
+        "v2_last_applied": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:7856",
+        "manifest_spec": "experiments/e2r/isolated_boutique.yaml:1091"
+      },
+      "cluster_ip": "10.43.40.174",
+      "type": "ClusterIP"
+    }
+  ],
+  "v1_v2_runtime_resets": [
+    {
+      "app": "adservice",
+      "old_uid": "ed468e41-7d4a-4268-bf11-f9e62d56317e",
+      "new_uid": "0a838b53-19c2-46d1-84ba-c5493c844049",
+      "old_pod_name": "adservice-5c4cccc69b-kfgm4",
+      "new_pod_name": "adservice-75fbc5fb79-9ht96",
+      "created_after_v1_before_v2": true,
+      "created_utc": "2026-09-26T15:51:45Z",
+      "both_regular_container_ids_changed": true,
+      "regular_container_imageIDs_unchanged": true,
+      "evidence": {
+        "v1_uid": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:3474",
+        "v2_uid": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:3474",
+        "v2_creation": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:3454"
+      }
+    },
+    {
+      "app": "cartservice",
+      "old_uid": "b893e550-3ca1-4a8a-bed6-c38e38712173",
+      "new_uid": "ea668207-2bc9-427e-81eb-65936ac18de1",
+      "old_pod_name": "cartservice-786db894f6-rdczs",
+      "new_pod_name": "cartservice-57f75ddddc-hdgzg",
+      "created_after_v1_before_v2": true,
+      "created_utc": "2026-09-26T15:47:39Z",
+      "both_regular_container_ids_changed": true,
+      "regular_container_imageIDs_unchanged": true,
+      "evidence": {
+        "v1_uid": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:3796",
+        "v2_uid": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:3796",
+        "v2_creation": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:3776"
+      }
+    },
+    {
+      "app": "checkoutservice",
+      "old_uid": "a6379a7a-b652-45f5-ae74-30f6d37c1fcd",
+      "new_uid": "5f6095c7-c767-4ea2-be60-0654deb3fb4b",
+      "old_pod_name": "checkoutservice-599c56876c-fvrz8",
+      "new_pod_name": "checkoutservice-55db6cfd66-jfk7q",
+      "created_after_v1_before_v2": true,
+      "created_utc": "2026-09-26T15:46:11Z",
+      "both_regular_container_ids_changed": true,
+      "regular_container_imageIDs_unchanged": true,
+      "evidence": {
+        "v1_uid": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:4108",
+        "v2_uid": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:4108",
+        "v2_creation": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:4088"
+      }
+    },
+    {
+      "app": "currencyservice",
+      "old_uid": "753e3880-e0a5-4649-8443-c728d6e420d7",
+      "new_uid": "6b24d2dc-9c05-4596-b0a7-d87cc9dbfcc1",
+      "old_pod_name": "currencyservice-798d98fb48-rhnhh",
+      "new_pod_name": "currencyservice-5957d6db75-vp9hb",
+      "created_after_v1_before_v2": true,
+      "created_utc": "2026-09-26T15:47:39Z",
+      "both_regular_container_ids_changed": true,
+      "regular_container_imageIDs_unchanged": true,
+      "evidence": {
+        "v1_uid": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:4446",
+        "v2_uid": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:4446",
+        "v2_creation": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:4426"
+      }
+    },
+    {
+      "app": "emailservice",
+      "old_uid": "e1d19fe5-d509-4e7e-9ae1-f7fd6d6db156",
+      "new_uid": "daa97f92-8676-479e-8bfa-b03220dab29f",
+      "old_pod_name": "emailservice-86cbcd5847-6hnqn",
+      "new_pod_name": "emailservice-6d86bdfd4-lgf57",
+      "created_after_v1_before_v2": true,
+      "created_utc": "2026-09-26T15:46:11Z",
+      "both_regular_container_ids_changed": true,
+      "regular_container_imageIDs_unchanged": true,
+      "evidence": {
+        "v1_uid": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:4775",
+        "v2_uid": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:4775",
+        "v2_creation": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:4755"
+      }
+    },
+    {
+      "app": "frontend",
+      "old_uid": "dc6b6029-cd5e-4933-83be-0c18feb32c47",
+      "new_uid": "ca664d5b-d3a9-48c6-98f4-d33b5c363176",
+      "old_pod_name": "frontend-7644db9f9-dkg69",
+      "new_pod_name": "frontend-575dcbd8d6-wcpbg",
+      "created_after_v1_before_v2": true,
+      "created_utc": "2026-09-26T15:46:55Z",
+      "both_regular_container_ids_changed": true,
+      "regular_container_imageIDs_unchanged": true,
+      "evidence": {
+        "v1_uid": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:5092",
+        "v2_uid": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:5092",
+        "v2_creation": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:5072"
+      }
+    },
+    {
+      "app": "loadgenerator",
+      "old_uid": "6fb15615-6573-40a6-920c-7ee222725529",
+      "new_uid": "81d34579-b1da-4832-9c08-450b030501a1",
+      "old_pod_name": "loadgenerator-7df69c5b5d-q6rkf",
+      "new_pod_name": "loadgenerator-9dd77bb5c-mnhhd",
+      "created_after_v1_before_v2": true,
+      "created_utc": "2026-09-26T15:51:45Z",
+      "both_regular_container_ids_changed": true,
+      "regular_container_imageIDs_unchanged": true,
+      "evidence": {
+        "v1_uid": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:5457",
+        "v2_uid": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:5457",
+        "v2_creation": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:5437"
+      }
+    },
+    {
+      "app": "paymentservice",
+      "old_uid": "cb265537-c2ea-4fc1-b317-ad0603153721",
+      "new_uid": "413458b5-ce2d-4e62-b3c2-2db54905509a",
+      "old_pod_name": "paymentservice-5df954d465-vxqvv",
+      "new_pod_name": "paymentservice-74c69df798-swqwx",
+      "created_after_v1_before_v2": true,
+      "created_utc": "2026-09-26T15:46:26Z",
+      "both_regular_container_ids_changed": true,
+      "regular_container_imageIDs_unchanged": true,
+      "evidence": {
+        "v1_uid": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:5816",
+        "v2_uid": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:5816",
+        "v2_creation": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:5796"
+      }
+    },
+    {
+      "app": "productcatalogservice",
+      "old_uid": "3e0ce8db-b281-474a-90c4-bf159dd0fee3",
+      "new_uid": "3b33831b-857c-4086-95e7-00e729fa91fe",
+      "old_pod_name": "productcatalogservice-6f484c97cf-7jp76",
+      "new_pod_name": "productcatalogservice-74667c88f6-rjlrl",
+      "created_after_v1_before_v2": true,
+      "created_utc": "2026-09-26T15:46:57Z",
+      "both_regular_container_ids_changed": true,
+      "regular_container_imageIDs_unchanged": true,
+      "evidence": {
+        "v1_uid": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:6144",
+        "v2_uid": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:6144",
+        "v2_creation": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:6124"
+      }
+    },
+    {
+      "app": "recommendationservice",
+      "old_uid": "451c5452-dc3a-4e24-a59f-767a3c4f9875",
+      "new_uid": "ea052333-47ae-4696-a2d7-cf367cc68123",
+      "old_pod_name": "recommendationservice-5fc99db7fb-p7nwh",
+      "new_pod_name": "recommendationservice-f9fdcbff5-xr6fn",
+      "created_after_v1_before_v2": true,
+      "created_utc": "2026-09-26T15:46:34Z",
+      "both_regular_container_ids_changed": true,
+      "regular_container_imageIDs_unchanged": true,
+      "evidence": {
+        "v1_uid": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:6458",
+        "v2_uid": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:6458",
+        "v2_creation": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:6438"
+      }
+    },
+    {
+      "app": "redis-cart",
+      "old_uid": "7eb5fbf5-8fe4-421e-8c60-062d00502110",
+      "new_uid": "7e898c0b-5717-4864-bfca-f9052100e6cd",
+      "old_pod_name": "redis-cart-654b4566b4-rsvpr",
+      "new_pod_name": "redis-cart-6995d49-z7dzw",
+      "created_after_v1_before_v2": true,
+      "created_utc": "2026-09-26T15:49:01Z",
+      "both_regular_container_ids_changed": true,
+      "regular_container_imageIDs_unchanged": true,
+      "evidence": {
+        "v1_uid": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:6780",
+        "v2_uid": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:6780",
+        "v2_creation": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:6760"
+      }
+    },
+    {
+      "app": "shippingservice",
+      "old_uid": "4af03c05-3aab-4350-ac08-fab072681bba",
+      "new_uid": "443cee0a-2082-42a9-bbee-c82c9fe390a8",
+      "old_pod_name": "shippingservice-d95cbd8f9-xqvt8",
+      "new_pod_name": "shippingservice-87f84748b-5bqjf",
+      "created_after_v1_before_v2": true,
+      "created_utc": "2026-09-26T15:49:01Z",
+      "both_regular_container_ids_changed": true,
+      "regular_container_imageIDs_unchanged": true,
+      "evidence": {
+        "v1_uid": "experiments/e2r/runs/recovery_baseline_v1/baseline.json:7068",
+        "v2_uid": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:7068",
+        "v2_creation": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:7048"
+      }
+    }
+  ],
+  "no_fault_flags": [
+    {
+      "version": "v1",
+      "fault_injected": false,
+      "repair_executed": false,
+      "evaluation_type": "live_no_fault_baseline_only",
+      "limits": [
+        "No fault was injected and no repair was planned or executed.",
+        "HTTP root/product checks characterize this isolated benchmark workload only."
+      ],
+      "evidence": [
+        "experiments/e2r/runs/recovery_baseline_v1/baseline.json:2",
+        "experiments/e2r/runs/recovery_baseline_v1/baseline.json:3",
+        "experiments/e2r/runs/recovery_baseline_v1/baseline.json:5",
+        "experiments/e2r/runs/recovery_baseline_v1/baseline.json:6",
+        "experiments/e2r/runs/recovery_baseline_v1/baseline.json:7902"
+      ]
+    },
+    {
+      "version": "v2",
+      "fault_injected": false,
+      "repair_executed": false,
+      "evaluation_type": "live_no_fault_baseline_only",
+      "limits": [
+        "No fault was injected and no repair was planned or executed.",
+        "HTTP root/product checks characterize this isolated benchmark workload only."
+      ],
+      "evidence": [
+        "experiments/e2r/runs/recovery_baseline_v2/baseline.json:2",
+        "experiments/e2r/runs/recovery_baseline_v2/baseline.json:3",
+        "experiments/e2r/runs/recovery_baseline_v2/baseline.json:5",
+        "experiments/e2r/runs/recovery_baseline_v2/baseline.json:6",
+        "experiments/e2r/runs/recovery_baseline_v2/baseline.json:14733"
+      ]
+    }
+  ],
+  "caveats": [
+    "This is a read-only static audit of saved artifacts, not live Kubernetes or HTTP verification. No network, Kubernetes/API, GPU or experiment execution was performed.",
+    "Raw latencies support deterministic recomputation, but request outcomes, HTTP bodies and per-request timestamps are not preserved; successful request counts and canary booleans remain recorded observations.",
+    "The workload consists of six 30-second measurement windows per calibration with 150 scheduled requests each, alongside the manifest loadgenerator USERS=10. It supports baseline calibration for this isolated workload, not fault/repair efficacy, recovery rate, repeated-seed robustness, or production performance.",
+    "Baseline throughput is median(window successes/elapsed_seconds), not total successes divided by summed active duration or the overall wall-clock span. Both baseline p95 values use all 900 raw latency samples with nearest-rank ceil(0.95*N)-1 indexing.",
+    "v1 has no saved cluster_snapshot_after or runtime-stability field. Its single snapshot cannot establish runtime stability across calibration. v2 does retain pre/post snapshots, which are structurally identical in all 36 deployment/pod/service objects.",
+    "v1\u2192v2 pod/container identities must not be treated as continuous. The observed sidecar-only specification change, generation/revision increment, and replacement timing are consistent with deliberate rollout; operator intent is not independently established by these four experiment inputs.",
+    "Current YAML matches v2 last-applied deployment/service specs; last-applied annotations and current code do not by themselves prove the exact historical execution path or authenticate the saved records.",
+    "isolated_environment.json is high-level metadata and does not enumerate the subsequent sidecar sleep hardening. Its claim that existing online-boutique is unchanged cannot be verified without corresponding snapshots of that separate namespace.",
+    "This same-family review remains provisional for semantic integrity judgments; deterministic file consistency checks have passed.",
+    "The supplemental review record documents intended rollout/reset. Redis uses emptyDir at isolated_boutique.yaml:1158; replacement pods cannot establish persistent-state preservation across v1\u2192v2."
+  ],
+  "audited_inputs_unchanged_during_check": true,
+  "operational_intent_corroboration": {
+    "status": "recorded_intent_corresponds_to_observed_reset",
+    "evidence": [
+      "refine-logs/FULL_EXPERIMENT_CODE_REVIEW.md:686",
+      "refine-logs/FULL_EXPERIMENT_CODE_REVIEW.md:687",
+      "refine-logs/FULL_EXPERIMENT_CODE_REVIEW.md:688",
+      "refine-logs/FULL_EXPERIMENT_CODE_REVIEW.md:691"
+    ],
+    "details": "Supplementary review record explicitly calls the sidecar change an intentional benchmark setup rollout, requires new identities and pre/post calibration checks, and says to treat application/Redis emptyDir restart as an environment reset. Saved baseline objects match that declared reset pattern. This is documentary corroboration, not an external execution attestation."
+  },
+  "v2_init_container_checks": [
+    {
+      "snapshot": "cluster_snapshot",
+      "pod": "loadgenerator-9dd77bb5c-mnhhd",
+      "name": "frontend-check",
+      "containerID": "containerd://7f5f3f371cc8a5c46d86b816252d88cb3fc827e6ae7a83ea0373a5c2194ca76a",
+      "ready": true,
+      "restartCount": 0,
+      "exitCode": 0,
+      "evidence": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:5736"
+    },
+    {
+      "snapshot": "cluster_snapshot_after",
+      "pod": "loadgenerator-9dd77bb5c-mnhhd",
+      "name": "frontend-check",
+      "containerID": "containerd://7f5f3f371cc8a5c46d86b816252d88cb3fc827e6ae7a83ea0373a5c2194ca76a",
+      "ready": true,
+      "restartCount": 0,
+      "exitCode": 0,
+      "evidence": "experiments/e2r/runs/recovery_baseline_v2/baseline.json:12566"
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "catalog": [
+    {
+      "id": "op0000",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:cartservice-5967c9cd9b-9xjvl",
+        "attrs": {
+          "type": "pod",
+          "service": "cartservice",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:cartservice-5967c9cd9b-9xjvl"
+        ]
+      },
+      "evidence_id": "during:pod:cartservice-5967c9cd9b-9xjvl",
+      "requires": []
+    },
+    {
+      "id": "op0001",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:cartservice-5967c9cd9b-jr5qc",
+        "attrs": {
+          "type": "pod",
+          "service": "cartservice",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:cartservice-5967c9cd9b-jr5qc"
+        ]
+      },
+      "evidence_id": "during:pod:cartservice-5967c9cd9b-jr5qc",
+      "requires": []
+    },
+    {
+      "id": "op0002",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "cartservice",
+        "target": "pod:cartservice-5967c9cd9b-jr5qc",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "evidence": [
+          "during:cartservice->pod:cartservice-5967c9cd9b-jr5qc"
+        ]
+      },
+      "evidence_id": "during:cartservice->pod:cartservice-5967c9cd9b-jr5qc",
+      "requires": [
+        "op0001"
+      ]
+    }
+  ],
+  "plan": {
+    "experiment_id": "case00017",
+    "change_type": "observation_supported_updates",
+    "confidence": 0.0,
+    "causal_role": "not_inferred",
+    "node_ops": [
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:cartservice-5967c9cd9b-9xjvl",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "cartservice",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:cartservice-5967c9cd9b-9xjvl"
+        ]
+      },
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:cartservice-5967c9cd9b-jr5qc",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "cartservice",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:cartservice-5967c9cd9b-jr5qc"
+        ]
+      }
+    ],
+    "edge_ops": [
+      {
+        "op": "ADD_EDGE",
+        "source": "cartservice",
+        "target": "pod:cartservice-5967c9cd9b-jr5qc",
+        "old_source": "cartservice",
+        "old_target": "pod:cartservice-5967c9cd9b-jr5qc",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:cartservice->pod:cartservice-5967c9cd9b-jr5qc"
+        ]
+      }
+    ],
+    "weight_ops": [],
+    "state_transfer": {},
+    "evidence": [
+      "during:pod:cartservice-5967c9cd9b-9xjvl",
+      "during:pod:cartservice-5967c9cd9b-jr5qc",
+      "during:cartservice->pod:cartservice-5967c9cd9b-jr5qc"
+    ]
+  }
+}

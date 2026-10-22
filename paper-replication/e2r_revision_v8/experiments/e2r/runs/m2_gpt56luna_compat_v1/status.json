@@ -1,0 +1,13 @@
+{
+  "status": "complete",
+  "authorized_request_ceiling": 3,
+  "actual_http_attempts_started": 3,
+  "finished_attempts": 3,
+  "unknown_outcome_attempts": [],
+  "transport_successes": 3,
+  "strict_accepted": 3,
+  "response_models": [
+    "gpt-5.6-luna"
+  ],
+  "provider_usage_missing_attempts": 0
+}

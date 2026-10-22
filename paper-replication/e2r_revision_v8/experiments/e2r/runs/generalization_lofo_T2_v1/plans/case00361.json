@@ -1,0 +1,240 @@
+{
+  "catalog": [
+    {
+      "id": "op0000",
+      "group": "edge_ops",
+      "operation": {
+        "op": "REMOVE_EDGE",
+        "source": "checkoutservice",
+        "target": "pod:checkoutservice-78cf67b9fc-65zfr",
+        "evidence": [
+          "topology_diff:checkoutservice->pod:checkoutservice-78cf67b9fc-65zfr"
+        ]
+      },
+      "evidence_id": "topology_diff:checkoutservice->pod:checkoutservice-78cf67b9fc-65zfr",
+      "requires": []
+    },
+    {
+      "id": "op0001",
+      "group": "edge_ops",
+      "operation": {
+        "op": "REMOVE_EDGE",
+        "source": "checkoutservice",
+        "target": "pod:checkoutservice-78cf67b9fc-qjjln",
+        "evidence": [
+          "topology_diff:checkoutservice->pod:checkoutservice-78cf67b9fc-qjjln"
+        ]
+      },
+      "evidence_id": "topology_diff:checkoutservice->pod:checkoutservice-78cf67b9fc-qjjln",
+      "requires": []
+    },
+    {
+      "id": "op0002",
+      "group": "edge_ops",
+      "operation": {
+        "op": "REMOVE_EDGE",
+        "source": "checkoutservice",
+        "target": "pod:checkoutservice-78cf67b9fc-t5f4m",
+        "evidence": [
+          "topology_diff:checkoutservice->pod:checkoutservice-78cf67b9fc-t5f4m"
+        ]
+      },
+      "evidence_id": "topology_diff:checkoutservice->pod:checkoutservice-78cf67b9fc-t5f4m",
+      "requires": []
+    },
+    {
+      "id": "op0003",
+      "group": "edge_ops",
+      "operation": {
+        "op": "REMOVE_EDGE",
+        "source": "checkoutservice",
+        "target": "pod:checkoutservice-78cf67b9fc-v59rf",
+        "evidence": [
+          "topology_diff:checkoutservice->pod:checkoutservice-78cf67b9fc-v59rf"
+        ]
+      },
+      "evidence_id": "topology_diff:checkoutservice->pod:checkoutservice-78cf67b9fc-v59rf",
+      "requires": []
+    },
+    {
+      "id": "op0004",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "cartservice",
+        "target": "checkoutservice",
+        "edge_type": "dependency",
+        "weight": 1.0,
+        "evidence": [
+          "during:cartservice->checkoutservice"
+        ]
+      },
+      "evidence_id": "during:cartservice->checkoutservice",
+      "requires": []
+    },
+    {
+      "id": "op0005",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "checkoutservice",
+        "target": "pod:cartservice-5967c9cd9b-2czh7",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "evidence": [
+          "during:checkoutservice->pod:cartservice-5967c9cd9b-2czh7"
+        ]
+      },
+      "evidence_id": "during:checkoutservice->pod:cartservice-5967c9cd9b-2czh7",
+      "requires": []
+    },
+    {
+      "id": "op0006",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_TRACE_MISMATCH_EDGE",
+        "source": "checkoutservice",
+        "target": "cartservice",
+        "edge_type": "endpoint_mismatch",
+        "weight": 1.0,
+        "evidence": [
+          "endpoint_owner:checkoutservice:10.244.2.45"
+        ]
+      },
+      "evidence_id": "endpoint_owner:checkoutservice:10.244.2.45",
+      "requires": []
+    }
+  ],
+  "plan": {
+    "experiment_id": "case00361",
+    "change_type": "observation_supported_updates",
+    "confidence": 0.0,
+    "causal_role": "not_inferred",
+    "node_ops": [],
+    "edge_ops": [
+      {
+        "op": "REMOVE_EDGE",
+        "source": "checkoutservice",
+        "target": "pod:checkoutservice-78cf67b9fc-65zfr",
+        "old_source": "checkoutservice",
+        "old_target": "pod:checkoutservice-78cf67b9fc-65zfr",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": null,
+        "attrs": {},
+        "evidence": [
+          "topology_diff:checkoutservice->pod:checkoutservice-78cf67b9fc-65zfr"
+        ]
+      },
+      {
+        "op": "REMOVE_EDGE",
+        "source": "checkoutservice",
+        "target": "pod:checkoutservice-78cf67b9fc-qjjln",
+        "old_source": "checkoutservice",
+        "old_target": "pod:checkoutservice-78cf67b9fc-qjjln",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": null,
+        "attrs": {},
+        "evidence": [
+          "topology_diff:checkoutservice->pod:checkoutservice-78cf67b9fc-qjjln"
+        ]
+      },
+      {
+        "op": "REMOVE_EDGE",
+        "source": "checkoutservice",
+        "target": "pod:checkoutservice-78cf67b9fc-t5f4m",
+        "old_source": "checkoutservice",
+        "old_target": "pod:checkoutservice-78cf67b9fc-t5f4m",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": null,
+        "attrs": {},
+        "evidence": [
+          "topology_diff:checkoutservice->pod:checkoutservice-78cf67b9fc-t5f4m"
+        ]
+      },
+      {
+        "op": "REMOVE_EDGE",
+        "source": "checkoutservice",
+        "target": "pod:checkoutservice-78cf67b9fc-v59rf",
+        "old_source": "checkoutservice",
+        "old_target": "pod:checkoutservice-78cf67b9fc-v59rf",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": null,
+        "attrs": {},
+        "evidence": [
+          "topology_diff:checkoutservice->pod:checkoutservice-78cf67b9fc-v59rf"
+        ]
+      },
+      {
+        "op": "ADD_EDGE",
+        "source": "cartservice",
+        "target": "checkoutservice",
+        "old_source": "cartservice",
+        "old_target": "checkoutservice",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:cartservice->checkoutservice"
+        ]
+      },
+      {
+        "op": "ADD_EDGE",
+        "source": "checkoutservice",
+        "target": "pod:cartservice-5967c9cd9b-2czh7",
+        "old_source": "checkoutservice",
+        "old_target": "pod:cartservice-5967c9cd9b-2czh7",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:checkoutservice->pod:cartservice-5967c9cd9b-2czh7"
+        ]
+      },
+      {
+        "op": "ADD_TRACE_MISMATCH_EDGE",
+        "source": "checkoutservice",
+        "target": "cartservice",
+        "old_source": "checkoutservice",
+        "old_target": "cartservice",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "endpoint_mismatch",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "endpoint_owner:checkoutservice:10.244.2.45"
+        ]
+      }
+    ],
+    "weight_ops": [],
+    "state_transfer": {},
+    "evidence": [
+      "topology_diff:checkoutservice->pod:checkoutservice-78cf67b9fc-65zfr",
+      "topology_diff:checkoutservice->pod:checkoutservice-78cf67b9fc-qjjln",
+      "topology_diff:checkoutservice->pod:checkoutservice-78cf67b9fc-t5f4m",
+      "topology_diff:checkoutservice->pod:checkoutservice-78cf67b9fc-v59rf",
+      "during:cartservice->checkoutservice",
+      "during:checkoutservice->pod:cartservice-5967c9cd9b-2czh7",
+      "endpoint_owner:checkoutservice:10.244.2.45"
+    ]
+  }
+}

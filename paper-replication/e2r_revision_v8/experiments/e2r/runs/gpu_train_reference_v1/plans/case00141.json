@@ -1,0 +1,48 @@
+{
+  "catalog": [
+    {
+      "id": "op0000",
+      "group": "edge_ops",
+      "operation": {
+        "op": "REMOVE_EDGE",
+        "source": "ts-travel-service",
+        "target": "pod:ts-travel-service-6f6dd9dc64-l9zmm",
+        "evidence": [
+          "topology_diff:ts-travel-service->pod:ts-travel-service-6f6dd9dc64-l9zmm"
+        ]
+      },
+      "evidence_id": "topology_diff:ts-travel-service->pod:ts-travel-service-6f6dd9dc64-l9zmm",
+      "requires": []
+    }
+  ],
+  "plan": {
+    "experiment_id": "case00141",
+    "change_type": "observation_supported_updates",
+    "confidence": 0.0,
+    "causal_role": "not_inferred",
+    "node_ops": [],
+    "edge_ops": [
+      {
+        "op": "REMOVE_EDGE",
+        "source": "ts-travel-service",
+        "target": "pod:ts-travel-service-6f6dd9dc64-l9zmm",
+        "old_source": "ts-travel-service",
+        "old_target": "pod:ts-travel-service-6f6dd9dc64-l9zmm",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": null,
+        "attrs": {},
+        "evidence": [
+          "topology_diff:ts-travel-service->pod:ts-travel-service-6f6dd9dc64-l9zmm"
+        ]
+      }
+    ],
+    "weight_ops": [],
+    "state_transfer": {},
+    "evidence": [
+      "topology_diff:ts-travel-service->pod:ts-travel-service-6f6dd9dc64-l9zmm"
+    ]
+  }
+}

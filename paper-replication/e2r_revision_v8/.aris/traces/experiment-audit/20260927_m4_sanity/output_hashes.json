@@ -1,0 +1,7 @@
+{
+  "experiments/e2r/runs/m4_sanity_audit_v1/EXPERIMENT_AUDIT.md": "sha256:060d05e4d4512bc86381bad9da8cc059c4a0fd21bb07fde28d5fa03f45bfc977",
+  "experiments/e2r/runs/m4_sanity_audit_v1/EXPERIMENT_AUDIT.json": "sha256:6ae816d657c0f32983aaf7cf2b541daf3d9e7343fb0b4a98965a035bbdb17d8b",
+  ".aris/traces/experiment-audit/20260927_m4_sanity/recomputed.json": "sha256:4703e3881adb0d28b009f4f1e7156cc37fb0d833cd0d3c85f30ec3e6a9870ae4",
+  ".aris/traces/experiment-audit/20260927_m4_sanity/baseline_runtime_checks.json": "sha256:1f12ecc6906b7c8b05bf58e8adb93e3ff83c247d9900ae25422b22031e95e773",
+  ".aris/traces/experiment-audit/20260927_m4_sanity/baseline_runtime_checks.md": "sha256:30ab7201fd680dce882ac4b87d1e056ee3f052542e8a9a014d7dbde8d49110e9"
+}

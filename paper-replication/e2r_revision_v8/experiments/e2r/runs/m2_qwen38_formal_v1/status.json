@@ -1,0 +1,13 @@
+{
+  "status": "complete",
+  "authorized_request_ceiling": 648,
+  "actual_http_attempts_started": 648,
+  "finished_attempts": 648,
+  "unknown_outcome_attempts": [],
+  "transport_successes": 648,
+  "strict_accepted": 476,
+  "response_models": [
+    "qwen3.8-flash"
+  ],
+  "provider_usage_missing_attempts": 0
+}

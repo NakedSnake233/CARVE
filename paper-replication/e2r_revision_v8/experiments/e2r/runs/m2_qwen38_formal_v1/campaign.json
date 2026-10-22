@@ -1,0 +1,694 @@
+{
+  "schema": "e2r_m2_formal_v1",
+  "source_manifest": "experiments/e2r/runs/full_data_v2/manifest.json",
+  "source_split": "experiments/e2r/runs/gpu_full_4090d/split.json",
+  "model_alias": "qwen3.8-flash",
+  "request_model": "qwen3.8-flash",
+  "api_style": "anthropic",
+  "actual_request_settings": {
+    "api_style": "anthropic",
+    "model": "qwen3.8-flash",
+    "stream": false,
+    "temperature": 0,
+    "max_tokens": 2000,
+    "thinking": {
+      "type": "disabled"
+    }
+  },
+  "cases": [
+    {
+      "case_id": "case00012",
+      "app": "boutique",
+      "scenario": "T1",
+      "catalog_operations": 3
+    },
+    {
+      "case_id": "case00115",
+      "app": "trainticket",
+      "scenario": "T1",
+      "catalog_operations": 12
+    },
+    {
+      "case_id": "case00533",
+      "app": "trainticket",
+      "scenario": "T3",
+      "catalog_operations": 0
+    },
+    {
+      "case_id": "case00231",
+      "app": "boutique",
+      "scenario": "T2",
+      "catalog_operations": 4
+    },
+    {
+      "case_id": "case00321",
+      "app": "trainticket",
+      "scenario": "T2",
+      "catalog_operations": 4
+    },
+    {
+      "case_id": "case00440",
+      "app": "boutique",
+      "scenario": "T3",
+      "catalog_operations": 4
+    },
+    {
+      "case_id": "case00790",
+      "app": "trainticket",
+      "scenario": "T4",
+      "catalog_operations": 3
+    },
+    {
+      "case_id": "case00600",
+      "app": "boutique",
+      "scenario": "T4",
+      "catalog_operations": 3
+    },
+    {
+      "case_id": "case00360",
+      "app": "boutique",
+      "scenario": "T3",
+      "catalog_operations": 0
+    },
+    {
+      "case_id": "case00275",
+      "app": "trainticket",
+      "scenario": "T2",
+      "catalog_operations": 4
+    },
+    {
+      "case_id": "case00199",
+      "app": "trainticket",
+      "scenario": "T1",
+      "catalog_operations": 4
+    },
+    {
+      "case_id": "case00549",
+      "app": "boutique",
+      "scenario": "T4",
+      "catalog_operations": 2
+    },
+    {
+      "case_id": "case00004",
+      "app": "boutique",
+      "scenario": "T1",
+      "catalog_operations": 3
+    },
+    {
+      "case_id": "case00472",
+      "app": "trainticket",
+      "scenario": "T3",
+      "catalog_operations": 2
+    },
+    {
+      "case_id": "case00758",
+      "app": "trainticket",
+      "scenario": "T4",
+      "catalog_operations": 3
+    },
+    {
+      "case_id": "case00227",
+      "app": "boutique",
+      "scenario": "T2",
+      "catalog_operations": 4
+    },
+    {
+      "case_id": "case00120",
+      "app": "trainticket",
+      "scenario": "T1",
+      "catalog_operations": 6
+    },
+    {
+      "case_id": "case00366",
+      "app": "boutique",
+      "scenario": "T3",
+      "catalog_operations": 4
+    },
+    {
+      "case_id": "case00539",
+      "app": "trainticket",
+      "scenario": "T3",
+      "catalog_operations": 3
+    },
+    {
+      "case_id": "case00611",
+      "app": "boutique",
+      "scenario": "T4",
+      "catalog_operations": 3
+    },
+    {
+      "case_id": "case00728",
+      "app": "trainticket",
+      "scenario": "T4",
+      "catalog_operations": 4
+    },
+    {
+      "case_id": "case00087",
+      "app": "boutique",
+      "scenario": "T1",
+      "catalog_operations": 4
+    },
+    {
+      "case_id": "case00283",
+      "app": "trainticket",
+      "scenario": "T2",
+      "catalog_operations": 4
+    },
+    {
+      "case_id": "case00258",
+      "app": "boutique",
+      "scenario": "T2",
+      "catalog_operations": 7
+    },
+    {
+      "case_id": "case00110",
+      "app": "trainticket",
+      "scenario": "T1",
+      "catalog_operations": 5
+    },
+    {
+      "case_id": "case00070",
+      "app": "boutique",
+      "scenario": "T1",
+      "catalog_operations": 2
+    },
+    {
+      "case_id": "case00513",
+      "app": "trainticket",
+      "scenario": "T3",
+      "catalog_operations": 0
+    },
+    {
+      "case_id": "case00556",
+      "app": "boutique",
+      "scenario": "T4",
+      "catalog_operations": 2
+    },
+    {
+      "case_id": "case00240",
+      "app": "boutique",
+      "scenario": "T2",
+      "catalog_operations": 4
+    },
+    {
+      "case_id": "case00724",
+      "app": "trainticket",
+      "scenario": "T4",
+      "catalog_operations": 3
+    },
+    {
+      "case_id": "case00330",
+      "app": "trainticket",
+      "scenario": "T2",
+      "catalog_operations": 4
+    },
+    {
+      "case_id": "case00358",
+      "app": "boutique",
+      "scenario": "T3",
+      "catalog_operations": 0
+    },
+    {
+      "case_id": "case00300",
+      "app": "trainticket",
+      "scenario": "T2",
+      "catalog_operations": 2
+    },
+    {
+      "case_id": "case00015",
+      "app": "boutique",
+      "scenario": "T1",
+      "catalog_operations": 3
+    },
+    {
+      "case_id": "case00756",
+      "app": "trainticket",
+      "scenario": "T4",
+      "catalog_operations": 5
+    },
+    {
+      "case_id": "case00217",
+      "app": "boutique",
+      "scenario": "T2",
+      "catalog_operations": 4
+    },
+    {
+      "case_id": "case00420",
+      "app": "boutique",
+      "scenario": "T3",
+      "catalog_operations": 4
+    },
+    {
+      "case_id": "case00504",
+      "app": "trainticket",
+      "scenario": "T3",
+      "catalog_operations": 3
+    },
+    {
+      "case_id": "case00570",
+      "app": "boutique",
+      "scenario": "T4",
+      "catalog_operations": 2
+    },
+    {
+      "case_id": "case00155",
+      "app": "trainticket",
+      "scenario": "T1",
+      "catalog_operations": 7
+    },
+    {
+      "case_id": "case00055",
+      "app": "boutique",
+      "scenario": "T1",
+      "catalog_operations": 2
+    },
+    {
+      "case_id": "case00697",
+      "app": "trainticket",
+      "scenario": "T4",
+      "catalog_operations": 3
+    },
+    {
+      "case_id": "case00668",
+      "app": "boutique",
+      "scenario": "T4",
+      "catalog_operations": 3
+    },
+    {
+      "case_id": "case00341",
+      "app": "trainticket",
+      "scenario": "T2",
+      "catalog_operations": 4
+    },
+    {
+      "case_id": "case00102",
+      "app": "trainticket",
+      "scenario": "T1",
+      "catalog_operations": 10
+    },
+    {
+      "case_id": "case00380",
+      "app": "boutique",
+      "scenario": "T3",
+      "catalog_operations": 11
+    },
+    {
+      "case_id": "case00501",
+      "app": "trainticket",
+      "scenario": "T3",
+      "catalog_operations": 4
+    },
+    {
+      "case_id": "case00272",
+      "app": "boutique",
+      "scenario": "T2",
+      "catalog_operations": 4
+    },
+    {
+      "case_id": "case00315",
+      "app": "trainticket",
+      "scenario": "T2",
+      "catalog_operations": 5
+    },
+    {
+      "case_id": "case00014",
+      "app": "boutique",
+      "scenario": "T1",
+      "catalog_operations": 3
+    },
+    {
+      "case_id": "case00450",
+      "app": "trainticket",
+      "scenario": "T3",
+      "catalog_operations": 0
+    },
+    {
+      "case_id": "case00422",
+      "app": "boutique",
+      "scenario": "T3",
+      "catalog_operations": 4
+    },
+    {
+      "case_id": "case00148",
+      "app": "trainticket",
+      "scenario": "T1",
+      "catalog_operations": 8
+    },
+    {
+      "case_id": "case00597",
+      "app": "boutique",
+      "scenario": "T4",
+      "catalog_operations": 2
+    },
+    {
+      "case_id": "case00218",
+      "app": "boutique",
+      "scenario": "T2",
+      "catalog_operations": 5
+    },
+    {
+      "case_id": "case00753",
+      "app": "trainticket",
+      "scenario": "T4",
+      "catalog_operations": 3
+    },
+    {
+      "case_id": "case00029",
+      "app": "boutique",
+      "scenario": "T1",
+      "catalog_operations": 6
+    },
+    {
+      "case_id": "case00746",
+      "app": "trainticket",
+      "scenario": "T4",
+      "catalog_operations": 3
+    },
+    {
+      "case_id": "case00171",
+      "app": "trainticket",
+      "scenario": "T1",
+      "catalog_operations": 6
+    },
+    {
+      "case_id": "case00598",
+      "app": "boutique",
+      "scenario": "T4",
+      "catalog_operations": 2
+    },
+    {
+      "case_id": "case00233",
+      "app": "boutique",
+      "scenario": "T2",
+      "catalog_operations": 4
+    },
+    {
+      "case_id": "case00317",
+      "app": "trainticket",
+      "scenario": "T2",
+      "catalog_operations": 9
+    },
+    {
+      "case_id": "case00463",
+      "app": "trainticket",
+      "scenario": "T3",
+      "catalog_operations": 0
+    },
+    {
+      "case_id": "case00443",
+      "app": "boutique",
+      "scenario": "T3",
+      "catalog_operations": 3
+    },
+    {
+      "case_id": "case00541",
+      "app": "trainticket",
+      "scenario": "T3",
+      "catalog_operations": 4
+    },
+    {
+      "case_id": "case00082",
+      "app": "boutique",
+      "scenario": "T1",
+      "catalog_operations": 10
+    },
+    {
+      "case_id": "case00434",
+      "app": "boutique",
+      "scenario": "T3",
+      "catalog_operations": 0
+    },
+    {
+      "case_id": "case00189",
+      "app": "trainticket",
+      "scenario": "T1",
+      "catalog_operations": 4
+    },
+    {
+      "case_id": "case00659",
+      "app": "boutique",
+      "scenario": "T4",
+      "catalog_operations": 3
+    },
+    {
+      "case_id": "case00313",
+      "app": "trainticket",
+      "scenario": "T2",
+      "catalog_operations": 4
+    },
+    {
+      "case_id": "case00274",
+      "app": "boutique",
+      "scenario": "T2",
+      "catalog_operations": 4
+    },
+    {
+      "case_id": "case00733",
+      "app": "trainticket",
+      "scenario": "T4",
+      "catalog_operations": 3
+    },
+    {
+      "case_id": "case00175",
+      "app": "trainticket",
+      "scenario": "T1",
+      "catalog_operations": 0
+    },
+    {
+      "case_id": "case00607",
+      "app": "boutique",
+      "scenario": "T4",
+      "catalog_operations": 3
+    },
+    {
+      "case_id": "case00410",
+      "app": "boutique",
+      "scenario": "T3",
+      "catalog_operations": 0
+    },
+    {
+      "case_id": "case00468",
+      "app": "trainticket",
+      "scenario": "T3",
+      "catalog_operations": 6
+    },
+    {
+      "case_id": "case00343",
+      "app": "trainticket",
+      "scenario": "T2",
+      "catalog_operations": 4
+    },
+    {
+      "case_id": "case00032",
+      "app": "boutique",
+      "scenario": "T1",
+      "catalog_operations": 6
+    },
+    {
+      "case_id": "case00677",
+      "app": "trainticket",
+      "scenario": "T4",
+      "catalog_operations": 3
+    },
+    {
+      "case_id": "case00263",
+      "app": "boutique",
+      "scenario": "T2",
+      "catalog_operations": 4
+    },
+    {
+      "case_id": "case00036",
+      "app": "boutique",
+      "scenario": "T1",
+      "catalog_operations": 6
+    },
+    {
+      "case_id": "case00691",
+      "app": "trainticket",
+      "scenario": "T4",
+      "catalog_operations": 4
+    },
+    {
+      "case_id": "case00585",
+      "app": "boutique",
+      "scenario": "T4",
+      "catalog_operations": 2
+    },
+    {
+      "case_id": "case00478",
+      "app": "trainticket",
+      "scenario": "T3",
+      "catalog_operations": 5
+    },
+    {
+      "case_id": "case00357",
+      "app": "boutique",
+      "scenario": "T3",
+      "catalog_operations": 0
+    },
+    {
+      "case_id": "case00170",
+      "app": "trainticket",
+      "scenario": "T1",
+      "catalog_operations": 0
+    },
+    {
+      "case_id": "case00095",
+      "app": "boutique",
+      "scenario": "T1",
+      "catalog_operations": 6
+    },
+    {
+      "case_id": "case00684",
+      "app": "trainticket",
+      "scenario": "T4",
+      "catalog_operations": 3
+    },
+    {
+      "case_id": "case00412",
+      "app": "boutique",
+      "scenario": "T3",
+      "catalog_operations": 0
+    },
+    {
+      "case_id": "case00481",
+      "app": "trainticket",
+      "scenario": "T3",
+      "catalog_operations": 0
+    },
+    {
+      "case_id": "case00191",
+      "app": "trainticket",
+      "scenario": "T1",
+      "catalog_operations": 0
+    },
+    {
+      "case_id": "case00664",
+      "app": "boutique",
+      "scenario": "T4",
+      "catalog_operations": 3
+    },
+    {
+      "case_id": "case00018",
+      "app": "boutique",
+      "scenario": "T1",
+      "catalog_operations": 3
+    },
+    {
+      "case_id": "case00749",
+      "app": "trainticket",
+      "scenario": "T4",
+      "catalog_operations": 3
+    },
+    {
+      "case_id": "case00538",
+      "app": "trainticket",
+      "scenario": "T3",
+      "catalog_operations": 5
+    },
+    {
+      "case_id": "case00371",
+      "app": "boutique",
+      "scenario": "T3",
+      "catalog_operations": 0
+    },
+    {
+      "case_id": "case00582",
+      "app": "boutique",
+      "scenario": "T4",
+      "catalog_operations": 2
+    },
+    {
+      "case_id": "case00172",
+      "app": "trainticket",
+      "scenario": "T1",
+      "catalog_operations": 3
+    },
+    {
+      "case_id": "case00680",
+      "app": "trainticket",
+      "scenario": "T4",
+      "catalog_operations": 3
+    },
+    {
+      "case_id": "case00649",
+      "app": "boutique",
+      "scenario": "T4",
+      "catalog_operations": 3
+    },
+    {
+      "case_id": "case00076",
+      "app": "boutique",
+      "scenario": "T1",
+      "catalog_operations": 2
+    },
+    {
+      "case_id": "case00784",
+      "app": "trainticket",
+      "scenario": "T4",
+      "catalog_operations": 4
+    },
+    {
+      "case_id": "case00446",
+      "app": "boutique",
+      "scenario": "T3",
+      "catalog_operations": 4
+    },
+    {
+      "case_id": "case00796",
+      "app": "trainticket",
+      "scenario": "T4",
+      "catalog_operations": 3
+    },
+    {
+      "case_id": "case00576",
+      "app": "boutique",
+      "scenario": "T4",
+      "catalog_operations": 2
+    },
+    {
+      "case_id": "case00707",
+      "app": "trainticket",
+      "scenario": "T4",
+      "catalog_operations": 3
+    },
+    {
+      "case_id": "case00601",
+      "app": "boutique",
+      "scenario": "T4",
+      "catalog_operations": 3
+    },
+    {
+      "case_id": "case00610",
+      "app": "boutique",
+      "scenario": "T4",
+      "catalog_operations": 3
+    }
+  ],
+  "excluded_case_ids": [
+    "case00418",
+    "case00290",
+    "case00250",
+    "case00499",
+    "case00005",
+    "case00105",
+    "case00742",
+    "case00673"
+  ],
+  "generations": 2,
+  "routes": [
+    "proposal",
+    "raw_direct",
+    "catalog_direct"
+  ],
+  "frozen_model_inputs": "frozen_inputs.json",
+  "separate_evaluator_labels": "evaluator_labels.json",
+  "selection_seed": 20260926,
+  "authorized_request_ceiling": 648,
+  "retry_policy": "none; failed/unknown attempts consume the fixed ceiling",
+  "route_policy": {
+    "raw_direct": "cutoff facts only",
+    "catalog_direct": "same facts and catalog as proposal; ranking only",
+    "proposal": "same facts/catalog; complete ranking plus selected operation IDs"
+  }
+}

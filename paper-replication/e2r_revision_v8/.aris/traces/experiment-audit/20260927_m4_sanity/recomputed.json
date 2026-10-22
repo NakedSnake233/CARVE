@@ -1,0 +1,1428 @@
+{
+  "generated_at": "2026-09-26T16:15:41.896005+00:00",
+  "checks": [
+    {
+      "check": "baseline_v1/baseline-0:all_attempt_latencies",
+      "passed": true
+    },
+    {
+      "check": "baseline_v1/baseline-0:success_domain",
+      "passed": true
+    },
+    {
+      "check": "baseline_v1/baseline-0:p95",
+      "passed": true
+    },
+    {
+      "check": "baseline_v1/baseline-0:throughput",
+      "passed": true
+    },
+    {
+      "check": "baseline_v1/baseline-0:error",
+      "passed": true
+    },
+    {
+      "check": "baseline_v1/baseline-0:scheduled_count",
+      "passed": true
+    },
+    {
+      "check": "baseline_v1/baseline-0:elapsed",
+      "passed": true
+    },
+    {
+      "check": "baseline_v1/baseline-0:identity",
+      "passed": true
+    },
+    {
+      "check": "baseline_v1/baseline-1:all_attempt_latencies",
+      "passed": true
+    },
+    {
+      "check": "baseline_v1/baseline-1:success_domain",
+      "passed": true
+    },
+    {
+      "check": "baseline_v1/baseline-1:p95",
+      "passed": true
+    },
+    {
+      "check": "baseline_v1/baseline-1:throughput",
+      "passed": true
+    },
+    {
+      "check": "baseline_v1/baseline-1:error",
+      "passed": true
+    },
+    {
+      "check": "baseline_v1/baseline-1:scheduled_count",
+      "passed": true
+    },
+    {
+      "check": "baseline_v1/baseline-1:elapsed",
+      "passed": true
+    },
+    {
+      "check": "baseline_v1/baseline-1:identity",
+      "passed": true
+    },
+    {
+      "check": "baseline_v1/baseline-2:all_attempt_latencies",
+      "passed": true
+    },
+    {
+      "check": "baseline_v1/baseline-2:success_domain",
+      "passed": true
+    },
+    {
+      "check": "baseline_v1/baseline-2:p95",
+      "passed": true
+    },
+    {
+      "check": "baseline_v1/baseline-2:throughput",
+      "passed": true
+    },
+    {
+      "check": "baseline_v1/baseline-2:error",
+      "passed": true
+    },
+    {
+      "check": "baseline_v1/baseline-2:scheduled_count",
+      "passed": true
+    },
+    {
+      "check": "baseline_v1/baseline-2:elapsed",
+      "passed": true
+    },
+    {
+      "check": "baseline_v1/baseline-2:identity",
+      "passed": true
+    },
+    {
+      "check": "baseline_v1/baseline-3:all_attempt_latencies",
+      "passed": true
+    },
+    {
+      "check": "baseline_v1/baseline-3:success_domain",
+      "passed": true
+    },
+    {
+      "check": "baseline_v1/baseline-3:p95",
+      "passed": true
+    },
+    {
+      "check": "baseline_v1/baseline-3:throughput",
+      "passed": true
+    },
+    {
+      "check": "baseline_v1/baseline-3:error",
+      "passed": true
+    },
+    {
+      "check": "baseline_v1/baseline-3:scheduled_count",
+      "passed": true
+    },
+    {
+      "check": "baseline_v1/baseline-3:elapsed",
+      "passed": true
+    },
+    {
+      "check": "baseline_v1/baseline-3:identity",
+      "passed": true
+    },
+    {
+      "check": "baseline_v1/baseline-4:all_attempt_latencies",
+      "passed": true
+    },
+    {
+      "check": "baseline_v1/baseline-4:success_domain",
+      "passed": true
+    },
+    {
+      "check": "baseline_v1/baseline-4:p95",
+      "passed": true
+    },
+    {
+      "check": "baseline_v1/baseline-4:throughput",
+      "passed": true
+    },
+    {
+      "check": "baseline_v1/baseline-4:error",
+      "passed": true
+    },
+    {
+      "check": "baseline_v1/baseline-4:scheduled_count",
+      "passed": true
+    },
+    {
+      "check": "baseline_v1/baseline-4:elapsed",
+      "passed": true
+    },
+    {
+      "check": "baseline_v1/baseline-4:identity",
+      "passed": true
+    },
+    {
+      "check": "baseline_v1/baseline-5:all_attempt_latencies",
+      "passed": true
+    },
+    {
+      "check": "baseline_v1/baseline-5:success_domain",
+      "passed": true
+    },
+    {
+      "check": "baseline_v1/baseline-5:p95",
+      "passed": true
+    },
+    {
+      "check": "baseline_v1/baseline-5:throughput",
+      "passed": true
+    },
+    {
+      "check": "baseline_v1/baseline-5:error",
+      "passed": true
+    },
+    {
+      "check": "baseline_v1/baseline-5:scheduled_count",
+      "passed": true
+    },
+    {
+      "check": "baseline_v1/baseline-5:elapsed",
+      "passed": true
+    },
+    {
+      "check": "baseline_v1/baseline-5:identity",
+      "passed": true
+    },
+    {
+      "check": "baseline_v1:six_raw_windows",
+      "passed": true
+    },
+    {
+      "check": "baseline_v1:ordered_windows",
+      "passed": true
+    },
+    {
+      "check": "baseline_v1:aggregate_p95",
+      "passed": true
+    },
+    {
+      "check": "baseline_v1:aggregate_count",
+      "passed": true
+    },
+    {
+      "check": "baseline_v1:aggregate_throughput",
+      "passed": true
+    },
+    {
+      "check": "baseline_v1:aggregate_error",
+      "passed": true
+    },
+    {
+      "check": "baseline_v1:no_fault",
+      "passed": true
+    },
+    {
+      "check": "baseline_v1:aggregate_times",
+      "passed": true
+    },
+    {
+      "check": "baseline_v2/baseline-0:all_attempt_latencies",
+      "passed": true
+    },
+    {
+      "check": "baseline_v2/baseline-0:success_domain",
+      "passed": true
+    },
+    {
+      "check": "baseline_v2/baseline-0:p95",
+      "passed": true
+    },
+    {
+      "check": "baseline_v2/baseline-0:throughput",
+      "passed": true
+    },
+    {
+      "check": "baseline_v2/baseline-0:error",
+      "passed": true
+    },
+    {
+      "check": "baseline_v2/baseline-0:scheduled_count",
+      "passed": true
+    },
+    {
+      "check": "baseline_v2/baseline-0:elapsed",
+      "passed": true
+    },
+    {
+      "check": "baseline_v2/baseline-0:identity",
+      "passed": true
+    },
+    {
+      "check": "baseline_v2/baseline-1:all_attempt_latencies",
+      "passed": true
+    },
+    {
+      "check": "baseline_v2/baseline-1:success_domain",
+      "passed": true
+    },
+    {
+      "check": "baseline_v2/baseline-1:p95",
+      "passed": true
+    },
+    {
+      "check": "baseline_v2/baseline-1:throughput",
+      "passed": true
+    },
+    {
+      "check": "baseline_v2/baseline-1:error",
+      "passed": true
+    },
+    {
+      "check": "baseline_v2/baseline-1:scheduled_count",
+      "passed": true
+    },
+    {
+      "check": "baseline_v2/baseline-1:elapsed",
+      "passed": true
+    },
+    {
+      "check": "baseline_v2/baseline-1:identity",
+      "passed": true
+    },
+    {
+      "check": "baseline_v2/baseline-2:all_attempt_latencies",
+      "passed": true
+    },
+    {
+      "check": "baseline_v2/baseline-2:success_domain",
+      "passed": true
+    },
+    {
+      "check": "baseline_v2/baseline-2:p95",
+      "passed": true
+    },
+    {
+      "check": "baseline_v2/baseline-2:throughput",
+      "passed": true
+    },
+    {
+      "check": "baseline_v2/baseline-2:error",
+      "passed": true
+    },
+    {
+      "check": "baseline_v2/baseline-2:scheduled_count",
+      "passed": true
+    },
+    {
+      "check": "baseline_v2/baseline-2:elapsed",
+      "passed": true
+    },
+    {
+      "check": "baseline_v2/baseline-2:identity",
+      "passed": true
+    },
+    {
+      "check": "baseline_v2/baseline-3:all_attempt_latencies",
+      "passed": true
+    },
+    {
+      "check": "baseline_v2/baseline-3:success_domain",
+      "passed": true
+    },
+    {
+      "check": "baseline_v2/baseline-3:p95",
+      "passed": true
+    },
+    {
+      "check": "baseline_v2/baseline-3:throughput",
+      "passed": true
+    },
+    {
+      "check": "baseline_v2/baseline-3:error",
+      "passed": true
+    },
+    {
+      "check": "baseline_v2/baseline-3:scheduled_count",
+      "passed": true
+    },
+    {
+      "check": "baseline_v2/baseline-3:elapsed",
+      "passed": true
+    },
+    {
+      "check": "baseline_v2/baseline-3:identity",
+      "passed": true
+    },
+    {
+      "check": "baseline_v2/baseline-4:all_attempt_latencies",
+      "passed": true
+    },
+    {
+      "check": "baseline_v2/baseline-4:success_domain",
+      "passed": true
+    },
+    {
+      "check": "baseline_v2/baseline-4:p95",
+      "passed": true
+    },
+    {
+      "check": "baseline_v2/baseline-4:throughput",
+      "passed": true
+    },
+    {
+      "check": "baseline_v2/baseline-4:error",
+      "passed": true
+    },
+    {
+      "check": "baseline_v2/baseline-4:scheduled_count",
+      "passed": true
+    },
+    {
+      "check": "baseline_v2/baseline-4:elapsed",
+      "passed": true
+    },
+    {
+      "check": "baseline_v2/baseline-4:identity",
+      "passed": true
+    },
+    {
+      "check": "baseline_v2/baseline-5:all_attempt_latencies",
+      "passed": true
+    },
+    {
+      "check": "baseline_v2/baseline-5:success_domain",
+      "passed": true
+    },
+    {
+      "check": "baseline_v2/baseline-5:p95",
+      "passed": true
+    },
+    {
+      "check": "baseline_v2/baseline-5:throughput",
+      "passed": true
+    },
+    {
+      "check": "baseline_v2/baseline-5:error",
+      "passed": true
+    },
+    {
+      "check": "baseline_v2/baseline-5:scheduled_count",
+      "passed": true
+    },
+    {
+      "check": "baseline_v2/baseline-5:elapsed",
+      "passed": true
+    },
+    {
+      "check": "baseline_v2/baseline-5:identity",
+      "passed": true
+    },
+    {
+      "check": "baseline_v2:six_raw_windows",
+      "passed": true
+    },
+    {
+      "check": "baseline_v2:ordered_windows",
+      "passed": true
+    },
+    {
+      "check": "baseline_v2:aggregate_p95",
+      "passed": true
+    },
+    {
+      "check": "baseline_v2:aggregate_count",
+      "passed": true
+    },
+    {
+      "check": "baseline_v2:aggregate_throughput",
+      "passed": true
+    },
+    {
+      "check": "baseline_v2:aggregate_error",
+      "passed": true
+    },
+    {
+      "check": "baseline_v2:no_fault",
+      "passed": true
+    },
+    {
+      "check": "baseline_v2:aggregate_times",
+      "passed": true
+    },
+    {
+      "check": "comparison:p95_ratio",
+      "passed": true
+    },
+    {
+      "check": "comparison:throughput_ratio",
+      "passed": true
+    },
+    {
+      "check": "comparison:error_delta",
+      "passed": true
+    },
+    {
+      "check": "sanity_v1:baseline_hash",
+      "passed": true
+    },
+    {
+      "check": "sanity_v1/pre:all_attempt_latencies",
+      "passed": true
+    },
+    {
+      "check": "sanity_v1/pre:success_domain",
+      "passed": true
+    },
+    {
+      "check": "sanity_v1/pre:p95",
+      "passed": true
+    },
+    {
+      "check": "sanity_v1/pre:throughput",
+      "passed": true
+    },
+    {
+      "check": "sanity_v1/pre:error",
+      "passed": true
+    },
+    {
+      "check": "sanity_v1/pre:scheduled_count",
+      "passed": true
+    },
+    {
+      "check": "sanity_v1/pre:elapsed",
+      "passed": true
+    },
+    {
+      "check": "sanity_v1/pre:identity",
+      "passed": true
+    },
+    {
+      "check": "sanity_v1/fault:all_attempt_latencies",
+      "passed": true
+    },
+    {
+      "check": "sanity_v1/fault:success_domain",
+      "passed": true
+    },
+    {
+      "check": "sanity_v1/fault:p95",
+      "passed": true
+    },
+    {
+      "check": "sanity_v1/fault:throughput",
+      "passed": true
+    },
+    {
+      "check": "sanity_v1/fault:error",
+      "passed": true
+    },
+    {
+      "check": "sanity_v1/fault:scheduled_count",
+      "passed": true
+    },
+    {
+      "check": "sanity_v1/fault:elapsed",
+      "passed": true
+    },
+    {
+      "check": "sanity_v1/fault:identity",
+      "passed": true
+    },
+    {
+      "check": "sanity_v1:pre_gate",
+      "passed": true
+    },
+    {
+      "check": "sanity_v1:baseline_precedes",
+      "passed": true
+    },
+    {
+      "check": "sanity_v1:attempt_times",
+      "passed": true
+    },
+    {
+      "check": "sanity_v1:cleanup",
+      "passed": true
+    },
+    {
+      "check": "sanity_v1:cleanup_target",
+      "passed": true
+    },
+    {
+      "check": "sanity_v1:scoped_context",
+      "passed": true
+    },
+    {
+      "check": "sanity_v1:rbac",
+      "passed": true
+    },
+    {
+      "check": "sanity_v1:one_injection",
+      "passed": true
+    },
+    {
+      "check": "sanity_v1:degradation",
+      "passed": true
+    },
+    {
+      "check": "sanity_v1:stage_times",
+      "passed": true
+    },
+    {
+      "check": "sanity_v1:settle_30s",
+      "passed": true
+    },
+    {
+      "check": "sanity_v1:reproduce_plan",
+      "passed": true
+    },
+    {
+      "check": "sanity_v1:plan_gate",
+      "passed": true
+    },
+    {
+      "check": "sanity_v1:render_yaml",
+      "passed": true
+    },
+    {
+      "check": "sanity_v1:yaml_gate",
+      "passed": true
+    },
+    {
+      "check": "sanity_v1:stored_gates",
+      "passed": true
+    },
+    {
+      "check": "sanity_v1:replayed_preconditions",
+      "passed": true
+    },
+    {
+      "check": "sanity_v1:same_observed_object",
+      "passed": true
+    },
+    {
+      "check": "sanity_v1:active_actual_snapshot",
+      "passed": true
+    },
+    {
+      "check": "sanity_v1:actual_target",
+      "passed": true
+    },
+    {
+      "check": "sanity_v1:conservative_deadline",
+      "passed": true
+    },
+    {
+      "check": "sanity_v1:monotonic_wall_agree",
+      "passed": true
+    },
+    {
+      "check": "sanity_v1:timeout_budget",
+      "passed": true
+    },
+    {
+      "check": "sanity_v1:infrastructure_failure",
+      "passed": true
+    },
+    {
+      "check": "sanity_v1:rollback_not_retry",
+      "passed": true
+    },
+    {
+      "check": "sanity_v2:baseline_hash",
+      "passed": true
+    },
+    {
+      "check": "sanity_v2/pre:all_attempt_latencies",
+      "passed": true
+    },
+    {
+      "check": "sanity_v2/pre:success_domain",
+      "passed": true
+    },
+    {
+      "check": "sanity_v2/pre:p95",
+      "passed": true
+    },
+    {
+      "check": "sanity_v2/pre:throughput",
+      "passed": true
+    },
+    {
+      "check": "sanity_v2/pre:error",
+      "passed": true
+    },
+    {
+      "check": "sanity_v2/pre:scheduled_count",
+      "passed": true
+    },
+    {
+      "check": "sanity_v2/pre:elapsed",
+      "passed": true
+    },
+    {
+      "check": "sanity_v2/pre:identity",
+      "passed": true
+    },
+    {
+      "check": "sanity_v2:pre_gate",
+      "passed": true
+    },
+    {
+      "check": "sanity_v2:baseline_precedes",
+      "passed": true
+    },
+    {
+      "check": "sanity_v2:attempt_times",
+      "passed": true
+    },
+    {
+      "check": "sanity_v2:cleanup",
+      "passed": true
+    },
+    {
+      "check": "sanity_v2:cleanup_target",
+      "passed": true
+    },
+    {
+      "check": "sanity_v2:scoped_context",
+      "passed": true
+    },
+    {
+      "check": "sanity_v2:rbac",
+      "passed": true
+    },
+    {
+      "check": "sanity_v2:no_injection_stage",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3:baseline_hash",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3/pre:all_attempt_latencies",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3/pre:success_domain",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3/pre:p95",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3/pre:throughput",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3/pre:error",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3/pre:scheduled_count",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3/pre:elapsed",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3/pre:identity",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3/fault:all_attempt_latencies",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3/fault:success_domain",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3/fault:p95",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3/fault:throughput",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3/fault:error",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3/fault:scheduled_count",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3/fault:elapsed",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3/fault:identity",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3/sanity-post-0:all_attempt_latencies",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3/sanity-post-0:success_domain",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3/sanity-post-0:p95",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3/sanity-post-0:throughput",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3/sanity-post-0:error",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3/sanity-post-0:scheduled_count",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3/sanity-post-0:elapsed",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3/sanity-post-0:identity",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3/sanity-post-1:all_attempt_latencies",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3/sanity-post-1:success_domain",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3/sanity-post-1:p95",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3/sanity-post-1:throughput",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3/sanity-post-1:error",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3/sanity-post-1:scheduled_count",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3/sanity-post-1:elapsed",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3/sanity-post-1:identity",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3/sanity-post-2:all_attempt_latencies",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3/sanity-post-2:success_domain",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3/sanity-post-2:p95",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3/sanity-post-2:throughput",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3/sanity-post-2:error",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3/sanity-post-2:scheduled_count",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3/sanity-post-2:elapsed",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3/sanity-post-2:identity",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3:pre_gate",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3:baseline_precedes",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3:attempt_times",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3:cleanup",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3:cleanup_target",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3:scoped_context",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3:rbac",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3:one_injection",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3:degradation",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3:stage_times",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3:settle_30s",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3:reproduce_plan",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3:plan_gate",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3:render_yaml",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3:yaml_gate",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3:stored_gates",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3:replayed_preconditions",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3:same_observed_object",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3:active_actual_snapshot",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3:actual_target",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3:conservative_deadline",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3:monotonic_wall_agree",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3:timeout_budget",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3:delete_execution",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3:oracle_replay",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3:oracle_pass",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3:all_posts_before_expiry",
+      "passed": true
+    },
+    {
+      "check": "sanity_v3:eval_before_expiry",
+      "passed": true
+    },
+    {
+      "check": "v3:static_bindings",
+      "passed": true
+    },
+    {
+      "check": "binding_rejection:bad_baseline_bytes",
+      "passed": true
+    },
+    {
+      "check": "binding_rejection:bad_manifest_bytes",
+      "passed": true
+    },
+    {
+      "check": "binding_rejection:old_baseline_path",
+      "passed": true
+    }
+  ],
+  "failed_checks": [],
+  "raw_window_count": 20,
+  "raw_attempts": 3000,
+  "windows": [
+    {
+      "artifact": "baseline_v1",
+      "window_id": "baseline-0",
+      "samples": 150,
+      "successes": 150,
+      "error_rate": 0.0,
+      "p95_ms": 17.989250365644693,
+      "throughput_rps": 4.997328442080016,
+      "elapsed_seconds": 30.016037916764617,
+      "start_time": 1790431469.6721792,
+      "end_time": 1790431499.6882167,
+      "state_canary_ok": true
+    },
+    {
+      "artifact": "baseline_v1",
+      "window_id": "baseline-1",
+      "samples": 150,
+      "successes": 150,
+      "error_rate": 0.0,
+      "p95_ms": 16.90029911696911,
+      "throughput_rps": 4.997065630290144,
+      "elapsed_seconds": 30.017616556957364,
+      "start_time": 1790431500.6988597,
+      "end_time": 1790431530.7164743,
+      "state_canary_ok": true
+    },
+    {
+      "artifact": "baseline_v1",
+      "window_id": "baseline-2",
+      "samples": 150,
+      "successes": 150,
+      "error_rate": 0.0,
+      "p95_ms": 17.157181166112423,
+      "throughput_rps": 4.997205189581473,
+      "elapsed_seconds": 30.016778240911663,
+      "start_time": 1790431531.727731,
+      "end_time": 1790431561.7445078,
+      "state_canary_ok": true
+    },
+    {
+      "artifact": "baseline_v1",
+      "window_id": "baseline-3",
+      "samples": 150,
+      "successes": 150,
+      "error_rate": 0.0,
+      "p95_ms": 16.98792725801468,
+      "throughput_rps": 4.997266239212251,
+      "elapsed_seconds": 30.016411537770182,
+      "start_time": 1790431562.7568388,
+      "end_time": 1790431592.7732499,
+      "state_canary_ok": true
+    },
+    {
+      "artifact": "baseline_v1",
+      "window_id": "baseline-4",
+      "samples": 150,
+      "successes": 150,
+      "error_rate": 0.0,
+      "p95_ms": 16.992858611047268,
+      "throughput_rps": 4.997304665267785,
+      "elapsed_seconds": 30.016180730890483,
+      "start_time": 1790431593.7843015,
+      "end_time": 1790431623.8004818,
+      "state_canary_ok": true
+    },
+    {
+      "artifact": "baseline_v1",
+      "window_id": "baseline-5",
+      "samples": 150,
+      "successes": 150,
+      "error_rate": 0.0,
+      "p95_ms": 17.747113946825266,
+      "throughput_rps": 4.997146873924545,
+      "elapsed_seconds": 30.01712853042409,
+      "start_time": 1790431624.811834,
+      "end_time": 1790431654.8289618,
+      "state_canary_ok": true
+    },
+    {
+      "artifact": "baseline_v2",
+      "window_id": "baseline-0",
+      "samples": 150,
+      "successes": 150,
+      "error_rate": 0.0,
+      "p95_ms": 18.263094127178192,
+      "throughput_rps": 4.99706365363021,
+      "elapsed_seconds": 30.01762843085453,
+      "start_time": 1790438116.8894362,
+      "end_time": 1790438146.907065,
+      "state_canary_ok": true
+    },
+    {
+      "artifact": "baseline_v2",
+      "window_id": "baseline-1",
+      "samples": 150,
+      "successes": 150,
+      "error_rate": 0.0,
+      "p95_ms": 18.072161823511124,
+      "throughput_rps": 4.9971268654298076,
+      "elapsed_seconds": 30.017248718999326,
+      "start_time": 1790438147.9178994,
+      "end_time": 1790438177.935146,
+      "state_canary_ok": true
+    },
+    {
+      "artifact": "baseline_v2",
+      "window_id": "baseline-2",
+      "samples": 150,
+      "successes": 150,
+      "error_rate": 0.0,
+      "p95_ms": 18.60261708498001,
+      "throughput_rps": 4.997210703599868,
+      "elapsed_seconds": 30.01674511982128,
+      "start_time": 1790438178.9466374,
+      "end_time": 1790438208.963382,
+      "state_canary_ok": true
+    },
+    {
+      "artifact": "baseline_v2",
+      "window_id": "baseline-3",
+      "samples": 150,
+      "successes": 150,
+      "error_rate": 0.0,
+      "p95_ms": 18.55033403262496,
+      "throughput_rps": 4.997201054870277,
+      "elapsed_seconds": 30.01680307695642,
+      "start_time": 1790438209.9743192,
+      "end_time": 1790438239.991121,
+      "state_canary_ok": true
+    },
+    {
+      "artifact": "baseline_v2",
+      "window_id": "baseline-4",
+      "samples": 150,
+      "successes": 150,
+      "error_rate": 0.0,
+      "p95_ms": 18.489612266421318,
+      "throughput_rps": 4.997016130464398,
+      "elapsed_seconds": 30.017913907766342,
+      "start_time": 1790438241.0025287,
+      "end_time": 1790438271.020442,
+      "state_canary_ok": true
+    },
+    {
+      "artifact": "baseline_v2",
+      "window_id": "baseline-5",
+      "samples": 150,
+      "successes": 150,
+      "error_rate": 0.0,
+      "p95_ms": 17.430427949875593,
+      "throughput_rps": 4.9976956179622,
+      "elapsed_seconds": 30.013832667376846,
+      "start_time": 1790438272.031561,
+      "end_time": 1790438302.045393,
+      "state_canary_ok": true
+    },
+    {
+      "artifact": "sanity_v1",
+      "window_id": "sanity-pre",
+      "samples": 150,
+      "successes": 150,
+      "error_rate": 0.0,
+      "p95_ms": 17.797869630157948,
+      "throughput_rps": 4.99738785172418,
+      "elapsed_seconds": 30.015681081917137,
+      "start_time": 1790436755.5567102,
+      "end_time": 1790436785.5723896,
+      "state_canary_ok": true
+    },
+    {
+      "artifact": "sanity_v1",
+      "window_id": "sanity-fault",
+      "samples": 150,
+      "successes": 150,
+      "error_rate": 0.0,
+      "p95_ms": 804.5414560474455,
+      "throughput_rps": 4.949053116261494,
+      "elapsed_seconds": 30.308828067965806,
+      "start_time": 1790436815.8203378,
+      "end_time": 1790436846.1291635,
+      "state_canary_ok": true
+    },
+    {
+      "artifact": "sanity_v2",
+      "window_id": "sanity-pre",
+      "samples": 150,
+      "successes": 150,
+      "error_rate": 0.0,
+      "p95_ms": 26.152758859097958,
+      "throughput_rps": 4.997397324718123,
+      "elapsed_seconds": 30.015624184627086,
+      "start_time": 1790437239.8898866,
+      "end_time": 1790437269.9055092,
+      "state_canary_ok": true
+    },
+    {
+      "artifact": "sanity_v3",
+      "window_id": "sanity-pre",
+      "samples": 150,
+      "successes": 150,
+      "error_rate": 0.0,
+      "p95_ms": 16.97438769042492,
+      "throughput_rps": 4.997317830940909,
+      "elapsed_seconds": 30.01610165182501,
+      "start_time": 1790438641.3304846,
+      "end_time": 1790438671.3465843,
+      "state_canary_ok": true
+    },
+    {
+      "artifact": "sanity_v3",
+      "window_id": "sanity-fault",
+      "samples": 150,
+      "successes": 150,
+      "error_rate": 0.0,
+      "p95_ms": 1399.842357262969,
+      "throughput_rps": 4.756543579846287,
+      "elapsed_seconds": 31.535504191648215,
+      "start_time": 1790438701.5902948,
+      "end_time": 1790438733.1257982,
+      "state_canary_ok": true
+    },
+    {
+      "artifact": "sanity_v3",
+      "window_id": "sanity-post-0",
+      "samples": 150,
+      "successes": 150,
+      "error_rate": 0.0,
+      "p95_ms": 16.94283913820982,
+      "throughput_rps": 4.997166310697659,
+      "elapsed_seconds": 30.017011777032167,
+      "start_time": 1790438735.2798727,
+      "end_time": 1790438765.2968824,
+      "state_canary_ok": true
+    },
+    {
+      "artifact": "sanity_v3",
+      "window_id": "sanity-post-1",
+      "samples": 150,
+      "successes": 150,
+      "error_rate": 0.0,
+      "p95_ms": 17.15258229523897,
+      "throughput_rps": 4.997221755783124,
+      "elapsed_seconds": 30.016678732819855,
+      "start_time": 1790438766.307491,
+      "end_time": 1790438796.324169,
+      "state_canary_ok": true
+    },
+    {
+      "artifact": "sanity_v3",
+      "window_id": "sanity-post-2",
+      "samples": 150,
+      "successes": 150,
+      "error_rate": 0.0,
+      "p95_ms": 16.887876205146313,
+      "throughput_rps": 4.997125394313344,
+      "elapsed_seconds": 30.017257555853575,
+      "start_time": 1790438797.3343022,
+      "end_time": 1790438827.3515592,
+      "state_canary_ok": true
+    }
+  ],
+  "sanity": {
+    "1": {
+      "status": "failed",
+      "fault_injected": true,
+      "repair_executed": false,
+      "chaos_uid": "636feb81-257f-4ce3-9c4c-4b85f4486d35",
+      "active_target_records": [
+        {
+          "events": [
+            {
+              "operation": "Apply",
+              "timestamp": "2026-09-26T15:33:06Z",
+              "type": "Succeeded"
+            }
+          ],
+          "id": "e2r-supplement-20260925/frontend-7644db9f9-dkg69/server",
+          "injectedCount": 1,
+          "phase": "Injected",
+          "recoveredCount": 0,
+          "selectorKey": "."
+        }
+      ],
+      "repair_completion_age_seconds": 61.18990707397461,
+      "execution_returncode": 1,
+      "cleanup_absent": true,
+      "baseline_version": 1,
+      "threshold_p95_ms": 20.803249441087246
+    },
+    "2": {
+      "status": "failed",
+      "fault_injected": false,
+      "repair_executed": false
+    },
+    "3": {
+      "status": "complete_pass",
+      "fault_injected": true,
+      "repair_executed": true,
+      "chaos_uid": "7c7cdb0c-580c-4f38-9a90-8fefa37b0ff6",
+      "active_target_records": [
+        {
+          "events": [
+            {
+              "operation": "Apply",
+              "timestamp": "2026-09-26T16:04:31Z",
+              "type": "Succeeded"
+            }
+          ],
+          "id": "e2r-supplement-20260925/frontend-575dcbd8d6-wcpbg/server",
+          "injectedCount": 1,
+          "phase": "Injected",
+          "recoveredCount": 0,
+          "selectorKey": "."
+        }
+      ],
+      "repair_completion_age_seconds": 63.92129373550415,
+      "execution_returncode": 0,
+      "cleanup_absent": true,
+      "baseline_version": 2,
+      "threshold_p95_ms": 21.91571295261383,
+      "post_end_fault_ages_seconds": [
+        93.93892049789429,
+        124.9662070274353,
+        155.99359726905823
+      ],
+      "freshness_seconds": [
+        62.44464063644409,
+        31.417354106903076,
+        0.38996386528015137
+      ],
+      "oracle_reproduced": {
+        "status": "PASS",
+        "success": true,
+        "technical": {
+          "fault_absent": true,
+          "resource_restored": true,
+          "ready_endpoints": true
+        },
+        "missing_technical_checks": [],
+        "invalid_technical_checks": [],
+        "failed_technical_checks": [],
+        "baseline_measurable": true,
+        "baseline_identity_valid": true,
+        "repair_completed_at": 1790438735.2792556,
+        "evaluated_at": 1790438827.741523,
+        "measurement_freshness_valid": true,
+        "required_consecutive_windows": 3,
+        "max_consecutive_passing_windows": 3,
+        "trailing_consecutive_passing_windows": 3,
+        "thresholds": {
+          "min_samples": 20,
+          "error_rate_max": 0.01,
+          "p95_ms_max": 21.91571295261383,
+          "throughput_rps_min": 3.9977311681200334,
+          "require_state_canary": true,
+          "max_window_age_seconds": 120
+        },
+        "windows": [
+          {
+            "index": 0,
+            "window": {
+              "samples": 150,
+              "throughput_rps": 4.997166310697659,
+              "error_rate": 0.0,
+              "p95_ms": 16.94283913820982,
+              "state_canary_ok": true,
+              "window_id": "sanity-post-0",
+              "source_id": "k8s://e2r-supplement-20260925/service/frontend/http-root",
+              "start_time": 1790438735.2798727,
+              "end_time": 1790438765.2968824
+            },
+            "measurable": true,
+            "identity_valid": true,
+            "state_ok": true,
+            "state_unknown": false,
+            "passed": true
+          },
+          {
+            "index": 1,
+            "window": {
+              "samples": 150,
+              "throughput_rps": 4.997221755783124,
+              "error_rate": 0.0,
+              "p95_ms": 17.15258229523897,
+              "state_canary_ok": true,
+              "window_id": "sanity-post-1",
+              "source_id": "k8s://e2r-supplement-20260925/service/frontend/http-root",
+              "start_time": 1790438766.307491,
+              "end_time": 1790438796.324169
+            },
+            "measurable": true,
+            "identity_valid": true,
+            "state_ok": true,
+            "state_unknown": false,
+            "passed": true
+          },
+          {
+            "index": 2,
+            "window": {
+              "samples": 150,
+              "throughput_rps": 4.997125394313344,
+              "error_rate": 0.0,
+              "p95_ms": 16.887876205146313,
+              "state_canary_ok": true,
+              "window_id": "sanity-post-2",
+              "source_id": "k8s://e2r-supplement-20260925/service/frontend/http-root",
+              "start_time": 1790438797.3343022,
+              "end_time": 1790438827.3515592
+            },
+            "measurable": true,
+            "identity_valid": true,
+            "state_ok": true,
+            "state_unknown": false,
+            "passed": true
+          }
+        ]
+      }
+    }
+  },
+  "denominators": {
+    "no_fault_calibrations": 2,
+    "sanity_attempts": 3,
+    "pre_health_rejections_before_injection": 1,
+    "injected_fault_episodes": 2,
+    "repair_process_invocations": 2,
+    "actual_typed_mutations_completed": 1,
+    "reported_oracle_passes": 1,
+    "reported_oracle_nonpasses": 0,
+    "injected_without_post_oracle_due_infrastructure_failure": 1,
+    "scope": "one namespace, one service, one fault profile; different setup/code versions; no success-rate estimate"
+  }
+}

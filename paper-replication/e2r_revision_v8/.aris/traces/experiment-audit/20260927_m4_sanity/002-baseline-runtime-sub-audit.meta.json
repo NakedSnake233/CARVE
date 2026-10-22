@@ -1,0 +1,16 @@
+{
+  "call_number": 2,
+  "purpose": "baseline-runtime-sub-audit",
+  "timestamp": "2026-09-26T16:23:07.446201+00:00",
+  "agent_id": "/root/m4_sanity_audit/baseline_runtime_checks",
+  "model": "gpt-6-astra",
+  "reviewer_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "duration_ms": null,
+  "status": "ok",
+  "response_artifacts": [
+    ".aris/traces/experiment-audit/20260927_m4_sanity/baseline_runtime_checks.md",
+    ".aris/traces/experiment-audit/20260927_m4_sanity/baseline_runtime_checks.json"
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "call_number": 1,
+  "purpose": "m4-sanity-audit",
+  "timestamp": null,
+  "recorded_at": "2026-09-26T16:23:07.446201+00:00",
+  "tool": "collaboration.spawn_agent",
+  "model": "gpt-6-astra",
+  "reasoning_effort": "ultra",
+  "fork_turns": "none",
+  "files_referenced": [
+    "experiments/e2r/isolated_boutique.yaml",
+    "experiments/e2r/isolated_environment.json",
+    "experiments/e2r/runs/recovery_baseline_comparison_v1/REPORT.md",
+    "experiments/e2r/runs/recovery_baseline_comparison_v1/analysis.json",
+    "experiments/e2r/runs/recovery_baseline_v1/baseline.json",
+    "experiments/e2r/runs/recovery_baseline_v2/baseline.json",
+    "experiments/e2r/runs/recovery_sanity_frontend_cpu_v1/trace.json",
+    "experiments/e2r/runs/recovery_sanity_frontend_cpu_v2/trace.json",
+    "experiments/e2r/runs/recovery_sanity_frontend_cpu_v3/trace.json",
+    "findings.md",
+    "methods/PlanRCAThinkRemed/cluster_client.py",
+    "methods/PlanRCAThinkRemed/playbook_generator_agent.py",
+    "methods/PlanRCAThinkRemed/repair_planner_agent.py",
+    "methods/PlanRCAThinkRemed/safe_probe_agent.py",
+    "methods/PlanRCAThinkRemed/safety_guard.py",
+    "methods/PlanRCAThinkRemed/schemas.py",
+    "rca_bench/recovery_oracle.py",
+    "rca_bench/workload_oracle.py",
+    "refine-logs/EXPERIMENT_TRACKER.md",
+    "refine-logs/FULL_EXPERIMENT_CODE_REVIEW.md",
+    "scripts/e2r/analyze_recovery_baselines.py",
+    "scripts/e2r/run_recovery_baseline.py",
+    "scripts/e2r/run_recovery_sanity.py"
+  ],
+  "prompt": "Fresh experiment-audit for E2R M4 preparation/live sanity in ${PROJECT_ROOT}. Follow ${LOCAL_HOME}/.codex/skills/experiment-audit/SKILL.md. Do not use network/Kubernetes/Ansible/API/GPU or edit implementation/results. Audit isolated manifest, recovery_baseline_v1/v2, recovery_baseline_comparison_v1, recovery_sanity_frontend_cpu_v1/v2/v3 traces, and relevant current code/review report. Recompute every raw-window sample/latency p95/throughput/error, time ordering/freshness/deadlines, static hashes, evidence/precondition target identity, plan/YAML/action, execution and technical/oracle outcomes, cleanup, attempt/injection denominators, and pre/post runtime snapshots. Classify v1 infrastructure failure, v2 pre-health rejection/no injection, v3 known-target contract result without conflating them. Check for fake ground truth, successful-only filtering, hidden retries, phantom recovery, natural-expiry confounding, and scope inflation. Save EXPERIMENT_AUDIT.md/.json under experiments/e2r/runs/m4_sanity_audit_v1 and full traces under .aris/traces/experiment-audit/20260927_m4_sanity. Same-family/provisional; PASS/WARN/BLOCK and one narrowly warranted statement.",
+  "followup_messages": [
+    {
+      "sender": "/root",
+      "recipient": "/root/m4_sanity_audit",
+      "message": "No separately persisted contemporaneous v3 pod snapshot exists. The root executor issued an immediate post-run read-only GET and observed 12 pods, all Ready, restart_total0, plus StressChaos NotFound, but those tool outputs were not written into the trace. Treat that as executor-reported only and flag the artifact gap; do not infer it from later state. The trace itself contains raw cleanup delete/absence probe and raw technical probe booleans only. I can preserve a clearly labeled late snapshot now, but it must not be treated as contemporaneous."
+    },
+    {
+      "sender": "/root",
+      "recipient": "/root/m4_sanity_audit",
+      "message": "Spawn metadata: model=gpt-6-astra, reasoning_effort=ultra, fork_turns=none. Canonical agent ID /root/m4_sanity_audit; review_independence=same-family; acceptance_status=provisional."
+    },
+    {
+      "sender": "/root",
+      "recipient": "/root/m4_sanity_audit",
+      "message": "Yes, one prospective post-v3 edit is underway for the not-yet-run matched block: workload_oracle now optionally returns raw technical probe evidence. V3 executed with the previously reviewed workload_oracle SHA256=12f788298199b4e3c95d47d13bd53fb1562d1547522be3522b3ffd13ad74c0e3, as pinned in FULL_EXPERIMENT_CODE_REVIEW.md. Freeze the v3 audit against that historical fingerprint/trace behavior; exclude current 84a222... from execution provenance or label it post-run prospective. No v3 artifact was changed."
+    },
+    {
+      "sender": "/root",
+      "recipient": "/root/m4_sanity_audit",
+      "message": "I reconstructed the exact execution-time workload_oracle source by reversing only the prospective raw-evidence patch and verified SHA256 matches 12f788... exactly. Saved at .aris/traces/experiment-audit/20260927_m4_sanity/historical_source/workload_oracle.py. Label it reconstructed post hoc but hash-verified against the reviewer-pinned execution fingerprint."
+    }
+  ]
+}

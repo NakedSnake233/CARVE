@@ -1,0 +1,160 @@
+{
+  "catalog": [
+    {
+      "id": "op0000",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:shippingservice-6c84c75b8d-x5rqm",
+        "attrs": {
+          "type": "pod",
+          "service": "shippingservice",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:shippingservice-6c84c75b8d-x5rqm"
+        ]
+      },
+      "evidence_id": "during:pod:shippingservice-6c84c75b8d-x5rqm",
+      "requires": []
+    },
+    {
+      "id": "op0001",
+      "group": "edge_ops",
+      "operation": {
+        "op": "REMOVE_EDGE",
+        "source": "shippingservice",
+        "target": "pod:shippingservice-6c84c75b8d-k29jf",
+        "evidence": [
+          "topology_diff:shippingservice->pod:shippingservice-6c84c75b8d-k29jf"
+        ]
+      },
+      "evidence_id": "topology_diff:shippingservice->pod:shippingservice-6c84c75b8d-k29jf",
+      "requires": []
+    },
+    {
+      "id": "op0002",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "shippingservice",
+        "target": "pod:shippingservice-6c84c75b8d-x5rqm",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "evidence": [
+          "during:shippingservice->pod:shippingservice-6c84c75b8d-x5rqm"
+        ]
+      },
+      "evidence_id": "during:shippingservice->pod:shippingservice-6c84c75b8d-x5rqm",
+      "requires": [
+        "op0000"
+      ]
+    },
+    {
+      "id": "op0003",
+      "group": "node_ops",
+      "operation": {
+        "op": "ALIGN_NODE",
+        "old_node": "pod:shippingservice-6c84c75b8d-k29jf",
+        "new_node": "pod:shippingservice-6c84c75b8d-x5rqm",
+        "service": "shippingservice",
+        "attrs": {
+          "type": "pod",
+          "service": "shippingservice",
+          "version": "unknown"
+        },
+        "evidence": [
+          "identity_change:shippingservice"
+        ]
+      },
+      "evidence_id": "identity_change:shippingservice",
+      "requires": []
+    }
+  ],
+  "plan": {
+    "experiment_id": "case00271",
+    "change_type": "observation_supported_updates",
+    "confidence": 0.0,
+    "causal_role": "not_inferred",
+    "node_ops": [
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:shippingservice-6c84c75b8d-x5rqm",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "shippingservice",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:shippingservice-6c84c75b8d-x5rqm"
+        ]
+      },
+      {
+        "op": "ALIGN_NODE",
+        "node_id": "",
+        "old_node": "pod:shippingservice-6c84c75b8d-k29jf",
+        "new_node": "pod:shippingservice-6c84c75b8d-x5rqm",
+        "parent": "",
+        "children": [],
+        "service": "shippingservice",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "shippingservice",
+          "version": "unknown"
+        },
+        "evidence": [
+          "identity_change:shippingservice"
+        ]
+      }
+    ],
+    "edge_ops": [
+      {
+        "op": "REMOVE_EDGE",
+        "source": "shippingservice",
+        "target": "pod:shippingservice-6c84c75b8d-k29jf",
+        "old_source": "shippingservice",
+        "old_target": "pod:shippingservice-6c84c75b8d-k29jf",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": null,
+        "attrs": {},
+        "evidence": [
+          "topology_diff:shippingservice->pod:shippingservice-6c84c75b8d-k29jf"
+        ]
+      },
+      {
+        "op": "ADD_EDGE",
+        "source": "shippingservice",
+        "target": "pod:shippingservice-6c84c75b8d-x5rqm",
+        "old_source": "shippingservice",
+        "old_target": "pod:shippingservice-6c84c75b8d-x5rqm",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:shippingservice->pod:shippingservice-6c84c75b8d-x5rqm"
+        ]
+      }
+    ],
+    "weight_ops": [],
+    "state_transfer": {},
+    "evidence": [
+      "during:pod:shippingservice-6c84c75b8d-x5rqm",
+      "topology_diff:shippingservice->pod:shippingservice-6c84c75b8d-k29jf",
+      "during:shippingservice->pod:shippingservice-6c84c75b8d-x5rqm",
+      "identity_change:shippingservice"
+    ]
+  }
+}

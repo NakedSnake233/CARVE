@@ -1,0 +1,114 @@
+{
+  "catalog": [
+    {
+      "id": "op0000",
+      "group": "edge_ops",
+      "operation": {
+        "op": "REMOVE_EDGE",
+        "source": "checkoutservice",
+        "target": "pod:checkoutservice-78cf67b9fc-vzslh",
+        "evidence": [
+          "topology_diff:checkoutservice->pod:checkoutservice-78cf67b9fc-vzslh"
+        ]
+      },
+      "evidence_id": "topology_diff:checkoutservice->pod:checkoutservice-78cf67b9fc-vzslh",
+      "requires": []
+    },
+    {
+      "id": "op0001",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "checkoutservice",
+        "target": "pod:emailservice-65d48c6c8c-rhggj",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "evidence": [
+          "during:checkoutservice->pod:emailservice-65d48c6c8c-rhggj"
+        ]
+      },
+      "evidence_id": "during:checkoutservice->pod:emailservice-65d48c6c8c-rhggj",
+      "requires": []
+    },
+    {
+      "id": "op0002",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_TRACE_MISMATCH_EDGE",
+        "source": "checkoutservice",
+        "target": "emailservice",
+        "edge_type": "endpoint_mismatch",
+        "weight": 1.0,
+        "evidence": [
+          "endpoint_owner:checkoutservice:10.244.1.108"
+        ]
+      },
+      "evidence_id": "endpoint_owner:checkoutservice:10.244.1.108",
+      "requires": []
+    }
+  ],
+  "plan": {
+    "experiment_id": "case00367",
+    "change_type": "observation_supported_updates",
+    "confidence": 0.0,
+    "causal_role": "not_inferred",
+    "node_ops": [],
+    "edge_ops": [
+      {
+        "op": "REMOVE_EDGE",
+        "source": "checkoutservice",
+        "target": "pod:checkoutservice-78cf67b9fc-vzslh",
+        "old_source": "checkoutservice",
+        "old_target": "pod:checkoutservice-78cf67b9fc-vzslh",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": null,
+        "attrs": {},
+        "evidence": [
+          "topology_diff:checkoutservice->pod:checkoutservice-78cf67b9fc-vzslh"
+        ]
+      },
+      {
+        "op": "ADD_EDGE",
+        "source": "checkoutservice",
+        "target": "pod:emailservice-65d48c6c8c-rhggj",
+        "old_source": "checkoutservice",
+        "old_target": "pod:emailservice-65d48c6c8c-rhggj",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:checkoutservice->pod:emailservice-65d48c6c8c-rhggj"
+        ]
+      },
+      {
+        "op": "ADD_TRACE_MISMATCH_EDGE",
+        "source": "checkoutservice",
+        "target": "emailservice",
+        "old_source": "checkoutservice",
+        "old_target": "emailservice",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "endpoint_mismatch",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "endpoint_owner:checkoutservice:10.244.1.108"
+        ]
+      }
+    ],
+    "weight_ops": [],
+    "state_transfer": {},
+    "evidence": [
+      "topology_diff:checkoutservice->pod:checkoutservice-78cf67b9fc-vzslh",
+      "during:checkoutservice->pod:emailservice-65d48c6c8c-rhggj",
+      "endpoint_owner:checkoutservice:10.244.1.108"
+    ]
+  }
+}

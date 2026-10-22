@@ -1,0 +1,39 @@
+{
+  "schema": "e2r_m2_formal_v1",
+  "source_manifest": "experiments/e2r/runs/full_data_v2/manifest.json",
+  "source_split": "experiments/e2r/runs/gpu_full_4090d/split.json",
+  "model_alias": "gpt-5.6-luna",
+  "request_model": "gpt-5.6-luna",
+  "api_style": "responses",
+  "actual_request_settings": {
+    "api_style": "responses",
+    "model": "gpt-5.6-luna",
+    "stream": false,
+    "max_output_tokens": 2000
+  },
+  "cases": [
+    {
+      "case_id": "case00418",
+      "app": "boutique",
+      "scenario": "T3",
+      "catalog_operations": 8
+    }
+  ],
+  "excluded_case_ids": [],
+  "generations": 1,
+  "routes": [
+    "proposal",
+    "raw_direct",
+    "catalog_direct"
+  ],
+  "frozen_model_inputs": "frozen_inputs.json",
+  "separate_evaluator_labels": "evaluator_labels.json",
+  "selection_seed": 20260926,
+  "authorized_request_ceiling": 3,
+  "retry_policy": "none; failed/unknown attempts consume the fixed ceiling",
+  "route_policy": {
+    "raw_direct": "cutoff facts only",
+    "catalog_direct": "same facts and catalog as proposal; ranking only",
+    "proposal": "same facts/catalog; complete ranking plus selected operation IDs"
+  }
+}

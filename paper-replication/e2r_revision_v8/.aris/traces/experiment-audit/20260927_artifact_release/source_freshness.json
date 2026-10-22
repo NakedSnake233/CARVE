@@ -1,0 +1,114 @@
+[
+  {
+    "path": "refine-logs/EXPERIMENT_TRACKER.md",
+    "present": true,
+    "source_sha256": "73758b44d283b2494a7079600e3fdb22ffd630230ca52cf63487dec29f404d50",
+    "package_sha256": "73758b44d283b2494a7079600e3fdb22ffd630230ca52cf63487dec29f404d50",
+    "source_after_declared_anonymization_matches": true
+  },
+  {
+    "path": "refine-logs/EXPERIMENT_RESULTS.md",
+    "present": true,
+    "source_sha256": "b1c35e3720a9fb285f7b25056796f146149172f76e996b8b9021a2e32e230cc8",
+    "package_sha256": "b1c35e3720a9fb285f7b25056796f146149172f76e996b8b9021a2e32e230cc8",
+    "source_after_declared_anonymization_matches": true
+  },
+  {
+    "path": "refine-logs/FULL_EXPERIMENT_CODE_REVIEW.md",
+    "present": true,
+    "source_sha256": "5511d98d0e587034ca95bb27d39b6313dc237aa1fe356a34148f2b727275132d",
+    "package_sha256": "650c1183a1eef4db0125bc51d17e8733b86a23e81dcf0bebc81c9e2826daf6b5",
+    "source_after_declared_anonymization_matches": true
+  },
+  {
+    "path": "findings.md",
+    "present": true,
+    "source_sha256": "edfc8440d6fc79fab69b086efe823c8557d38fc910800a16c28dae9bb63c6c31",
+    "package_sha256": "bdbd8b4acf00db98f2418a855e55a654001e9a94ebef1834cf49865f0fe41906",
+    "source_after_declared_anonymization_matches": true
+  },
+  {
+    "path": "experiments/e2r/runs/b2_b3_audit_v1/EXPERIMENT_AUDIT.md",
+    "present": true,
+    "source_sha256": "554f495b4ac0990e247dac5963ac8e798505a4f902ae22be1a491300f6e6a029",
+    "package_sha256": "a5b0205fa0b483f900fdec5f2867d5e4d16e931e245ff17d28b39282a57aa536",
+    "source_after_declared_anonymization_matches": true
+  },
+  {
+    "path": "experiments/e2r/runs/b2_b3_audit_v1/EXPERIMENT_AUDIT.json",
+    "present": true,
+    "source_sha256": "d514aad54b92be797c78347cfefe8b15a149f702ab157e475c5b4543912296c6",
+    "package_sha256": "790f813eb7d88086414ec3e43f53af862c014c7dd9ffeb0cfb1b3e6731c1c946",
+    "source_after_declared_anonymization_matches": true
+  },
+  {
+    "path": "experiments/e2r/runs/m4_sanity_audit_v1/EXPERIMENT_AUDIT.md",
+    "present": true,
+    "source_sha256": "060d05e4d4512bc86381bad9da8cc059c4a0fd21bb07fde28d5fa03f45bfc977",
+    "package_sha256": "78dcd5d8133014be4eaff9d399af2315aaa620c32e1b249f70ca933bc3f3125f",
+    "source_after_declared_anonymization_matches": true
+  },
+  {
+    "path": "experiments/e2r/runs/m4_sanity_audit_v1/EXPERIMENT_AUDIT.json",
+    "present": true,
+    "source_sha256": "6ae816d657c0f32983aaf7cf2b541daf3d9e7343fb0b4a98965a035bbdb17d8b",
+    "package_sha256": "6ae816d657c0f32983aaf7cf2b541daf3d9e7343fb0b4a98965a035bbdb17d8b",
+    "source_after_declared_anonymization_matches": true
+  },
+  {
+    "path": "experiments/e2r/runs/m1_matrix_v3/EXPERIMENT_AUDIT.md",
+    "present": true,
+    "source_sha256": "d70f517afa8ce9fcb7164f20f20de47f078aaed7f2898ab4ef7d816429083bdc",
+    "package_sha256": "f1c7901c680465b9b38d6a38c2e9910755c98eb0de7df647e5dff58650401216",
+    "source_after_declared_anonymization_matches": true
+  },
+  {
+    "path": "experiments/e2r/runs/m1_matrix_v3/EXPERIMENT_AUDIT.json",
+    "present": true,
+    "source_sha256": "891aedbf5ad545ea4a0568d51862f04118a2328f4d6a8e9284fb52ebac609e6a",
+    "package_sha256": "7223cd1b185514397cd50e2f302b9b622a18fc9c4b4154dcb28e2da62047cf7f",
+    "source_after_declared_anonymization_matches": true
+  },
+  {
+    "path": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/audit_v1/EXPERIMENT_AUDIT.md",
+    "present": true,
+    "source_sha256": "189d0ca3fc93073ff763bb75afaa0694772caffd814b31176153a075928bb0f6",
+    "package_sha256": "14dd236b7f875116adeb48ce948a71391b86ba780c1d1698de7259dfca05d3c1",
+    "source_after_declared_anonymization_matches": true
+  },
+  {
+    "path": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/audit_v1/EXPERIMENT_AUDIT.json",
+    "present": true,
+    "source_sha256": "f093321a4ed7a681888380b5b1af618b5ec761c18d30a8000072d010094cd60c",
+    "package_sha256": "d7ae1f760634bcc52631a75900a896127be802c7197978c430f5e4674d958f64",
+    "source_after_declared_anonymization_matches": true
+  },
+  {
+    "path": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/block.interruption.json",
+    "present": true,
+    "source_sha256": "100b1f4d1e28a06e67a7b0eff0e15b0f45c6c1ad8925a998e7181bb07a64daf4",
+    "package_sha256": "e88c3dc7837add49b62f3d427601045aec2438ec5afb8980fac818793c38debd",
+    "source_after_declared_anonymization_matches": true
+  },
+  {
+    "path": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/episodes/01_typed_cleanup.interruption.json",
+    "present": true,
+    "source_sha256": "5f0e12cb8aad3b33dabf5c4ad0c3dd22a36c2fe3bdd469dfe80f80cb4f0f7006",
+    "package_sha256": "8da24665a7e4df85524c78d0f92993484c7c55edc984051a33c396529b84902d",
+    "source_after_declared_anonymization_matches": true
+  },
+  {
+    "path": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/analysis_v1/REPORT.md",
+    "present": true,
+    "source_sha256": "950592e1607a5f89ae71ad7732d059a061b4673fd2847096ef6bf68d25c8be59",
+    "package_sha256": "950592e1607a5f89ae71ad7732d059a061b4673fd2847096ef6bf68d25c8be59",
+    "source_after_declared_anonymization_matches": true
+  },
+  {
+    "path": "experiments/e2r/runs/recovery_matched_frontend_cpu_v1/analysis_v1/analysis.json",
+    "present": true,
+    "source_sha256": "dd725f727b7b243ec88160b38a691bb7fd63e6866451ca391409d5c39f40794b",
+    "package_sha256": "b29a59dc66e017f283bd578c6b18dcc338b8b2fd0a362ee4a92c1080ef685a5c",
+    "source_after_declared_anonymization_matches": true
+  }
+]

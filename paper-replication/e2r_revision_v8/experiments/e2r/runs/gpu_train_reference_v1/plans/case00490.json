@@ -1,0 +1,128 @@
+{
+  "catalog": [
+    {
+      "id": "op0000",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-order-other-service-67cf586847-5wx5r",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-order-other-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-order-other-service-67cf586847-5wx5r"
+        ]
+      },
+      "evidence_id": "during:pod:ts-order-other-service-67cf586847-5wx5r",
+      "requires": []
+    },
+    {
+      "id": "op0001",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-order-other-service-67cf586847-8j6b2",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-order-other-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-order-other-service-67cf586847-8j6b2"
+        ]
+      },
+      "evidence_id": "during:pod:ts-order-other-service-67cf586847-8j6b2",
+      "requires": []
+    },
+    {
+      "id": "op0002",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-order-other-service-67cf586847-x5f9j",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-order-other-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-order-other-service-67cf586847-x5f9j"
+        ]
+      },
+      "evidence_id": "during:pod:ts-order-other-service-67cf586847-x5f9j",
+      "requires": []
+    }
+  ],
+  "plan": {
+    "experiment_id": "case00490",
+    "change_type": "observation_supported_updates",
+    "confidence": 0.0,
+    "causal_role": "not_inferred",
+    "node_ops": [
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-order-other-service-67cf586847-5wx5r",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-order-other-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-order-other-service-67cf586847-5wx5r"
+        ]
+      },
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-order-other-service-67cf586847-8j6b2",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-order-other-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-order-other-service-67cf586847-8j6b2"
+        ]
+      },
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-order-other-service-67cf586847-x5f9j",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-order-other-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-order-other-service-67cf586847-x5f9j"
+        ]
+      }
+    ],
+    "edge_ops": [],
+    "weight_ops": [],
+    "state_transfer": {},
+    "evidence": [
+      "during:pod:ts-order-other-service-67cf586847-5wx5r",
+      "during:pod:ts-order-other-service-67cf586847-8j6b2",
+      "during:pod:ts-order-other-service-67cf586847-x5f9j"
+    ]
+  }
+}

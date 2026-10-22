@@ -1,0 +1,220 @@
+{
+  "catalog": [
+    {
+      "id": "op0000",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:cartservice-5967c9cd9b-gvxrt",
+        "attrs": {
+          "type": "pod",
+          "service": "cartservice",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:cartservice-5967c9cd9b-gvxrt"
+        ]
+      },
+      "evidence_id": "during:pod:cartservice-5967c9cd9b-gvxrt",
+      "requires": []
+    },
+    {
+      "id": "op0001",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:cartservice-5967c9cd9b-vdxv9",
+        "attrs": {
+          "type": "pod",
+          "service": "cartservice",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:cartservice-5967c9cd9b-vdxv9"
+        ]
+      },
+      "evidence_id": "during:pod:cartservice-5967c9cd9b-vdxv9",
+      "requires": []
+    },
+    {
+      "id": "op0002",
+      "group": "edge_ops",
+      "operation": {
+        "op": "REMOVE_EDGE",
+        "source": "currencyservice",
+        "target": "pod:currencyservice-84754ffd69-2qgn5",
+        "evidence": [
+          "topology_diff:currencyservice->pod:currencyservice-84754ffd69-2qgn5"
+        ]
+      },
+      "evidence_id": "topology_diff:currencyservice->pod:currencyservice-84754ffd69-2qgn5",
+      "requires": []
+    },
+    {
+      "id": "op0003",
+      "group": "edge_ops",
+      "operation": {
+        "op": "REMOVE_EDGE",
+        "source": "currencyservice",
+        "target": "pod:currencyservice-84754ffd69-4xslz",
+        "evidence": [
+          "topology_diff:currencyservice->pod:currencyservice-84754ffd69-4xslz"
+        ]
+      },
+      "evidence_id": "topology_diff:currencyservice->pod:currencyservice-84754ffd69-4xslz",
+      "requires": []
+    },
+    {
+      "id": "op0004",
+      "group": "edge_ops",
+      "operation": {
+        "op": "REMOVE_EDGE",
+        "source": "currencyservice",
+        "target": "pod:currencyservice-84754ffd69-bxtl6",
+        "evidence": [
+          "topology_diff:currencyservice->pod:currencyservice-84754ffd69-bxtl6"
+        ]
+      },
+      "evidence_id": "topology_diff:currencyservice->pod:currencyservice-84754ffd69-bxtl6",
+      "requires": []
+    },
+    {
+      "id": "op0005",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "cartservice",
+        "target": "pod:cartservice-5967c9cd9b-vdxv9",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "evidence": [
+          "during:cartservice->pod:cartservice-5967c9cd9b-vdxv9"
+        ]
+      },
+      "evidence_id": "during:cartservice->pod:cartservice-5967c9cd9b-vdxv9",
+      "requires": [
+        "op0001"
+      ]
+    }
+  ],
+  "plan": {
+    "experiment_id": "case00009",
+    "change_type": "observation_supported_updates",
+    "confidence": 0.0,
+    "causal_role": "not_inferred",
+    "node_ops": [
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:cartservice-5967c9cd9b-gvxrt",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "cartservice",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:cartservice-5967c9cd9b-gvxrt"
+        ]
+      },
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:cartservice-5967c9cd9b-vdxv9",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "cartservice",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:cartservice-5967c9cd9b-vdxv9"
+        ]
+      }
+    ],
+    "edge_ops": [
+      {
+        "op": "REMOVE_EDGE",
+        "source": "currencyservice",
+        "target": "pod:currencyservice-84754ffd69-2qgn5",
+        "old_source": "currencyservice",
+        "old_target": "pod:currencyservice-84754ffd69-2qgn5",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": null,
+        "attrs": {},
+        "evidence": [
+          "topology_diff:currencyservice->pod:currencyservice-84754ffd69-2qgn5"
+        ]
+      },
+      {
+        "op": "REMOVE_EDGE",
+        "source": "currencyservice",
+        "target": "pod:currencyservice-84754ffd69-4xslz",
+        "old_source": "currencyservice",
+        "old_target": "pod:currencyservice-84754ffd69-4xslz",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": null,
+        "attrs": {},
+        "evidence": [
+          "topology_diff:currencyservice->pod:currencyservice-84754ffd69-4xslz"
+        ]
+      },
+      {
+        "op": "REMOVE_EDGE",
+        "source": "currencyservice",
+        "target": "pod:currencyservice-84754ffd69-bxtl6",
+        "old_source": "currencyservice",
+        "old_target": "pod:currencyservice-84754ffd69-bxtl6",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": null,
+        "attrs": {},
+        "evidence": [
+          "topology_diff:currencyservice->pod:currencyservice-84754ffd69-bxtl6"
+        ]
+      },
+      {
+        "op": "ADD_EDGE",
+        "source": "cartservice",
+        "target": "pod:cartservice-5967c9cd9b-vdxv9",
+        "old_source": "cartservice",
+        "old_target": "pod:cartservice-5967c9cd9b-vdxv9",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:cartservice->pod:cartservice-5967c9cd9b-vdxv9"
+        ]
+      }
+    ],
+    "weight_ops": [],
+    "state_transfer": {},
+    "evidence": [
+      "during:pod:cartservice-5967c9cd9b-gvxrt",
+      "during:pod:cartservice-5967c9cd9b-vdxv9",
+      "topology_diff:currencyservice->pod:currencyservice-84754ffd69-2qgn5",
+      "topology_diff:currencyservice->pod:currencyservice-84754ffd69-4xslz",
+      "topology_diff:currencyservice->pod:currencyservice-84754ffd69-bxtl6",
+      "during:cartservice->pod:cartservice-5967c9cd9b-vdxv9"
+    ]
+  }
+}

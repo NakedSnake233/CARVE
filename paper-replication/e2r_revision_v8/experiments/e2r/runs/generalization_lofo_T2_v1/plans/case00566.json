@@ -1,0 +1,221 @@
+{
+  "catalog": [
+    {
+      "id": "op0000",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:checkoutservice-v2-c6cd7497c-rz69m",
+        "attrs": {
+          "type": "pod",
+          "service": "checkoutservice",
+          "version": "v2.0.0"
+        },
+        "evidence": [
+          "during:pod:checkoutservice-v2-c6cd7497c-rz69m"
+        ]
+      },
+      "evidence_id": "during:pod:checkoutservice-v2-c6cd7497c-rz69m",
+      "requires": []
+    },
+    {
+      "id": "op0001",
+      "group": "edge_ops",
+      "operation": {
+        "op": "REMOVE_EDGE",
+        "source": "currencyservice",
+        "target": "pod:currencyservice-84754ffd69-c259r",
+        "evidence": [
+          "topology_diff:currencyservice->pod:currencyservice-84754ffd69-c259r"
+        ]
+      },
+      "evidence_id": "topology_diff:currencyservice->pod:currencyservice-84754ffd69-c259r",
+      "requires": []
+    },
+    {
+      "id": "op0002",
+      "group": "edge_ops",
+      "operation": {
+        "op": "REMOVE_EDGE",
+        "source": "currencyservice",
+        "target": "pod:currencyservice-84754ffd69-dhlpl",
+        "evidence": [
+          "topology_diff:currencyservice->pod:currencyservice-84754ffd69-dhlpl"
+        ]
+      },
+      "evidence_id": "topology_diff:currencyservice->pod:currencyservice-84754ffd69-dhlpl",
+      "requires": []
+    },
+    {
+      "id": "op0003",
+      "group": "edge_ops",
+      "operation": {
+        "op": "REMOVE_EDGE",
+        "source": "currencyservice",
+        "target": "pod:currencyservice-84754ffd69-mgdkg",
+        "evidence": [
+          "topology_diff:currencyservice->pod:currencyservice-84754ffd69-mgdkg"
+        ]
+      },
+      "evidence_id": "topology_diff:currencyservice->pod:currencyservice-84754ffd69-mgdkg",
+      "requires": []
+    },
+    {
+      "id": "op0004",
+      "group": "edge_ops",
+      "operation": {
+        "op": "REMOVE_EDGE",
+        "source": "currencyservice",
+        "target": "pod:currencyservice-84754ffd69-sl79c",
+        "evidence": [
+          "topology_diff:currencyservice->pod:currencyservice-84754ffd69-sl79c"
+        ]
+      },
+      "evidence_id": "topology_diff:currencyservice->pod:currencyservice-84754ffd69-sl79c",
+      "requires": []
+    },
+    {
+      "id": "op0005",
+      "group": "node_ops",
+      "operation": {
+        "op": "SPLIT_NODE",
+        "parent": "checkoutservice",
+        "children": [
+          "checkoutservice:unversioned",
+          "checkoutservice:v2.0.0"
+        ],
+        "attrs": {
+          "type": "version",
+          "service": "checkoutservice"
+        },
+        "evidence": [
+          "version_coexistence:checkoutservice"
+        ]
+      },
+      "evidence_id": "version_coexistence:checkoutservice",
+      "requires": []
+    }
+  ],
+  "plan": {
+    "experiment_id": "case00566",
+    "change_type": "observation_supported_updates",
+    "confidence": 0.0,
+    "causal_role": "not_inferred",
+    "node_ops": [
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:checkoutservice-v2-c6cd7497c-rz69m",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "checkoutservice",
+          "version": "v2.0.0"
+        },
+        "evidence": [
+          "during:pod:checkoutservice-v2-c6cd7497c-rz69m"
+        ]
+      },
+      {
+        "op": "SPLIT_NODE",
+        "node_id": "",
+        "old_node": "",
+        "new_node": "",
+        "parent": "checkoutservice",
+        "children": [
+          "checkoutservice:unversioned",
+          "checkoutservice:v2.0.0"
+        ],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "version",
+          "service": "checkoutservice"
+        },
+        "evidence": [
+          "version_coexistence:checkoutservice"
+        ]
+      }
+    ],
+    "edge_ops": [
+      {
+        "op": "REMOVE_EDGE",
+        "source": "currencyservice",
+        "target": "pod:currencyservice-84754ffd69-c259r",
+        "old_source": "currencyservice",
+        "old_target": "pod:currencyservice-84754ffd69-c259r",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": null,
+        "attrs": {},
+        "evidence": [
+          "topology_diff:currencyservice->pod:currencyservice-84754ffd69-c259r"
+        ]
+      },
+      {
+        "op": "REMOVE_EDGE",
+        "source": "currencyservice",
+        "target": "pod:currencyservice-84754ffd69-dhlpl",
+        "old_source": "currencyservice",
+        "old_target": "pod:currencyservice-84754ffd69-dhlpl",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": null,
+        "attrs": {},
+        "evidence": [
+          "topology_diff:currencyservice->pod:currencyservice-84754ffd69-dhlpl"
+        ]
+      },
+      {
+        "op": "REMOVE_EDGE",
+        "source": "currencyservice",
+        "target": "pod:currencyservice-84754ffd69-mgdkg",
+        "old_source": "currencyservice",
+        "old_target": "pod:currencyservice-84754ffd69-mgdkg",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": null,
+        "attrs": {},
+        "evidence": [
+          "topology_diff:currencyservice->pod:currencyservice-84754ffd69-mgdkg"
+        ]
+      },
+      {
+        "op": "REMOVE_EDGE",
+        "source": "currencyservice",
+        "target": "pod:currencyservice-84754ffd69-sl79c",
+        "old_source": "currencyservice",
+        "old_target": "pod:currencyservice-84754ffd69-sl79c",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": null,
+        "attrs": {},
+        "evidence": [
+          "topology_diff:currencyservice->pod:currencyservice-84754ffd69-sl79c"
+        ]
+      }
+    ],
+    "weight_ops": [],
+    "state_transfer": {},
+    "evidence": [
+      "during:pod:checkoutservice-v2-c6cd7497c-rz69m",
+      "topology_diff:currencyservice->pod:currencyservice-84754ffd69-c259r",
+      "topology_diff:currencyservice->pod:currencyservice-84754ffd69-dhlpl",
+      "topology_diff:currencyservice->pod:currencyservice-84754ffd69-mgdkg",
+      "topology_diff:currencyservice->pod:currencyservice-84754ffd69-sl79c",
+      "version_coexistence:checkoutservice"
+    ]
+  }
+}

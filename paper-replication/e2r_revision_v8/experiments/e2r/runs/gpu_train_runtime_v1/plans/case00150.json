@@ -1,0 +1,372 @@
+{
+  "catalog": [
+    {
+      "id": "op0000",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-preserve-service-7d5dddf58d-25cxx",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-preserve-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-preserve-service-7d5dddf58d-25cxx"
+        ]
+      },
+      "evidence_id": "during:pod:ts-preserve-service-7d5dddf58d-25cxx",
+      "requires": []
+    },
+    {
+      "id": "op0001",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-preserve-service-7d5dddf58d-9npkq",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-preserve-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-preserve-service-7d5dddf58d-9npkq"
+        ]
+      },
+      "evidence_id": "during:pod:ts-preserve-service-7d5dddf58d-9npkq",
+      "requires": []
+    },
+    {
+      "id": "op0002",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-preserve-service-7d5dddf58d-hnlr4",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-preserve-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-preserve-service-7d5dddf58d-hnlr4"
+        ]
+      },
+      "evidence_id": "during:pod:ts-preserve-service-7d5dddf58d-hnlr4",
+      "requires": []
+    },
+    {
+      "id": "op0003",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-preserve-service-7d5dddf58d-k4n42",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-preserve-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-preserve-service-7d5dddf58d-k4n42"
+        ]
+      },
+      "evidence_id": "during:pod:ts-preserve-service-7d5dddf58d-k4n42",
+      "requires": []
+    },
+    {
+      "id": "op0004",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-preserve-service-7d5dddf58d-qbn2d",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-preserve-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-preserve-service-7d5dddf58d-qbn2d"
+        ]
+      },
+      "evidence_id": "during:pod:ts-preserve-service-7d5dddf58d-qbn2d",
+      "requires": []
+    },
+    {
+      "id": "op0005",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-preserve-service-7d5dddf58d-xbq8f",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-preserve-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-preserve-service-7d5dddf58d-xbq8f"
+        ]
+      },
+      "evidence_id": "during:pod:ts-preserve-service-7d5dddf58d-xbq8f",
+      "requires": []
+    },
+    {
+      "id": "op0006",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "ts-travel2-service",
+        "target": "pod:ts-travel2-service-c549f6bfd-hrjvm",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "evidence": [
+          "during:ts-travel2-service->pod:ts-travel2-service-c549f6bfd-hrjvm"
+        ]
+      },
+      "evidence_id": "during:ts-travel2-service->pod:ts-travel2-service-c549f6bfd-hrjvm",
+      "requires": []
+    },
+    {
+      "id": "op0007",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "ts-travel2-service",
+        "target": "pod:ts-travel2-service-c549f6bfd-nv9dq",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "evidence": [
+          "during:ts-travel2-service->pod:ts-travel2-service-c549f6bfd-nv9dq"
+        ]
+      },
+      "evidence_id": "during:ts-travel2-service->pod:ts-travel2-service-c549f6bfd-nv9dq",
+      "requires": []
+    },
+    {
+      "id": "op0008",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "ts-travel2-service",
+        "target": "pod:ts-travel2-service-c549f6bfd-rl2lc",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "evidence": [
+          "during:ts-travel2-service->pod:ts-travel2-service-c549f6bfd-rl2lc"
+        ]
+      },
+      "evidence_id": "during:ts-travel2-service->pod:ts-travel2-service-c549f6bfd-rl2lc",
+      "requires": []
+    },
+    {
+      "id": "op0009",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "ts-travel2-service",
+        "target": "pod:ts-travel2-service-c549f6bfd-w6wrm",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "evidence": [
+          "during:ts-travel2-service->pod:ts-travel2-service-c549f6bfd-w6wrm"
+        ]
+      },
+      "evidence_id": "during:ts-travel2-service->pod:ts-travel2-service-c549f6bfd-w6wrm",
+      "requires": []
+    }
+  ],
+  "plan": {
+    "experiment_id": "case00150",
+    "change_type": "observation_supported_updates",
+    "confidence": 0.0,
+    "causal_role": "not_inferred",
+    "node_ops": [
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-preserve-service-7d5dddf58d-25cxx",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-preserve-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-preserve-service-7d5dddf58d-25cxx"
+        ]
+      },
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-preserve-service-7d5dddf58d-9npkq",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-preserve-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-preserve-service-7d5dddf58d-9npkq"
+        ]
+      },
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-preserve-service-7d5dddf58d-hnlr4",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-preserve-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-preserve-service-7d5dddf58d-hnlr4"
+        ]
+      },
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-preserve-service-7d5dddf58d-k4n42",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-preserve-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-preserve-service-7d5dddf58d-k4n42"
+        ]
+      },
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-preserve-service-7d5dddf58d-qbn2d",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-preserve-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-preserve-service-7d5dddf58d-qbn2d"
+        ]
+      },
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-preserve-service-7d5dddf58d-xbq8f",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-preserve-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-preserve-service-7d5dddf58d-xbq8f"
+        ]
+      }
+    ],
+    "edge_ops": [
+      {
+        "op": "ADD_EDGE",
+        "source": "ts-travel2-service",
+        "target": "pod:ts-travel2-service-c549f6bfd-hrjvm",
+        "old_source": "ts-travel2-service",
+        "old_target": "pod:ts-travel2-service-c549f6bfd-hrjvm",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:ts-travel2-service->pod:ts-travel2-service-c549f6bfd-hrjvm"
+        ]
+      },
+      {
+        "op": "ADD_EDGE",
+        "source": "ts-travel2-service",
+        "target": "pod:ts-travel2-service-c549f6bfd-nv9dq",
+        "old_source": "ts-travel2-service",
+        "old_target": "pod:ts-travel2-service-c549f6bfd-nv9dq",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:ts-travel2-service->pod:ts-travel2-service-c549f6bfd-nv9dq"
+        ]
+      },
+      {
+        "op": "ADD_EDGE",
+        "source": "ts-travel2-service",
+        "target": "pod:ts-travel2-service-c549f6bfd-rl2lc",
+        "old_source": "ts-travel2-service",
+        "old_target": "pod:ts-travel2-service-c549f6bfd-rl2lc",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:ts-travel2-service->pod:ts-travel2-service-c549f6bfd-rl2lc"
+        ]
+      },
+      {
+        "op": "ADD_EDGE",
+        "source": "ts-travel2-service",
+        "target": "pod:ts-travel2-service-c549f6bfd-w6wrm",
+        "old_source": "ts-travel2-service",
+        "old_target": "pod:ts-travel2-service-c549f6bfd-w6wrm",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:ts-travel2-service->pod:ts-travel2-service-c549f6bfd-w6wrm"
+        ]
+      }
+    ],
+    "weight_ops": [],
+    "state_transfer": {},
+    "evidence": [
+      "during:pod:ts-preserve-service-7d5dddf58d-25cxx",
+      "during:pod:ts-preserve-service-7d5dddf58d-9npkq",
+      "during:pod:ts-preserve-service-7d5dddf58d-hnlr4",
+      "during:pod:ts-preserve-service-7d5dddf58d-k4n42",
+      "during:pod:ts-preserve-service-7d5dddf58d-qbn2d",
+      "during:pod:ts-preserve-service-7d5dddf58d-xbq8f",
+      "during:ts-travel2-service->pod:ts-travel2-service-c549f6bfd-hrjvm",
+      "during:ts-travel2-service->pod:ts-travel2-service-c549f6bfd-nv9dq",
+      "during:ts-travel2-service->pod:ts-travel2-service-c549f6bfd-rl2lc",
+      "during:ts-travel2-service->pod:ts-travel2-service-c549f6bfd-w6wrm"
+    ]
+  }
+}

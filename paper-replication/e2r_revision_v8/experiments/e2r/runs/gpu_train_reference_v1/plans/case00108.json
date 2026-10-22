@@ -1,0 +1,239 @@
+{
+  "catalog": [
+    {
+      "id": "op0000",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-order-other-service-67cf586847-2vk6r",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-order-other-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-order-other-service-67cf586847-2vk6r"
+        ]
+      },
+      "evidence_id": "during:pod:ts-order-other-service-67cf586847-2vk6r",
+      "requires": []
+    },
+    {
+      "id": "op0001",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-order-other-service-67cf586847-7pkns",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-order-other-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-order-other-service-67cf586847-7pkns"
+        ]
+      },
+      "evidence_id": "during:pod:ts-order-other-service-67cf586847-7pkns",
+      "requires": []
+    },
+    {
+      "id": "op0002",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-order-other-service-67cf586847-f5vvl",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-order-other-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-order-other-service-67cf586847-f5vvl"
+        ]
+      },
+      "evidence_id": "during:pod:ts-order-other-service-67cf586847-f5vvl",
+      "requires": []
+    },
+    {
+      "id": "op0003",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-order-other-service-67cf586847-ml5mb",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-order-other-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-order-other-service-67cf586847-ml5mb"
+        ]
+      },
+      "evidence_id": "during:pod:ts-order-other-service-67cf586847-ml5mb",
+      "requires": []
+    },
+    {
+      "id": "op0004",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-order-other-service-67cf586847-shcx2",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-order-other-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-order-other-service-67cf586847-shcx2"
+        ]
+      },
+      "evidence_id": "during:pod:ts-order-other-service-67cf586847-shcx2",
+      "requires": []
+    },
+    {
+      "id": "op0005",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-order-other-service-67cf586847-vjwlv",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-order-other-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-order-other-service-67cf586847-vjwlv"
+        ]
+      },
+      "evidence_id": "during:pod:ts-order-other-service-67cf586847-vjwlv",
+      "requires": []
+    }
+  ],
+  "plan": {
+    "experiment_id": "case00108",
+    "change_type": "observation_supported_updates",
+    "confidence": 0.0,
+    "causal_role": "not_inferred",
+    "node_ops": [
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-order-other-service-67cf586847-2vk6r",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-order-other-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-order-other-service-67cf586847-2vk6r"
+        ]
+      },
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-order-other-service-67cf586847-7pkns",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-order-other-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-order-other-service-67cf586847-7pkns"
+        ]
+      },
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-order-other-service-67cf586847-f5vvl",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-order-other-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-order-other-service-67cf586847-f5vvl"
+        ]
+      },
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-order-other-service-67cf586847-ml5mb",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-order-other-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-order-other-service-67cf586847-ml5mb"
+        ]
+      },
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-order-other-service-67cf586847-shcx2",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-order-other-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-order-other-service-67cf586847-shcx2"
+        ]
+      },
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-order-other-service-67cf586847-vjwlv",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-order-other-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-order-other-service-67cf586847-vjwlv"
+        ]
+      }
+    ],
+    "edge_ops": [],
+    "weight_ops": [],
+    "state_transfer": {},
+    "evidence": [
+      "during:pod:ts-order-other-service-67cf586847-2vk6r",
+      "during:pod:ts-order-other-service-67cf586847-7pkns",
+      "during:pod:ts-order-other-service-67cf586847-f5vvl",
+      "during:pod:ts-order-other-service-67cf586847-ml5mb",
+      "during:pod:ts-order-other-service-67cf586847-shcx2",
+      "during:pod:ts-order-other-service-67cf586847-vjwlv"
+    ]
+  }
+}

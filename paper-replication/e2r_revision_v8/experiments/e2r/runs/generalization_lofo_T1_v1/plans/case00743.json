@@ -1,0 +1,132 @@
+{
+  "catalog": [
+    {
+      "id": "op0000",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-preserve-service-v2-5df5dc5658-ssj8h",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-preserve-service",
+          "version": "v2.0.0"
+        },
+        "evidence": [
+          "during:pod:ts-preserve-service-v2-5df5dc5658-ssj8h"
+        ]
+      },
+      "evidence_id": "during:pod:ts-preserve-service-v2-5df5dc5658-ssj8h",
+      "requires": []
+    },
+    {
+      "id": "op0001",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "ts-preserve-service",
+        "target": "pod:ts-preserve-service-v2-5df5dc5658-ssj8h",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "evidence": [
+          "during:ts-preserve-service->pod:ts-preserve-service-v2-5df5dc5658-ssj8h"
+        ]
+      },
+      "evidence_id": "during:ts-preserve-service->pod:ts-preserve-service-v2-5df5dc5658-ssj8h",
+      "requires": [
+        "op0000"
+      ]
+    },
+    {
+      "id": "op0002",
+      "group": "node_ops",
+      "operation": {
+        "op": "SPLIT_NODE",
+        "parent": "ts-preserve-service",
+        "children": [
+          "ts-preserve-service:unversioned",
+          "ts-preserve-service:v2.0.0"
+        ],
+        "attrs": {
+          "type": "version",
+          "service": "ts-preserve-service"
+        },
+        "evidence": [
+          "version_coexistence:ts-preserve-service"
+        ]
+      },
+      "evidence_id": "version_coexistence:ts-preserve-service",
+      "requires": []
+    }
+  ],
+  "plan": {
+    "experiment_id": "case00743",
+    "change_type": "observation_supported_updates",
+    "confidence": 0.0,
+    "causal_role": "not_inferred",
+    "node_ops": [
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-preserve-service-v2-5df5dc5658-ssj8h",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-preserve-service",
+          "version": "v2.0.0"
+        },
+        "evidence": [
+          "during:pod:ts-preserve-service-v2-5df5dc5658-ssj8h"
+        ]
+      },
+      {
+        "op": "SPLIT_NODE",
+        "node_id": "",
+        "old_node": "",
+        "new_node": "",
+        "parent": "ts-preserve-service",
+        "children": [
+          "ts-preserve-service:unversioned",
+          "ts-preserve-service:v2.0.0"
+        ],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "version",
+          "service": "ts-preserve-service"
+        },
+        "evidence": [
+          "version_coexistence:ts-preserve-service"
+        ]
+      }
+    ],
+    "edge_ops": [
+      {
+        "op": "ADD_EDGE",
+        "source": "ts-preserve-service",
+        "target": "pod:ts-preserve-service-v2-5df5dc5658-ssj8h",
+        "old_source": "ts-preserve-service",
+        "old_target": "pod:ts-preserve-service-v2-5df5dc5658-ssj8h",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:ts-preserve-service->pod:ts-preserve-service-v2-5df5dc5658-ssj8h"
+        ]
+      }
+    ],
+    "weight_ops": [],
+    "state_transfer": {},
+    "evidence": [
+      "during:pod:ts-preserve-service-v2-5df5dc5658-ssj8h",
+      "during:ts-preserve-service->pod:ts-preserve-service-v2-5df5dc5658-ssj8h",
+      "version_coexistence:ts-preserve-service"
+    ]
+  }
+}

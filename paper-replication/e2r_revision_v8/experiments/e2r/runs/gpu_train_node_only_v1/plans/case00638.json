@@ -1,0 +1,159 @@
+{
+  "catalog": [
+    {
+      "id": "op0000",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:recommendationservice-v2-56445745ff-7ntls",
+        "attrs": {
+          "type": "pod",
+          "service": "recommendationservice",
+          "version": "v2.0.0"
+        },
+        "evidence": [
+          "during:pod:recommendationservice-v2-56445745ff-7ntls"
+        ]
+      },
+      "evidence_id": "during:pod:recommendationservice-v2-56445745ff-7ntls",
+      "requires": []
+    },
+    {
+      "id": "op0001",
+      "group": "edge_ops",
+      "operation": {
+        "op": "REMOVE_EDGE",
+        "source": "recommendationservice",
+        "target": "pod:recommendationservice-5dc8b478f6-d6gsv",
+        "evidence": [
+          "topology_diff:recommendationservice->pod:recommendationservice-5dc8b478f6-d6gsv"
+        ]
+      },
+      "evidence_id": "topology_diff:recommendationservice->pod:recommendationservice-5dc8b478f6-d6gsv",
+      "requires": []
+    },
+    {
+      "id": "op0002",
+      "group": "edge_ops",
+      "operation": {
+        "op": "REMOVE_EDGE",
+        "source": "recommendationservice",
+        "target": "pod:recommendationservice-5dc8b478f6-mbvnl",
+        "evidence": [
+          "topology_diff:recommendationservice->pod:recommendationservice-5dc8b478f6-mbvnl"
+        ]
+      },
+      "evidence_id": "topology_diff:recommendationservice->pod:recommendationservice-5dc8b478f6-mbvnl",
+      "requires": []
+    },
+    {
+      "id": "op0003",
+      "group": "node_ops",
+      "operation": {
+        "op": "SPLIT_NODE",
+        "parent": "recommendationservice",
+        "children": [
+          "recommendationservice:unversioned",
+          "recommendationservice:v2.0.0"
+        ],
+        "attrs": {
+          "type": "version",
+          "service": "recommendationservice"
+        },
+        "evidence": [
+          "version_coexistence:recommendationservice"
+        ]
+      },
+      "evidence_id": "version_coexistence:recommendationservice",
+      "requires": []
+    }
+  ],
+  "plan": {
+    "experiment_id": "case00638",
+    "change_type": "observation_supported_updates",
+    "confidence": 0.0,
+    "causal_role": "not_inferred",
+    "node_ops": [
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:recommendationservice-v2-56445745ff-7ntls",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "recommendationservice",
+          "version": "v2.0.0"
+        },
+        "evidence": [
+          "during:pod:recommendationservice-v2-56445745ff-7ntls"
+        ]
+      },
+      {
+        "op": "SPLIT_NODE",
+        "node_id": "",
+        "old_node": "",
+        "new_node": "",
+        "parent": "recommendationservice",
+        "children": [
+          "recommendationservice:unversioned",
+          "recommendationservice:v2.0.0"
+        ],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "version",
+          "service": "recommendationservice"
+        },
+        "evidence": [
+          "version_coexistence:recommendationservice"
+        ]
+      }
+    ],
+    "edge_ops": [
+      {
+        "op": "REMOVE_EDGE",
+        "source": "recommendationservice",
+        "target": "pod:recommendationservice-5dc8b478f6-d6gsv",
+        "old_source": "recommendationservice",
+        "old_target": "pod:recommendationservice-5dc8b478f6-d6gsv",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": null,
+        "attrs": {},
+        "evidence": [
+          "topology_diff:recommendationservice->pod:recommendationservice-5dc8b478f6-d6gsv"
+        ]
+      },
+      {
+        "op": "REMOVE_EDGE",
+        "source": "recommendationservice",
+        "target": "pod:recommendationservice-5dc8b478f6-mbvnl",
+        "old_source": "recommendationservice",
+        "old_target": "pod:recommendationservice-5dc8b478f6-mbvnl",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": null,
+        "attrs": {},
+        "evidence": [
+          "topology_diff:recommendationservice->pod:recommendationservice-5dc8b478f6-mbvnl"
+        ]
+      }
+    ],
+    "weight_ops": [],
+    "state_transfer": {},
+    "evidence": [
+      "during:pod:recommendationservice-v2-56445745ff-7ntls",
+      "topology_diff:recommendationservice->pod:recommendationservice-5dc8b478f6-d6gsv",
+      "topology_diff:recommendationservice->pod:recommendationservice-5dc8b478f6-mbvnl",
+      "version_coexistence:recommendationservice"
+    ]
+  }
+}

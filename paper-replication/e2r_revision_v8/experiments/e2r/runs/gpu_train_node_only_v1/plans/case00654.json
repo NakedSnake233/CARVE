@@ -1,0 +1,132 @@
+{
+  "catalog": [
+    {
+      "id": "op0000",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:shippingservice-v2-769db547c6-mwpxl",
+        "attrs": {
+          "type": "pod",
+          "service": "shippingservice",
+          "version": "v2.0.0"
+        },
+        "evidence": [
+          "during:pod:shippingservice-v2-769db547c6-mwpxl"
+        ]
+      },
+      "evidence_id": "during:pod:shippingservice-v2-769db547c6-mwpxl",
+      "requires": []
+    },
+    {
+      "id": "op0001",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "shippingservice",
+        "target": "pod:shippingservice-v2-769db547c6-mwpxl",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "evidence": [
+          "during:shippingservice->pod:shippingservice-v2-769db547c6-mwpxl"
+        ]
+      },
+      "evidence_id": "during:shippingservice->pod:shippingservice-v2-769db547c6-mwpxl",
+      "requires": [
+        "op0000"
+      ]
+    },
+    {
+      "id": "op0002",
+      "group": "node_ops",
+      "operation": {
+        "op": "SPLIT_NODE",
+        "parent": "shippingservice",
+        "children": [
+          "shippingservice:unversioned",
+          "shippingservice:v2.0.0"
+        ],
+        "attrs": {
+          "type": "version",
+          "service": "shippingservice"
+        },
+        "evidence": [
+          "version_coexistence:shippingservice"
+        ]
+      },
+      "evidence_id": "version_coexistence:shippingservice",
+      "requires": []
+    }
+  ],
+  "plan": {
+    "experiment_id": "case00654",
+    "change_type": "observation_supported_updates",
+    "confidence": 0.0,
+    "causal_role": "not_inferred",
+    "node_ops": [
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:shippingservice-v2-769db547c6-mwpxl",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "shippingservice",
+          "version": "v2.0.0"
+        },
+        "evidence": [
+          "during:pod:shippingservice-v2-769db547c6-mwpxl"
+        ]
+      },
+      {
+        "op": "SPLIT_NODE",
+        "node_id": "",
+        "old_node": "",
+        "new_node": "",
+        "parent": "shippingservice",
+        "children": [
+          "shippingservice:unversioned",
+          "shippingservice:v2.0.0"
+        ],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "version",
+          "service": "shippingservice"
+        },
+        "evidence": [
+          "version_coexistence:shippingservice"
+        ]
+      }
+    ],
+    "edge_ops": [
+      {
+        "op": "ADD_EDGE",
+        "source": "shippingservice",
+        "target": "pod:shippingservice-v2-769db547c6-mwpxl",
+        "old_source": "shippingservice",
+        "old_target": "pod:shippingservice-v2-769db547c6-mwpxl",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:shippingservice->pod:shippingservice-v2-769db547c6-mwpxl"
+        ]
+      }
+    ],
+    "weight_ops": [],
+    "state_transfer": {},
+    "evidence": [
+      "during:pod:shippingservice-v2-769db547c6-mwpxl",
+      "during:shippingservice->pod:shippingservice-v2-769db547c6-mwpxl",
+      "version_coexistence:shippingservice"
+    ]
+  }
+}

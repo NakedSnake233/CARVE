@@ -1,0 +1,113 @@
+{
+  "failed_pilot_v1": {
+    "status_consistent": true,
+    "journal_timestamp_seconds_consistent": true,
+    "attempts": 3,
+    "raw_provider_envelopes": 0,
+    "all_numeric_usage_fields": {
+      "input_tokens": 14456,
+      "output_tokens": 6000,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 22528,
+      "prompt_tokens": 14456,
+      "completion_tokens": 6000,
+      "total_tokens": 20456
+    },
+    "cache_inclusive_input_and_output_tokens": 42984
+  },
+  "pilot_v2": {
+    "status_consistent": true,
+    "journal_timestamp_seconds_consistent": true,
+    "attempts": 48,
+    "raw_provider_envelopes": 48,
+    "all_numeric_usage_fields": {
+      "input_tokens": 141146,
+      "output_tokens": 17789,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 551424,
+      "prompt_tokens": 141146,
+      "completion_tokens": 17789,
+      "total_tokens": 158935
+    },
+    "cache_inclusive_input_and_output_tokens": 710359
+  },
+  "formal": {
+    "status_consistent": true,
+    "journal_timestamp_seconds_consistent": true,
+    "attempts": 648,
+    "raw_provider_envelopes": 648,
+    "all_numeric_usage_fields": {
+      "input_tokens": 1863990,
+      "output_tokens": 242302,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 7461888,
+      "prompt_tokens": 1863990,
+      "completion_tokens": 242302,
+      "total_tokens": 2106292
+    },
+    "cache_inclusive_input_and_output_tokens": 9568180
+  },
+  "combined": {
+    "status_consistent": true,
+    "journal_timestamp_seconds_consistent": true,
+    "attempts": 696,
+    "raw_provider_envelopes": 696,
+    "all_numeric_usage_fields": {
+      "input_tokens": 2005136,
+      "output_tokens": 260091,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 8013312,
+      "prompt_tokens": 2005136,
+      "completion_tokens": 260091,
+      "total_tokens": 2265227
+    },
+    "cache_inclusive_input_and_output_tokens": 10278539
+  },
+  "all_qwen_expenditure": {
+    "attempts": 699,
+    "all_numeric_usage_fields": {
+      "input_tokens": 2019592,
+      "output_tokens": 266091,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 8035840,
+      "prompt_tokens": 2019592,
+      "completion_tokens": 266091,
+      "total_tokens": 2285683
+    },
+    "cache_inclusive_input_and_output_tokens": 10321523,
+    "monetary_cost": null,
+    "note": "Cache-inclusive volume is accounting only; token classes may have different billing rules. No provider monetary cost was returned."
+  },
+  "gnn_timing_rows": {
+    "reference": {
+      "n": 348,
+      "mean": 0.001949596308417961,
+      "min": 0.0006110919639468193,
+      "max": 0.22787003265693784
+    },
+    "runtime": {
+      "n": 348,
+      "mean": 0.0006548251244828276,
+      "min": 0.0006111431866884232,
+      "max": 0.0008462970145046711
+    },
+    "rule_patch": {
+      "n": 348,
+      "mean": 0.0006617989415174414,
+      "min": 0.0006089531816542149,
+      "max": 0.002753952983766794
+    },
+    "llm_patch_no_fallback": {
+      "n": 612,
+      "mean": 0.0006678459779328965,
+      "min": 0.0006146128289401531,
+      "max": 0.00112910196185112
+    },
+    "llm_patch_with_fallback": {
+      "n": 696,
+      "mean": 0.0006666207892135128,
+      "min": 0.0006146128289401531,
+      "max": 0.00112910196185112
+    }
+  }
+}

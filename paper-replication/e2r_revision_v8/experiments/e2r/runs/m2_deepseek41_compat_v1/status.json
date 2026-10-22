@@ -1,0 +1,11 @@
+{
+  "status": "complete",
+  "authorized_request_ceiling": 3,
+  "actual_http_attempts_started": 3,
+  "finished_attempts": 3,
+  "unknown_outcome_attempts": [],
+  "transport_successes": 0,
+  "strict_accepted": 0,
+  "response_models": [],
+  "provider_usage_missing_attempts": 3
+}

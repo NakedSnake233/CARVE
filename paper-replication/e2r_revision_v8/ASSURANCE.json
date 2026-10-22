@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "tested_at": "2026-09-27T02:56:31.743203+00:00",
+  "tests_passed": 12,
+  "command": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=${ARTIFACT_ROOT} DYRCA_ROOT=${DYRCA_ROOT} python -m pytest -c /dev/null --confcutdir=${ARTIFACT_ROOT} tests/e2r/test_multi_root_proxy.py tests/e2r/test_m2_formal_pipeline.py tests/e2r/test_observation.py -q -p no:cacheprovider",
+  "scope": "relocatable observation access, M2 formal scoring/analysis contract and multi-root composition",
+  "test_environment": {
+    "python": "3.13.9",
+    "implementation": "CPython",
+    "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+    "torch": "2.14.0+cpu"
+  },
+  "target_lock_clean_install_tested": false,
+  "external_dependency_note": "DY-RCA source was supplied outside the artifact during smoke tests."
+}

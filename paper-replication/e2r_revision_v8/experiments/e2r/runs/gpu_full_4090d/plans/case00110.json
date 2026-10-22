@@ -1,0 +1,202 @@
+{
+  "catalog": [
+    {
+      "id": "op0000",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-order-other-service-67cf586847-grt5p",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-order-other-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-order-other-service-67cf586847-grt5p"
+        ]
+      },
+      "evidence_id": "during:pod:ts-order-other-service-67cf586847-grt5p",
+      "requires": []
+    },
+    {
+      "id": "op0001",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-order-other-service-67cf586847-jrs2k",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-order-other-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-order-other-service-67cf586847-jrs2k"
+        ]
+      },
+      "evidence_id": "during:pod:ts-order-other-service-67cf586847-jrs2k",
+      "requires": []
+    },
+    {
+      "id": "op0002",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-order-other-service-67cf586847-rstwx",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-order-other-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-order-other-service-67cf586847-rstwx"
+        ]
+      },
+      "evidence_id": "during:pod:ts-order-other-service-67cf586847-rstwx",
+      "requires": []
+    },
+    {
+      "id": "op0003",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-order-other-service-67cf586847-s9v7h",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-order-other-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-order-other-service-67cf586847-s9v7h"
+        ]
+      },
+      "evidence_id": "during:pod:ts-order-other-service-67cf586847-s9v7h",
+      "requires": []
+    },
+    {
+      "id": "op0004",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-order-other-service-67cf586847-wvxtf",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-order-other-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-order-other-service-67cf586847-wvxtf"
+        ]
+      },
+      "evidence_id": "during:pod:ts-order-other-service-67cf586847-wvxtf",
+      "requires": []
+    }
+  ],
+  "plan": {
+    "experiment_id": "case00110",
+    "change_type": "observation_supported_updates",
+    "confidence": 0.0,
+    "causal_role": "not_inferred",
+    "node_ops": [
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-order-other-service-67cf586847-grt5p",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-order-other-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-order-other-service-67cf586847-grt5p"
+        ]
+      },
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-order-other-service-67cf586847-jrs2k",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-order-other-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-order-other-service-67cf586847-jrs2k"
+        ]
+      },
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-order-other-service-67cf586847-rstwx",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-order-other-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-order-other-service-67cf586847-rstwx"
+        ]
+      },
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-order-other-service-67cf586847-s9v7h",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-order-other-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-order-other-service-67cf586847-s9v7h"
+        ]
+      },
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-order-other-service-67cf586847-wvxtf",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-order-other-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-order-other-service-67cf586847-wvxtf"
+        ]
+      }
+    ],
+    "edge_ops": [],
+    "weight_ops": [],
+    "state_transfer": {},
+    "evidence": [
+      "during:pod:ts-order-other-service-67cf586847-grt5p",
+      "during:pod:ts-order-other-service-67cf586847-jrs2k",
+      "during:pod:ts-order-other-service-67cf586847-rstwx",
+      "during:pod:ts-order-other-service-67cf586847-s9v7h",
+      "during:pod:ts-order-other-service-67cf586847-wvxtf"
+    ]
+  }
+}

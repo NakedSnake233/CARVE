@@ -1,0 +1,96 @@
+{
+  "catalog": [
+    {
+      "id": "op0000",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:currencyservice-v2-646cc88594-zzh24",
+        "attrs": {
+          "type": "pod",
+          "service": "currencyservice",
+          "version": "v2.0.0"
+        },
+        "evidence": [
+          "during:pod:currencyservice-v2-646cc88594-zzh24"
+        ]
+      },
+      "evidence_id": "during:pod:currencyservice-v2-646cc88594-zzh24",
+      "requires": []
+    },
+    {
+      "id": "op0001",
+      "group": "node_ops",
+      "operation": {
+        "op": "SPLIT_NODE",
+        "parent": "currencyservice",
+        "children": [
+          "currencyservice:unversioned",
+          "currencyservice:v2.0.0"
+        ],
+        "attrs": {
+          "type": "version",
+          "service": "currencyservice"
+        },
+        "evidence": [
+          "version_coexistence:currencyservice"
+        ]
+      },
+      "evidence_id": "version_coexistence:currencyservice",
+      "requires": []
+    }
+  ],
+  "plan": {
+    "experiment_id": "case00597",
+    "change_type": "observation_supported_updates",
+    "confidence": 0.0,
+    "causal_role": "not_inferred",
+    "node_ops": [
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:currencyservice-v2-646cc88594-zzh24",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "currencyservice",
+          "version": "v2.0.0"
+        },
+        "evidence": [
+          "during:pod:currencyservice-v2-646cc88594-zzh24"
+        ]
+      },
+      {
+        "op": "SPLIT_NODE",
+        "node_id": "",
+        "old_node": "",
+        "new_node": "",
+        "parent": "currencyservice",
+        "children": [
+          "currencyservice:unversioned",
+          "currencyservice:v2.0.0"
+        ],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "version",
+          "service": "currencyservice"
+        },
+        "evidence": [
+          "version_coexistence:currencyservice"
+        ]
+      }
+    ],
+    "edge_ops": [],
+    "weight_ops": [],
+    "state_transfer": {},
+    "evidence": [
+      "during:pod:currencyservice-v2-646cc88594-zzh24",
+      "version_coexistence:currencyservice"
+    ]
+  }
+}

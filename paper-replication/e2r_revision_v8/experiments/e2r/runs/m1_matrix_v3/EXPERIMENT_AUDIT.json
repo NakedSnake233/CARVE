@@ -1,0 +1,276 @@
+{
+  "audit_skill": "experiment-audit",
+  "verdict": "WARN",
+  "overall_verdict": "WARN",
+  "integrity_status": "pass",
+  "artifact_integrity": "PASS",
+  "reason_code": "scope_and_backend_reproducibility_limits",
+  "summary": "Revised M1 raw results and all reported statistics are internally verified; narrow reuse is warranted with explicit scope and numerical qualifiers. No actual integrity blocker found.",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "auditor": "Fresh Codex reviewer /root/m1_revision_audit with independent ablation subauditor",
+  "agent_id": "/root/m1_revision_audit",
+  "verdict_id": "m1_revision_20260926_v3",
+  "reviewer_model": "gpt-6-astra",
+  "reviewer_family": "openai",
+  "reviewer_reasoning": "ultra",
+  "generated_at": "2026-09-26T12:52:11.028701+00:00",
+  "date": "2026-09-26",
+  "scope": {
+    "included": [
+      "M1 matched-training graph matrix",
+      "Boutique frozen feature deletion",
+      "all-test frozen operation-group deletion"
+    ],
+    "excluded": [
+      "legacy paper tables and claims",
+      "ongoing M2",
+      "generalization/LOFO/cross-app results",
+      "live recovery"
+    ],
+    "final_analysis": "experiments/e2r/runs/m1_matrix_v3/analysis.json",
+    "superseded_analysis": "experiments/e2r/runs/m1_matrix_v2/analysis.json",
+    "final_inventory": "experiments/e2r/runs/review_inventory_v2/inventory.json"
+  },
+  "actual_blockers": [],
+  "checks": {
+    "gt_provenance": {
+      "status": "PASS",
+      "details": "All 798 dataset labels matched source GT; all 798 snapshots rebuilt exactly from raw observed telemetry/topology; no post-cutoff observation or label input found. Eligibility/cutoff GT use disclosed in inventory_v2, with zero actual exclusions.",
+      "evidence": [
+        "methods/E2R/data.py:61",
+        "methods/E2R/data.py:183",
+        "scripts/e2r/prepare_data.py:40",
+        "experiments/e2r/runs/review_inventory_v2/inventory.json:272"
+      ]
+    },
+    "score_normalization": {
+      "status": "PASS",
+      "details": "AC metrics are incident rank indicators and MRR is reciprocal dataset-GT rank. No denominator uses model score statistics. GraphSAGE neighbor mean and log1p input transforms are not reported-score normalization.",
+      "evidence": [
+        "scripts/e2r/run_graph_experiment.py:158",
+        "scripts/e2r/run_graph_experiment.py:170",
+        "scripts/e2r/analyze_m1_matrix.py:8",
+        "scripts/e2r/run_modality_ablation.py:64",
+        "scripts/e2r/run_operation_ablation.py:64"
+      ]
+    },
+    "result_existence": {
+      "status": "PASS",
+      "details": "All in-scope results/checkpoints exist; exact prediction products are complete; every reported accuracy/MRR, seed mean/sample SD, subgroup, both bootstrap intervals, sign-flip p and actual Holm adjusted p recomputed. Tracker now marks completed in-scope runs. Matrix has 15 cells; no patch-trained/node-only test cell is claimed.",
+      "evidence": [
+        "experiments/e2r/runs/m1_matrix_v3/REPORT.md:5",
+        "experiments/e2r/runs/m1_matrix_v3/REPORT.md:12",
+        "refine-logs/EXPERIMENT_TRACKER.md:9",
+        "scripts/e2r/analyze_m1_matrix.py:39"
+      ]
+    },
+    "dead_code": {
+      "status": "PASS",
+      "details": "Forward, supervised candidate-masked loss, graph execution, rank metrics, deletions and analyses are reached by actual entrypoints; checkpoint validation losses replay minima; remote epoch logs and summary values match result files. No inactive metric presented as measured.",
+      "evidence": [
+        "scripts/e2r/run_graph_experiment.py:136",
+        "scripts/e2r/run_graph_experiment.py:143",
+        "scripts/e2r/run_graph_experiment.py:158",
+        "scripts/e2r/run_modality_ablation.py:52",
+        "scripts/e2r/run_operation_ablation.py:50",
+        "experiments/e2r/remote/reviewer_full/worker.log:15"
+      ]
+    },
+    "scope": {
+      "status": "WARN",
+      "details": "Two injected-fault testbeds, 116 held-out incidents on one recurring-condition split and 3 training seeds. All 49 test condition groups occur in train. One exact train/test patch-input alias has different GT. Runtime superiority lacks 0.05 sign-flip/Holm support; frozen deletion controls measure sensitivity, and source modalities remain partly present in call edges.",
+      "evidence": [
+        "experiments/e2r/runs/m1_matrix_v3/REPORT.md:12",
+        "experiments/e2r/runs/m1_matrix_v3/REPORT.md:21",
+        "experiments/e2r/runs/m1_matrix_v3/REPORT.md:28",
+        "experiments/e2r/runs/modality_ablation_boutique_v1/REPORT.md:3",
+        "experiments/e2r/runs/operation_ablation_v1/results.json:53"
+      ]
+    },
+    "evaluation_type": {
+      "status": "PASS",
+      "classification": "real_gt",
+      "details": "Offline supervised service ranking against recorded injected-fault labels from real testbed observations. Not model-generated GT, live remediation, production validation or synthetic multi-root evaluation."
+    },
+    "backend_replay": {
+      "status": "WARN",
+      "details": "CPU torch 2.14.0+cpu versus recorded CUDA torch 2.11.0+cu130 preserves all AC@1/3/5 values; near-tie reorderings prevent bitwise ranking and MRR replay. No logits saved to prove original CUDA margins.",
+      "evidence": [
+        "experiments/e2r/runs/gpu_train_reference_v1/results.json:4",
+        "scripts/e2r/run_graph_experiment.py:159",
+        "scripts/e2r/run_graph_experiment.py:163"
+      ]
+    }
+  },
+  "warnings": [
+    {
+      "id": "W1",
+      "kind": "claim_scope",
+      "detail": "Do not claim statistically established matched-runtime superiority: incident delta +0.0488506; sign-flip/Holm 0.0533947; condition-macro delta +0.0527211 with 95% interval [-0.0124717,0.1275510]; per-seed deltas are [0,0.0775862,0.0689655]."
+    },
+    {
+      "id": "W2",
+      "kind": "pseudoreplication",
+      "detail": "Seeds are repeated fits, not new incidents; incident bootstrap/sign flips rely on incident-level independence/symmetry and do not cover new conditions. All 49 test app/scenario/service/category conditions are in training (70 train conditions). Condition-macro intervals change estimand and resample observed recurring condition groups, not held-out fault types."
+    },
+    {
+      "id": "W3",
+      "kind": "ablation_scope",
+      "detail": "Deletion arms reuse full-patch-trained checkpoints, so they measure frozen-scorer reliance and distribution shift. no_trace_features and no_metric_features retain mixed-source call edges. no_log slightly improves observed accuracy; universal positive contribution of every modality is unsupported."
+    },
+    {
+      "id": "W4",
+      "kind": "structural_scope",
+      "detail": "node_only is a per-node self-network with zero neighborhood input, keeping biases; added noncandidate nodes cannot influence service logits. It tests message-passing availability with retraining, not independent node-identity or existing-node-relation attribution. drop_identity removes ALIGN_NODE only, not ADD_NODE. Missing patch-trained/node_only cell remains explicitly absent; no full 4x4 claim."
+    },
+    {
+      "id": "W5",
+      "kind": "reproducibility",
+      "detail": "CPU replay has 119/5220 matrix GT-rank differences, all at saved/replayed ranks >=12; 0/885 modality and 63/1392 operation GT-rank differences. Every AC@1/3/5 matches. Largest absolute per-cell mean MRR difference in matrix is 0.000101760. Saved CPU score inversions are <=9.5367431640625e-7; no original logits or deterministic CUDA guarantee."
+    },
+    {
+      "id": "W6",
+      "kind": "input_ambiguity",
+      "detail": "Train case00526 and test case00450 have exactly equal effective patch input signatures but different labels (ts-station-service versus ts-basic-service). Source directories and incidents are disjoint; this is observable-input aliasing, not an identical labeled training example."
+    },
+    {
+      "id": "W7",
+      "kind": "provenance_and_timing",
+      "detail": "Current source/snapshots/checkpoints are hash-pinned in the audit. Operation results omit their own source/checkpoint/runtime metadata; supplied checkpoint agreement and full-arm equality corroborate provenance but are not a signed historical execution attestation. Materialization timings cannot be recalculated from prediction rows; no latency claim is certified."
+    }
+  ],
+  "warranted_narrow_statement": "On one fixed 566/116/116 split of 798 recorded fault-injection incidents from Online Boutique and TrainTicket, three matched-training GraphSAGE fits gave patch AC@1 0.8218, reference 0.7184, runtime 0.7730, and no-message-passing control 0.7241. The patch–runtime gain is descriptive, not significant under the reported paired sign-flip/Holm test. Frozen-patch feature and operation deletions show scorer sensitivity within these recorded recurring conditions; they do not establish unseen-condition, LLM, recovery, or production benefits.",
+  "claims": [
+    {
+      "id": "matched_training_descriptive",
+      "impact": "supported_with_scope"
+    },
+    {
+      "id": "significant_runtime_superiority",
+      "impact": "unsupported_at_0.05"
+    },
+    {
+      "id": "frozen_deletion_sensitivity",
+      "impact": "supported_with_scope"
+    },
+    {
+      "id": "unseen_condition_generalization",
+      "impact": "not_evaluated"
+    },
+    {
+      "id": "LLM_or_recovery_value",
+      "impact": "outside_scope"
+    }
+  ],
+  "verification": {
+    "snapshots_rebuilt": 798,
+    "dataset_GT_matches": 798,
+    "split_counts": {
+      "train": 566,
+      "val": 116,
+      "test": 116
+    },
+    "matrix_rows": 5220,
+    "matrix_cells": 15,
+    "matrix_missing_cell": "patch->node_only",
+    "checkpoint_count": 12,
+    "common_config": {
+      "hidden_dim": 128,
+      "num_layers": 2,
+      "dropout": 0.1,
+      "lr": 0.003,
+      "weight_decay": 1e-05,
+      "epochs": 200,
+      "batch_size": 1,
+      "early_stop_patience": 30,
+      "pairwise_ranking_coef": 1.0
+    },
+    "modality_rows": 885,
+    "operation_rows": 1392,
+    "condition_groups_test": 49,
+    "condition_groups_test_seen_in_train": 49,
+    "all_stored_statistics_match": true,
+    "v3_macro_labels_and_points_verified": true,
+    "maximum_validation_minimum_replay_error": 8.990518807205916e-08
+  },
+  "trace_path": ".aris/traces/experiment-audit/20260926_m1_revision/",
+  "audited_input_hashes": {
+    "scripts/e2r/run_graph_experiment.py": "sha256:5dfbad3b44dc4fb714258b9b195bc962736bca48a16a7b7ce8b7485d240c67cb",
+    "scripts/e2r/analyze_m1_matrix.py": "sha256:8ebe42670d43c1260cdaee1e575084eb83658b0d73f330885d0de510908f90e8",
+    "scripts/e2r/run_modality_ablation.py": "sha256:07b03bf5a93c2df760d299daa949c08682356d42ea0ba5dc98073312c821b0d3",
+    "scripts/e2r/run_operation_ablation.py": "sha256:a2d55925bca8d7121a4671cb0b2c7b50d75d0d1635442c7887f87fa02db5a861",
+    "scripts/e2r/prepare_data.py": "sha256:3931003bade1ce3073c3f13b8de498465111518663ab075b633565794242820e",
+    "scripts/e2r/audit_inputs.py": "sha256:c67e633102cd51773d31f499071080ecc7d47de4c3f733f2c39b142b62b0333b",
+    "scripts/e2r/build_review_inventory.py": "sha256:649a5ba0426cce23c50d7ae3fbaac36b393b6c80485ef295522788961d758bca",
+    "methods/E2R/data.py": "sha256:9d86328e1224d9ce0207234f76371601d12ba86e1a77d1e3f8ede1678f10d336",
+    "methods/E2R/graph.py": "sha256:a6c1ff4f985c1fad056a7b2acc39803772604785ff46ce5794d6ab3fd0c411f9",
+    "methods/E2R/paths.py": "sha256:0aeca81c0aa15dbfa1b813a5760b99129ba2cbbb891e1b67708b4f06f7031739",
+    "refine-logs/EXPERIMENT_PLAN_20260926_184526.md": "sha256:5dfd5aaddc52ffe490220a6b24fabf4263590cedd3c9512c1d638ae5328a01f0",
+    "refine-logs/EXPERIMENT_TRACKER.md": "sha256:df99d965e5aa73c2d125262906a93e26b7d0d0441487bb7cd89e9d11ecdb272a",
+    "${DYRCA_ROOT}/src/dyrca_rca/models/graphsage.py": "sha256:0c32996905507303994af0c1fe8bb9d87ece0b91094876409e470c197286dab9",
+    "${DYRCA_ROOT}/src/dyrca_rca/models/losses.py": "sha256:1a5a125a996f73b9a63d2fd2961a4f49cd1db9cd6999aec95bb5d4f669fc5b69",
+    "${DYRCA_ROOT}/src/dyrca_rca/models/config.py": "sha256:76b12dbe7207db24fdb04a1a84882ac0f1223b7d165f1cfcec56e7cbaf591f74",
+    "${DYRCA_ROOT}/src/dyrca_rca/graph/executor.py": "sha256:6e8fa7bc70ed5d28d0b7f58df284a41ae4fa3882476a4b2b9361f246f15499bc",
+    "${DYRCA_ROOT}/src/dyrca_rca/graph/update_ops.py": "sha256:8bfb2b24f99e26f6b4f43c1da44f7b0f053bc8345043fdeeab3058adc401a7a4",
+    "experiments/e2r/runs/full_data_v2/manifest.json": "sha256:b5ae9921b196d9708d32d635db91c011724c95ec5440c2681e3d635115f77c22",
+    "experiments/e2r/runs/gpu_full_4090d/results.json": "sha256:bbc131436228c09cc460e0ec94dd52cd494699c3e15087e0435de8888d77c337",
+    "experiments/e2r/runs/gpu_full_4090d/predictions.jsonl": "sha256:214ce77910a6353be73a47d9d9d40abc28459c0e04b719a222d6100d1e0d0750",
+    "experiments/e2r/runs/gpu_full_4090d/split.json": "sha256:88ae2a7fa56a515cdf57f5043e928a645cb760746a009b3e22755583e1bb1bae",
+    "experiments/e2r/runs/gpu_full_4090d/model_seed42.pt": "sha256:c4895cf287eb11dae65267fdf0e6c53d7053680ec651e3a7066e75baf58889f5",
+    "experiments/e2r/runs/gpu_full_4090d/model_seed43.pt": "sha256:5b1486bf9bd8e33d8569170ecc9d79344409e0647062fc6c801ad5661c36b467",
+    "experiments/e2r/runs/gpu_full_4090d/model_seed44.pt": "sha256:ce72f2987e5e9514eea28f56c76d2c50e67445dc8746b79006071fa95ecbfb80",
+    "experiments/e2r/runs/gpu_train_reference_v1/results.json": "sha256:0f892fa4ba3fba6de62bda991e9e9df53855f5a85a98fd55b7d3d12f61b6baca",
+    "experiments/e2r/runs/gpu_train_reference_v1/predictions.jsonl": "sha256:3571d6c68e97b04d9a34c5130bf0d044de74c3986a75bf0ebfe68bdce8c8022f",
+    "experiments/e2r/runs/gpu_train_reference_v1/split.json": "sha256:88ae2a7fa56a515cdf57f5043e928a645cb760746a009b3e22755583e1bb1bae",
+    "experiments/e2r/runs/gpu_train_reference_v1/model_seed42.pt": "sha256:773cb8dede2690cee13e94dcf6599d1cffcc264c6e0532370d3df2ff3bbbc9e8",
+    "experiments/e2r/runs/gpu_train_reference_v1/model_seed43.pt": "sha256:37e57e1661621a699851dd45c0693da23b04e44a0b2c58dc87007a58c9d91b2f",
+    "experiments/e2r/runs/gpu_train_reference_v1/model_seed44.pt": "sha256:62d8a8d3fa212ace01ec4a99b25938666c6d333b7cf1fb463ac876a465e715d7",
+    "experiments/e2r/runs/gpu_train_runtime_v1/results.json": "sha256:b96c94fc846000c5ea5ae5e950c5ab1be003751bc8877f321867b661705aaa38",
+    "experiments/e2r/runs/gpu_train_runtime_v1/predictions.jsonl": "sha256:a54377105d8d9c2c1dad723367fe2098299a0d77d51523fdc893d964ca52f5a3",
+    "experiments/e2r/runs/gpu_train_runtime_v1/split.json": "sha256:88ae2a7fa56a515cdf57f5043e928a645cb760746a009b3e22755583e1bb1bae",
+    "experiments/e2r/runs/gpu_train_runtime_v1/model_seed42.pt": "sha256:84856f7a435301ebbec7f24676a00ceecd7a68b21e81bb2eecae64a84710077f",
+    "experiments/e2r/runs/gpu_train_runtime_v1/model_seed43.pt": "sha256:216437ca9bc5dd9e0e2ee73bdb61e0c57197453d507c45fc1bf74ec207c0e81d",
+    "experiments/e2r/runs/gpu_train_runtime_v1/model_seed44.pt": "sha256:18754bd4fb01be24369dc3739230369e904117301c25892190b1c7a342097cf4",
+    "experiments/e2r/runs/gpu_train_node_only_v1/results.json": "sha256:3f0320b35d135db5540cb99d43c7deeefa59148ef81e502c5ba32c6bc8e0b371",
+    "experiments/e2r/runs/gpu_train_node_only_v1/predictions.jsonl": "sha256:80c9a0b1b88474cef36ce25a3bc627b46b921d1cca6ddfa39e9794b63348ef15",
+    "experiments/e2r/runs/gpu_train_node_only_v1/split.json": "sha256:88ae2a7fa56a515cdf57f5043e928a645cb760746a009b3e22755583e1bb1bae",
+    "experiments/e2r/runs/gpu_train_node_only_v1/model_seed42.pt": "sha256:15cf1f9307a9f8645c94d3fc59e423930145ea9a0e452e83bd85ce2dbf76f922",
+    "experiments/e2r/runs/gpu_train_node_only_v1/model_seed43.pt": "sha256:dffd2ed91dee3a23b156bef64b827f9dbb2663ff1328ac7cf79a719c0ed08200",
+    "experiments/e2r/runs/gpu_train_node_only_v1/model_seed44.pt": "sha256:47b92122adddbbd2aee9ec2b37c56c7a73d128413a47c102a7aaac2cb64f8358",
+    "experiments/e2r/runs/m1_matrix_v2/analysis.json": "sha256:f6d8bd8706545beb6e6a9ae20f5ab653704ecd8810d57bbf8119cf98ffd0e7ec",
+    "experiments/e2r/runs/m1_matrix_v2/REPORT.md": "sha256:2b08337a51c394a9f16edd77df63e47e3b1ea0a151eaf9beaa2dbb8a6076033f",
+    "experiments/e2r/runs/m1_matrix_v3/analysis.json": "sha256:893857c8000f8014c9770c0c94923c3d20dbb7e861df5e0146f6856a1e9aae41",
+    "experiments/e2r/runs/m1_matrix_v3/REPORT.md": "sha256:0451c1b52ad84d9acd2cb49d754dfd832bcee40e8a26985db785304102bc0eeb",
+    "experiments/e2r/runs/modality_ablation_boutique_v1/results.json": "sha256:23557fff03ed9757957e512e42d5b20967e03fa4276729e01295dcb800661d13",
+    "experiments/e2r/runs/modality_ablation_boutique_v1/predictions.jsonl": "sha256:22549bce58c0298a39bc7be45e717e8bda7d85776d774c934c77fdfa5c5c9425",
+    "experiments/e2r/runs/modality_ablation_boutique_v1/REPORT.md": "sha256:6bf32a76c9aee10035a7d2b89f14a7a25816aaa824b8eb00e9e26c1d7053b7ef",
+    "experiments/e2r/runs/operation_ablation_v1/results.json": "sha256:905961def8a1282b99a3d4c44c60128ffccfbcb654ff02217aae556631225f1c",
+    "experiments/e2r/runs/operation_ablation_v1/predictions.jsonl": "sha256:16087fadbc50d076b91f66d5019edc5f0c64a2fd7d97d83a8a554876f5a26236",
+    "experiments/e2r/runs/input_audit_v1/summary.json": "sha256:719f5cc824aeaa2245c7b9f9e0c267769c60f4f959c08f607ac0852d31d41aa9",
+    "experiments/e2r/runs/input_audit_v1/cases.jsonl": "sha256:29ba5b63e2d0eed728f9597d1f429af421602297199dd74d6980d6f48b139ff0",
+    "experiments/e2r/runs/review_inventory_v1/inventory.json": "sha256:d85ff479053ce154715a6081d4a60c21d6833228cd122f2dcade640e73832eb7",
+    "experiments/e2r/runs/review_inventory_v1/cases.jsonl": "sha256:dd602ac3074e10a3bcd1c9abdda50b7f5da4a3f87d55f3807a04555c0e1540b0",
+    "experiments/e2r/runs/review_inventory_v1/table_audit.json": "sha256:484884ab6b71e13c7b29adc3378bac10f839b82de7527b284f78afbc0cc03bd6",
+    "experiments/e2r/runs/review_inventory_v2/inventory.json": "sha256:a6f0bb4b5f0c0b9695df04468dc9d746a02771a9fde32a21223b3ce05ccb4a4c",
+    "experiments/e2r/runs/review_inventory_v2/cases.jsonl": "sha256:dd602ac3074e10a3bcd1c9abdda50b7f5da4a3f87d55f3807a04555c0e1540b0",
+    "experiments/e2r/remote/reviewer_full/worker.log": "sha256:50fb4f007e4d659d1dcade22b291ea088ef014d9b0edc133fbdc76670c7a134c",
+    "experiments/e2r/remote/reviewer_full/full_reference.log": "sha256:199c347227a480de2a19d13b0515a50d42eb002522c0c4d630d61af0f4251059",
+    "experiments/e2r/remote/reviewer_full/full_runtime.log": "sha256:9c1356fb7629638e64937410c3774579ad5e24c502874605a439c848134e98d3",
+    "experiments/e2r/remote/reviewer_full/full_node_only.log": "sha256:5d6fcf2baf7672df69d95e37afdb3dacbe373ca4a10215fc11dec8c5d629f0a2"
+  },
+  "complete_hash_manifest": ".aris/traces/experiment-audit/20260926_m1_revision/audited_input_hashes.json",
+  "complete_hash_manifest_sha256": "sha256:ed7d281033a44301a721e4d6e406131bdfcf8f0d9c33a36da35e97b7facbff3d",
+  "trace_artifacts": [
+    "verify_matrix.py",
+    "verification.json",
+    "verification.log",
+    "verify_runtime_details.py",
+    "runtime_details.json",
+    "runtime_details.log",
+    "ablation_verify.py",
+    "ablation_verification.json",
+    "ablation_verification.log",
+    "v3_reporting_verification.json"
+  ]
+}

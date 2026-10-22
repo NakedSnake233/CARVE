@@ -1,0 +1,25 @@
+# Target: Linux x86_64, CPython3.10, NVIDIA CUDA12.8 PyTorch wheel.
+# Exact resolved wheel versions are exported to requirements.lock.txt.
+torch==2.7.1+cu128
+numpy
+pandas
+networkx
+PyYAML
+pytest
+matplotlib
+requests
+httpx
+jsonschema
+kubernetes
+openai
+tenacity
+rich
+pyarrow
+python-dateutil
+pip
+setuptools
+wheel
+# Explicit target-only dependencies: pip cross-download evaluates some markers on the host.
+async-timeout>=4.0,<6.0
+exceptiongroup>=1.0.2
+tomli>=1

@@ -1,0 +1,89 @@
+formal verified 2916 rows
+pilot verified 216 rows
+{
+  "checks": 29075,
+  "formal_rows": 2916,
+  "combined_rows": 3132,
+  "proxy": {
+    "source_incidents": 116,
+    "pairs": 57,
+    "compositions": 114,
+    "rows": 342,
+    "leftovers": [
+      "case00597",
+      "case00539"
+    ],
+    "phase_diagnostics_total": {
+      "imported_pods": 636,
+      "preserved_base_root_pods_for_cross_service_endpoints": 2,
+      "remapped_endpoint_ips": 504,
+      "ambiguous_ip_owners": 0,
+      "dangling_endpoint_ips": 0,
+      "duplicate_relation_rows_collapsed": 1606
+    },
+    "stable_cross_phase_imported_pods": 227,
+    "summary": {
+      "42:left_base": {
+        "n": 57,
+        "Recall@1": 0.4824561403508772,
+        "Recall@2": 0.8157894736842105,
+        "Recall@5": 0.9298245614035088,
+        "ExactSet@2": 0.631578947368421,
+        "MAP": 0.8862647566594934
+      },
+      "42:right_base": {
+        "n": 57,
+        "Recall@1": 0.4824561403508772,
+        "Recall@2": 0.7894736842105263,
+        "Recall@5": 0.9035087719298246,
+        "ExactSet@2": 0.5789473684210527,
+        "MAP": 0.8728236412446939
+      },
+      "43:left_base": {
+        "n": 57,
+        "Recall@1": 0.4824561403508772,
+        "Recall@2": 0.8070175438596491,
+        "Recall@5": 0.9385964912280702,
+        "ExactSet@2": 0.6140350877192983,
+        "MAP": 0.8852204792994267
+      },
+      "43:right_base": {
+        "n": 57,
+        "Recall@1": 0.4824561403508772,
+        "Recall@2": 0.8070175438596491,
+        "Recall@5": 0.9210526315789473,
+        "ExactSet@2": 0.6140350877192983,
+        "MAP": 0.8804259804259804
+      },
+      "44:left_base": {
+        "n": 57,
+        "Recall@1": 0.4824561403508772,
+        "Recall@2": 0.8245614035087719,
+        "Recall@5": 0.9298245614035088,
+        "ExactSet@2": 0.6491228070175439,
+        "MAP": 0.8909013481381902
+      },
+      "44:right_base": {
+        "n": 57,
+        "Recall@1": 0.4824561403508772,
+        "Recall@2": 0.8070175438596491,
+        "Recall@5": 0.9210526315789473,
+        "ExactSet@2": 0.6140350877192983,
+        "MAP": 0.8817208843524633
+      }
+    }
+  },
+  "cpu_replay": {
+    "torch": "2.14.0+cpu",
+    "device": "cpu",
+    "ranking_differences": 681,
+    "by_component": {
+      "formal": 627,
+      "pilot": 54
+    },
+    "true_rank_differences": 102,
+    "ac_differences": 0,
+    "proxy_hits2_differences": 0,
+    "max_saved_order_score_inversion": 3.5762786865234375e-07
+  }
+}

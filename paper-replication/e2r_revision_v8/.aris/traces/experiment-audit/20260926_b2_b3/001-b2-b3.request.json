@@ -1,0 +1,34 @@
+{
+  "call_number": 1,
+  "purpose": "b2-b3-integrity-review",
+  "timestamp": "2026-09-26T14:20:59.627560+00:00",
+  "timestamp_kind": "trace_save_time",
+  "tool": "spawn_agent",
+  "model": "gpt-6-astra",
+  "reasoning_effort": "ultra",
+  "fork_turns": "none",
+  "agent_id": "/root/b2_b3_result_audit",
+  "prompt": "You are the fresh independent experiment-audit reviewer for E2R B2/B3 completed artifacts in ${PROJECT_ROOT}. Follow ${LOCAL_HOME}/.codex/skills/experiment-audit/SKILL.md exactly. Audit, do not edit implementation/results and do not use network/API/SSH/GPU/Kubernetes. Scope: (1) Qwen formal campaign experiments/e2r/runs/m2_qwen38_formal_v1, frozen GPU scores m2_qwen38_formal_scores_v1, analysis m2_qwen38_formal_analysis_v1; include pilot v1/v2 only for expenditure/accounting if needed. Verify 648 journal identities, failures retained, frozen inputs/labels separation, checkpoint hashes, every metric/paired comparison/usage/latency and claim ceiling. (2) six generalization_*_v1 runs plus generalization_analysis_v1; verify splits, checkpoints/prediction identities, recomputed metrics, exact protocol and no leakage. (3) scaling_cpu_v1, scaling_gpu_v1, scaling_analysis_v1; verify raw-to-summary, synthetic-only labeling, timing arithmetic and hardware claims. (4) multi_root_proxy_v1 plus run_multi_root_proxy.py; verify pair coverage/disjointness, all 114 compositions, ranking metrics, GT-conditioned construction disclosure, stable remapping/no dangling/ambiguous identities, relation aggregation, time policy and simulation-only claim. Run deterministic/CPU forensic scripts as needed. Save reviewer-authored EXPERIMENT_AUDIT.md and JSON under experiments/e2r/runs/b2_b3_audit_v1 plus trace files under .aris/traces/experiment-audit/20260926_b2_b3. Report PASS/WARN/BLOCK per component and one warranted narrow statement. Same-family/provisional disclosure required.",
+  "followup_messages_verbatim": [
+    "New immutable combined 116-case view now exists: experiments/e2r/runs/m2_qwen38_combined_campaign_v1 and m2_qwen38_combined_scores_v1, exact concatenation of disjoint 8-case v2 pilot +108 formal via scripts/e2r/combine_m2_campaigns.py; no replay/recompute. I will create combined analysis next. Please include combination integrity and use combined metrics for final B2 claim, while retaining shard and earlier failed-v1 expenditure accounting.",
+    "Corrected combined score provenance: removed the misleading global checkpoint_sha256 copied from formal. results.json and combine script now record checkpoint_provenance_by_shard, with pilot declared hashes=null and formal hashes explicit, plus the historical-attestation limitation. Please behaviorally replay pilot as planned and keep this WARN.",
+    "Immutable corrected accounting artifacts ready: m2_qwen38_combined_analysis_v2 (cache_read=8,013,312; normalized total=2,265,227; cache-inclusive=10,278,539), m2_qwen38_formal_analysis_v2, and m2_expenditure_v2 (all 705 attempts; normalized=2,315,241; cache_read=8,035,840; cache-inclusive=10,351,081; cost null). v1 preserved/superseded. Please verify and cite v2.",
+    "Added immutable m2_expenditure_v3: DeepSeek missing-usage rows now show unknown/null rather than zero; totals renamed cache_inclusive_reported_volume and explicitly sum reported rows only. Grand reported volume remains 10,351,081. Please use v3 as final expenditure artifact; v1/v2 preserved."
+  ],
+  "files_referenced": [
+    "experiments/e2r/runs/m2_qwen38_formal_v1",
+    "experiments/e2r/runs/m2_qwen38_formal_scores_v1",
+    "experiments/e2r/runs/m2_qwen38_formal_analysis_v1",
+    "experiments/e2r/runs/m2_qwen38_formal_analysis_v2",
+    "experiments/e2r/runs/m2_qwen38_combined_campaign_v1",
+    "experiments/e2r/runs/m2_qwen38_combined_scores_v1",
+    "experiments/e2r/runs/m2_qwen38_combined_analysis_v2",
+    "experiments/e2r/runs/m2_expenditure_v3",
+    "experiments/e2r/runs/generalization_*_v1",
+    "experiments/e2r/runs/scaling_cpu_v1",
+    "experiments/e2r/runs/scaling_gpu_v1",
+    "experiments/e2r/runs/scaling_analysis_v1",
+    "experiments/e2r/runs/multi_root_proxy_v1",
+    "scripts/e2r/run_multi_root_proxy.py"
+  ]
+}

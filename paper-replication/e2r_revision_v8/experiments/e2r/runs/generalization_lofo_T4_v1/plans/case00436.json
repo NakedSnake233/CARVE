@@ -1,0 +1,180 @@
+{
+  "catalog": [
+    {
+      "id": "op0000",
+      "group": "edge_ops",
+      "operation": {
+        "op": "REMOVE_EDGE",
+        "source": "shippingservice",
+        "target": "pod:shippingservice-6c84c75b8d-jnjqf",
+        "evidence": [
+          "topology_diff:shippingservice->pod:shippingservice-6c84c75b8d-jnjqf"
+        ]
+      },
+      "evidence_id": "topology_diff:shippingservice->pod:shippingservice-6c84c75b8d-jnjqf",
+      "requires": []
+    },
+    {
+      "id": "op0001",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "emailservice",
+        "target": "shippingservice",
+        "edge_type": "dependency",
+        "weight": 1.0,
+        "evidence": [
+          "during:emailservice->shippingservice"
+        ]
+      },
+      "evidence_id": "during:emailservice->shippingservice",
+      "requires": []
+    },
+    {
+      "id": "op0002",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "frontend",
+        "target": "emailservice",
+        "edge_type": "dependency",
+        "weight": 1.0,
+        "evidence": [
+          "during:frontend->emailservice"
+        ]
+      },
+      "evidence_id": "during:frontend->emailservice",
+      "requires": []
+    },
+    {
+      "id": "op0003",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "shippingservice",
+        "target": "pod:emailservice-65d48c6c8c-rhggj",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "evidence": [
+          "during:shippingservice->pod:emailservice-65d48c6c8c-rhggj"
+        ]
+      },
+      "evidence_id": "during:shippingservice->pod:emailservice-65d48c6c8c-rhggj",
+      "requires": []
+    },
+    {
+      "id": "op0004",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_TRACE_MISMATCH_EDGE",
+        "source": "shippingservice",
+        "target": "emailservice",
+        "edge_type": "endpoint_mismatch",
+        "weight": 1.0,
+        "evidence": [
+          "endpoint_owner:shippingservice:10.244.1.108"
+        ]
+      },
+      "evidence_id": "endpoint_owner:shippingservice:10.244.1.108",
+      "requires": []
+    }
+  ],
+  "plan": {
+    "experiment_id": "case00436",
+    "change_type": "observation_supported_updates",
+    "confidence": 0.0,
+    "causal_role": "not_inferred",
+    "node_ops": [],
+    "edge_ops": [
+      {
+        "op": "REMOVE_EDGE",
+        "source": "shippingservice",
+        "target": "pod:shippingservice-6c84c75b8d-jnjqf",
+        "old_source": "shippingservice",
+        "old_target": "pod:shippingservice-6c84c75b8d-jnjqf",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": null,
+        "attrs": {},
+        "evidence": [
+          "topology_diff:shippingservice->pod:shippingservice-6c84c75b8d-jnjqf"
+        ]
+      },
+      {
+        "op": "ADD_EDGE",
+        "source": "emailservice",
+        "target": "shippingservice",
+        "old_source": "emailservice",
+        "old_target": "shippingservice",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:emailservice->shippingservice"
+        ]
+      },
+      {
+        "op": "ADD_EDGE",
+        "source": "frontend",
+        "target": "emailservice",
+        "old_source": "frontend",
+        "old_target": "emailservice",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:frontend->emailservice"
+        ]
+      },
+      {
+        "op": "ADD_EDGE",
+        "source": "shippingservice",
+        "target": "pod:emailservice-65d48c6c8c-rhggj",
+        "old_source": "shippingservice",
+        "old_target": "pod:emailservice-65d48c6c8c-rhggj",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:shippingservice->pod:emailservice-65d48c6c8c-rhggj"
+        ]
+      },
+      {
+        "op": "ADD_TRACE_MISMATCH_EDGE",
+        "source": "shippingservice",
+        "target": "emailservice",
+        "old_source": "shippingservice",
+        "old_target": "emailservice",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "endpoint_mismatch",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "endpoint_owner:shippingservice:10.244.1.108"
+        ]
+      }
+    ],
+    "weight_ops": [],
+    "state_transfer": {},
+    "evidence": [
+      "topology_diff:shippingservice->pod:shippingservice-6c84c75b8d-jnjqf",
+      "during:emailservice->shippingservice",
+      "during:frontend->emailservice",
+      "during:shippingservice->pod:emailservice-65d48c6c8c-rhggj",
+      "endpoint_owner:shippingservice:10.244.1.108"
+    ]
+  }
+}

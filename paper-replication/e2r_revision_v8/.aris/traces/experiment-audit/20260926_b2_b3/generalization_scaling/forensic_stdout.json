@@ -1,0 +1,167 @@
+{
+  "checks_failed": [],
+  "generalization": {
+    "lofo_T1": {
+      "split_counts": {
+        "train": 425,
+        "val": 87,
+        "test": 29
+      },
+      "predictions": 348,
+      "patch_mean": {
+        "AC@1": 0.3448275862068965,
+        "AC@3": 0.5862068965517242,
+        "AC@5": 0.6551724137931034,
+        "MRR": 0.5093773683213338
+      },
+      "patch_tensor_train_test_overlap": {
+        "shared_input_signatures": 0,
+        "left_cases": 0,
+        "right_cases": 0
+      },
+      "patch_tensor_train_validation_overlap": {
+        "shared_input_signatures": 0,
+        "left_cases": 0,
+        "right_cases": 0
+      }
+    },
+    "lofo_T2": {
+      "split_counts": {
+        "train": 460,
+        "val": 94,
+        "test": 22
+      },
+      "predictions": 264,
+      "patch_mean": {
+        "AC@1": 0.48484848484848486,
+        "AC@3": 0.7878787878787878,
+        "AC@5": 0.8939393939393939,
+        "MRR": 0.6598484848484849
+      },
+      "patch_tensor_train_test_overlap": {
+        "shared_input_signatures": 0,
+        "left_cases": 0,
+        "right_cases": 0
+      },
+      "patch_tensor_train_validation_overlap": {
+        "shared_input_signatures": 0,
+        "left_cases": 0,
+        "right_cases": 0
+      }
+    },
+    "lofo_T3": {
+      "split_counts": {
+        "train": 425,
+        "val": 87,
+        "test": 29
+      },
+      "predictions": 348,
+      "patch_mean": {
+        "AC@1": 0.14942528735632182,
+        "AC@3": 0.471264367816092,
+        "AC@5": 0.7011494252873564,
+        "MRR": 0.3630552604183436
+      },
+      "patch_tensor_train_test_overlap": {
+        "shared_input_signatures": 0,
+        "left_cases": 0,
+        "right_cases": 0
+      },
+      "patch_tensor_train_validation_overlap": {
+        "shared_input_signatures": 0,
+        "left_cases": 0,
+        "right_cases": 0
+      }
+    },
+    "lofo_T4": {
+      "split_counts": {
+        "train": 388,
+        "val": 80,
+        "test": 36
+      },
+      "predictions": 432,
+      "patch_mean": {
+        "AC@1": 0.1388888888888889,
+        "AC@3": 0.3611111111111111,
+        "AC@5": 0.6759259259259259,
+        "MRR": 0.34629629629629627
+      },
+      "patch_tensor_train_test_overlap": {
+        "shared_input_signatures": 0,
+        "left_cases": 0,
+        "right_cases": 0
+      },
+      "patch_tensor_train_validation_overlap": {
+        "shared_input_signatures": 0,
+        "left_cases": 0,
+        "right_cases": 0
+      }
+    },
+    "boutique_to_trainticket": {
+      "split_counts": {
+        "train": 282,
+        "val": 59,
+        "test": 57
+      },
+      "predictions": 684,
+      "patch_mean": {
+        "AC@1": 0.4152046783625731,
+        "AC@3": 0.5614035087719298,
+        "AC@5": 0.6140350877192983,
+        "MRR": 0.5005614763466291
+      },
+      "patch_tensor_train_test_overlap": {
+        "shared_input_signatures": 0,
+        "left_cases": 0,
+        "right_cases": 0
+      },
+      "patch_tensor_train_validation_overlap": {
+        "shared_input_signatures": 0,
+        "left_cases": 0,
+        "right_cases": 0
+      }
+    },
+    "trainticket_to_boutique": {
+      "split_counts": {
+        "train": 284,
+        "val": 57,
+        "test": 59
+      },
+      "predictions": 708,
+      "patch_mean": {
+        "AC@1": 0.3050847457627119,
+        "AC@3": 0.3898305084745763,
+        "AC@5": 0.6440677966101694,
+        "MRR": 0.4446125907990315
+      },
+      "patch_tensor_train_test_overlap": {
+        "shared_input_signatures": 0,
+        "left_cases": 0,
+        "right_cases": 0
+      },
+      "patch_tensor_train_validation_overlap": {
+        "shared_input_signatures": 0,
+        "left_cases": 0,
+        "right_cases": 0
+      }
+    }
+  },
+  "replay_differences": 499,
+  "scaling": {
+    "cpu": {
+      "raw_rows": 200,
+      "conditions": 20,
+      "device": "cpu",
+      "torch": "2.14.0+cpu",
+      "peak_allocated_bytes": null
+    },
+    "gpu": {
+      "raw_rows": 200,
+      "conditions": 20,
+      "device": "cuda:0",
+      "torch": "2.11.0+cu130",
+      "peak_allocated_bytes": 13611008
+    }
+  },
+  "hash_count": 4649
+}

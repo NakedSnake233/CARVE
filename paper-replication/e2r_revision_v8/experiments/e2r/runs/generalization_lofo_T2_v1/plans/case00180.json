@@ -1,0 +1,141 @@
+{
+  "catalog": [
+    {
+      "id": "op0000",
+      "group": "edge_ops",
+      "operation": {
+        "op": "REMOVE_EDGE",
+        "source": "ts-order-other-service",
+        "target": "pod:ts-order-other-service-67cf586847-7z5dm",
+        "evidence": [
+          "topology_diff:ts-order-other-service->pod:ts-order-other-service-67cf586847-7z5dm"
+        ]
+      },
+      "evidence_id": "topology_diff:ts-order-other-service->pod:ts-order-other-service-67cf586847-7z5dm",
+      "requires": []
+    },
+    {
+      "id": "op0001",
+      "group": "edge_ops",
+      "operation": {
+        "op": "REMOVE_EDGE",
+        "source": "ts-order-other-service",
+        "target": "pod:ts-order-other-service-67cf586847-9h7rw",
+        "evidence": [
+          "topology_diff:ts-order-other-service->pod:ts-order-other-service-67cf586847-9h7rw"
+        ]
+      },
+      "evidence_id": "topology_diff:ts-order-other-service->pod:ts-order-other-service-67cf586847-9h7rw",
+      "requires": []
+    },
+    {
+      "id": "op0002",
+      "group": "edge_ops",
+      "operation": {
+        "op": "REMOVE_EDGE",
+        "source": "ts-order-other-service",
+        "target": "pod:ts-order-other-service-67cf586847-n9xrr",
+        "evidence": [
+          "topology_diff:ts-order-other-service->pod:ts-order-other-service-67cf586847-n9xrr"
+        ]
+      },
+      "evidence_id": "topology_diff:ts-order-other-service->pod:ts-order-other-service-67cf586847-n9xrr",
+      "requires": []
+    },
+    {
+      "id": "op0003",
+      "group": "edge_ops",
+      "operation": {
+        "op": "REMOVE_EDGE",
+        "source": "ts-order-other-service",
+        "target": "pod:ts-order-other-service-67cf586847-nwhhl",
+        "evidence": [
+          "topology_diff:ts-order-other-service->pod:ts-order-other-service-67cf586847-nwhhl"
+        ]
+      },
+      "evidence_id": "topology_diff:ts-order-other-service->pod:ts-order-other-service-67cf586847-nwhhl",
+      "requires": []
+    }
+  ],
+  "plan": {
+    "experiment_id": "case00180",
+    "change_type": "observation_supported_updates",
+    "confidence": 0.0,
+    "causal_role": "not_inferred",
+    "node_ops": [],
+    "edge_ops": [
+      {
+        "op": "REMOVE_EDGE",
+        "source": "ts-order-other-service",
+        "target": "pod:ts-order-other-service-67cf586847-7z5dm",
+        "old_source": "ts-order-other-service",
+        "old_target": "pod:ts-order-other-service-67cf586847-7z5dm",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": null,
+        "attrs": {},
+        "evidence": [
+          "topology_diff:ts-order-other-service->pod:ts-order-other-service-67cf586847-7z5dm"
+        ]
+      },
+      {
+        "op": "REMOVE_EDGE",
+        "source": "ts-order-other-service",
+        "target": "pod:ts-order-other-service-67cf586847-9h7rw",
+        "old_source": "ts-order-other-service",
+        "old_target": "pod:ts-order-other-service-67cf586847-9h7rw",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": null,
+        "attrs": {},
+        "evidence": [
+          "topology_diff:ts-order-other-service->pod:ts-order-other-service-67cf586847-9h7rw"
+        ]
+      },
+      {
+        "op": "REMOVE_EDGE",
+        "source": "ts-order-other-service",
+        "target": "pod:ts-order-other-service-67cf586847-n9xrr",
+        "old_source": "ts-order-other-service",
+        "old_target": "pod:ts-order-other-service-67cf586847-n9xrr",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": null,
+        "attrs": {},
+        "evidence": [
+          "topology_diff:ts-order-other-service->pod:ts-order-other-service-67cf586847-n9xrr"
+        ]
+      },
+      {
+        "op": "REMOVE_EDGE",
+        "source": "ts-order-other-service",
+        "target": "pod:ts-order-other-service-67cf586847-nwhhl",
+        "old_source": "ts-order-other-service",
+        "old_target": "pod:ts-order-other-service-67cf586847-nwhhl",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": null,
+        "attrs": {},
+        "evidence": [
+          "topology_diff:ts-order-other-service->pod:ts-order-other-service-67cf586847-nwhhl"
+        ]
+      }
+    ],
+    "weight_ops": [],
+    "state_transfer": {},
+    "evidence": [
+      "topology_diff:ts-order-other-service->pod:ts-order-other-service-67cf586847-7z5dm",
+      "topology_diff:ts-order-other-service->pod:ts-order-other-service-67cf586847-9h7rw",
+      "topology_diff:ts-order-other-service->pod:ts-order-other-service-67cf586847-n9xrr",
+      "topology_diff:ts-order-other-service->pod:ts-order-other-service-67cf586847-nwhhl"
+    ]
+  }
+}

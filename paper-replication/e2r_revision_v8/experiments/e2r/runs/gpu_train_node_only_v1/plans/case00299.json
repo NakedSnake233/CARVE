@@ -1,0 +1,93 @@
+{
+  "catalog": [
+    {
+      "id": "op0000",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-order-service-5755fc9ccd-md4xq",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-order-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-order-service-5755fc9ccd-md4xq"
+        ]
+      },
+      "evidence_id": "during:pod:ts-order-service-5755fc9ccd-md4xq",
+      "requires": []
+    },
+    {
+      "id": "op0001",
+      "group": "node_ops",
+      "operation": {
+        "op": "ALIGN_NODE",
+        "old_node": "pod:ts-order-service-5755fc9ccd-zjk87",
+        "new_node": "pod:ts-order-service-5755fc9ccd-md4xq",
+        "service": "ts-order-service",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-order-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "identity_change:ts-order-service"
+        ]
+      },
+      "evidence_id": "identity_change:ts-order-service",
+      "requires": []
+    }
+  ],
+  "plan": {
+    "experiment_id": "case00299",
+    "change_type": "observation_supported_updates",
+    "confidence": 0.0,
+    "causal_role": "not_inferred",
+    "node_ops": [
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-order-service-5755fc9ccd-md4xq",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-order-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-order-service-5755fc9ccd-md4xq"
+        ]
+      },
+      {
+        "op": "ALIGN_NODE",
+        "node_id": "",
+        "old_node": "pod:ts-order-service-5755fc9ccd-zjk87",
+        "new_node": "pod:ts-order-service-5755fc9ccd-md4xq",
+        "parent": "",
+        "children": [],
+        "service": "ts-order-service",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-order-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "identity_change:ts-order-service"
+        ]
+      }
+    ],
+    "edge_ops": [],
+    "weight_ops": [],
+    "state_transfer": {},
+    "evidence": [
+      "during:pod:ts-order-service-5755fc9ccd-md4xq",
+      "identity_change:ts-order-service"
+    ]
+  }
+}

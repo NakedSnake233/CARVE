@@ -1,0 +1,522 @@
+{
+  "seed": 20260926,
+  "pairs": [
+    {
+      "pair_id": "pair000",
+      "app": "boutique",
+      "left_case_id": "case00004",
+      "right_case_id": "case00227",
+      "left_scenario": "T1",
+      "right_scenario": "T2",
+      "root_count": 2
+    },
+    {
+      "pair_id": "pair001",
+      "app": "boutique",
+      "left_case_id": "case00005",
+      "right_case_id": "case00412",
+      "left_scenario": "T1",
+      "right_scenario": "T3",
+      "root_count": 2
+    },
+    {
+      "pair_id": "pair002",
+      "app": "boutique",
+      "left_case_id": "case00012",
+      "right_case_id": "case00366",
+      "left_scenario": "T1",
+      "right_scenario": "T3",
+      "root_count": 2
+    },
+    {
+      "pair_id": "pair003",
+      "app": "boutique",
+      "left_case_id": "case00014",
+      "right_case_id": "case00556",
+      "left_scenario": "T1",
+      "right_scenario": "T4",
+      "root_count": 2
+    },
+    {
+      "pair_id": "pair004",
+      "app": "boutique",
+      "left_case_id": "case00015",
+      "right_case_id": "case00576",
+      "left_scenario": "T1",
+      "right_scenario": "T4",
+      "root_count": 2
+    },
+    {
+      "pair_id": "pair005",
+      "app": "boutique",
+      "left_case_id": "case00070",
+      "right_case_id": "case00570",
+      "left_scenario": "T1",
+      "right_scenario": "T4",
+      "root_count": 2
+    },
+    {
+      "pair_id": "pair006",
+      "app": "boutique",
+      "left_case_id": "case00076",
+      "right_case_id": "case00582",
+      "left_scenario": "T1",
+      "right_scenario": "T4",
+      "root_count": 2
+    },
+    {
+      "pair_id": "pair007",
+      "app": "boutique",
+      "left_case_id": "case00087",
+      "right_case_id": "case00272",
+      "left_scenario": "T1",
+      "right_scenario": "T2",
+      "root_count": 2
+    },
+    {
+      "pair_id": "pair008",
+      "app": "boutique",
+      "left_case_id": "case00095",
+      "right_case_id": "case00610",
+      "left_scenario": "T1",
+      "right_scenario": "T4",
+      "root_count": 2
+    },
+    {
+      "pair_id": "pair009",
+      "app": "boutique",
+      "left_case_id": "case00217",
+      "right_case_id": "case00659",
+      "left_scenario": "T2",
+      "right_scenario": "T4",
+      "root_count": 2
+    },
+    {
+      "pair_id": "pair010",
+      "app": "boutique",
+      "left_case_id": "case00233",
+      "right_case_id": "case00029",
+      "left_scenario": "T2",
+      "right_scenario": "T1",
+      "root_count": 2
+    },
+    {
+      "pair_id": "pair011",
+      "app": "boutique",
+      "left_case_id": "case00263",
+      "right_case_id": "case00380",
+      "left_scenario": "T2",
+      "right_scenario": "T3",
+      "root_count": 2
+    },
+    {
+      "pair_id": "pair012",
+      "app": "boutique",
+      "left_case_id": "case00357",
+      "right_case_id": "case00082",
+      "left_scenario": "T3",
+      "right_scenario": "T1",
+      "root_count": 2
+    },
+    {
+      "pair_id": "pair013",
+      "app": "boutique",
+      "left_case_id": "case00358",
+      "right_case_id": "case00218",
+      "left_scenario": "T3",
+      "right_scenario": "T2",
+      "root_count": 2
+    },
+    {
+      "pair_id": "pair014",
+      "app": "boutique",
+      "left_case_id": "case00360",
+      "right_case_id": "case00240",
+      "left_scenario": "T3",
+      "right_scenario": "T2",
+      "root_count": 2
+    },
+    {
+      "pair_id": "pair015",
+      "app": "boutique",
+      "left_case_id": "case00410",
+      "right_case_id": "case00018",
+      "left_scenario": "T3",
+      "right_scenario": "T1",
+      "root_count": 2
+    },
+    {
+      "pair_id": "pair016",
+      "app": "boutique",
+      "left_case_id": "case00418",
+      "right_case_id": "case00673",
+      "left_scenario": "T3",
+      "right_scenario": "T4",
+      "root_count": 2
+    },
+    {
+      "pair_id": "pair017",
+      "app": "boutique",
+      "left_case_id": "case00420",
+      "right_case_id": "case00549",
+      "left_scenario": "T3",
+      "right_scenario": "T4",
+      "root_count": 2
+    },
+    {
+      "pair_id": "pair018",
+      "app": "boutique",
+      "left_case_id": "case00434",
+      "right_case_id": "case00258",
+      "left_scenario": "T3",
+      "right_scenario": "T2",
+      "root_count": 2
+    },
+    {
+      "pair_id": "pair019",
+      "app": "boutique",
+      "left_case_id": "case00440",
+      "right_case_id": "case00598",
+      "left_scenario": "T3",
+      "right_scenario": "T4",
+      "root_count": 2
+    },
+    {
+      "pair_id": "pair020",
+      "app": "boutique",
+      "left_case_id": "case00443",
+      "right_case_id": "case00250",
+      "left_scenario": "T3",
+      "right_scenario": "T2",
+      "root_count": 2
+    },
+    {
+      "pair_id": "pair021",
+      "app": "boutique",
+      "left_case_id": "case00446",
+      "right_case_id": "case00032",
+      "left_scenario": "T3",
+      "right_scenario": "T1",
+      "root_count": 2
+    },
+    {
+      "pair_id": "pair022",
+      "app": "boutique",
+      "left_case_id": "case00585",
+      "right_case_id": "case00231",
+      "left_scenario": "T4",
+      "right_scenario": "T2",
+      "root_count": 2
+    },
+    {
+      "pair_id": "pair023",
+      "app": "boutique",
+      "left_case_id": "case00600",
+      "right_case_id": "case00371",
+      "left_scenario": "T4",
+      "right_scenario": "T3",
+      "root_count": 2
+    },
+    {
+      "pair_id": "pair024",
+      "app": "boutique",
+      "left_case_id": "case00601",
+      "right_case_id": "case00422",
+      "left_scenario": "T4",
+      "right_scenario": "T3",
+      "root_count": 2
+    },
+    {
+      "pair_id": "pair025",
+      "app": "boutique",
+      "left_case_id": "case00607",
+      "right_case_id": "case00274",
+      "left_scenario": "T4",
+      "right_scenario": "T2",
+      "root_count": 2
+    },
+    {
+      "pair_id": "pair026",
+      "app": "boutique",
+      "left_case_id": "case00611",
+      "right_case_id": "case00664",
+      "left_scenario": "T4",
+      "right_scenario": "T4",
+      "root_count": 2
+    },
+    {
+      "pair_id": "pair027",
+      "app": "boutique",
+      "left_case_id": "case00649",
+      "right_case_id": "case00036",
+      "left_scenario": "T4",
+      "right_scenario": "T1",
+      "root_count": 2
+    },
+    {
+      "pair_id": "pair028",
+      "app": "boutique",
+      "left_case_id": "case00668",
+      "right_case_id": "case00055",
+      "left_scenario": "T4",
+      "right_scenario": "T1",
+      "root_count": 2
+    },
+    {
+      "pair_id": "pair029",
+      "app": "trainticket",
+      "left_case_id": "case00102",
+      "right_case_id": "case00321",
+      "left_scenario": "T1",
+      "right_scenario": "T2",
+      "root_count": 2
+    },
+    {
+      "pair_id": "pair030",
+      "app": "trainticket",
+      "left_case_id": "case00120",
+      "right_case_id": "case00315",
+      "left_scenario": "T1",
+      "right_scenario": "T2",
+      "root_count": 2
+    },
+    {
+      "pair_id": "pair031",
+      "app": "trainticket",
+      "left_case_id": "case00155",
+      "right_case_id": "case00300",
+      "left_scenario": "T1",
+      "right_scenario": "T2",
+      "root_count": 2
+    },
+    {
+      "pair_id": "pair032",
+      "app": "trainticket",
+      "left_case_id": "case00170",
+      "right_case_id": "case00784",
+      "left_scenario": "T1",
+      "right_scenario": "T4",
+      "root_count": 2
+    },
+    {
+      "pair_id": "pair033",
+      "app": "trainticket",
+      "left_case_id": "case00171",
+      "right_case_id": "case00796",
+      "left_scenario": "T1",
+      "right_scenario": "T4",
+      "root_count": 2
+    },
+    {
+      "pair_id": "pair034",
+      "app": "trainticket",
+      "left_case_id": "case00172",
+      "right_case_id": "case00677",
+      "left_scenario": "T1",
+      "right_scenario": "T4",
+      "root_count": 2
+    },
+    {
+      "pair_id": "pair035",
+      "app": "trainticket",
+      "left_case_id": "case00191",
+      "right_case_id": "case00463",
+      "left_scenario": "T1",
+      "right_scenario": "T3",
+      "root_count": 2
+    },
+    {
+      "pair_id": "pair036",
+      "app": "trainticket",
+      "left_case_id": "case00199",
+      "right_case_id": "case00504",
+      "left_scenario": "T1",
+      "right_scenario": "T3",
+      "root_count": 2
+    },
+    {
+      "pair_id": "pair037",
+      "app": "trainticket",
+      "left_case_id": "case00283",
+      "right_case_id": "case00110",
+      "left_scenario": "T2",
+      "right_scenario": "T1",
+      "root_count": 2
+    },
+    {
+      "pair_id": "pair038",
+      "app": "trainticket",
+      "left_case_id": "case00290",
+      "right_case_id": "case00758",
+      "left_scenario": "T2",
+      "right_scenario": "T4",
+      "root_count": 2
+    },
+    {
+      "pair_id": "pair039",
+      "app": "trainticket",
+      "left_case_id": "case00313",
+      "right_case_id": "case00724",
+      "left_scenario": "T2",
+      "right_scenario": "T4",
+      "root_count": 2
+    },
+    {
+      "pair_id": "pair040",
+      "app": "trainticket",
+      "left_case_id": "case00317",
+      "right_case_id": "case00790",
+      "left_scenario": "T2",
+      "right_scenario": "T4",
+      "root_count": 2
+    },
+    {
+      "pair_id": "pair041",
+      "app": "trainticket",
+      "left_case_id": "case00341",
+      "right_case_id": "case00753",
+      "left_scenario": "T2",
+      "right_scenario": "T4",
+      "root_count": 2
+    },
+    {
+      "pair_id": "pair042",
+      "app": "trainticket",
+      "left_case_id": "case00343",
+      "right_case_id": "case00733",
+      "left_scenario": "T2",
+      "right_scenario": "T4",
+      "root_count": 2
+    },
+    {
+      "pair_id": "pair043",
+      "app": "trainticket",
+      "left_case_id": "case00450",
+      "right_case_id": "case00691",
+      "left_scenario": "T3",
+      "right_scenario": "T4",
+      "root_count": 2
+    },
+    {
+      "pair_id": "pair044",
+      "app": "trainticket",
+      "left_case_id": "case00472",
+      "right_case_id": "case00746",
+      "left_scenario": "T3",
+      "right_scenario": "T4",
+      "root_count": 2
+    },
+    {
+      "pair_id": "pair045",
+      "app": "trainticket",
+      "left_case_id": "case00478",
+      "right_case_id": "case00684",
+      "left_scenario": "T3",
+      "right_scenario": "T4",
+      "root_count": 2
+    },
+    {
+      "pair_id": "pair046",
+      "app": "trainticket",
+      "left_case_id": "case00499",
+      "right_case_id": "case00189",
+      "left_scenario": "T3",
+      "right_scenario": "T1",
+      "root_count": 2
+    },
+    {
+      "pair_id": "pair047",
+      "app": "trainticket",
+      "left_case_id": "case00501",
+      "right_case_id": "case00707",
+      "left_scenario": "T3",
+      "right_scenario": "T4",
+      "root_count": 2
+    },
+    {
+      "pair_id": "pair048",
+      "app": "trainticket",
+      "left_case_id": "case00513",
+      "right_case_id": "case00680",
+      "left_scenario": "T3",
+      "right_scenario": "T4",
+      "root_count": 2
+    },
+    {
+      "pair_id": "pair049",
+      "app": "trainticket",
+      "left_case_id": "case00533",
+      "right_case_id": "case00481",
+      "left_scenario": "T3",
+      "right_scenario": "T3",
+      "root_count": 2
+    },
+    {
+      "pair_id": "pair050",
+      "app": "trainticket",
+      "left_case_id": "case00538",
+      "right_case_id": "case00275",
+      "left_scenario": "T3",
+      "right_scenario": "T2",
+      "root_count": 2
+    },
+    {
+      "pair_id": "pair051",
+      "app": "trainticket",
+      "left_case_id": "case00541",
+      "right_case_id": "case00175",
+      "left_scenario": "T3",
+      "right_scenario": "T1",
+      "root_count": 2
+    },
+    {
+      "pair_id": "pair052",
+      "app": "trainticket",
+      "left_case_id": "case00697",
+      "right_case_id": "case00330",
+      "left_scenario": "T4",
+      "right_scenario": "T2",
+      "root_count": 2
+    },
+    {
+      "pair_id": "pair053",
+      "app": "trainticket",
+      "left_case_id": "case00728",
+      "right_case_id": "case00115",
+      "left_scenario": "T4",
+      "right_scenario": "T1",
+      "root_count": 2
+    },
+    {
+      "pair_id": "pair054",
+      "app": "trainticket",
+      "left_case_id": "case00742",
+      "right_case_id": "case00468",
+      "left_scenario": "T4",
+      "right_scenario": "T3",
+      "root_count": 2
+    },
+    {
+      "pair_id": "pair055",
+      "app": "trainticket",
+      "left_case_id": "case00749",
+      "right_case_id": "case00148",
+      "left_scenario": "T4",
+      "right_scenario": "T1",
+      "root_count": 2
+    },
+    {
+      "pair_id": "pair056",
+      "app": "trainticket",
+      "left_case_id": "case00756",
+      "right_case_id": "case00105",
+      "left_scenario": "T4",
+      "right_scenario": "T1",
+      "root_count": 2
+    }
+  ],
+  "leftovers": [
+    "case00597",
+    "case00539"
+  ]
+}

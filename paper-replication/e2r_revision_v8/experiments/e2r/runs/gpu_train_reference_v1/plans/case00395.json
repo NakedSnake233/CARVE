@@ -1,0 +1,213 @@
+{
+  "catalog": [
+    {
+      "id": "op0000",
+      "group": "edge_ops",
+      "operation": {
+        "op": "REMOVE_EDGE",
+        "source": "productcatalogservice",
+        "target": "pod:productcatalogservice-69c47d7f4d-q65z8",
+        "evidence": [
+          "topology_diff:productcatalogservice->pod:productcatalogservice-69c47d7f4d-q65z8"
+        ]
+      },
+      "evidence_id": "topology_diff:productcatalogservice->pod:productcatalogservice-69c47d7f4d-q65z8",
+      "requires": []
+    },
+    {
+      "id": "op0001",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "emailservice",
+        "target": "productcatalogservice",
+        "edge_type": "dependency",
+        "weight": 1.0,
+        "evidence": [
+          "during:emailservice->productcatalogservice"
+        ]
+      },
+      "evidence_id": "during:emailservice->productcatalogservice",
+      "requires": []
+    },
+    {
+      "id": "op0002",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "frontend",
+        "target": "emailservice",
+        "edge_type": "dependency",
+        "weight": 1.0,
+        "evidence": [
+          "during:frontend->emailservice"
+        ]
+      },
+      "evidence_id": "during:frontend->emailservice",
+      "requires": []
+    },
+    {
+      "id": "op0003",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "productcatalogservice",
+        "target": "pod:emailservice-65d48c6c8c-rhggj",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "evidence": [
+          "during:productcatalogservice->pod:emailservice-65d48c6c8c-rhggj"
+        ]
+      },
+      "evidence_id": "during:productcatalogservice->pod:emailservice-65d48c6c8c-rhggj",
+      "requires": []
+    },
+    {
+      "id": "op0004",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_EDGE",
+        "source": "recommendationservice",
+        "target": "emailservice",
+        "edge_type": "dependency",
+        "weight": 1.0,
+        "evidence": [
+          "during:recommendationservice->emailservice"
+        ]
+      },
+      "evidence_id": "during:recommendationservice->emailservice",
+      "requires": []
+    },
+    {
+      "id": "op0005",
+      "group": "edge_ops",
+      "operation": {
+        "op": "ADD_TRACE_MISMATCH_EDGE",
+        "source": "productcatalogservice",
+        "target": "emailservice",
+        "edge_type": "endpoint_mismatch",
+        "weight": 1.0,
+        "evidence": [
+          "endpoint_owner:productcatalogservice:10.244.1.108"
+        ]
+      },
+      "evidence_id": "endpoint_owner:productcatalogservice:10.244.1.108",
+      "requires": []
+    }
+  ],
+  "plan": {
+    "experiment_id": "case00395",
+    "change_type": "observation_supported_updates",
+    "confidence": 0.0,
+    "causal_role": "not_inferred",
+    "node_ops": [],
+    "edge_ops": [
+      {
+        "op": "REMOVE_EDGE",
+        "source": "productcatalogservice",
+        "target": "pod:productcatalogservice-69c47d7f4d-q65z8",
+        "old_source": "productcatalogservice",
+        "old_target": "pod:productcatalogservice-69c47d7f4d-q65z8",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": null,
+        "attrs": {},
+        "evidence": [
+          "topology_diff:productcatalogservice->pod:productcatalogservice-69c47d7f4d-q65z8"
+        ]
+      },
+      {
+        "op": "ADD_EDGE",
+        "source": "emailservice",
+        "target": "productcatalogservice",
+        "old_source": "emailservice",
+        "old_target": "productcatalogservice",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:emailservice->productcatalogservice"
+        ]
+      },
+      {
+        "op": "ADD_EDGE",
+        "source": "frontend",
+        "target": "emailservice",
+        "old_source": "frontend",
+        "old_target": "emailservice",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:frontend->emailservice"
+        ]
+      },
+      {
+        "op": "ADD_EDGE",
+        "source": "productcatalogservice",
+        "target": "pod:emailservice-65d48c6c8c-rhggj",
+        "old_source": "productcatalogservice",
+        "old_target": "pod:emailservice-65d48c6c8c-rhggj",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "endpoint",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:productcatalogservice->pod:emailservice-65d48c6c8c-rhggj"
+        ]
+      },
+      {
+        "op": "ADD_EDGE",
+        "source": "recommendationservice",
+        "target": "emailservice",
+        "old_source": "recommendationservice",
+        "old_target": "emailservice",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "dependency",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "during:recommendationservice->emailservice"
+        ]
+      },
+      {
+        "op": "ADD_TRACE_MISMATCH_EDGE",
+        "source": "productcatalogservice",
+        "target": "emailservice",
+        "old_source": "productcatalogservice",
+        "old_target": "emailservice",
+        "new_source": "",
+        "new_target": "",
+        "service": "",
+        "edge_type": "endpoint_mismatch",
+        "weight": 1.0,
+        "attrs": {},
+        "evidence": [
+          "endpoint_owner:productcatalogservice:10.244.1.108"
+        ]
+      }
+    ],
+    "weight_ops": [],
+    "state_transfer": {},
+    "evidence": [
+      "topology_diff:productcatalogservice->pod:productcatalogservice-69c47d7f4d-q65z8",
+      "during:emailservice->productcatalogservice",
+      "during:frontend->emailservice",
+      "during:productcatalogservice->pod:emailservice-65d48c6c8c-rhggj",
+      "during:recommendationservice->emailservice",
+      "endpoint_owner:productcatalogservice:10.244.1.108"
+    ]
+  }
+}

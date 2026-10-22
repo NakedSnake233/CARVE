@@ -1,0 +1,128 @@
+{
+  "catalog": [
+    {
+      "id": "op0000",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-travel2-service-c549f6bfd-4cvfp",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-travel2-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-travel2-service-c549f6bfd-4cvfp"
+        ]
+      },
+      "evidence_id": "during:pod:ts-travel2-service-c549f6bfd-4cvfp",
+      "requires": []
+    },
+    {
+      "id": "op0001",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-travel2-service-c549f6bfd-4lkpg",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-travel2-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-travel2-service-c549f6bfd-4lkpg"
+        ]
+      },
+      "evidence_id": "during:pod:ts-travel2-service-c549f6bfd-4lkpg",
+      "requires": []
+    },
+    {
+      "id": "op0002",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-travel2-service-c549f6bfd-vlddb",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-travel2-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-travel2-service-c549f6bfd-vlddb"
+        ]
+      },
+      "evidence_id": "during:pod:ts-travel2-service-c549f6bfd-vlddb",
+      "requires": []
+    }
+  ],
+  "plan": {
+    "experiment_id": "case00194",
+    "change_type": "observation_supported_updates",
+    "confidence": 0.0,
+    "causal_role": "not_inferred",
+    "node_ops": [
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-travel2-service-c549f6bfd-4cvfp",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-travel2-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-travel2-service-c549f6bfd-4cvfp"
+        ]
+      },
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-travel2-service-c549f6bfd-4lkpg",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-travel2-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-travel2-service-c549f6bfd-4lkpg"
+        ]
+      },
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:ts-travel2-service-c549f6bfd-vlddb",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "ts-travel2-service",
+          "version": "unknown"
+        },
+        "evidence": [
+          "during:pod:ts-travel2-service-c549f6bfd-vlddb"
+        ]
+      }
+    ],
+    "edge_ops": [],
+    "weight_ops": [],
+    "state_transfer": {},
+    "evidence": [
+      "during:pod:ts-travel2-service-c549f6bfd-4cvfp",
+      "during:pod:ts-travel2-service-c549f6bfd-4lkpg",
+      "during:pod:ts-travel2-service-c549f6bfd-vlddb"
+    ]
+  }
+}

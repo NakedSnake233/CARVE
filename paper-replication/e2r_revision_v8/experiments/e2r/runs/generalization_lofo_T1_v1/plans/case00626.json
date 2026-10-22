@@ -1,0 +1,96 @@
+{
+  "catalog": [
+    {
+      "id": "op0000",
+      "group": "node_ops",
+      "operation": {
+        "op": "ADD_NODE",
+        "node_id": "pod:recommendationservice-v2-56445745ff-zk6p9",
+        "attrs": {
+          "type": "pod",
+          "service": "recommendationservice",
+          "version": "v2.0.0"
+        },
+        "evidence": [
+          "during:pod:recommendationservice-v2-56445745ff-zk6p9"
+        ]
+      },
+      "evidence_id": "during:pod:recommendationservice-v2-56445745ff-zk6p9",
+      "requires": []
+    },
+    {
+      "id": "op0001",
+      "group": "node_ops",
+      "operation": {
+        "op": "SPLIT_NODE",
+        "parent": "recommendationservice",
+        "children": [
+          "recommendationservice:unversioned",
+          "recommendationservice:v2.0.0"
+        ],
+        "attrs": {
+          "type": "version",
+          "service": "recommendationservice"
+        },
+        "evidence": [
+          "version_coexistence:recommendationservice"
+        ]
+      },
+      "evidence_id": "version_coexistence:recommendationservice",
+      "requires": []
+    }
+  ],
+  "plan": {
+    "experiment_id": "case00626",
+    "change_type": "observation_supported_updates",
+    "confidence": 0.0,
+    "causal_role": "not_inferred",
+    "node_ops": [
+      {
+        "op": "ADD_NODE",
+        "node_id": "pod:recommendationservice-v2-56445745ff-zk6p9",
+        "old_node": "",
+        "new_node": "",
+        "parent": "",
+        "children": [],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "pod",
+          "service": "recommendationservice",
+          "version": "v2.0.0"
+        },
+        "evidence": [
+          "during:pod:recommendationservice-v2-56445745ff-zk6p9"
+        ]
+      },
+      {
+        "op": "SPLIT_NODE",
+        "node_id": "",
+        "old_node": "",
+        "new_node": "",
+        "parent": "recommendationservice",
+        "children": [
+          "recommendationservice:unversioned",
+          "recommendationservice:v2.0.0"
+        ],
+        "service": "",
+        "version": "",
+        "attrs": {
+          "type": "version",
+          "service": "recommendationservice"
+        },
+        "evidence": [
+          "version_coexistence:recommendationservice"
+        ]
+      }
+    ],
+    "edge_ops": [],
+    "weight_ops": [],
+    "state_transfer": {},
+    "evidence": [
+      "during:pod:recommendationservice-v2-56445745ff-zk6p9",
+      "version_coexistence:recommendationservice"
+    ]
+  }
+}
